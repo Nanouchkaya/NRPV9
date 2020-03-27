@@ -1,0 +1,67 @@
+{JAVASCRIPT}
+
+<!-- BEGIN switch_user_login_form_header -->
+<div class="panel">
+	<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+		<div class="user_login_form center">
+			<input placeholder="{L_USERNAME}" class="inputbox fl_username" type="text" size="10" name="username" />
+			<input placeholder="{L_PASSWORD}" class="inputbox fl_password" type="password" size="10" name="password" />
+			<br />
+			<label>{L_AUTO_LOGIN}: <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>
+			{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
+            <!-- BEGIN switch_social_login -->
+            <div class="social_btn">
+                <!-- BEGIN fb_connect -->
+                <div class="fb-login-button"></div>
+                <!-- END fb_connect -->
+                <!-- BEGIN topicit_connect -->
+                <div class="ti-connect"></div>
+                <!-- END topicit_connect -->
+            </div>
+            <!-- END switch_social_login -->
+		</div>
+	</form>
+</div>
+<!-- END switch_user_login_form_header -->
+
+<!-- BEGIN message_admin_index -->
+	<div class="panel introduction">
+		<!-- BEGIN message_admin_titre -->
+			<div class="h3">{message_admin_index.message_admin_titre.MES_TITRE}</div>
+		<!-- END message_admin_titre -->
+
+		<!-- BEGIN message_admin_txt -->
+			<div class="mes-txt">{message_admin_index.message_admin_txt.MES_TXT}</div>
+		<!-- END message_admin_txt -->
+	</div>
+<!-- END message_admin_index -->
+
+{BOARD_INDEX}
+
+
+
+<!-- BEGIN switch_user_login_form_footer -->
+<div class="panel">
+	<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+		<div class="user_login_form center">
+			<input placeholder="{L_USERNAME}" class="inputbox fl_username" type="text" size="10" name="username" />
+			<input placeholder="{L_PASSWORD}" class="inputbox fl_password" type="password" size="10" name="password" />
+			<br />
+			<label>{L_AUTO_LOGIN}: <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>
+			{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
+			<!-- BEGIN switch_social_login -->
+            <div class="social_btn">
+                <!-- BEGIN fb_connect -->
+                <div class="fb-login-button"></div>
+                <!-- END fb_connect -->
+                <!-- BEGIN topicit_connect -->
+                <div class="ti-connect"></div>
+                <!-- END topicit_connect -->
+            </div>
+            <!-- END switch_social_login -->
+		</div>
+	</form>
+</div>
+<!-- END switch_user_login_form_footer -->
+
+{AUTO_DST}

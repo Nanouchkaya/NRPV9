@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}"
+	  xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
+<head>
+	<title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+	<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}"/>
+	<meta http-equiv="content-script-type" content="text/javascript"/>
+	<meta http-equiv="content-style-type" content="text/css"/>
+	<!-- BEGIN switch_compat_meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE={switch_compat_meta.VERSION}"/>
+	<!-- END switch_compat_meta -->
+	<!-- BEGIN switch_canonical_url -->
+	<link rel="canonical" href="{switch_canonical_url.CANONICAL_URL}"/>
+	<!-- END switch_canonical_url -->
+	{META_FAVICO}
+	{META}
+	{META_FB_LIKE}
+	<meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}"/>
+  {T_HEAD_STYLESHEET}
+  {CSS}
+  <link rel="alternate stylesheet" type="text/css" title="micro_light" href="http://memoires-du-monde.fr/NRPV9/css/micro_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="AP_light" href="http://memoires-du-monde.fr/NRPV9/css/AP_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="chim_light" href="http://memoires-du-monde.fr/NRPV9/css/chim_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="zomb_light" href="http://memoires-du-monde.fr/NRPV9/css/zomb_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="xmen_light" href="http://memoires-du-monde.fr/NRPV9/css/xmen_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="AdP_light" href="http://memoires-du-monde.fr/NRPV9/css/AdP_light.css" />
+  
+  
+ 
+	<link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}" />
+	<link rel="search" type="application/opensearchdescription+xml"
+		  href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}" />
+	<script src="{JQUERY_PATH}" type="text/javascript"></script>
+	<!-- BEGIN switch_recent_jquery -->
+	<script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+	<script src="{JQUERY_DIR}browser/v1.0/jquery.browser.min.js" type="text/javascript"></script>
+	<script src="{JQUERY_DIR}support/jquery.support.js" type="text/javascript"></script>
+	<!-- END switch_recent_jquery -->
+	<script src="{JS_DIR}{L_LANG}.js" type="text/javascript"></script>
+	{RICH_SNIPPET_GOOGLE}
+
+	<script type="text/javascript">//<![CDATA[
+		$(document).ready(function () {
+			<!-- BEGIN switch_enable_pm_popup -->
+			pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
+			if (pm != null) {
+				pm.focus();
+			}
+			<!-- END switch_enable_pm_popup -->
+			<!-- BEGIN switch_report_popup -->
+			report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
+			if (report != null) {
+				report.focus();
+			}
+			<!-- END switch_report_popup -->
+			
+		});
+
+		<!-- BEGIN switch_login_popup -->
+		var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH},
+			logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
+
+		$(document).ready(function () {
+			$(window).resize(function () {
+				var windowWidth = document.documentElement.clientWidth;
+				var popupWidth = $("#login_popup").width();
+				var mypopup = $("#login_popup");
+
+				$("#login_popup").css({
+					"left": windowWidth / 2 - popupWidth / 2
+				});
+			});
+		});
+		<!-- END switch_login_popup -->
+		//]]>
+	</script>
+
+	{GREETING_POPUP}
+
+	<style type="text/css">
+		#page-footer, div.navbar, div.navbar ul.linklist {
+			display: block !important;
+		}
+
+		ul.linklist li.rightside, ul.linklist li.rightside a.copyright {
+			display: inline !important;
+		}
+	</style>
+
+	{HOSTING_JS}
+
+	<!-- BEGIN google_analytics_code -->
+	<script type="text/javascript">
+		//<![CDATA[
+		(function (i, s, o, g, r, a, m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+		})
+		(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', '{G_ANALYTICS_ID}', 'auto');
+		ga('send', 'pageview');
+		ga('set', 'anonymizeIp', true);
+
+		<!-- BEGIN google_analytics_code_bis -->
+		ga('create', '{G_ANALYTICS_ID_BIS}', 'auto', 'bis');
+		ga('bis.send', 'pageview');
+		ga('bis.set', 'anonymizeIp', true);
+		<!-- END google_analytics_code_bis -->
+		//]]>
+	</script>
+	<!-- END google_analytics_code -->
+
+  	<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+		  rel="stylesheet"/>
+  	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
+  	<link href="http://memoires-du-monde.fr/NRPV9/font/font.css" rel="stylesheet" />
+	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
+  	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body id="modernbb" onload="set_style_from_cookie()">
+<!-- BEGIN switch_login_popup -->
+<div id="login_popup" style="z-index: 10000 !important;">
+	<div class="h3">{SITENAME}</div>
+	<div id="login_popup_message">
+		{LOGIN_POPUP_MSG}
+	</div>
+	<div id="login_popup_buttons">
+		<form action="{S_LOGIN_ACTION}" method="get">
+			<input type="submit" class="button1" value="{L_LOGIN}"/>
+			<input type="button" class="button1" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';"/>
+			<input id="login_popup_close" type="button" class="button2" value="{L_DONT_DISPLAY_AGAIN}"/>
+		</form>
+	</div>
+</div>
+<!-- END switch_login_popup -->
+
+<a id="top" name="top" accesskey="t"></a>
+{JAVASCRIPT}
+
+<div class="wrapper">
+<header id="page-header">
+		<div id="headerbar-top">
+                   <div id="theme-button">
+                      <a type="button" onclick="openThemes()">Métamorphose</a>
+                      <div id="themes">
+                        <ul class="themes-list">
+                          	<li class="themes-list-item color-micro"><a type="button" onclick="switch_style('micro_light');closeThemes();return false">Pico.</a></li>
+                        	<li class="themes-list-item color-AP"><a type="button" onclick="switch_style('AP_light');closeThemes();return false">Alpha Perdu</a></li>
+				<li class="themes-list-item color-chimeres"><a type="button" onclick="switch_style('chim_light');closeThemes();return false">Chimères</a></li>
+                        	<li class="themes-list-item color-zombie"><a type="button" onclick="switch_style('zomb_light');closeThemes();return false">Zombieland</a></li>
+                        	<li class="themes-list-item color-AdP"><a type="button" onclick="switch_style('AdP_light');closeThemes();return false">Av. du Passé</a></li>
+                        	<li class="themes-list-item color-xmen"><a type="button" onclick="switch_style('xmen_light');closeThemes();return false">X-men</a></li>
+                        </ul>
+                        <img class="cross" onclick="closeThemes()" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
+                      </div>
+                    </div>
+                          <ul class="navbar first">                      
+                            <li><a href="/">Accueil</a></li>
+                            <li><a href="/search">Rechercher</a></li>
+                            <!-- BEGIN switch_user_logged_in -->
+                            <li><a href="/profile?mode=editprofile">Profil</a></li>
+                            <li><a href="/memberlist">Membres</a></li>
+                            <li><a href="/groups">Groupes</a></li>             
+                            <!-- END switch_user_logged_in -->
+                  	  </ul>
+                          <ul class="navbar last">
+                            <li>{GENERATED_NAV_BAR}</li>
+			  </ul>                          	  
+		</div>
+  <span id="mamie_guitar" href="/">
+    <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/ban_mamie.png" alt="Mamie guitare" />
+  <span>10 ans dejaaa !!</span></span>
+        <h1 id="site-title"><span>Nano.</span> RolePlay</h1>
+	<p id="site-desc">Ici, c'est pas plus de 4 lignes !</p>
+    
+  
+  
+</header>   
+<main id="main-content">
