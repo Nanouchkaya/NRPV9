@@ -1,0 +1,141 @@
+@import 'variables';
+
+.forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
+  width: 166px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.forumbg {
+  margin: 1rem auto;
+  padding: $padding-tb $padding-rl;
+  max-width: $maxWidthForum;
+  width: 90vw;
+  background-color: $no-color;
+
+  li.header {
+    background-color: $nano-dark;
+    color: $no-color;
+    text-align: center;
+    padding: $padding-tb 0;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  li.row {
+    display: flex;
+    align-items: center;
+    margin: $margin-tb 0;
+
+    .topiclist-lastpost {
+      flex: 1;
+      display: flex;
+      font-size: .9rem;
+
+      .posts-views {
+        color: lighten($nano-dark, $amount: 50%);
+      }
+  
+      .lastpost {
+        display: flex;
+        flex-direction: column;
+        padding: .7rem 1rem;
+        position: relative;
+        margin-left: .35rem; // pour le cadre nouveau message
+        white-space: nowrap;
+
+        &.newpost {
+          border-width: 3px;
+          border-style: solid;
+          height: fit-content;
+          border-color: $main-color;
+    
+          &::after {
+            top: calc(#{$padding-tb} * -1);
+            content: "Du neuf ! ";
+            font-family: $special-font;
+            font-size: 0.6rem;
+            position: absolute;
+            right: 5%;
+            padding: .1rem $padding-tb $padding-tb;
+            background-color: $no-color;
+            color: $main-color
+          }
+        }
+      }
+
+      .topic-etiquette {
+        width: 30px;
+        background-position-y: center;
+      }
+    }
+
+    .dterm {
+      flex: 2;
+
+      h2.topic-title.hierarchy a {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: $nano-dark;
+      }
+      
+      .topic-title-container {
+          text-align: right;
+      }
+      
+      .topic-description {
+          color: lighten($nano-dark, $amount: 50%);
+          font-size: .9rem;
+      }
+
+      .topic-goto-page a {
+        color: black;
+      }
+      .topic-title.hierarchy a:first-of-type:hover::after,
+      .topic-goto-page a:hover::after {
+        background-color: $nano-dark;
+      }
+    }
+  }
+
+  .topics-list-bottom {
+    background-color: $nano-dark;
+    padding: $padding-tb $padding-rl;
+    margin-top: $margin-tb;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+
+    &-pagination {
+        color: $no-color;
+        justify-self: flex-end;
+        margin-bottom: calc(#{$padding-tb * -1});
+    }
+
+    span#read-forum a, span#watch-forum a {
+        margin-right: 1rem;
+        position: relative;
+        padding-left: 23px;
+
+        &::before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-repeat: no-repeat;
+          background-position: center;
+      }
+    }
+    span#read-forum a::before {
+      background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_lu.png);
+    }
+    span#watch-forum a[href$="?watch=forum"]::before {
+      background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+    }
+    span#watch-forum a[href$="?unwatch=forum"]::before {
+      background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+    }
+  }
+}

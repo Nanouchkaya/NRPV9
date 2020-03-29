@@ -170,7 +170,7 @@
   nav.onglets {
     display: flex;
     justify-content: space-around;
-    max-width: 1300px;
+    max-width: $maxWidthForum;
     margin: 1rem auto;
     font-size: 1.2rem;
   }
@@ -293,6 +293,7 @@
 
       dd.forumrow-desc {
         font-size: .8rem;
+        padding: .35rem .35rem 0 0;
       }
 
       dd.forumrow-lastpost {

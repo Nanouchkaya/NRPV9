@@ -166,6 +166,8 @@
     flex-wrap: nowrap;
     padding: 0 1rem;
     color: $no-color;
+
+    a { color : $no-color; }
   }
 
   #normal {
@@ -187,4 +189,16 @@
       }
     }
   }
+}
+
+footer#page-footer {
+  background-color: #161614;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: .9rem;
+  color: grey;
+}
+
+footer#page-footer a {
+  color: grey;
 }

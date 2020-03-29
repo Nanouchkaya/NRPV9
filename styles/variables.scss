@@ -32,6 +32,10 @@ $padding-tb: .7rem;
 $padding-rl: 1rem;
 
 
+// taille
+$maxWidthForum: 1100px;
+
+
 // Borders
 @mixin border($border-color) {
   border: 2px solid $border-color;

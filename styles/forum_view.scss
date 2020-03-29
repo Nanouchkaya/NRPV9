@@ -1,6 +1,17 @@
 
 @import 'variables';
 
+a.topic-button { // boutons nouveau/repondre/lock
+  margin: 1rem auto;
+  max-width: $maxWidthForum;
+  width: 90vw;
+  display: block;
+
+  &:hover::after {
+    display: none;
+  }
+}
+
 .forumview {
   
   ul.forumrows {
@@ -99,7 +110,7 @@
       background-color: $nano-dark;
       color: $nano-dark;
       width: fit-content;
-      margin: auto;
+      margin: calc(2 * #{$margin-rl}) auto 0;
       padding: $padding-tb $padding-rl;
       position: relative;
 
@@ -125,7 +136,7 @@
       }
 
       .nav span span:not([data-ong])::before {
-        content: '>>';
+        content: url(https://i.servimg.com/u/f18/17/49/10/89/arrow_14.png);
         margin-right: .5rem;
       }
       // pour masquer le lien vers les sous forum lv2 NM
