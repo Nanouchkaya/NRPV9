@@ -77,34 +77,46 @@ header#page-header {
     z-index: 9;
   }
 
-  #theme-button {
-    background-color: $nano-dark;
-    color: $no-color;
+  #theme-button, #nav-plus-button {
     font-weight: 700;
     padding: 1.3rem 1rem;
     text-transform: uppercase;
-    width: 10.5rem;
     position: relative;
   }
 
-  #themes {
-    opacity: 0;
+  #nav-plus-button img {
+    min-width: 30px;
+    max-width: 40%;
+  }
+  
+  #theme-button {
     width: 10.5rem;
+    background-color: $nano-dark;
+    color: $no-color;
+  }
+  
+  #themes, #nav-plus {
+    background-color: $nano-dark;
+    color: $no-color;
+    width: 10.5rem;
+    opacity: 0;
     height: 0;
     overflow: hidden;
     display:flex;
     flex-direction: column;
-    background-color: $nano-dark;
     position: absolute;
     top: 4rem;
     left:0;
     transition: all 400ms ease-in-out;
     padding: .7rem 1rem;
 
-    li.themes-list-item {
+    li.themes-list-item,
+    li.nav-plus-list-item {
       margin: .7rem 0 .7rem 1.5rem;
       position: relative;
     }
+    
+    li.nav-plus-list-item { margin: $padding-tb 0;}
 
     li.themes-list-item::before {
       content: '';
@@ -121,16 +133,18 @@ header#page-header {
       font-size: .8em;
     }
 
+
     .cross {
       align-self: flex-end;
-      font-weight: 700;
-      font-size: 2rem;
+      width: 30px;
     
       &:hover {
         cursor: pointer;
       }
     }
   }
+
+  #nav-plus { width: 12rem; }
 
   .navbar {
     display: flex;

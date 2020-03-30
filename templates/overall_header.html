@@ -116,9 +116,6 @@
 	</script>
 	<!-- END google_analytics_code -->
 
-  	<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		  rel="stylesheet"/>
   	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
   	<link href="http://memoires-du-monde.fr/NRPV9/font/font.css" rel="stylesheet" />
 	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
@@ -148,32 +145,59 @@
 <div class="wrapper">
 <header id="page-header">
 		<div id="headerbar-top">
-                   <div id="theme-button">
-                      <a type="button" onclick="openThemes()">Métamorphose</a>
-                      <div id="themes">
-                        <ul class="themes-list">
-                          	<li class="themes-list-item color-micro"><a type="button" onclick="switch_style('micro_light');closeThemes();return false">Pico.</a></li>
-                        	<li class="themes-list-item color-AP"><a type="button" onclick="switch_style('AP_light');closeThemes();return false">Alpha Perdu</a></li>
-				<li class="themes-list-item color-chimeres"><a type="button" onclick="switch_style('chim_light');closeThemes();return false">Chimères</a></li>
-                        	<li class="themes-list-item color-zombie"><a type="button" onclick="switch_style('zomb_light');closeThemes();return false">Zombieland</a></li>
-                        	<li class="themes-list-item color-AdP"><a type="button" onclick="switch_style('AdP_light');closeThemes();return false">Av. du Passé</a></li>
-                        	<li class="themes-list-item color-xmen"><a type="button" onclick="switch_style('xmen_light');closeThemes();return false">X-men</a></li>
-                        </ul>
-                        <img class="cross" onclick="closeThemes()" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
-                      </div>
-                    </div>
-                          <ul class="navbar first">                      
-                            <li><a href="/">Accueil</a></li>
-                            <li><a href="/search">Rechercher</a></li>
-                            <!-- BEGIN switch_user_logged_in -->
-                            <li><a href="/profile?mode=editprofile">Profil</a></li>
-                            <li><a href="/memberlist">Membres</a></li>
-                            <li><a href="/groups">Groupes</a></li>             
-                            <!-- END switch_user_logged_in -->
-                  	  </ul>
-                          <ul class="navbar last">
-                            <li>{GENERATED_NAV_BAR}</li>
-			  </ul>                          	  
+			<div id="theme-button">
+				<a type="button" onclick="openMenu('themes');closeMenu('nav-plus')" ondblclick="closeMenu('themes')">Métamorphose</a>
+				<div id="themes">
+					<ul class="themes-list">
+						<li class="themes-list-item color-micro"><a type="button" onclick="switch_style('micro_light');closeMenu('themes');return false">Pico.</a></li>
+						<li class="themes-list-item color-AP"><a type="button" onclick="switch_style('AP_light');closeMenu('themes');return false">Alpha Perdu</a></li>
+						<li class="themes-list-item color-chimeres"><a type="button" onclick="switch_style('chim_light');closeMenu('themes');return false">Chimères</a></li>
+						<li class="themes-list-item color-zombie"><a type="button" onclick="switch_style('zomb_light');closeMenu('themes');return false">Zombieland</a></li>
+						<li class="themes-list-item color-AdP"><a type="button" onclick="switch_style('AdP_light');closeMenu('themes');return false">Av. du Passé</a></li>
+						<li class="themes-list-item color-xmen"><a type="button" onclick="switch_style('xmen_light');closeMenu('themes');return false">X-men</a></li>
+					</ul>
+					<img class="cross" onclick="closeMenu('themes')" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
+				</div>
+			</div>
+			<ul class="navbar first">                      
+				<li><a href="/">Accueil</a></li>
+				<li><a href="/search">Rechercher</a></li>
+				<!-- BEGIN switch_user_logged_in -->
+				<li><a href="/profile?mode=editprofile">Profil</a></li>
+				<li><a href="/memberlist">Membres</a></li>
+				<li><a href="/groups">Groupes</a></li>             
+			<!-- END switch_user_logged_in -->
+			</ul>
+			<div id="nav-plus-button">
+				<a type="button" onclick="openMenu('nav-plus');closeMenu('themes')" ondblclick="closeMenu('nav-plus')">
+					<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/bn-lien.png" alt="Plus" />
+				</a>
+				<div id="nav-plus">
+					<ul class="nav-plus-list">
+						<li class="nav-plus-list-item"><a href="" onclick="closeMenu('nav-plus');return false">Contrat du RP</a></li>
+						<!-- BEGIN switch_user_logged_in -->
+						<li class="nav-plus-list-item">
+							<a href="{U_SEARCH_NEW}" onclick="closeMenu('nav-plus');return false">Nouveaux messages</a>
+						</li>
+						<li class="nav-plus-list-item">
+							<a href="{U_SEARCH_SELF}" onclick="closeMenu('nav-plus');return false">Mes messages</a>
+						</li>
+						<!-- END switch_user_logged_in -->
+						<li class="nav-plus-list-item">
+							<a href="{U_SEARCH_UNANSWERED}" onclick="closeMenu('nav-plus');return false">Messages sans réponses</a>
+						</li>
+						<!-- BEGIN switch_user_logged_in -->
+							<li class="nav-plus-list-item">
+								<a href="{U_MARK_READ}" onclick="closeMenu('nav-plus');return false" accesskey="m">Tout marqué lu</a>
+							</li>
+						<!-- END switch_user_logged_in -->
+					</ul>
+					<img class="cross" onclick="closeMenu('nav-plus')" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
+				</div>
+			</div>
+			<ul class="navbar last">
+				<li>{GENERATED_NAV_BAR}</li>
+			</ul>                          	  
 		</div>
   <span id="mamie_guitar" href="/">
     <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/ban_mamie.png" alt="Mamie guitare" />

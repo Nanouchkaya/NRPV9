@@ -105,46 +105,47 @@ a.topic-button { // boutons nouveau/repondre/lock
   }
 
 }
-    .path {
-      text-align: center;
-      background-color: $nano-dark;
-      color: $nano-dark;
-      width: fit-content;
-      margin: calc(2 * #{$margin-rl}) auto 0;
-      padding: $padding-tb $padding-rl;
-      position: relative;
 
-      &::after, &::before {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        position: absolute;
-        content: '';
-        top: 0;
-      }
+.path {
+  text-align: center;
+  background-color: $nano-dark;
+  color: $nano-dark;
+  width: fit-content;
+  margin: calc(2 * #{$margin-rl}) auto 0;
+  padding: $padding-tb $padding-rl;
+  position: relative;
 
-      &::before {
-        border-width: 0 0 3rem 3rem;
-        border-color: transparent transparent rgb(22, 22, 20) transparent;
-        left: -3rem;
-      }
+  &::after, &::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    content: '';
+    top: 0;
+  }
 
-      &::after {
-        border-width: 3rem 0 0 3rem;
-        border-color: transparent transparent transparent rgb(22, 22, 20);
-        right: -3rem;
-      }
+  &::before {
+    border-width: 0 0 3rem 3rem;
+    border-color: transparent transparent rgb(22, 22, 20) transparent;
+    left: -3rem;
+  }
 
-      .nav span span:not([data-ong])::before {
-        content: url(https://i.servimg.com/u/f18/17/49/10/89/arrow_14.png);
-        margin-right: .5rem;
-      }
-      // pour masquer le lien vers les sous forum lv2 NM
-      .nav span[data-ong] {
-        display: none;
-      }
+  &::after {
+    border-width: 3rem 0 0 3rem;
+    border-color: transparent transparent transparent rgb(22, 22, 20);
+    right: -3rem;
+  }
 
-      span[data-cat='NM'] {
-        margin-right: -1rem;
-      }
-    }
+  .nav span span:not([data-ong])::before {
+    content: url(https://i.servimg.com/u/f18/17/49/10/89/arrow_14.png);
+    margin-right: .5rem;
+  }
+  // pour masquer le lien vers les sous forum lv2 NM
+  .nav span[data-ong] {
+    display: none;
+  }
+
+  span[data-cat='NM'] {
+    margin-right: -1rem;
+  }
+}

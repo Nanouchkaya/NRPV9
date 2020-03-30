@@ -1,11 +1,31 @@
 {BOARD_INDEX}
 
+<!-- BEGIN switch_user_authpost -->
+<a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="topic-button" title="{L_POST_NEW_TOPIC}">
+  <img src="{POST_IMG}" alt="{L_POST_NEW_TOPIC}" />
+</a>
+<!-- END switch_user_authpost -->
+<!-- BEGIN html_validation -->
+<div>
+<!-- END html_validation -->
 {TOPICS_LIST_BOX}
+
+  <div class="topics-list-bottom">
+  
+    <div class="topics-list-bottom-actions">
+      <span id="read-forum"><a href="{U_MARK_READ}">Marqué Lu</a></span>
+      <span id="watch-forum">{S_WATCH_FORUM}</span>
+    </div>
+                  
+    <div class="topics-list-bottom-pagination">
+          {PAGINATION}
+    </div>
+  </div>
+</div>
 
 <div class="path">
   <a class="path-link nav" href="{U_INDEX}">[ Retour à l'index ]</a>{NAV_CAT_DESC}
 </div>
-
 
 <script type="text/javascript">
   $("span[data-level='one']").parents("div.category").addClass("forumview");

@@ -115,34 +115,46 @@ header#page-header #headerbar-top {
   width: 100%;
   z-index: 9;
 }
-header#page-header #theme-button {
-  background-color: #161614;
-  color: white;
+header#page-header #theme-button, header#page-header #nav-plus-button {
   font-weight: 700;
   padding: 1.3rem 1rem;
   text-transform: uppercase;
-  width: 10.5rem;
   position: relative;
 }
-header#page-header #themes {
-  opacity: 0;
+header#page-header #nav-plus-button img {
+  min-width: 30px;
+  max-width: 40%;
+}
+header#page-header #theme-button {
   width: 10.5rem;
+  background-color: #161614;
+  color: white;
+}
+header#page-header #themes, header#page-header #nav-plus {
+  background-color: #161614;
+  color: white;
+  width: 10.5rem;
+  opacity: 0;
   height: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #161614;
   position: absolute;
   top: 4rem;
   left: 0;
   transition: all 400ms ease-in-out;
   padding: 0.7rem 1rem;
 }
-header#page-header #themes li.themes-list-item {
+header#page-header #themes li.themes-list-item,
+header#page-header #themes li.nav-plus-list-item, header#page-header #nav-plus li.themes-list-item,
+header#page-header #nav-plus li.nav-plus-list-item {
   margin: 0.7rem 0 0.7rem 1.5rem;
   position: relative;
 }
-header#page-header #themes li.themes-list-item::before {
+header#page-header #themes li.nav-plus-list-item, header#page-header #nav-plus li.nav-plus-list-item {
+  margin: 0.7rem 0;
+}
+header#page-header #themes li.themes-list-item::before, header#page-header #nav-plus li.themes-list-item::before {
   content: "";
   width: 1rem;
   height: 1rem;
@@ -151,17 +163,19 @@ header#page-header #themes li.themes-list-item::before {
   left: -1.5rem;
   top: 0.4rem;
 }
-header#page-header #themes a {
+header#page-header #themes a, header#page-header #nav-plus a {
   margin: 1rem 0;
   font-size: 0.8em;
 }
-header#page-header #themes .cross {
+header#page-header #themes .cross, header#page-header #nav-plus .cross {
   align-self: flex-end;
-  font-weight: 700;
-  font-size: 2rem;
+  width: 30px;
 }
-header#page-header #themes .cross:hover {
+header#page-header #themes .cross:hover, header#page-header #nav-plus .cross:hover {
   cursor: pointer;
+}
+header#page-header #nav-plus {
+  width: 12rem;
 }
 header#page-header .navbar {
   display: flex;
@@ -1075,6 +1089,159 @@ a.topic-button:hover::after {
 }
 .path span[data-cat=NM] {
   margin-right: -1rem;
+}
+
+.topic-maincontent {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.post {
+  background-color: white;
+  margin: 1.5rem;
+  padding: 0.7rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-profile-avatar {
+  background-color: #161614;
+  max-width: 200px;
+  color: white;
+}
+.post-rpg {
+  background-color: #161614;
+  color: white;
+  padding: 0.7rem 1rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 200px;
+  font-size: 0;
+  flex: 1 calc(100% - 200px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-rpg a, .post-rpg table tr td:first-child, .post-rpg table tr:first-child {
+  display: none;
+}
+.post-rpg .rpg-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.post-rpg table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.post-rpg table td {
+  border: none;
+  padding: 0.1rem 0.35rem;
+  text-align: center;
+  width: 10rem;
+}
+.post-profile {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  position: relative;
+  background-color: #161614;
+  max-width: 200px;
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.post-profile-rank {
+  position: relative;
+  left: -29px;
+  top: -12px;
+}
+.post-profile-online.online {
+  display: initial;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #00a652;
+  padding-top: 0.7rem;
+  display: flex;
+}
+.post-profile-online.online img {
+  margin-right: 0.7rem;
+}
+.post-profile-online {
+  display: none;
+}
+.post-profile-mp {
+  flex: 100%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+}
+.post-body {
+  flex: 1;
+  padding: 0.7rem 1rem;
+}
+.post-body-head {
+  display: flex;
+  justify-content: space-between;
+}
+.post-body-head .profile-icons {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 20%;
+}
+.post-body-head .topic-retitle {
+  flex: 1 70%;
+  font-size: 0.8rem;
+  color: #9a9a8f;
+}
+.post-body-head .topic-retitle a {
+  color: #9a9a8f;
+  margin-right: 0.7rem;
+}
+.post-body-content {
+  background-color: #F4F4F4;
+  padding: 0.7rem 1rem;
+}
+.post-signature {
+  flex: 100%;
+}
+
+.fa_vote, .fa_voted, .fa_count {
+  font-size: 12px;
+  display: inline-block !important;
+  width: auto !important;
+  float: none !important;
+  transition: 300ms;
+}
+
+.fa_voted, .fa_vote:hover {
+  opacity: 0.4;
+}
+
+.fa_voted {
+  cursor: default;
+}
+
+.fa_count {
+  font-weight: bold;
+  margin: 0 3px;
+  cursor: default;
+}
+
+.fa_positive {
+  color: #00a652;
+}
+
+.fa_votebar, .fa_votebar_inner {
+  height: 3px;
+}
+
+.fa_votebar_inner {
+  background: #00a652;
+  transition: 300ms;
+}
+
+.fa_reputation a {
+  float: none;
 }
 
 body {
