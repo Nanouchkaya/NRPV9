@@ -107,7 +107,7 @@
     font-size: .9rem;
 
     &-pagination {
-        color: $no-color;
+        color: lighten($nano-dark, $amount: 50%);
         justify-self: flex-end;
         margin-bottom: calc(#{$padding-tb * -1});
     }

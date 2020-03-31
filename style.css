@@ -933,7 +933,7 @@ footer#page-footer a {
   font-size: 0.9rem;
 }
 .forumbg .topics-list-bottom-pagination {
-  color: white;
+  color: #9a9a8f;
   justify-self: flex-end;
   margin-bottom: calc(-0.7rem);
 }
@@ -1096,16 +1096,93 @@ a.topic-button:hover::after {
   margin: auto;
 }
 
+.topic-top .topic-actions-auth {
+  flex: 1;
+  text-align: right;
+}
+.topic-top .topic-title {
+  font-family: "summeronregular", cursive;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+.topic-top.auth-buttons {
+  text-align: right;
+  margin: 1.5rem;
+}
+.topic-top.pagination {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem 0 -1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.topic-top.pagination span {
+  color: #9a9a8f;
+}
+
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_sondage.jpg) no-repeat bottom right;
+  padding: 0.7rem 1rem;
+}
+.panel h2 {
+  font-size: 1.1rem;
+  flex: 1;
+}
+.panel .polls {
+  flex: 1 100%;
+  border: none;
+  border-top: 3px solid #23a9b5;
+  margin-top: 0.7rem;
+}
+.panel .polls dt {
+  min-width: 10%;
+}
+.panel .polls dl {
+  display: flex;
+  align-items: center;
+}
+.panel .polls dl:nth-last-child(2) dd:nth-last-child(1) {
+  width: 39%;
+  font-size: 0.9rem;
+  text-align: right;
+}
+.panel .polls dl:nth-last-child(2) dd:nth-last-child(1) a {
+  color: #161614;
+}
+.panel .poll-bar {
+  background-color: #a4a3a382;
+  position: relative;
+  height: 1.5rem;
+  width: 50%;
+  margin: 1rem 0;
+}
+.panel .poll-bar-bar {
+  background-color: #23a9b5;
+  height: 1.5rem;
+}
+.panel .poll-bar-desc {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .post {
   background-color: white;
-  margin: 1.5rem;
+  margin: 1.5rem 0;
   padding: 0.7rem 1rem;
   display: flex;
   flex-wrap: wrap;
 }
 .post-profile-avatar {
   background-color: #161614;
-  max-width: 200px;
+  width: 200px;
   color: white;
 }
 .post-rpg {
@@ -1152,8 +1229,14 @@ a.topic-button:hover::after {
 }
 .post-profile-rank {
   position: relative;
-  left: -29px;
+  left: -2.9rem;
   top: -12px;
+}
+.post-profile .post-profile-name {
+  margin: 0.7rem 0;
+}
+.post-profile .post-profile-name a {
+  font-family: "summeronregular", cursive;
 }
 .post-profile-online.online {
   display: initial;
@@ -1203,6 +1286,116 @@ a.topic-button:hover::after {
 }
 .post-signature {
   flex: 100%;
+}
+
+.topic-bottom {
+  background-color: #161614;
+  color: #9a9a8f;
+  padding: 0.7rem 1rem;
+  margin: -1.5rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.topic-bottom span#watch-topic a {
+  margin-right: 1rem;
+  position: relative;
+  padding-left: 23px;
+}
+.topic-bottom span#watch-topic a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.topic-bottom span#watch-topic a[href$="?watch=topic"]::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+}
+.topic-bottom span#watch-topic a[href$="?unwatch=topic"]::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+}
+
+.topic-forum-rules {
+  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_reglement.jpg) no-repeat top right;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.topic-forum-rules h4 {
+  color: #ee1c25;
+}
+
+.topic-quickreply {
+  background-color: white;
+}
+.topic-quickreply .h3 {
+  background-color: #23a9b5;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.topic-quickreply #quick_reply input.button2 {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  transition: all 200ms ease-in-out;
+}
+.topic-quickreply #quick_reply input.button2:hover {
+  color: #23a9b5;
+  cursor: pointer;
+}
+.topic-quickreply form#quick_reply {
+  padding: 0.7rem 1rem;
+  margin-top: -0.7rem;
+}
+.topic-quickreply div#textarea_content {
+  margin-bottom: -20px;
+}
+.topic-quickreply .sceditor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem !important;
+}
+.topic-quickreply .sceditor-group {
+  display: flex !important;
+  justify-content: space-around;
+  background-color: #f4f4f4 !important;
+  border: none !important;
+  flex: 1;
+}
+.topic-quickreply .sceditor-group a.sceditor-button {
+  padding: 0.7rem;
+}
+.topic-quickreply .sceditor-group .sceditor-button div {
+  margin: -7px -7px;
+}
+
+.topic-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+}
+.topic-actions-moderation {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.topic-actions-moderation p {
+  display: flex;
+  margin-top: calc($padding-tb / 2);
+}
+.topic-actions .topic-actions-auth {
+  flex: 1;
+  text-align: right;
 }
 
 .fa_vote, .fa_voted, .fa_count {

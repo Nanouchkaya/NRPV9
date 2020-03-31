@@ -1,4 +1,3 @@
-
 <div class="topic-maincontent">
   <div class="topic-top">
     <h2 class="topic-title">
@@ -16,20 +15,18 @@
       </a>
       <!-- END switch_user_authreply -->
     </div>
-    
-    <!-- BEGIN topicpagination -->
-    <div class="topic-top pagination">
-      {PAGINATION}
-    </div>
-    <!-- END topicpagination -->
   </div>
 
-  <div class="topic-poll">
     {POLL_DISPLAY}
+
+  <!-- BEGIN topicpagination -->
+  <div class="topic-top pagination">
+    {PAGINATION}
   </div>
+  <!-- END topicpagination -->
   <!-- BEGIN postrow -->
   <!-- BEGIN displayed -->
-  <div id="p{postrow.displayed.U_POST_ID}" class="post post--{postrow.displayed.U_POST_ID}"{postrow.displayed.THANK_BGCOLOR} style="{postrow.displayed.DISPLAYABLE_STATE}">
+  <div id="{postrow.displayed.U_POST_ID}" class="post post--{postrow.displayed.U_POST_ID}"{postrow.displayed.THANK_BGCOLOR} style="{postrow.displayed.DISPLAYABLE_STATE}">
     
     <div class="post-profile-avatar" id="profile-avatar{postrow.displayed.U_POST_ID}">
       {postrow.displayed.POSTER_AVATAR}
@@ -128,7 +125,7 @@
             </a>
           </li>
           <li class="btn-thank">
-            <a href="{postrow.displayed.THANK_URL}" title="Super cookie, remercie un unique participant à ton sujet !">
+            <a href="{postrow.displayed.THANK_URL}" title="Super cookie, remercie un unique participant à ton sujet !"> {postrow.displayed.THANK_IMG}
               <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_merci.png" alt="Merci" />
             </a>
           </li>
@@ -148,7 +145,6 @@
       </div>
       <!-- END switch_signature -->
     </div>
-
   </div>
   <!-- BEGIN first_post_br -->
   <hr id="first-post-br" />
@@ -156,9 +152,25 @@
   <!-- END displayed -->
   <!-- END postrow -->
 
+  <div class="topic-bottom">
+    <!-- BEGIN switch_user_logged_in -->
+    <!-- BEGIN watchtopic -->
+    <div class="topic-bottom-watch">
+      <span id="watch-topic">{S_WATCH_TOPIC}</span>
+    </div>
+    <!-- END watchtopic -->
+    <!-- END switch_user_logged_in -->  
+    <!-- BEGIN topicpagination -->
+    <div class="pagination">
+      {PAGINATION}
+    </div>
+    <!-- END topicpagination -->
+  </div>
+
+
   <!-- BEGIN switch_forum_rules -->
   <div class="topic-forum-rules">
-    <h4>{L_FORUM_RULES}</h4>
+    <h4>On oublie pas !</h4>
     <!-- BEGIN switch_forum_rule_image -->
     <img src="{RULE_IMG_URL}" alt="Règles spéciales" />
     <!-- END switch_forum_rule_image -->
@@ -169,25 +181,14 @@
   <!-- END switch_forum_rules -->
 
   <!-- BEGIN switch_user_logged_in -->
-    {QUICK_REPLY_FORM}
+    <div class="topic-quickreply">
+      {QUICK_REPLY_FORM}
+    </div>
+      
   <!-- END switch_user_logged_in -->
 
-  <div class="topic-bottom">
-    <!-- BEGIN topicpagination -->
-    <div class="pagination">
-      {PAGINATION}
-    </div>
-    <!-- END topicpagination -->
-    
-    <!-- BEGIN switch_user_logged_in -->
-      <!-- BEGIN watchtopic -->
-        <div class="topic-bottom-actions">
-          <span id="watch-forum">{S_WATCH_TOPIC}</span>
-        </div>
-      <!-- END watchtopic -->
-    <!-- END switch_user_logged_in -->  
-
-    <div class="topic-bottom-auth-buttons">
+  <div class="topic-actions">
+    <div class="topic-actions-auth">
       <!-- BEGIN switch_user_authpost -->
       <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_NEW_TOPIC}">
         <img src="{POST_IMG}" alt="{L_POST_NEW_TOPIC}" />
@@ -201,7 +202,7 @@
     </div>
     
     <!-- BEGIN viewtopic_bottom -->
-    <div class="topic-bottom-moderation-buttons">
+    <div class="topic-actions-moderation">
       <h4><a href="https://www.youtube.com/watch?v=0ywAW3gjF_w">I got the power!</a></h4>
       <p>{S_TOPIC_ADMIN}</p>
     </div>
@@ -231,4 +232,36 @@ $(resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image
       $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text(result);
 return true;
   });
+</script>
+
+<script type="text/javascript">
+  //<![CDATA[
+$(document).ready(function() {
+  var textarea = document.querySelector('.sceditor-container textarea');
+var maxChar = 650;
+var initialCount = textarea.value.length;
+
+var counter = document.createElement('span');
+counter.className = 'counter';
+counter.textContent = initialCount + ' / ' + maxChar; 
+textarea.parentElement.appendChild(counter);
+
+function changeCounter(e) {
+  var currentCount = e.target.textLength;
+  e.target.parentElement.style.transition = 'all 300ms ease';
+  counter.textContent = currentCount + ' / ' + maxChar;
+
+  if (currentCount > 0 && currentCount < 482) {
+    e.target.parentElement.style.border = '3px solid #00a652';
+  } else if (currentCount >= 482 && currentCount <= 690) {
+    e.target.parentElement.style.border = '3px solid #f36523';
+  } else if (currentCount > 690) {
+    e.target.parentElement.style.border = '3px solid #ee1c25';
+  }
+}
+
+textarea.addEventListener('keyup', changeCounter);
+  
+}); 
+//]]>
 </script>
