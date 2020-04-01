@@ -38,6 +38,10 @@ input, button, textarea, select {
   font: inherit;
 }
 
+input, button, input:focus, button:focus, select, select:focus {
+  border: none;
+}
+
 img:not([alt]) {
   filter: blur(10px);
 }
@@ -1435,6 +1439,98 @@ a.topic-button:hover::after {
 
 .fa_reputation a {
   float: none;
+}
+
+.page-title.solo {
+  font-family: "summeronregular", cursive;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+  color: white;
+}
+
+.wrapper.solo {
+  max-width: 1300px;
+  margin: auto;
+}
+.wrapper.solo .normal-panel {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem auto;
+  color: white;
+}
+.wrapper.solo .normal-panel h2 {
+  border-bottom: 3px solid #23a9b5;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+.wrapper.solo .normal-panel p {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper.solo .normal-panel .inputbox, .wrapper.solo .normal-panel input[type=text], .wrapper.solo .normal-panel select {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  cursor: text;
+  color: white;
+}
+.wrapper.solo .normal-panel .inputbox:focus,
+.wrapper.solo .normal-panel .inputbox:hover,
+.wrapper.solo .normal-panel input[type=text]:focus,
+.wrapper.solo .normal-panel input[type=text]:hover {
+  border-bottom: 1px solid #23a9b5;
+}
+.wrapper.solo .normal-panel option {
+  background-color: #161614;
+}
+.wrapper.solo .normal-panel input.button2 {
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+.wrapper.solo .normal-panel input.button2:hover {
+  color: #23a9b5;
+}
+.wrapper.solo .normal-panel .submit {
+  display: flex;
+  align-items: center;
+}
+.wrapper.solo .forumbg-table {
+  max-width: 100%;
+  background-color: white;
+}
+.wrapper.solo .table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.wrapper.solo .table thead {
+  background-color: #161614;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+}
+.wrapper.solo .table th {
+  padding: 0.7rem 1rem;
+}
+.wrapper.solo .table td.avatar-mini {
+  padding: 0.7rem 0;
+}
+.wrapper.solo .table td.avatar-mini img {
+  width: 100px;
+}
+.wrapper.solo .pagination-bar {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.wrapper.solo .pagination-bar span {
+  color: #9a9a8f;
 }
 
 body {

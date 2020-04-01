@@ -1,0 +1,95 @@
+@import 'variables';
+
+
+.page-title.solo {
+  font-family: $special-font;
+  text-align: center;
+  font-size: 2rem;
+  padding: $margin-tb;
+  color: $no-color;
+}
+
+.wrapper.solo {
+  max-width: 1300px;
+  margin: auto;
+
+  .normal-panel {
+    background-color: $nano-dark;
+    padding: $padding-tb $padding-rl;
+    margin: $margin-tb auto ;
+    color: $no-color;
+
+    h2 {
+      border-bottom: 3px solid $main-color;
+      margin-bottom: $margin-tb;
+      font-size: 1.2rem;
+    }
+
+    p { 
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .inputbox, input[type="text"], select {
+      background-color: transparent;
+      border-bottom: 1px solid $no-color;
+      cursor: text;
+      color: $no-color;
+    }
+
+    .inputbox:focus,
+    .inputbox:hover,
+    input[type="text"]:focus,
+    input[type="text"]:hover {
+      border-bottom: 1px solid $main-color;
+    }
+
+    option { background-color: $nano-dark; }
+
+    input.button2 {
+      background-color: transparent;
+      color: $no-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: all 200ms ease;
+      &:hover { color: $main-color; }
+    }
+
+    .submit {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .forumbg-table {
+    max-width: 100%;
+    background-color: $no-color;
+  }
+
+  .table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    thead {
+      background-color: $nano-dark;
+      color: $no-color;
+      text-transform: uppercase;
+      padding: $padding-tb $padding-rl;
+    }
+
+    th { padding: $padding-tb $padding-rl; }
+    td.avatar-mini { padding: $padding-tb 0; }
+    td.avatar-mini img { width: 100px; }
+  }
+
+  .pagination-bar {
+    background-color: $nano-dark;
+    padding: $padding-tb $padding-rl;
+    margin: 0 0 $margin-tb;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    span { color: lighten($nano-dark, $amount: 50%); }
+  }
+}
