@@ -1,0 +1,267 @@
+<div class="topic-maincontent">
+  <div class="topic-top">
+    <h2 class="topic-title">
+      <a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
+    </h2>
+    <div class="topic-top auth-buttons">
+      <!-- BEGIN switch_user_authpost -->
+      <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_NEW_TOPIC}">
+        <img src="{POST_IMG}" alt="{L_POST_NEW_TOPIC}" />
+      </a>
+      <!-- END switch_user_authpost -->
+      <!-- BEGIN switch_user_authreply -->
+      <a href="{U_POST_REPLY_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_REPLY_TOPIC}">
+        <img src="{REPLY_IMG}" alt="{L_POST_REPLY_TOPIC}" />
+      </a>
+      <!-- END switch_user_authreply -->
+    </div>
+  </div>
+
+    {POLL_DISPLAY}
+
+  <!-- BEGIN topicpagination -->
+  <div class="topic-top pagination">
+    {PAGINATION}
+  </div>
+  <!-- END topicpagination -->
+  <!-- BEGIN postrow -->
+  <!-- BEGIN displayed -->
+  <div id="{postrow.displayed.U_POST_ID}" class="post post--{postrow.displayed.U_POST_ID}"{postrow.displayed.THANK_BGCOLOR} style="{postrow.displayed.DISPLAYABLE_STATE}">
+    
+    <div class="post-profile-avatar" id="profile-avatar{postrow.displayed.U_POST_ID}">
+      {postrow.displayed.POSTER_AVATAR}
+    </div>
+
+    <div class="post-rpg">
+      {postrow.displayed.POSTER_RPG}
+    </div>
+
+    <div class="post-profile" id="profile-infos{postrow.displayed.U_POST_ID}">
+      <div class="post-profile-rank">
+        {postrow.displayed.RANK_IMAGE}
+      </div>
+
+      <div class="post-profile-name">
+        {postrow.displayed.POSTER_NAME}
+      </div>
+
+      <div class="post-profile-fields">
+        <!-- BEGIN profile_field -->
+          {postrow.displayed.profile_field.LABEL}
+          <span class="profile-field-content">
+            {postrow.displayed.profile_field.CONTENT}
+          </span>
+          {postrow.displayed.profile_field.SEPARATOR}
+        <!-- END profile_field -->
+      </div>
+
+      <div class="post-profile-online {postrow.displayed.ONLINE_IMG_NEW}">
+        <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/profil_online.png" alt="Online" />En ligne
+      </div>
+
+      <div class="post-profile-mp">
+        {postrow.displayed.PM_IMG}
+      </div>
+    </div>
+
+    <div class="post-body">
+      <div class="post-body-head">
+        <div class="topic-retitle">
+          <a href="{postrow.displayed.POST_URL}">
+            {postrow.displayed.POST_SUBJECT}
+          </a>
+          <span class="topic-date">
+            {postrow.displayed.POST_DATE_NEW}           
+          </span>
+        </div>
+
+        <!-- BEGIN switch_vote_active -->
+        <div class="vote">
+          <!-- BEGIN switch_vote -->
+            <a href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_PLUS}" class="ion-thumbsup"></a>
+          <!-- END switch_vote -->
+
+          <!-- BEGIN switch_vote -->
+            <a href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_MINUS}" class="ion-thumbsdown"></a>
+          <!-- END switch_vote -->
+
+          <!-- BEGIN switch_bar -->
+          <div class="vote-bar" title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}">
+            <div class="vote-bar-desc">
+              {postrow.displayed.switch_vote_active.L_VOTE_TITLE}
+            </div>
+
+            <div class="vote-bars">
+              <!-- BEGIN switch_vote_plus -->
+                <div class="vote-bar-plus" style="width:{postrow.displayed.switch_vote_active.switch_bar.switch_vote_plus.HEIGHT_PLUS}px;"></div>
+              <!-- END switch_vote_plus -->
+
+              <!-- BEGIN switch_vote_minus -->
+                <div class="vote-bar-minus" style="width:{postrow.displayed.switch_vote_active.switch_bar.switch_vote_minus.HEIGHT_MINUS}px;"></div>
+              <!-- END switch_vote_minus -->
+            </div>
+          </div>
+          <!-- END switch_bar -->
+
+          <!-- BEGIN switch_no_bar -->
+            <div title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}" class="vote-bar-empty"></div>
+          <!-- END switch_no_bar -->
+        </div>
+        <!-- END switch_vote_active -->
+        <ul class="profile-icons">
+          <li class="btn-quote">
+            <a href="{postrow.displayed.QUOTE_URL}" title="Citer">
+              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_quote.png" alt="Citer" />
+            </a>
+          </li>
+          <li class="btn-edit">
+            <a href="{postrow.displayed.EDIT_URL}" title="Editer">
+              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_edit.png" alt="Editer" />
+            </a>
+          </li>
+          <li class="btn-delete">
+            <a href="{postrow.displayed.DELETE_URL}" title="Sipprimer">
+              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_delete.png" alt="Supprimer" />
+            </a>
+          </li>
+          <li class="btn-thank">
+            <a href="{postrow.displayed.THANK_URL}" title="Super cookie, remercie un unique participant à ton sujet !"> {postrow.displayed.THANK_IMG}
+              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_merci.png" alt="Merci" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="post-body-content content">
+        {postrow.displayed.MESSAGE}
+      </div>
+      <div class="edited-message">
+        {postrow.displayed.EDITED_MESSAGE}
+      </div>
+
+      <!-- BEGIN switch_signature -->
+      <div class="post-signature" id="sig{postrow.displayed.U_POST_ID}">
+        {postrow.displayed.SIGNATURE_NEW}
+      </div>
+      <!-- END switch_signature -->
+    </div>
+  </div>
+  <!-- BEGIN first_post_br -->
+  <hr id="first-post-br" />
+  <!-- END first_post_br -->
+  <!-- END displayed -->
+  <!-- END postrow -->
+
+  <div class="topic-bottom">
+    <!-- BEGIN switch_user_logged_in -->
+    <!-- BEGIN watchtopic -->
+    <div class="topic-bottom-watch">
+      <span id="watch-topic">{S_WATCH_TOPIC}</span>
+    </div>
+    <!-- END watchtopic -->
+    <!-- END switch_user_logged_in -->  
+    <!-- BEGIN topicpagination -->
+    <div class="pagination">
+      {PAGINATION}
+    </div>
+    <!-- END topicpagination -->
+  </div>
+
+
+  <!-- BEGIN switch_forum_rules -->
+  <div class="topic-forum-rules">
+    <h4>On oublie pas !</h4>
+    <!-- BEGIN switch_forum_rule_image -->
+    <img src="{RULE_IMG_URL}" alt="Règles spéciales" />
+    <!-- END switch_forum_rule_image -->
+    <p class="rules content">
+      {RULE_MSG}
+    </p>
+  </div>
+  <!-- END switch_forum_rules -->
+
+  <!-- BEGIN switch_user_logged_in -->
+    <div class="topic-quickreply">
+      {QUICK_REPLY_FORM}
+    </div>
+      
+  <!-- END switch_user_logged_in -->
+
+  <div class="topic-actions">
+    <div class="topic-actions-auth">
+      <!-- BEGIN switch_user_authpost -->
+      <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_NEW_TOPIC}">
+        <img src="{POST_IMG}" alt="{L_POST_NEW_TOPIC}" />
+      </a>
+      <!-- END switch_user_authpost -->
+      <!-- BEGIN switch_user_authreply -->
+      <a href="{U_POST_REPLY_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_REPLY_TOPIC}">
+        <img src="{REPLY_IMG}" alt="{L_POST_REPLY_TOPIC}" />
+      </a>
+      <!-- END switch_user_authreply -->
+    </div>
+    
+    <!-- BEGIN viewtopic_bottom -->
+    <div class="topic-actions-moderation">
+      <h4><a href="https://www.youtube.com/watch?v=0ywAW3gjF_w">I got the power!</a></h4>
+      <p>{S_TOPIC_ADMIN}</p>
+    </div>
+    <!-- END viewtopic_bottom -->
+  </div>
+</div>
+
+<div class="path">
+  <a class="path-link nav" href="{U_INDEX}">[ Retour à l'index ]</a>{NAV_CAT_DESC}
+</div>
+
+<!-- BEGIN switch_image_resize -->
+<script type="text/javascript">
+//<![CDATA[
+$(resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} }));
+//]]>
+</script>
+<!-- END switch_image_resize -->
+
+<script type="text/javascript">          
+  $(".post").each(function() {
+    var ID = $(this).attr('id'); 
+    var rp = $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text();
+    var cookies = $('div.'+ID+'').children("span:contains(Cookies)").next("span.profile-field-content").text();
+    var result = parseInt(rp,10) - parseInt(cookies,10) + 5;
+    
+      $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text(result);
+return true;
+  });
+</script>
+
+<script type="text/javascript">
+  //<![CDATA[
+$(document).ready(function() {
+  var textarea = document.querySelector('.sceditor-container textarea');
+var maxChar = 650;
+var initialCount = textarea.value.length;
+
+var counter = document.createElement('span');
+counter.className = 'counter';
+counter.textContent = initialCount + ' / ' + maxChar; 
+textarea.parentElement.appendChild(counter);
+
+function changeCounter(e) {
+  var currentCount = e.target.textLength;
+  e.target.parentElement.style.transition = 'all 300ms ease';
+  counter.textContent = currentCount + ' / ' + maxChar;
+
+  if (currentCount > 0 && currentCount < 482) {
+    e.target.parentElement.style.border = '3px solid #00a652';
+  } else if (currentCount >= 482 && currentCount <= 690) {
+    e.target.parentElement.style.border = '3px solid #f36523';
+  } else if (currentCount > 690) {
+    e.target.parentElement.style.border = '3px solid #ee1c25';
+  }
+}
+
+textarea.addEventListener('keyup', changeCounter);
+  
+}); 
+//]]>
+</script>

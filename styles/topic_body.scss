@@ -1,0 +1,383 @@
+@import "variables";
+
+.topic-maincontent {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.topic-top {
+  .topic-actions-auth {
+    flex: 1;
+    text-align: right;
+  }
+
+  .topic-title {
+    font-family: $special-font;
+    text-align: center;
+    font-size: 2rem;
+    padding: $margin-tb;
+  }
+
+  &.auth-buttons {
+    text-align: right;
+    margin: $margin-tb;
+  }
+
+  &.pagination {
+    background-color: $nano-dark;
+    padding: $padding-tb $padding-rl;
+    margin: 1.5rem 0 -1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    span { color: lighten($nano-dark, $amount: 50%); }
+  }
+}
+  
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_sondage.jpg) no-repeat bottom right;
+  padding: $padding-tb $padding-rl;
+
+  h2 {
+    font-size: 1.1rem;
+    flex: 1;
+  }
+
+  .polls {
+    flex: 1 100%;
+    border: none;
+    border-top: 3px solid $main-color;
+    margin-top: $padding-tb;
+
+    & dt {
+      min-width: 10%;
+    }
+    
+    & dl {
+      display: flex;
+      align-items: center;
+    }
+
+    & dl:nth-last-child(2) dd:nth-last-child(1) {
+      width: 39%;
+      font-size: .9rem;
+      text-align: right;
+
+      a { color: $nano-dark; }
+    }
+  }
+
+  .poll-bar {
+    background-color: #a4a3a382;
+    position: relative;
+    height: 1.5rem;
+    width: 50%;
+    margin: 1rem 0;
+
+    &-bar {
+      background-color: $main-color;
+      height: 1.5rem;
+    }
+    
+    &-desc {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      color: $no-color;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.post {
+  background-color: $no-color;
+  margin: $margin-tb 0;
+  padding: $padding-tb $padding-rl;
+  display: flex;
+  flex-wrap: wrap;
+
+  &-profile-avatar {
+    background-color: $nano-dark;
+    width: 200px;
+    color: $no-color;
+  }
+
+  &-rpg {
+    background-color: $nano-dark;
+    color: $no-color;
+    padding: $padding-tb $padding-rl;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 200px;
+    font-size: 0;
+    flex: 1 calc(100% - 200px);
+    display: flex;
+    flex-wrap: wrap;
+
+    & a,
+    & table tr td:first-child,
+    & table tr:first-child {
+      display: none;
+    }
+
+    .rpg-title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  
+    & table {
+      border: none;
+      border-collapse: collapse;
+      font-size: .8rem;
+    }
+  
+    & table td {
+      border: none;
+      padding: 0.1rem 0.35rem;
+      text-align: center;
+      width: 10rem;
+    }
+  }
+
+  &-profile {
+    flex: 1;
+    padding: $padding-tb $padding-rl;
+    position: relative;
+    background-color: $nano-dark;
+    max-width: 200px;
+    font-size: .9rem;
+    color: $no-color;
+    display: flex;
+    flex-direction: column;
+
+    &-rank {
+      position: relative;
+      left: -2.9rem;
+      top: -12px;
+    }
+
+    .post-profile-name {
+      margin: $padding-tb 0;
+
+      a {font-family: $special-font;}
+    }
+
+    &-online.online {
+      display: initial;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $AdP;
+      padding-top: .7rem;
+      display: flex;
+        img { margin-right: $padding-tb; }
+    }
+
+    &-online {
+        display: none;
+    }
+
+    &-mp {
+      flex: 100%;
+      align-self: flex-end;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &-body {
+    flex: 1;
+    padding: $padding-tb $padding-rl;
+
+    &-head {
+      display: flex;
+      justify-content: space-between;
+
+      .profile-icons {
+        display: flex;
+        justify-content: space-around;
+        flex: 1 20%;
+      }
+      
+      .topic-retitle {
+        flex: 1 70%;
+        font-size: .8rem;
+        color: lighten($nano-dark, $amount: 50%);
+        a {
+          color: lighten($nano-dark, $amount: 50%);
+          margin-right: $padding-tb;
+        }
+      }
+      
+    }
+
+    &-content {
+      background-color: #F4F4F4;
+      padding: $padding-tb $padding-rl;
+    }
+  }
+
+  &-signature {
+    flex: 100%;
+  }
+}
+
+.topic-bottom {
+  background-color: $nano-dark;
+  color: lighten($nano-dark, $amount: 50%);
+  padding: $padding-tb $padding-rl;
+  margin: -1.5rem 0 $margin-tb;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+
+  span#watch-topic a {
+    margin-right: 1rem;
+    position: relative;
+    padding-left: 23px;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &[href$="?watch=topic"]::before {
+      background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+    }
+    &[href$="?unwatch=topic"]::before {
+      background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+    }
+  }
+}
+
+.topic-forum-rules {
+  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_reglement.jpg) no-repeat top right;
+  padding: $padding-tb $padding-rl;
+  margin: $margin-tb 0;
+  text-align: center;
+
+  & h4 { color: $zombie; }
+}
+
+.topic-quickreply {
+  background: $no-color url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
+
+  .h3 { 
+    background-color: $main-color;
+    color: $no-color;
+    padding: $padding-tb $padding-rl;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  #quick_reply input.button2 {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: $padding-tb $padding-rl;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $main-color;
+      cursor: pointer;
+    }
+  }
+
+  form#quick_reply {
+    padding: $padding-tb $padding-rl;
+    margin-top: -.7rem;
+  }
+
+  div#textarea_content {
+     margin-bottom: -20px;
+  }
+
+  .sceditor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-tb $padding-rl!important;
+  }
+
+  .sceditor-group {
+    display: flex!important;
+    justify-content: space-around;
+    background-color: #f4f4f4!important;
+    border: none!important;
+    flex: 1;
+
+    a.sceditor-button { padding: .7rem;}
+    .sceditor-button div { margin: -7px -7px; }
+  }
+}
+
+.topic-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+
+  &-moderation {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  &-moderation p {
+    display: flex;
+    margin-top: calc($padding-tb / 2);
+  }
+  .topic-actions-auth {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+
+
+
+
+
+
+.fa_vote, .fa_voted, .fa_count {
+  font-size: 12px;
+  display: inline-block !important;
+  width: auto !important;
+  float: none !important;
+  transition:300ms;
+}
+ 
+.fa_voted, .fa_vote:hover { opacity:0.4 }
+.fa_voted { cursor:default }
+ 
+.fa_count {
+  font-weight: bold;
+  margin: 0 3px;
+  cursor: default;
+}
+ 
+.fa_positive { color: $AdP }
+ 
+.fa_votebar, .fa_votebar_inner {
+  height: 3px;
+}
+ 
+.fa_votebar_inner {
+  background: $AdP;
+  transition: 300ms;
+}
+ 
+.fa_reputation a {
+  float: none;
+}

@@ -1,0 +1,1681 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul[class], ol[class] {
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+input, button, input:focus, button:focus, select, select:focus {
+  border: none;
+}
+
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header#page-header {
+  height: 30rem;
+}
+header#page-header h1#site-title {
+  font-family: "summeronregular", cursive;
+  font-size: 4rem;
+  color: white;
+  font-weight: 100;
+  position: relative;
+  top: 17rem;
+  text-align: center;
+}
+header#page-header h1#site-title span {
+  margin-right: 8rem;
+  transition: all 100ms ease-in-out;
+}
+header#page-header h1#site-title:hover span {
+  margin-right: 11rem;
+}
+header#page-header p#site-desc {
+  color: white;
+  font-family: "summeronregular", cursive;
+  font-weight: 100;
+  font-size: 1.2rem;
+  position: relative;
+  text-align: center;
+  padding-left: 30rem;
+  top: 18rem;
+}
+header#page-header #mamie_guitar {
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  z-index: 1;
+}
+header#page-header #mamie_guitar span {
+  font-size: 0.6rem;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: 6rem;
+  transform: rotate(14deg);
+  width: fit-content;
+  transition: all 100ms ease-in-out;
+  font-family: "summeronregular", cursive;
+}
+header#page-header #mamie_guitar:hover + #site-title span {
+  margin-right: 11rem;
+}
+header#page-header #mamie_guitar img {
+  display: inline;
+  position: relative;
+  left: -247px;
+}
+header#page-header #mamie_guitar:hover span {
+  font-size: 0.8rem;
+}
+header#page-header #headerbar-top {
+  background-color: white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+header#page-header #theme-button, header#page-header #nav-plus-button {
+  font-weight: 700;
+  padding: 1.3rem 1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+header#page-header #nav-plus-button img {
+  min-width: 30px;
+  max-width: 40%;
+}
+header#page-header #theme-button {
+  width: 10.5rem;
+  background-color: #161614;
+  color: white;
+}
+header#page-header #themes, header#page-header #nav-plus {
+  background-color: #161614;
+  color: white;
+  width: 10.5rem;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  transition: all 400ms ease-in-out;
+  padding: 0.7rem 1rem;
+}
+header#page-header #themes li.themes-list-item,
+header#page-header #themes li.nav-plus-list-item, header#page-header #nav-plus li.themes-list-item,
+header#page-header #nav-plus li.nav-plus-list-item {
+  margin: 0.7rem 0 0.7rem 1.5rem;
+  position: relative;
+}
+header#page-header #themes li.nav-plus-list-item, header#page-header #nav-plus li.nav-plus-list-item {
+  margin: 0.7rem 0;
+}
+header#page-header #themes li.themes-list-item::before, header#page-header #nav-plus li.themes-list-item::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.5rem;
+  top: 0.4rem;
+}
+header#page-header #themes a, header#page-header #nav-plus a {
+  margin: 1rem 0;
+  font-size: 0.8em;
+}
+header#page-header #themes .cross, header#page-header #nav-plus .cross {
+  align-self: flex-end;
+  width: 30px;
+}
+header#page-header #themes .cross:hover, header#page-header #nav-plus .cross:hover {
+  cursor: pointer;
+}
+header#page-header #nav-plus {
+  width: 12rem;
+}
+header#page-header .navbar {
+  display: flex;
+  align-items: center;
+}
+header#page-header .navbar.first {
+  justify-content: space-around;
+  min-width: 50vw;
+}
+header#page-header .navbar.first a {
+  color: #161614;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+header#page-header .navbar.first a::after {
+  height: 0.2rem;
+  background-color: black;
+}
+header#page-header .navbar.first li {
+  text-transform: uppercase;
+  margin: 1rem;
+}
+header#page-header .navbar.last {
+  flex: 2;
+  justify-content: flex-end;
+}
+header#page-header .navbar #i_icon_mini_logout,
+header#page-header .navbar #i_icon_mini_new_message,
+header#page-header .navbar #i_icon_mini_message,
+header#page-header .navbar #i_icon_mini_register,
+header#page-header .navbar #i_icon_mini_login,
+header#page-header .navbar img[alt="Panneau admin"] {
+  min-width: 30px;
+  max-width: 40%;
+}
+
+.category {
+  margin: auto;
+}
+.category .cat-title h2, .category #h1-category {
+  font-family: "summeronregular", cursive;
+  font-size: 3.8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.category li.forumrow:not(.level_one) {
+  display: none;
+}
+.category .forumrow-lastpost {
+  position: relative;
+  min-width: 200px;
+  padding: 0.7rem 1rem;
+}
+.category .forumrow-lastpost[title="Nouveaux messages"] {
+  border-width: 3px;
+  border-style: solid;
+  height: fit-content;
+  border-color: #23a9b5;
+}
+.category .forumrow-lastpost[title="Nouveaux messages"]::after {
+  top: calc(0.7rem * -1);
+  content: "Du neuf ! ";
+  font-family: "summeronregular", cursive;
+  font-size: 0.6rem;
+  position: absolute;
+  right: 5%;
+  padding: 0.1rem 0.7rem 0.7rem;
+  background-color: white;
+  color: #23a9b5;
+}
+.category .forumrow-lastpost a img {
+  display: inline;
+}
+
+/* CATEGORIES NON NM : général et faille */
+#cat_general .forumrows, #cat_faille .forumrows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+#cat_general .forumrows .forumrow.level_one, #cat_faille .forumrows .forumrow.level_one {
+  padding: 1.2rem;
+  min-width: 470px;
+  max-width: 520px;
+  width: 100%;
+  min-height: 330px;
+  margin: 1.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#cat_general .forumrows .forumrow.level_one .forumrow-title, #cat_faille .forumrows .forumrow.level_one .forumrow-title {
+  padding: 0.7rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.1rem;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content {
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-desc, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-desc {
+  padding: 0.7rem 1rem;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content ul.forum-desc-links, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content ul.forum-desc-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content ul.forum-desc-links a, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content ul.forum-desc-links a {
+  padding-left: 0.7rem;
+  text-transform: uppercase;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-stats, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-stats {
+  text-align: right;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-right: 1rem;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost a, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost a {
+  font-size: 1rem;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost a[href^="/u"]:not([href$="/u1"]) span, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost a[href^="/u"]:not([href$="/u1"]) span {
+  color: white !important;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"], #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"] {
+  background-color: rgba(35, 169, 181, 0.1);
+  border: none;
+  border-bottom: 7px solid #23a9b5;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  bottom: -2.7rem;
+  top: unset;
+  right: 0;
+  background-color: transparent;
+  content: "Y'a du neuf ! ";
+  color: #23a9b5;
+  font-size: 0.7rem;
+  width: fit-content;
+  padding-right: 1rem;
+  transform: rotate(-6deg);
+}
+
+#cat_general .forumrows .forumrow-title {
+  background-color: #23a9b5;
+}
+
+#cat_faille .forumrows .forumrow-title {
+  background-color: #23a9b5;
+}
+
+/* CATEGORIE NANO. MONDES */
+#cat_NM {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#cat_NM .wrapper-list {
+  background-color: #161614;
+}
+#cat_NM nav.onglets {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+}
+#cat_NM li#general {
+  justify-content: center;
+}
+#cat_NM li#general .forumrow-title {
+  display: none;
+}
+#cat_NM .listLieuxNM {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+  min-height: 53rem;
+  max-height: 92vh;
+}
+#cat_NM .listLieuxNM ul.forumrows {
+  max-width: 1300px;
+}
+#cat_NM .listLieuxNM li.forumrow {
+  display: block;
+  padding: 0.7rem 1rem;
+}
+#cat_NM .listLieuxNM li.forumrow dl.forumrow-content {
+  font-size: 0.9rem;
+  display: flex;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM {
+  align-self: flex-start;
+  position: absolute;
+  width: 30%;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM .forumrow-title {
+  display: none;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dl.forumrow-content {
+  flex-direction: column;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-desc {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-desc .nm-desc {
+  margin: 1.5rem 0;
+  padding: 0.7rem 1rem;
+  max-width: 348px;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-desc ul.nm-nav {
+  border-width: 3px;
+  border-style: solid;
+  padding: 0.7rem;
+  max-width: 348px;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-desc ul.nm-nav::after {
+  content: "Comprendre l'univers";
+  position: absolute;
+  top: calc(0.7rem * -2);
+  right: 5%;
+  background-color: #161614;
+  padding: 0.7rem;
+  font-family: "summeronregular", cursive;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-desc li.nm-nav-item {
+  position: relative;
+  margin: calc(1.5rem / 2);
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-lastpost {
+  display: none;
+}
+#cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-stats {
+  align-self: flex-end;
+  margin: 0.7rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  color: #9a9a8f;
+  display: block;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) {
+  margin: calc(0.7rem / 2) 1.5rem;
+  width: calc(70% - 1.5rem * 2);
+  background-color: white;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) a:not([href^="/u"]) {
+  color: #161614;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) a:not([href^="/u"]):hover::after {
+  background-color: #161614;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) dd.forumrow-desc {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.35rem 0 0;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) dd.forumrow-lastpost span {
+  display: inherit;
+  text-align: right;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) dd.forumrow-lastpost img {
+  display: initial;
+}
+#cat_NM .listLieuxNM li.forumrow:not(.forumNM) dd.forumrow-stats {
+  display: none;
+}
+#cat_NM .visible {
+  display: flex;
+}
+
+#cat_NM .forumrows li:first-of-type dd.forumrow-stats {
+  display: none;
+}
+#cat_NM .forumrows li:first-of-type #boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  padding: 0;
+  max-width: 90vw;
+  margin: auto;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box {
+  width: 80%;
+  max-width: 470px;
+  min-height: 280px;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 800px) {
+  #cat_NM .forumrows li:first-of-type #boxes .box {
+    width: 43%;
+    max-width: 410px;
+  }
+}
+@media (min-width: 1280px) {
+  #cat_NM .forumrows li:first-of-type #boxes .box {
+    width: 26%;
+  }
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-title a {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-desc {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-player {
+  font-size: 0.9rem;
+  flex: 2;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-details {
+  font-size: 0.9rem;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-popup {
+  align-self: flex-end;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-event-status {
+  padding: 0.7rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-event-link {
+  background-color: white;
+  padding: 0.7rem 1rem;
+  color: #161614;
+  text-align: center;
+}
+#cat_NM .forumrows li:first-of-type #boxes .box-event-link::after {
+  bottom: 0;
+  height: 0.2rem;
+}
+
+/* GESTION COULEUR PAR NM */
+#box_MM .box-title a,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #a963a9;
+}
+
+#box_AP .box-title a,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #0054a5;
+}
+
+#box_zombie .box-title a,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #ee1c25;
+}
+
+#box_AdP .box-title a,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #00a652;
+}
+
+#box_xmen .box-title a,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #f36523;
+}
+
+#box_chimeres .box-title a,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #e9bd28;
+}
+
+#box_MM .box-event-status,
+#box_MM .box-event-link::after,
+.listLieuxNM:nth-of-type(1) .nm-desc,
+li.themes-list-item.color-micro::before {
+  background-color: #a963a9;
+}
+
+#box_AP .box-event-status,
+#box_AP .box-event-link::after,
+.listLieuxNM:nth-of-type(2) .nm-desc,
+li.themes-list-item.color-AP::before {
+  background-color: #0054a5;
+}
+
+#box_zombie .box-event-status,
+#box_zombie .box-event-link::after,
+.listLieuxNM:nth-of-type(3) .nm-desc,
+li.themes-list-item.color-zombie::before {
+  background-color: #ee1c25;
+}
+
+#box_AdP .box-event-status,
+#box_AdP .box-event-link::after,
+.listLieuxNM:nth-of-type(4) .nm-desc,
+li.themes-list-item.color-AdP::before {
+  background-color: #00a652;
+}
+
+#box_xmen .box-event-status,
+#box_xmen .box-event-link::after,
+.listLieuxNM:nth-of-type(5) .nm-desc,
+li.themes-list-item.color-xmen::before {
+  background-color: #f36523;
+}
+
+#box_chimeres .box-event-status,
+#box_chimeres .box-event-link::after,
+.listLieuxNM:nth-of-type(6) .nm-desc,
+li.themes-list-item.color-chimeres::before {
+  background-color: #e9bd28;
+}
+
+.listLieuxNM:nth-of-type(1) ul.nm-nav,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #a963a9;
+}
+
+.listLieuxNM:nth-of-type(2) ul.nm-nav,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #0054a5;
+}
+
+.listLieuxNM:nth-of-type(3) ul.nm-nav,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #ee1c25;
+}
+
+.listLieuxNM:nth-of-type(4) ul.nm-nav,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #00a652;
+}
+
+.listLieuxNM:nth-of-type(5) ul.nm-nav,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #f36523;
+}
+
+.listLieuxNM:nth-of-type(6) ul.nm-nav,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #e9bd28;
+}
+
+.viewonline {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 90vw;
+  text-transform: uppercase;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 12% top;
+  justify-content: center;
+  height: 45rem;
+  align-content: center;
+}
+.viewonline a[href^="/u"] {
+  text-decoration: none;
+  padding-left: 0.2rem;
+}
+.viewonline-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 450px;
+}
+.viewonline-stats #TU, .viewonline-stats #TP, .viewonline-stats #TUO span, .viewonline-stats #LIUL {
+  background-color: #161614;
+  color: white;
+  padding: 0.7rem 1rem;
+  margin: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.viewonline-stats div#TUO {
+  display: flex;
+  justify-content: center;
+}
+.viewonline-stats div#TUO span:first-of-type {
+  background-color: #23a9b5;
+}
+.viewonline-stats div#LIUL {
+  flex-basis: 85%;
+  height: 5rem;
+  display: flex;
+  font-size: 0.9rem;
+}
+.viewonline-groups {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 450px;
+}
+.viewonline-groups-links {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.viewonline-groups-links a {
+  font-size: 1.1rem;
+}
+.viewonline-groups-links a:nth-of-type(1) {
+  color: #23a9b5;
+}
+.viewonline-groups-links a:nth-of-type(1):hover::after {
+  height: 0.15rem;
+  background-color: #23a9b5;
+}
+.viewonline-groups-links a:nth-of-type(2) {
+  color: #ee1c25;
+}
+.viewonline-groups-links a:nth-of-type(2):hover::after {
+  height: 0.15rem;
+  background-color: #ee1c25;
+}
+.viewonline-groups-links a:nth-of-type(3) {
+  color: #00a652;
+}
+.viewonline-groups-links a:nth-of-type(3):hover::after {
+  height: 0.15rem;
+  background-color: #00a652;
+}
+.viewonline-groups-links a:nth-of-type(4) {
+  color: #fafafa;
+}
+.viewonline-groups-links a:nth-of-type(4):hover::after {
+  height: 0.15rem;
+  background-color: #fafafa;
+}
+.viewonline-groups-info {
+  background-color: white;
+  padding: 0.7rem 1rem;
+  color: darkgrey;
+  padding: 0.7rem 1rem;
+  height: 8rem;
+  align-self: flex-start;
+  width: 100%;
+}
+.viewonline-groups-info em {
+  font-size: 0.8rem;
+}
+.viewonline-groups-network {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.viewonline-bottom {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  padding-left: 4%;
+}
+.viewonline-bottom div#connected, .viewonline-bottom-text {
+  flex: 1;
+  margin: 0.7rem;
+}
+.viewonline-bottom div#connected {
+  background-color: white;
+  display: flex;
+  font-size: 0.8rem;
+  height: 6rem;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  padding: 0.7rem 1rem;
+  align-content: flex-start;
+}
+.viewonline-bottom div#connected a span:not([style="color:#EE1C25"]) {
+  /* affiche la couleur que pour les admins dans les dernières connexion */
+  color: black !important;
+}
+.viewonline-bottom div#connected p {
+  font-weight: 700;
+}
+.viewonline-bottom-text {
+  font-family: "summeronregular", cursive;
+  color: white;
+  flex-basis: 25%;
+}
+
+/* partenaires */
+#footer-partner {
+  background-color: #161614;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 25rem;
+}
+#footer-partner #normal, #footer-partner #VIP {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90vw;
+  max-width: 900px;
+}
+#footer-partner #VIP {
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  color: white;
+}
+#footer-partner #VIP a {
+  color: white;
+}
+#footer-partner #normal a {
+  transition: all 200ms ease-in-out;
+}
+#footer-partner #normal a:hover::after {
+  display: none;
+}
+#footer-partner #normal a img {
+  padding: 0.3rem;
+  margin: 0.6rem;
+  background-color: white;
+}
+#footer-partner #normal a:hover img {
+  background-color: #23a9b5;
+}
+
+footer#page-footer {
+  background-color: #161614;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  color: grey;
+}
+
+footer#page-footer a {
+  color: grey;
+}
+
+.forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
+  width: 166px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.forumbg {
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
+  max-width: 1100px;
+  width: 90vw;
+  background-color: white;
+}
+.forumbg li.header {
+  background-color: #161614;
+  color: white;
+  text-align: center;
+  padding: 0.7rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.forumbg li.row {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.forumbg li.row .topiclist-lastpost {
+  flex: 1;
+  display: flex;
+  font-size: 0.9rem;
+}
+.forumbg li.row .topiclist-lastpost .posts-views {
+  color: #9a9a8f;
+}
+.forumbg li.row .topiclist-lastpost .lastpost {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 1rem;
+  position: relative;
+  margin-left: 0.35rem;
+  white-space: nowrap;
+}
+.forumbg li.row .topiclist-lastpost .lastpost.newpost {
+  border-width: 3px;
+  border-style: solid;
+  height: fit-content;
+  border-color: #23a9b5;
+}
+.forumbg li.row .topiclist-lastpost .lastpost.newpost::after {
+  top: calc(0.7rem * -1);
+  content: "Du neuf ! ";
+  font-family: "summeronregular", cursive;
+  font-size: 0.6rem;
+  position: absolute;
+  right: 5%;
+  padding: 0.1rem 0.7rem 0.7rem;
+  background-color: white;
+  color: #23a9b5;
+}
+.forumbg li.row .topiclist-lastpost .topic-etiquette {
+  width: 30px;
+  background-position-y: center;
+}
+.forumbg li.row .dterm {
+  flex: 2;
+}
+.forumbg li.row .dterm h2.topic-title.hierarchy a {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #161614;
+}
+.forumbg li.row .dterm .topic-title-container {
+  text-align: right;
+}
+.forumbg li.row .dterm .topic-description {
+  color: #9a9a8f;
+  font-size: 0.9rem;
+}
+.forumbg li.row .dterm .topic-goto-page a {
+  color: black;
+}
+.forumbg li.row .dterm .topic-title.hierarchy a:first-of-type:hover::after,
+.forumbg li.row .dterm .topic-goto-page a:hover::after {
+  background-color: #161614;
+}
+.forumbg .topics-list-bottom {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.forumbg .topics-list-bottom-pagination {
+  color: #9a9a8f;
+  justify-self: flex-end;
+  margin-bottom: calc(-0.7rem);
+}
+.forumbg .topics-list-bottom span#read-forum a, .forumbg .topics-list-bottom span#watch-forum a {
+  margin-right: 1rem;
+  position: relative;
+  padding-left: 23px;
+}
+.forumbg .topics-list-bottom span#read-forum a::before, .forumbg .topics-list-bottom span#watch-forum a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.forumbg .topics-list-bottom span#read-forum a::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_lu.png);
+}
+.forumbg .topics-list-bottom span#watch-forum a[href$="?watch=forum"]::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+}
+.forumbg .topics-list-bottom span#watch-forum a[href$="?unwatch=forum"]::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+}
+
+a.topic-button {
+  margin: 1rem auto;
+  max-width: 1100px;
+  width: 90vw;
+  display: block;
+}
+a.topic-button:hover::after {
+  display: none;
+}
+
+.forumview ul.forumrows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.forumview ul.forumrows li.forumrow.level_two {
+  display: flex;
+  min-width: 45rem;
+  max-width: 50rem;
+  width: 100%;
+  margin: 1.5rem;
+  height: 12rem;
+  padding: 0.7rem 1rem;
+  position: relative;
+  background-color: white;
+  flex-direction: column;
+}
+.forumview ul.forumrows li.forumrow.level_two::after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12rem 6rem 0 0;
+  border-color: white transparent transparent transparent;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 34%;
+}
+.forumview ul.forumrows h2.forumrow-title {
+  width: 43%;
+  position: relative;
+  z-index: 1;
+}
+.forumview ul.forumrows h2.forumrow-title a {
+  color: #161614;
+}
+.forumview ul.forumrows dl.forumrow-content {
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  flex: 2;
+}
+.forumview ul.forumrows dl.forumrow-content dd.forumrow-desc {
+  background-color: #161614;
+  color: white;
+  padding: 0.7rem 1rem 0.7rem 5.3rem;
+  height: calc(100% - 2 * 0.7rem);
+  width: 64%;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.forumview ul.forumrows dl.forumrow-content dd.forumrow-desc ul.forum-desc-links {
+  display: flex;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.forumview ul.forumrows dl.forumrow-content dd.forumrow-desc ul.forum-desc-links li {
+  padding-left: 0.7rem;
+}
+.forumview ul.forumrows dl.forumrow-content dd.forumrow-stats {
+  width: 25%;
+  padding: 0 1rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  color: #9a9a8f;
+  flex: 2;
+}
+.forumview ul.forumrows dl.forumrow-content dd.forumrow-lastpost {
+  width: 25%;
+}
+.forumview ul.forumrows dl.forumrow-content dd.forumrow-lastpost span a {
+  color: #161614;
+}
+
+.path {
+  text-align: center;
+  background-color: #161614;
+  color: #161614;
+  width: fit-content;
+  margin: calc(2 * 2rem) auto 0;
+  padding: 0.7rem 1rem;
+  position: relative;
+}
+.path::after, .path::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  content: "";
+  top: 0;
+}
+.path::before {
+  border-width: 0 0 3rem 3rem;
+  border-color: transparent transparent #161614 transparent;
+  left: -3rem;
+}
+.path::after {
+  border-width: 3rem 0 0 3rem;
+  border-color: transparent transparent transparent #161614;
+  right: -3rem;
+}
+.path .nav span span:not([data-ong])::before {
+  content: url(https://i.servimg.com/u/f18/17/49/10/89/arrow_14.png);
+  margin-right: 0.5rem;
+}
+.path .nav span[data-ong] {
+  display: none;
+}
+.path span[data-cat=NM] {
+  margin-right: -1rem;
+}
+
+.topic-maincontent {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.topic-top .topic-actions-auth {
+  flex: 1;
+  text-align: right;
+}
+.topic-top .topic-title {
+  font-family: "summeronregular", cursive;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+.topic-top.auth-buttons {
+  text-align: right;
+  margin: 1.5rem;
+}
+.topic-top.pagination {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem 0 -1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.topic-top.pagination span {
+  color: #9a9a8f;
+}
+
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_sondage.jpg) no-repeat bottom right;
+  padding: 0.7rem 1rem;
+}
+.panel h2 {
+  font-size: 1.1rem;
+  flex: 1;
+}
+.panel .polls {
+  flex: 1 100%;
+  border: none;
+  border-top: 3px solid #23a9b5;
+  margin-top: 0.7rem;
+}
+.panel .polls dt {
+  min-width: 10%;
+}
+.panel .polls dl {
+  display: flex;
+  align-items: center;
+}
+.panel .polls dl:nth-last-child(2) dd:nth-last-child(1) {
+  width: 39%;
+  font-size: 0.9rem;
+  text-align: right;
+}
+.panel .polls dl:nth-last-child(2) dd:nth-last-child(1) a {
+  color: #161614;
+}
+.panel .poll-bar {
+  background-color: #a4a3a382;
+  position: relative;
+  height: 1.5rem;
+  width: 50%;
+  margin: 1rem 0;
+}
+.panel .poll-bar-bar {
+  background-color: #23a9b5;
+  height: 1.5rem;
+}
+.panel .poll-bar-desc {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.post {
+  background-color: white;
+  margin: 1.5rem 0;
+  padding: 0.7rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-profile-avatar {
+  background-color: #161614;
+  width: 200px;
+  color: white;
+}
+.post-rpg {
+  background-color: #161614;
+  color: white;
+  padding: 0.7rem 1rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 200px;
+  font-size: 0;
+  flex: 1 calc(100% - 200px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-rpg a, .post-rpg table tr td:first-child, .post-rpg table tr:first-child {
+  display: none;
+}
+.post-rpg .rpg-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.post-rpg table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+.post-rpg table td {
+  border: none;
+  padding: 0.1rem 0.35rem;
+  text-align: center;
+  width: 10rem;
+}
+.post-profile {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  position: relative;
+  background-color: #161614;
+  max-width: 200px;
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.post-profile-rank {
+  position: relative;
+  left: -2.9rem;
+  top: -12px;
+}
+.post-profile .post-profile-name {
+  margin: 0.7rem 0;
+}
+.post-profile .post-profile-name a {
+  font-family: "summeronregular", cursive;
+}
+.post-profile-online.online {
+  display: initial;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #00a652;
+  padding-top: 0.7rem;
+  display: flex;
+}
+.post-profile-online.online img {
+  margin-right: 0.7rem;
+}
+.post-profile-online {
+  display: none;
+}
+.post-profile-mp {
+  flex: 100%;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+}
+.post-body {
+  flex: 1;
+  padding: 0.7rem 1rem;
+}
+.post-body-head {
+  display: flex;
+  justify-content: space-between;
+}
+.post-body-head .profile-icons {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 20%;
+}
+.post-body-head .topic-retitle {
+  flex: 1 70%;
+  font-size: 0.8rem;
+  color: #9a9a8f;
+}
+.post-body-head .topic-retitle a {
+  color: #9a9a8f;
+  margin-right: 0.7rem;
+}
+.post-body-content {
+  background-color: #F4F4F4;
+  padding: 0.7rem 1rem;
+}
+.post-signature {
+  flex: 100%;
+}
+
+.topic-bottom {
+  background-color: #161614;
+  color: #9a9a8f;
+  padding: 0.7rem 1rem;
+  margin: -1.5rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.topic-bottom span#watch-topic a {
+  margin-right: 1rem;
+  position: relative;
+  padding-left: 23px;
+}
+.topic-bottom span#watch-topic a::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.topic-bottom span#watch-topic a[href$="?watch=topic"]::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+}
+.topic-bottom span#watch-topic a[href$="?unwatch=topic"]::before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+}
+
+.topic-forum-rules {
+  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_reglement.jpg) no-repeat top right;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.topic-forum-rules h4 {
+  color: #ee1c25;
+}
+
+.topic-quickreply {
+  background: white url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
+}
+.topic-quickreply .h3 {
+  background-color: #23a9b5;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.topic-quickreply #quick_reply input.button2 {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  transition: all 200ms ease-in-out;
+}
+.topic-quickreply #quick_reply input.button2:hover {
+  color: #23a9b5;
+  cursor: pointer;
+}
+.topic-quickreply form#quick_reply {
+  padding: 0.7rem 1rem;
+  margin-top: -0.7rem;
+}
+.topic-quickreply div#textarea_content {
+  margin-bottom: -20px;
+}
+.topic-quickreply .sceditor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem !important;
+}
+.topic-quickreply .sceditor-group {
+  display: flex !important;
+  justify-content: space-around;
+  background-color: #f4f4f4 !important;
+  border: none !important;
+  flex: 1;
+}
+.topic-quickreply .sceditor-group a.sceditor-button {
+  padding: 0.7rem;
+}
+.topic-quickreply .sceditor-group .sceditor-button div {
+  margin: -7px -7px;
+}
+
+.topic-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem;
+}
+.topic-actions-moderation {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.topic-actions-moderation p {
+  display: flex;
+  margin-top: calc($padding-tb / 2);
+}
+.topic-actions .topic-actions-auth {
+  flex: 1;
+  text-align: right;
+}
+
+.fa_vote, .fa_voted, .fa_count {
+  font-size: 12px;
+  display: inline-block !important;
+  width: auto !important;
+  float: none !important;
+  transition: 300ms;
+}
+
+.fa_voted, .fa_vote:hover {
+  opacity: 0.4;
+}
+
+.fa_voted {
+  cursor: default;
+}
+
+.fa_count {
+  font-weight: bold;
+  margin: 0 3px;
+  cursor: default;
+}
+
+.fa_positive {
+  color: #00a652;
+}
+
+.fa_votebar, .fa_votebar_inner {
+  height: 3px;
+}
+
+.fa_votebar_inner {
+  background: #00a652;
+  transition: 300ms;
+}
+
+.fa_reputation a {
+  float: none;
+}
+
+.page-title.solo {
+  font-family: "summeronregular", cursive;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+  color: white;
+}
+
+.wrapper.solo {
+  max-width: 1300px;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+.wrapper.solo .group-time-info {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #9a9a8f;
+}
+.wrapper.solo .border-bottom {
+  border-bottom: 3px solid #23a9b5;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
+  font-weight: 700;
+}
+.wrapper.solo .normal-panel {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem auto;
+  color: white;
+  border: none;
+}
+.wrapper.solo .normal-panel p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.wrapper.solo .normal-panel dt label {
+  color: #23a9b5;
+}
+.wrapper.solo .normal-panel .inputbox, .wrapper.solo .normal-panel input[type=text], .wrapper.solo .normal-panel select {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  cursor: text;
+  color: white;
+}
+.wrapper.solo .normal-panel .inputbox:focus,
+.wrapper.solo .normal-panel .inputbox:hover,
+.wrapper.solo .normal-panel input[type=text]:focus,
+.wrapper.solo .normal-panel input[type=text]:hover {
+  border-bottom: 1px solid #23a9b5;
+}
+.wrapper.solo .normal-panel option {
+  background-color: #161614;
+}
+.wrapper.solo .normal-panel input.button2 {
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 200ms ease;
+}
+.wrapper.solo .normal-panel input.button2:hover {
+  color: #23a9b5;
+  cursor: pointer;
+}
+.wrapper.solo .normal-panel .submit {
+  display: flex;
+  align-items: center;
+}
+.wrapper.solo .forumbg-table {
+  max-width: 100%;
+  background-color: white;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem auto;
+}
+.wrapper.solo .table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  background-color: white;
+  margin: 1.5rem auto 0;
+}
+.wrapper.solo .table thead {
+  background-color: #161614;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+}
+.wrapper.solo .table th {
+  padding: 0.7rem 1rem;
+}
+.wrapper.solo .table td {
+  padding: calc(0.7rem / 2) 0.7rem;
+}
+.wrapper.solo .table td.avatar-mini {
+  padding: 0.7rem 0;
+}
+.wrapper.solo .table td.avatar-mini img {
+  width: 100px;
+}
+.wrapper.solo .pagination-bar {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.wrapper.solo .pagination-bar span {
+  color: #9a9a8f;
+}
+
+.jqmOverlay {
+  background-color: white;
+}
+
+#find_username {
+  width: 500px;
+  background-image: none;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 250px);
+  text-align: center;
+  background-color: white;
+}
+#find_username .panel {
+  background-image: none;
+}
+#find_username .panel p {
+  margin-bottom: 1.5rem;
+}
+#find_username #simple-wrap {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+}
+#find_username .page-title.jqDrag {
+  color: white;
+  font-size: 1.3rem;
+}
+#find_username input {
+  background-color: #23a9b5;
+  color: white;
+  padding: calc(0.7rem / 2) 1rem;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 100%;
+  background-color: #d2d2d2;
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ban-compact-3.jpg), url(http://memoires-du-monde.fr/upload/NRPV8/V9/texture-fond.jpg);
+  background-position: center 4.1rem, left top;
+  background-repeat: no-repeat, repeat;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a.gensmall[href^="/u"] {
+  text-decoration: none;
+  font-size: 0.9rem !important;
+}
+
+a[href^="/u"] {
+  text-decoration: none;
+}
+
+a:not([href^="/u"]) {
+  text-decoration: none;
+  color: white;
+  font-variant: small-caps;
+  font-weight: 700;
+  position: relative;
+}
+
+a:not([href^="/u"])::after,
+li.nm-nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.12rem;
+  background-color: white;
+  left: 0;
+  bottom: -0.3rem;
+  opacity: 0;
+  transform: translateZ(-30%);
+  transition: all 200ms ease-in-out;
+}
+
+a:not([href^="/u"]):hover::after,
+li.nm-nav-item:hover::after {
+  width: 100%;
+  transform: translateZ(0);
+  opacity: 1;
+  font-variant: small-caps;
+}
+
+#logo {
+  height: 385px;
+  width: 100vw;
+}
+
+input.button1 {
+  cursor: pointer;
+  background-color: #23a9b5;
+  color: white;
+  padding: calc(0.7rem / 2) 1rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  transition: all 200ms ease;
+}
+input.button1:hover {
+  color: #161614;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  border: 2px solid #161614;
+  transition: all 300ms ease-in-out;
+}
+input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background: #23a9b5;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

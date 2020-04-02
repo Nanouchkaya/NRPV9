@@ -1,0 +1,189 @@
+@import "variables";
+
+header#page-header {
+  height: 30rem;
+
+  h1#site-title {
+    font-family: $special-font;
+    font-size: 4rem;
+    color: $no-color;
+    font-weight: 100;
+    position: relative;
+    top: 17rem;
+    text-align: center;
+    //animation: fromCenter 150ms ease-in-out 300ms forwards;
+
+    span {
+      margin-right: 8rem;
+      transition: all 100ms ease-in-out;
+    }
+
+    &:hover span {
+      margin-right: 11rem;
+    }
+  }
+
+  p#site-desc {
+    color: $no-color;
+    font-family: $special-font;
+    font-weight: 100;
+    font-size: 1.2rem;
+    position: relative;
+    text-align: center;
+    padding-left: 30rem;
+    top: 18rem;
+    //animation: fade 150ms ease-in-out 350ms forwards;
+  }
+
+  #mamie_guitar {
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    z-index: 1;
+
+     span {
+      font-size: .6rem;
+      position: absolute;
+      left: 0;
+      text-transform: uppercase;
+      top: 6rem;
+      transform: rotate(14deg);
+      width: fit-content;
+      transition: all 100ms ease-in-out;
+      font-family: $special-font;
+    }
+
+    &:hover + #site-title span {
+      margin-right: 11rem;
+    }
+    
+    img {
+      display: inline;
+      position: relative;
+      left: -247px;
+    }
+
+    &:hover span {
+      font-size: .8rem;
+    }
+  }
+
+  #headerbar-top {
+    background-color: $no-color;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  #theme-button, #nav-plus-button {
+    font-weight: 700;
+    padding: 1.3rem 1rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  #nav-plus-button img {
+    min-width: 30px;
+    max-width: 40%;
+  }
+  
+  #theme-button {
+    width: 10.5rem;
+    background-color: $nano-dark;
+    color: $no-color;
+  }
+  
+  #themes, #nav-plus {
+    background-color: $nano-dark;
+    color: $no-color;
+    width: 10.5rem;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left:0;
+    transition: all 400ms ease-in-out;
+    padding: .7rem 1rem;
+
+    li.themes-list-item,
+    li.nav-plus-list-item {
+      margin: .7rem 0 .7rem 1.5rem;
+      position: relative;
+    }
+    
+    li.nav-plus-list-item { margin: $padding-tb 0;}
+
+    li.themes-list-item::before {
+      content: '';
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      left: -1.5rem;
+      top: .4rem;
+    }
+
+    a {
+      margin: 1rem 0;
+      font-size: .8em;
+    }
+
+
+    .cross {
+      align-self: flex-end;
+      width: 30px;
+    
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  #nav-plus { width: 12rem; }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    
+    &.first {
+      justify-content: space-around;
+      min-width: 50vw;
+    
+      a {
+        color: $nano-dark;
+        font-weight: 700;
+        font-size: .9rem;
+      
+        &::after {
+          height: .2rem;
+          background-color: black;
+        }
+      }
+
+      li {
+        text-transform: uppercase;
+        margin: 1rem;
+      }
+    }
+    
+    &.last {
+      flex: 2;
+      justify-content: flex-end;
+    }
+
+    #i_icon_mini_logout,
+    #i_icon_mini_new_message,
+    #i_icon_mini_message,
+    #i_icon_mini_register,
+    #i_icon_mini_login,
+    img[alt="Panneau admin"] {
+      min-width: 30px;
+      max-width: 40%;
+    }
+  }
+}

@@ -1,0 +1,160 @@
+<!-- BEGIN html_validation -->
+<div>
+	<main>
+<!-- END html_validation -->
+</main>              			
+
+
+<footer id="page-footer">
+<!-- BEGIN disable_viewonline -->
+	<div class="viewonline">
+    <div class="viewonline-stats">       
+      <span id="TU">{TOTAL_USERS}</span>
+      <span id="TP">{TOTAL_POSTS}</span>
+      <div id="TUO">
+        {TOTAL_USERS_ONLINE}
+      </div>
+      <div id="LIUL">
+        {LOGGED_IN_USER_LIST}
+      </div>
+    </div>
+    
+<div class="viewonline-groups"> 
+<div class="viewonline-groups-links">
+	<a onclick="changeGroupInfo('Les administratices, maîtresses suprêmes de la bienveillante nanitude, valident tes fiches (si t\'es sage) et cuisinent les meilleurs cookies de la Terre.')">Boss</a> 
+	<a onclick="changeGroupInfo('Joueurs et joueuses avec un ou plusieurs (cas le plus probable) personnages validés.<br />Sans eux, Nano. RP serait comme un cookie sans ses pépites <3')">Nanites</a> 
+	<a onclick="changeGroupInfo('Membre récemment inscrit-e dont on attend la fiche de présentation avec impatience !<br />Si tu veux marquer des points dans le coeur de Nano., rejoins Alpha Perdu <em>hihihi</em>')">Guguss</a>
+	<a onclick="changeGroupInfo('La sonnette d\'alarme, si tu atterris ici c\'est que tu viens plus depuis un moment et ton compte risque d\'être supprimé. <br />Ou alors, t\'es un vieux de la vieille <em>nostalgique</em>')">Souvenirs</a>
+</div>
+
+  <div class="viewonline-groups-info">Les administratices, maîtresses suprêmes de la bienveillante nanitude, valident tes fiches (si t'es sage) et cuisinent les meilleurs cookies de la Terre.</div>
+    
+    <div class="viewonline-groups-network">
+      <a href="https://www.facebook.com/Nano-Role-Play-185862524830690/?ref=aymt_homepage_panel"><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_fb.jpg" alt="Facebook" /></a>
+      <a href="https://discord.gg/p3SSKQq"><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_di.png" alt="Discord" /></a>
+    </div>
+  </div>
+
+  <div class="viewonline-bottom">
+    <div id="connected">
+      <p>Dernières connexions :</p> {L_CONNECTED_MEMBERS}
+    </div>
+    <div class="viewonline-bottom-text">
+      <p id="NU">{NEWEST_USER}.</p> 	            
+      <p id="annif">{L_WHOSBIRTHDAY_TODAY}</p>
+    </div>
+  </div>
+ </div>
+  
+    <script type="text/javascript"> 
+  document.getElementById('TU').innerHTML = document.getElementById('TU').innerHTML.replace(/Nous avons /," ").replace(/ membres enregistrés/," nanites");
+
+  document.getElementById('TP').innerHTML = document.getElementById('TP').innerHTML.replace(/Nos membres ont posté un total de /,"");
+
+    document.getElementById('NU').innerHTML = document.getElementById('NU').innerHTML.replace(/L'utilisateur enregistré le plus récent est/,"Le dernier gus s'appelle ");
+
+   document.getElementById('TUO').innerHTML = document.getElementById('TUO').innerHTML.replace(/Il y a en tout/,"").replace(/utilisateur en ligne ::/," en ligne").replace(/utilisateurs en ligne ::/," en ligne").replace(/Enregistré/,"").replace(/Enregistrés/,"").replace(/Invisible/,"").replace(/Invisibles /,"").replace(/Invité/,"voyeur").replace(/Invités/,"voyeurs");
+
+  var arrTUO = document.getElementById('TUO').innerHTML.split(" ");
+  var strTUO = '<span>' + arrTUO[5] + ' connecté(s)</span><span>' + arrTUO[10] + ' voyeur(s)</span>';
+  document.getElementById('TUO').innerHTML = strTUO;
+
+  document.getElementById('LIUL').innerHTML = document.getElementById('LIUL').innerHTML.replace(/Utilisateurs enregistrés :/," ").replace(/<br>/gi,'');
+
+			document.getElementById('connected').innerHTML = document.getElementById('connected').innerHTML.replace(/Membres connectés au cours des 48 dernières heures :/," ");
+ 
+		document.getElementById('annif').innerHTML = document.getElementById('annif').innerHTML.replace(/Membres fêtant leur anniversaire aujourd'hui :/,"Joyeux Anniversaire ").replace(/Aucun membre ne fête son anniversaire aujourd'hui/, "Pas de naniversaire");
+</script>  
+  
+<!-- END disable_viewonline -->  
+  
+  <div id="footer-partner">
+            <div id="VIP">
+		<a target="_blank" href="http://linked-ink.forumactif.com">LINKED INK</a>•
+		<a target="_blank" href="http://helldorado.forumactif.com/">HELL DORADO</a>•
+		<a target="_blank" href="http://www.kobehs.org/">KOBE HIGH SCHOOL</a>•
+		<a target="_blank" href="http://ilukaan.forumactif.com">ILUKAAN</a>•
+		<a target="_blank" href="http://valoransbattlefront.forumactif.org">VALORAN'S BF</a>•
+		<a target="_blank" href="http://metro.forumactif.com">METRO</a>
+	</div>
+
+<div id="normal">
+	<a target="_blank" href="http://epicode.bbactif.com">
+	<img src="https://i.ibb.co/FVY5fTm/Qp9nVAs.jpg" alt="Epicode" />
+</a>
+<a target="_blank" href="http://arcane.forumactif.fr/">
+	<img src="http://img.xooimage.com/files61/6/e/9/feu-100-35-ban-27ab857.png" alt="L'île d'Arcane" />
+</a>
+<a target="_blank" href="http://chronosrep.forumactif.org">
+	<img src="https://i.goopics.net/5eeod.png" alt="Chronos Republic" />
+</a>
+<a target="_blank" href="http://www.quederla-rpg.com/">
+	<img src="https://i.ibb.co/fYcbvTd/xboc.jpg" alt="Quederla" />
+</a>
+<a target="_blank" href="http://human-outside.forumactif.org/">
+	<img src="https://image.ibb.co/iEonqJ/manout.jpg" alt="Human Outside" />
+</a>
+<a target="_blank" href="http://dgraymanheart.forumactif.com/">
+	<img src="https://i.imgur.com/GM0hJFF.png" alt="D. Gray-Man Heart" />
+</a>
+<a target="_blank" href="http://gifted.forumactif.com/">
+	<img src="https://i.imgur.com/rOIVmgw.png" alt="Gifted" />
+</a>
+<a href="http://dusk-lumiris.forumactif.com/">
+	<img src="https://www.zupimages.net/up/17/30/bjj9.png" alt="Dusk Lumiris" />
+</a>
+<a target="_blank" href="http://the-holiday-scam.forumactif.com/">
+	<img src="https://i.imgur.com/LP1e0at.png" alt="The Holiday Scam" />
+</a>
+<a href="http://ls-halloween.fr">
+	<img src="https://i.imgur.com/iVV5cbF.png" alt="halloween" />
+</a>
+<a target="_blank" href="http://tahncelhan.forumactif.com/">
+	<img src="https://zupimages.net/up/19/05/k9wc.png" alt="Tahn Celhan" />
+</a>
+<a target="_blank" href="http://damnedtown.forumactif.org">
+	<img src="https://2img.net/image.noelshack.com/fichiers/2019/30/6/1564211368-bouton-part-100x35.png" alt="Damned Town" />
+</a>
+<a target="_blank" href="http://theawakening.forumactif.com">
+	<img src="https://i.imgur.com/l5RY7pf.png" alt="The Awakening" />
+</a>
+<a target="_blank" href="http://laserenissime.forumactif.org">
+	<img src="https://i.ibb.co/y0fR0PS/tcxq.jpg" alt="La Sérénissime" />
+</a>
+<a target="_blank" href="http://irydae.forumactif.org/">
+	<img src="https://redcdn.net/hpimg15/pics/896416partenariats100x35.png" alt="Chroniques d'Irydaë" />
+</a>
+<a target="_blank" href="http://terrae.forumpro.fr/">
+	<img src="https://www.zupimages.net/up/17/28/dr1v.png" alt="Terrae" />
+</a>
+<a target="_blank" href="http://www.esquisse-rp.com/">
+	<img src="https://i.imgur.com/h1TIM7N.png" alt="Esquisse" />
+</a>
+<a target="_blank" href="http://open-world.forumactif.com/">
+	<img src="https://nsa40.casimages.com/img/2019/11/03/191103013519478313.png" alt="Open World" />
+</a>
+<a target="_blank" href="http://enola.forumactif.com/">
+	<img src="https://zupimages.net/up/19/07/kitd.png" alt="Légendes d'Enola" />
+</a>
+<a target="_blank" href="https://otherlands.forumactif.com/">
+	<img src="https://www.zupimages.net/up/19/44/pwlj.png" alt="Otherlands" />
+</a>
+<a target="_blank" href="https://elemental-skin.forumactif.com/">
+	<img src="https://i.imgur.com/Gb7GJom.jpg" alt="Elemental Skin" />
+</a>
+<a target="_blank" href="#">
+	<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/logo_100-35.jpg" alt="Nom Forum" />
+</a>
+<a target="_blank" href="#">
+	<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/logo_100-35.jpg" alt="Nom Forum" />
+</a>
+<a target="_blank" href="#">
+	<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/logo_100-35.jpg" alt="Nom Forum" />
+</a>	
+</div>         
+          </div>
+<!-- BEGIN html_validation -->
+
+
+<!-- END html_validation -->
+</div>	

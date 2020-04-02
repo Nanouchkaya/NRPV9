@@ -1,0 +1,318 @@
+@import 'variables';
+
+.category {
+  //max-width: 90vw;
+  margin: auto;
+
+   .cat-title h2, #h1-category {
+    font-family: $special-font;
+    font-size: 3.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: $no-color;
+    text-align: center;
+    margin: $margin-tb 0;
+  }
+
+  // masque les sous-forums - niveau de compression 0
+  li.forumrow:not(.level_one) {
+    display: none;
+  }
+
+  .forumrow-lastpost {
+    position: relative;
+    min-width: 200px;
+    padding: $padding-tb $padding-rl;
+
+    &[title="Nouveaux messages"] {
+      border-width: 3px;
+      border-style: solid;
+      height: fit-content;
+      border-color: $main-color;
+
+      &::after {
+        top: calc(#{$padding-tb} * -1);
+        content: "Du neuf ! ";
+        font-family: $special-font;
+        font-size: 0.6rem;
+        position: absolute;
+        right: 5%;
+        padding: .1rem $padding-tb $padding-tb;
+        background-color: $no-color;
+        color: $main-color
+      }
+    }
+    a img { // correctif image lien petit cookie
+      display: inline;
+    } 
+  }
+}
+
+/* CATEGORIES NON NM : général et faille */
+#cat_general .forumrows, #cat_faille .forumrows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  color: $no-color;
+
+  .forumrow.level_one {
+    padding: 1.2rem;
+    min-width: 470px;
+    max-width: 520px;
+    width: 100%;
+    min-height: 330px;
+    margin: $margin-tb;
+    background-color: $no-color;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .forumrow-title {
+      padding: $padding-tb $padding-rl;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  
+    dl.forumrow-content {
+      font-size: .9rem;
+      background-color: rgba(0,0,0,0.3);
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 2;
+  
+      dd.forumrow-desc { 
+        padding: .7rem 1rem;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+  
+      ul.forum-desc-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        a {
+          padding-left: $padding-tb;
+          text-transform: uppercase;
+        }
+      }
+  
+      dd.forumrow-stats{
+        text-align: right;
+        font-size: 0.8rem;
+        font-style: italic;
+        padding-right: $padding-rl;
+      }
+  
+      dd.forumrow-lastpost {
+        background-color: rgba(0,0,0,0.3);
+        padding: $padding-tb $padding-rl;
+        font-size: .8rem;
+
+        a { font-size: 1rem; }  
+        a[href^='/u']:not([href$='/u1']) span {
+          color: $no-color!important
+        }      
+      }
+  
+      dd.forumrow-lastpost[title="Nouveaux messages"] {
+        background-color: rgba($main-color, .1);
+        border: none;
+        border-bottom: 7px solid $main-color;
+        
+        &::after {
+          bottom: -2.7rem;
+          top: unset;
+          right: 0;
+          background-color: transparent;
+          content: "Y'a du neuf ! ";
+          color: $main-color;
+          font-size: .7rem;
+          width: fit-content;
+          padding-right: 1rem;
+          transform: rotate(-6deg);
+        }
+      }
+    }
+  }
+}
+
+#cat_general .forumrows {
+  .forumrow-title {
+    background-color: $main-color;
+  }
+}
+
+#cat_faille .forumrows {
+  .forumrow-title {
+    background-color: $faille;
+  }
+}
+
+/* CATEGORIE NANO. MONDES */
+#cat_NM {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .wrapper-list {
+    background-color: $nano-dark;
+  }
+  
+  nav.onglets {
+    display: flex;
+    justify-content: space-around;
+    max-width: $maxWidthForum;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+  }
+  
+  // onglet general
+  li#general {
+    justify-content: center;
+    
+    .forumrow-title {
+      display: none;
+    }
+  }
+
+  // onglets NM
+  .listLieuxNM {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+    min-height: 53rem;
+    max-height: 92vh;
+
+    ul.forumrows {
+      max-width: 1300px;
+    }
+    
+    // règles communes
+    li.forumrow {
+      display: block;
+      padding: $padding-tb $padding-rl;
+
+      dl.forumrow-content {
+        font-size: .9rem;
+        display: flex;
+      }
+
+    }
+
+    // colonne gauche : image + nav
+    li.forumrow.forumNM { 
+      align-self: flex-start;
+      position: absolute;
+      width: 30%;
+
+      .forumrow-title {
+        display: none;
+      }
+
+      dl.forumrow-content {
+        flex-direction: column;
+      }
+
+      dd.forumrow-desc {
+        display: flex;
+        flex-wrap: wrap;
+        color: $no-color;
+
+        .nm-desc {
+          margin: $margin-tb 0;
+          padding: $padding-tb $padding-rl;
+          max-width: 348px;
+        }
+
+        ul.nm-nav {
+          border-width: 3px;
+          border-style: solid;
+          padding: $padding-tb;
+          max-width: 348px;
+          width: 100%;
+          font-weight: 700;
+          text-transform: uppercase;
+          position: relative;
+        }
+
+        ul.nm-nav::after {
+          content: "Comprendre l'univers";
+          position: absolute;
+          top: calc(#{$padding-tb} * -2);
+          right: 5%;
+          background-color: $nano-dark;
+          padding: $padding-tb;
+          font-family: $special-font;
+        }
+
+        li.nm-nav-item {
+          position: relative;
+          margin: calc(#{$margin-tb} / 2);
+        }
+      }  
+
+      dd.forumrow-lastpost {
+        display: none;
+      }
+
+      dd.forumrow-stats {
+        align-self: flex-end;
+        margin: .7rem;
+        font-variant: small-caps;
+        font-weight: 700;
+        color: lighten($nano-dark, $amount: 50%);
+        display: block;
+      }
+    }
+
+    // colonne droite : sous-forum (lieux NM)
+    li.forumrow:not(.forumNM) { 
+      margin: calc(#{$padding-tb} / 2) $margin-tb;
+      width: calc(70% - #{$margin-tb} * 2);
+      background-color: $no-color;
+
+      a:not([href^="/u"]) {
+        color: $nano-dark;
+
+        &:hover::after {
+          background-color: $nano-dark;
+        }
+      }
+
+      dd.forumrow-desc {
+        font-size: .8rem;
+        padding: .35rem .35rem 0 0;
+      }
+
+      dd.forumrow-lastpost {
+        span {
+          display: inherit;
+          text-align: right;
+        }
+        img {
+          display: initial;
+        }
+      }
+
+      dd.forumrow-stats {
+        display: none;
+      }
+    }
+  }
+
+  .visible {
+    display: flex;
+  }
+}

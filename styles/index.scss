@@ -1,0 +1,90 @@
+@import "reset", "variables", "header", "page_accueil", "category", "first_onglet", 
+ "footer", "profile", "mp", "topics_list", "forum_view", "topic_body", "solo_page";
+
+body {
+  font-family: $main-font;
+  font-size: 100%;
+  background-color: $nano-light;
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ban-compact-3.jpg), url(http://memoires-du-monde.fr/upload/NRPV8/V9/texture-fond.jpg);
+  background-position:  center 4.1rem, left top;
+  background-repeat: no-repeat, repeat;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a.gensmall[href^='/u'] {
+  text-decoration: none;
+  font-size: .9rem!important;
+}
+
+a[href^='/u'] {
+  text-decoration: none;
+}
+
+a:not([href^='/u']) {
+  text-decoration: none;
+  color: $no-color;
+  font-variant: small-caps;
+  font-weight: 700;
+
+  position: relative;
+}
+
+a:not([href^='/u'])::after,
+li.nm-nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: .12rem;
+  background-color: $no-color;
+  left: 0;
+  bottom: -.3rem;
+  opacity: 0;
+  transform: translateZ(-30%);
+  transition: all 200ms ease-in-out;
+}
+
+a:not([href^='/u']):hover::after,
+li.nm-nav-item:hover::after {
+  width: 100%;
+  transform: translateZ(0);
+  opacity: 1;
+  font-variant: small-caps;
+}
+
+#logo {
+  height: 385px;
+  width: 100vw;
+}
+
+input.button1 {
+  cursor: pointer;
+  background-color: $main-color ;
+  color: $no-color;
+  padding: calc(#{$padding-tb} / 2) $padding-rl;
+  font-variant: small-caps;
+  font-weight: 700;
+  margin: $margin-tb 0;
+  transition: all 200ms ease;
+  &:hover { color: $nano-dark; }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  border: 2px solid $nano-dark;
+  transition: all 300ms ease-in-out;
+  &:hover { cursor: pointer; }
+}
+input[type="checkbox"]:checked {
+  background: $main-color;
+  position: relative;
+}

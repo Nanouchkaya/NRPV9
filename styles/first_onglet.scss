@@ -1,0 +1,179 @@
+@import "variables";
+
+#cat_NM .forumrows li:first-of-type {
+
+  dd.forumrow-stats {
+    display: none;
+  }
+
+  #boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    color: $no-color;
+    padding: 0;
+    max-width: 90vw;
+    margin: auto;
+
+    .box {
+      width: 80%;
+      max-width: 470px;
+      min-height: 280px;
+      margin: $margin-tb;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media (min-width: 800px) {
+        width: 43%;
+        max-width: 410px;
+      }
+
+      @media (min-width: 1280px) {
+        width: 26%;
+      }
+      
+      &-content {
+        background-color: rgba(0,0,0,0.3);
+        padding: $padding-tb $padding-rl;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2;
+      }
+        
+      &-title a {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      &-desc { 
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      &-player {
+        font-size: .9rem;
+        flex: 2;
+      }
+
+      &-details {
+        font-size: .9rem;
+      }
+
+      &-popup {
+        align-self: flex-end;
+      }
+
+      &-event-status {
+        padding: $padding-tb $padding-rl;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+      }
+        
+      &-event-link {
+        background-color: $no-color;
+        padding: $padding-tb $padding-rl;
+        color: $nano-dark;
+        text-align: center;
+
+        &::after {
+          bottom: 0;
+          height: .2rem;
+        }
+
+      }
+    }
+  }
+}
+
+
+/* GESTION COULEUR PAR NM */
+
+#box_MM .box-title a,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $micro }
+#box_AP .box-title a,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $AP }
+#box_zombie .box-title a,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $zombie }
+#box_AdP .box-title a,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $AdP }
+#box_xmen .box-title a,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $xmen }
+#box_chimeres .box-title a,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $chimeres }
+
+
+// background
+#box_MM .box-event-status,
+#box_MM .box-event-link::after,
+.listLieuxNM:nth-of-type(1) .nm-desc,
+li.themes-list-item.color-micro::before
+{ background-color: $micro }
+
+#box_AP .box-event-status,
+#box_AP .box-event-link::after,
+.listLieuxNM:nth-of-type(2) .nm-desc,
+li.themes-list-item.color-AP::before
+{ background-color: $AP }
+
+#box_zombie .box-event-status,
+#box_zombie .box-event-link::after,
+.listLieuxNM:nth-of-type(3) .nm-desc,
+li.themes-list-item.color-zombie::before
+{ background-color: $zombie }
+
+#box_AdP .box-event-status,
+#box_AdP .box-event-link::after,
+.listLieuxNM:nth-of-type(4) .nm-desc,
+li.themes-list-item.color-AdP::before 
+{ background-color: $AdP }
+
+#box_xmen .box-event-status,
+#box_xmen .box-event-link::after,
+.listLieuxNM:nth-of-type(5) .nm-desc,
+li.themes-list-item.color-xmen::before
+{ background-color: $xmen }
+
+#box_chimeres .box-event-status,
+#box_chimeres .box-event-link::after,
+.listLieuxNM:nth-of-type(6) .nm-desc,
+li.themes-list-item.color-chimeres::before 
+{ background-color: $chimeres }
+
+
+// border color
+.listLieuxNM:nth-of-type(1) ul.nm-nav,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $micro }
+
+.listLieuxNM:nth-of-type(2) ul.nm-nav,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $AP }
+
+.listLieuxNM:nth-of-type(3) ul.nm-nav,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $zombie }
+
+.listLieuxNM:nth-of-type(4) ul.nm-nav,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $AdP }
+
+.listLieuxNM:nth-of-type(5) ul.nm-nav,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $xmen }
+
+.listLieuxNM:nth-of-type(6) ul.nm-nav,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $chimeres }
