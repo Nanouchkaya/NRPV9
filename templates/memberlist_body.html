@@ -2,23 +2,22 @@
 
 <div class="wrapper solo">
   <form action="{S_MODE_ACTION}" method="get">
-  <div class="normal-panel">
-    <h2>{L_ORDER_OR_SELECT}</h2>
-    <p>
-      {L_USER_SELECT}&nbsp;<input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      {L_SELECT_SORT_METHOD}&nbsp;{S_MODE_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      {L_ORDER}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      {S_HIDDEN_SID}
-      <span class="submit">
-        <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/ic_lu.png" alt="OK" />
-        <input class="button2" type="submit" name="submit" />
-      </span>
-    </p>
-  </div>
+    <div class="normal-panel">
+      <h2 class="border-bottom">{L_ORDER_OR_SELECT}</h2>
+      <p>
+        {L_USER_SELECT}&nbsp;<input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {L_SELECT_SORT_METHOD}&nbsp;{S_MODE_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {L_ORDER}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {S_HIDDEN_SID}
+        <span class="submit">
+          <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/ic_lu.png" alt="OK" />
+          <input class="button2" type="submit" name="submit" />
+        </span>
+      </p>
+    </div>
   </form>
 
-  <div class="forumbg-table">
-      <table class="table" id="memberlist">
+  <table class="table" id="memberlist">
     <thead>
     <tr>
       <th class="number">#</th>
@@ -56,9 +55,7 @@
     </tr>
     <!-- END switch_no_user -->
     </tbody>
-    </table>
-
-  </div>
+  </table>
 
   <div class="pagination-bar">
     <!-- BEGIN switch_pagination -->

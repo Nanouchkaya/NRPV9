@@ -1,0 +1,48 @@
+<h1 class="page-title solo">{L_USERGROUPS}</h1>
+<div class="wrapper solo">
+  <!-- BEGIN switch_groups_joined -->
+    <!-- BEGIN switch_groups_member -->
+    <div class="forumbg-table">
+      <div class="group-time-info">
+        <!-- BEGIN switch_user_logged_in -->
+        <p>{LAST_VISIT_DATE}</p>
+        <!-- END switch_user_logged_in -->
+        <p>{CURRENT_TIME}</p>
+      </div>
+      <h2 class="border-bottom">{L_GROUP_MEMBERSHIP_DETAILS}</h2>
+      <fieldset class="normal-panel">
+        <dl>
+          <dt><label>{L_YOU_BELONG_GROUPS}</label></dt>
+          <dd>{GROUP_MEMBER_SELECT_NEW}</dd>
+        </dl>
+      </fieldset>
+      </div>
+    <!-- END switch_groups_member -->
+
+    <!-- BEGIN switch_groups_pending -->
+    <div class="forumbg-table">
+      <h2 class="border-bottom">Vos demandes d'adhésion</h2>
+      <fieldset  class="normal-panel">
+        <dl>
+          <dt><label>Groupe(s) en attente</label></dt>
+          <dd>{GROUP_PENDING_SELECT_NEW}</dd>
+        </dl>
+      </fieldset>
+    </div>
+    <!-- END switch_groups_pending -->
+  <!-- END switch_groups_joined -->
+
+  <!-- BEGIN switch_groups_remaining -->
+  <div class="forumbg-table">
+    <h2 class="border-bottom">{L_JOIN_A_GROUP}</h2>
+    <form action="{U_USERGROUP_ACTION}" method="get">
+    <fieldset  class="normal-panel">
+      <dl>
+        <dt><label>{L_SELECT_A_GROUP}</label></dt>
+        <dd>{GROUP_LIST_SELECT}&nbsp;<input class="button2" type="submit" value="{L_VIEW_INFORMATION}" />{S_HIDDEN_FIELDS}</dd>
+      </dl>
+    </fieldset>
+    </form>
+  </div>
+  <!-- END switch_groups_remaining -->
+</div>

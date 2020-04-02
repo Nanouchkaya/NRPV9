@@ -1,0 +1,141 @@
+<h1 class="page-title solo">{GROUP_NAME}</h1>
+
+<div class="wrapper solo">
+  <div class="forumbg-table">
+    <div class="group-time-info">
+      <!-- BEGIN switch_user_logged_in -->
+      <p>{LAST_VISIT_DATE}</p>
+      <!-- END switch_user_logged_in -->
+      <p>{CURRENT_TIME}</p>
+    </div>
+
+    <h2 class="border-bottom">{L_GROUP_INFORMATION}</h2>
+    <form action="{S_GROUPCP_ACTION}" method="post">
+    <fieldset class="normal-panel">
+      <dl>
+        <dt><label>{L_GROUP_NAME}:</label></dt>
+        <dd><strong>{GROUP_NAME}</strong></dd>
+      </dl>
+      <dl>
+        <dt><label>{L_GROUP_DESC}:</label></dt>
+        <dd>{GROUP_DESC}</dd>
+      </dl>
+      <dl>
+        <dt><label>{L_GROUP_MEMBERSHIP}:</label></dt>
+        <dd>{GROUP_DETAILS}&nbsp;
+          <!-- BEGIN switch_subscribe_group_input -->
+          <input class="button2" type="submit" name="joingroup" value="{L_JOIN_GROUP}" />
+          <!-- END switch_subscribe_group_input -->
+          <!-- BEGIN switch_unsubscribe_group_input -->
+          <input class="button2" type="submit" name="unsub" value="{L_UNSUBSCRIBE_GROUP}" />
+          <!-- END switch_unsubscribe_group_input -->
+        </dd>
+      </dl>
+      <!-- BEGIN switch_mod_option -->
+      <dl>
+        <dt><label>{L_GROUP_TYPE}:</label></dt>
+        <dd><label><input type="radio" name="group_type" value="{S_GROUP_OPEN_TYPE}" {S_GROUP_OPEN_CHECKED} {S_GROUP_OPEN_DISABLED} />{L_GROUP_OPEN}</label>
+          <label><input type="radio" name="group_type" value="{S_GROUP_CLOSED_TYPE}" {S_GROUP_CLOSED_CHECKED} />&nbsp;{L_GROUP_CLOSED}</label>
+          <label><input type="radio" name="group_type" value="{S_GROUP_HIDDEN_TYPE}" {S_GROUP_HIDDEN_CHECKED} />&nbsp;{L_GROUP_HIDDEN}</label>
+          <label><input class="button2" type="submit" name="groupstatus" value="{L_UPDATE}" /></label>
+        </dd>
+      </dl>
+      <!-- END switch_mod_option -->
+      {S_HIDDEN_FIELDS}
+    </fieldset>
+    </form>
+      <!-- BEGIN switch_mod_option -->
+  <div class="normal-panel">
+    <!-- BEGIN switch_grp_admin -->
+    <p><strong>{L_ADMIN_GRP_EXPLAIN}</strong></p>
+    <!-- END switch_grp_admin -->
+    <p>
+      <input class="inputbox tiny" type="text" id="username" name="username" />
+      <input class="button2" type="submit" name="add" value="{L_ADD_MEMBER}" />
+      <input class="button2" type="button" id="find_user" value="{L_FIND_USERNAME}" />
+      <input class="button1" type="submit" name="remove" value="{L_REMOVE_SELECTED}" />{S_HIDDEN_FIELDS}
+    </p>
+  </div>
+  <!-- END switch_mod_option -->
+  <div id="find_username" class="jqmWindow"></div>
+</div>
+
+
+<form action="{S_GROUPCP_ACTION}" method="post" name="post">
+  <table class="table">
+  <thead>
+    <tr>
+      <th class="name">{L_USERNAME}</th>
+      <th class="posts">{L_POSTS}</th>
+      <th class="pm">{L_PM}</th>
+      <th>{L_SELECT}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="4"><p class="border-bottom">{L_GROUP_MODERATOR}</p></td>
+    </tr>
+    <tr>
+    <td><a href="{U_MOD_VIEWPROFILE}">{MOD_USERNAME}</a></td>
+    <td>{MOD_POSTS}</td>
+    <td><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/membres_mp.jpg" alt="MP" /></td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4"><p class="border-bottom">{L_GROUP_MEMBERS}</p></td>
+    </tr>
+    <!-- BEGIN member_row -->
+    <tr class="group-counter">
+      <td><a href="{member_row.U_VIEWPROFILE}">{member_row.USERNAME}</a></td>
+      <td>{member_row.POSTS}</td>
+      <td><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/membres_mp.jpg" alt="MP" /></td>
+      <td class="posts"><!-- BEGIN switch_mod_option --><input type="checkbox" name="members[]" value="{member_row.USER_ID}" /><!-- END switch_mod_option --></td>
+    </tr>
+    <!-- END member_row -->
+    <!-- BEGIN switch_no_members -->
+    <tr>
+      <td colspan="4">{L_NO_MEMBERS}</td>
+    </tr>
+    <!-- END switch_no_members -->
+    <!-- BEGIN switch_hidden_group -->
+    <tr>
+      <td colspan="4">{L_HIDDEN_MEMBERS}</td>
+    </tr>
+    <!-- END switch_hidden_group -->
+  </tbody>
+  </table>
+
+  {PENDING_USER_BOX}
+</form>
+
+  <div class="pagination-bar">
+    <!-- BEGIN switch_pagination -->
+    {PAGINATION}
+    <!-- END switch_pagination -->
+  </div>
+</div>
+
+<!-- BEGIN switch_mod_option -->
+
+<script src="{JQUERY_DIR}jqmodal/jqmodal.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+		function find_username(fieldname) {
+			$.get('{U_SEARCH_USER}&fieldname=' + fieldname + '&time=' + timestamp(), '',
+				function(data){
+					$('#find_username').html(data).jqmShow();
+					$('.jqmOverlay').bgiframe();
+					$('#find_username').bgiframe();
+				});
+			return false;
+		}
+		$('#find_user').click(function(){
+			return find_username('username');
+		});
+		$('#find_username').jqm({toTop: true});
+	});
+//]]>
+</script>
+<!-- END switch_mod_option -->
+

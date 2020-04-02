@@ -1334,7 +1334,7 @@ a.topic-button:hover::after {
 }
 
 .topic-quickreply {
-  background-color: white;
+  background: white url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
 }
 .topic-quickreply .h3 {
   background-color: #23a9b5;
@@ -1452,21 +1452,34 @@ a.topic-button:hover::after {
 .wrapper.solo {
   max-width: 1300px;
   margin: auto;
+  padding: 1.5rem 0;
+}
+.wrapper.solo .group-time-info {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #9a9a8f;
+}
+.wrapper.solo .border-bottom {
+  border-bottom: 3px solid #23a9b5;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
+  font-weight: 700;
 }
 .wrapper.solo .normal-panel {
   background-color: #161614;
   padding: 0.7rem 1rem;
   margin: 1.5rem auto;
   color: white;
-}
-.wrapper.solo .normal-panel h2 {
-  border-bottom: 3px solid #23a9b5;
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  border: none;
 }
 .wrapper.solo .normal-panel p {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+.wrapper.solo .normal-panel dt label {
+  color: #23a9b5;
 }
 .wrapper.solo .normal-panel .inputbox, .wrapper.solo .normal-panel input[type=text], .wrapper.solo .normal-panel select {
   background-color: transparent;
@@ -1492,6 +1505,7 @@ a.topic-button:hover::after {
 }
 .wrapper.solo .normal-panel input.button2:hover {
   color: #23a9b5;
+  cursor: pointer;
 }
 .wrapper.solo .normal-panel .submit {
   display: flex;
@@ -1500,11 +1514,15 @@ a.topic-button:hover::after {
 .wrapper.solo .forumbg-table {
   max-width: 100%;
   background-color: white;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem auto;
 }
 .wrapper.solo .table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
+  background-color: white;
+  margin: 1.5rem auto 0;
 }
 .wrapper.solo .table thead {
   background-color: #161614;
@@ -1514,6 +1532,9 @@ a.topic-button:hover::after {
 }
 .wrapper.solo .table th {
   padding: 0.7rem 1rem;
+}
+.wrapper.solo .table td {
+  padding: calc(0.7rem / 2) 0.7rem;
 }
 .wrapper.solo .table td.avatar-mini {
   padding: 0.7rem 0;
@@ -1531,6 +1552,39 @@ a.topic-button:hover::after {
 }
 .wrapper.solo .pagination-bar span {
   color: #9a9a8f;
+}
+
+.jqmOverlay {
+  background-color: white;
+}
+
+#find_username {
+  width: 500px;
+  background-image: none;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 250px);
+  text-align: center;
+  background-color: white;
+}
+#find_username .panel {
+  background-image: none;
+}
+#find_username .panel p {
+  margin-bottom: 1.5rem;
+}
+#find_username #simple-wrap {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+}
+#find_username .page-title.jqDrag {
+  color: white;
+  font-size: 1.3rem;
+}
+#find_username input {
+  background-color: #23a9b5;
+  color: white;
+  padding: calc(0.7rem / 2) 1rem;
 }
 
 body {
@@ -1588,6 +1642,40 @@ li.nm-nav-item:hover::after {
 #logo {
   height: 385px;
   width: 100vw;
+}
+
+input.button1 {
+  cursor: pointer;
+  background-color: #23a9b5;
+  color: white;
+  padding: calc(0.7rem / 2) 1rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  transition: all 200ms ease;
+}
+input.button1:hover {
+  color: #161614;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  border: 2px solid #161614;
+  transition: all 300ms ease-in-out;
+}
+input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background: #23a9b5;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

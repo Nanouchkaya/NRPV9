@@ -12,23 +12,36 @@
 .wrapper.solo {
   max-width: 1300px;
   margin: auto;
+  padding: $margin-tb 0;
+
+  .group-time-info {
+    text-align: right;
+    font-size: .9rem;
+    color: lighten($nano-dark, $amount: 50%);
+  }
+  
+  .border-bottom {
+    border-bottom: 3px solid $main-color;
+    margin-bottom: $margin-tb;
+    font-size: 1.2rem;
+    padding: $padding-tb 0;
+    font-weight: 700;
+  }
 
   .normal-panel {
     background-color: $nano-dark;
     padding: $padding-tb $padding-rl;
     margin: $margin-tb auto ;
     color: $no-color;
-
-    h2 {
-      border-bottom: 3px solid $main-color;
-      margin-bottom: $margin-tb;
-      font-size: 1.2rem;
-    }
+    border: none; // si class appliquée à un fieldset
 
     p { 
       display: flex;
       justify-content: flex-end;
+      align-items: center;
     }
+
+    dt label { color: $main-color; }
 
     .inputbox, input[type="text"], select {
       background-color: transparent;
@@ -52,7 +65,10 @@
       text-transform: uppercase;
       font-weight: 700;
       transition: all 200ms ease;
-      &:hover { color: $main-color; }
+      &:hover { 
+        color: $main-color;
+        cursor: pointer;
+      }
     }
 
     .submit {
@@ -64,12 +80,16 @@
   .forumbg-table {
     max-width: 100%;
     background-color: $no-color;
+    padding: $padding-tb $padding-rl;
+    margin: $margin-tb auto;
   }
 
   .table {
     width: 100%;
     text-align: center;
     border-collapse: collapse;
+    background-color: $no-color;
+    margin: $margin-tb auto 0;
 
     thead {
       background-color: $nano-dark;
@@ -79,6 +99,7 @@
     }
 
     th { padding: $padding-tb $padding-rl; }
+    td { padding: calc(#{$padding-tb} / 2) $padding-tb; }
     td.avatar-mini { padding: $padding-tb 0; }
     td.avatar-mini img { width: 100px; }
   }
@@ -91,5 +112,41 @@
     justify-content: space-between;
     font-size: 0.9rem;
     span { color: lighten($nano-dark, $amount: 50%); }
+  }
+}
+
+// popup trouver un membre
+.jqmOverlay {
+  background-color: $no-color;
+}
+
+#find_username {
+  width: 500px;
+  background-image: none;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 250px);
+  text-align: center;
+  background-color: $no-color;
+
+  .panel { 
+    background-image: none; 
+    p { margin-bottom: 1.5rem; }
+  }
+
+  #simple-wrap {
+    background-color: $nano-dark;
+    padding: $padding-tb $padding-rl;
+  }
+  
+  .page-title.jqDrag {
+    color: $no-color;
+    font-size: 1.3rem;
+  }
+
+  & input {
+    background-color: $main-color;
+    color: $no-color;
+    padding: calc(#{$padding-tb} / 2) $padding-rl;
   }
 }

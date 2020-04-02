@@ -1,0 +1,26 @@
+		<table class="table">
+		<thead>
+			<tr>
+				<th class="name">{L_USERNAME}</th>
+				<th class="posts">{L_POSTS}</th>
+				<th class="pm">{L_PM}</th>
+				<th>{L_SELECT}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="4"><p class="border-bottom">{L_PENDING_MEMBERS}</p></td>
+			</tr>
+			<!-- BEGIN pending_members_row -->
+			<tr>
+        <td><a href="{pending_members_row.U_VIEWPROFILE}">{pending_members_row.USERNAME}</a></td>
+				<td>{pending_members_row.POSTS}</td>
+				<td><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/membres_mp.jpg" alt="MP" /></td>
+				<td class="posts"><input type="checkbox" name="pending_members[]" value="{pending_members_row.USER_ID}" checked="checked" /></td>
+			</tr>
+      <tr><td colspan="4" style="text-align:right">
+        <input class="button1" type="submit" name="approve" value="{L_APPROVE_SELECTED}" />&nbsp;<input class="button1" type="submit" name="deny" value="{L_DENY_SELECTED}" />
+      </td></tr>
+			<!-- END pending_members_row -->
+		</tbody>
+		</table>
