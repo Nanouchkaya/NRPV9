@@ -1,0 +1,42 @@
+<div class="wrapper solo">
+  <h2 class="border-bottom">
+    {L_SEARCH_MATCHES}
+  </h2>
+
+  <form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();">
+			<table class="table">
+				<thead>
+					<tr class="icon">
+						<th>{L_TOPICS}</th>
+						<th class="posts">{L_REPLIES}</th>
+						<th class="views">{L_VIEWS}</th>
+						<th class="lastpost">{L_LASTPOST}</th>
+					</tr>
+				</thead>
+      <!-- BEGIN searchresults -->
+        <tbody>
+					<tr>
+						<td class="dterm">
+							<div class="topic-title-container">								
+									<a class="topictitle" href="{searchresults.U_VIEW_TOPIC}">
+										{searchresults.TOPIC_TITLE}
+									</a>
+							</div>
+							<span class="topic-author">
+								{searchresults.L_BY} {searchresults.TOPIC_AUTHOR} {searchresults.L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a>
+							</span>
+						</td>
+						<td class="posts">{searchresults.REPLIES}</td>
+						<td class="views">{searchresults.VIEWS}</td>
+						<td class="lastpost">
+							<span>
+								{searchresults.LAST_POST_AUTHOR}&nbsp;<dfn>{L_LASTPOST}</dfn>{searchresults.LAST_POST_IMG}<br />{searchresults.LAST_POST_TIME}
+							</span>
+						</td>
+					</tr>
+        </tbody>
+			<!-- END searchresults -->
+			</table>
+    <p class="pagination-bar">{PAGINATION}</p>
+  </form>
+</div>

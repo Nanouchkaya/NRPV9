@@ -6,11 +6,11 @@
   background-position: center;
 }
 
-.forumbg {
-  margin: 1rem auto;
+.forumbg, .forumbg-table {
+  margin: $margin-tb auto;
   padding: $padding-tb $padding-rl;
   max-width: $maxWidthForum;
-  width: 90vw;
+  width: 100%;
   background-color: $no-color;
 
   li.header {

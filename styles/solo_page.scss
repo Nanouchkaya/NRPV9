@@ -10,7 +10,7 @@
 }
 
 .wrapper.solo {
-  max-width: 1300px;
+  max-width: $maxWidthForum;
   margin: auto;
   padding: $margin-tb 0;
 
@@ -18,14 +18,6 @@
     text-align: right;
     font-size: .9rem;
     color: lighten($nano-dark, $amount: 50%);
-  }
-  
-  .border-bottom {
-    border-bottom: 3px solid $main-color;
-    margin-bottom: $margin-tb;
-    font-size: 1.2rem;
-    padding: $padding-tb 0;
-    font-weight: 700;
   }
 
   .normal-panel {
@@ -76,13 +68,7 @@
       align-items: center;
     }
   }
-  
-  .forumbg-table {
-    max-width: 100%;
-    background-color: $no-color;
-    padding: $padding-tb $padding-rl;
-    margin: $margin-tb auto;
-  }
+
 
   .table {
     width: 100%;
@@ -90,6 +76,9 @@
     border-collapse: collapse;
     background-color: $no-color;
     margin: $margin-tb auto 0;
+
+    a { color: $nano-dark; }
+    a:hover::after { background-color: $nano-dark;} 
 
     thead {
       background-color: $nano-dark;

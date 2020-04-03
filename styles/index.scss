@@ -88,3 +88,40 @@ input[type="checkbox"]:checked {
   background: $main-color;
   position: relative;
 }
+
+.border-bottom {
+  border-bottom: 3px solid $main-color;
+  margin-bottom: $margin-tb;
+  font-size: 1.2rem;
+  padding: $padding-tb 0;
+  font-weight: 700;
+  flex: 1 100%;
+}
+
+.panel {
+  background-color: $no-color;
+  max-width: $maxWidthForum;
+  margin: auto;
+  //padding: $margin-tb 0;
+
+  a { color: $nano-dark!important; }
+  a:hover::after { background-color: $nano-dark!important;}
+
+  fieldset {
+    border: none;
+  }
+
+  .table1 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.panel.row2, .panel.row3 {
+  background-color: transparent;
+}
+
+.right-box {
+  text-align: right;
+  margin-right: .7rem;
+}

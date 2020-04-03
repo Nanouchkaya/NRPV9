@@ -105,7 +105,7 @@ header#page-header {
     display:flex;
     flex-direction: column;
     position: absolute;
-    top: 4rem;
+    top: 4.2rem;
     left:0;
     transition: all 400ms ease-in-out;
     padding: .7rem 1rem;
@@ -152,7 +152,6 @@ header#page-header {
     
     &.first {
       justify-content: space-around;
-      min-width: 50vw;
     
       a {
         color: $nano-dark;

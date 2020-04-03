@@ -34,11 +34,14 @@
   }
 }
   
-.panel {
+.image-panel {
   display: flex;
   flex-wrap: wrap;
   background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_sondage.jpg) no-repeat bottom right;
   padding: $padding-tb $padding-rl;
+
+  a { color: $nano-dark!important; }
+  a:hover::after { background-color: $nano-dark!important;}
 
   h2 {
     font-size: 1.1rem;

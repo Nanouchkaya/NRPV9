@@ -144,7 +144,7 @@ header#page-header #themes, header#page-header #nav-plus {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 4rem;
+  top: 4.2rem;
   left: 0;
   transition: all 400ms ease-in-out;
   padding: 0.7rem 1rem;
@@ -187,7 +187,6 @@ header#page-header .navbar {
 }
 header#page-header .navbar.first {
   justify-content: space-around;
-  min-width: 50vw;
 }
 header#page-header .navbar.first a {
   color: #161614;
@@ -843,20 +842,118 @@ footer#page-footer a {
   color: grey;
 }
 
+/* EDITION */
+#tabs ul {
+  display: flex;
+  justify-content: space-between;
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+}
+#tabs ul li {
+  list-style: none;
+}
+
+.profile_h2,
+form h1.page-title {
+  border-bottom: 8px solid #23a9b5;
+  font-size: 1.2rem;
+  padding: 0.7rem 1rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.second-panel {
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.5rem;
+  background-color: white;
+}
+.second-panel a {
+  color: #161614 !important;
+}
+.second-panel a:hover::after {
+  background-color: #161614 !important;
+}
+.second-panel fieldset {
+  border: none;
+}
+.second-panel dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.7rem 0;
+}
+.second-panel dt {
+  font-weight: 700;
+  flex: 1 30%;
+}
+.second-panel dd {
+  flex: 1 70%;
+}
+.second-panel input[type=text] {
+  border: none;
+  border-bottom: 1px solid #161614;
+  width: 100% !important;
+}
+.second-panel #profile_field_4_-12_0 {
+  width: initial !important;
+}
+.second-panel span[style="color:#FFFFFF;"] {
+  color: #161614 !important;
+}
+
+.italic {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.profile_field_list {
+  display: flex;
+}
+
+.signature_edit input.button2 {
+  cursor: pointer;
+  background-color: #23a9b5;
+  color: white;
+  padding: calc(0.7rem / 2) 1rem;
+  font-variant: small-caps;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  transition: all 200ms ease;
+}
+.signature_edit input.button2:hover {
+  color: #161614;
+}
+.signature_edit #parent_editor_simple {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.rpg-table {
+  border-collapse: separate;
+  border-spacing: 0.7rem;
+}
+
+.rpg-avatar-explanation {
+  text-align: center;
+  color: #ee1c25;
+}
+
 .forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
   width: 166px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.forumbg {
-  margin: 1rem auto;
+.forumbg, .forumbg-table {
+  margin: 1.5rem auto;
   padding: 0.7rem 1rem;
   max-width: 1100px;
-  width: 90vw;
+  width: 100%;
   background-color: white;
 }
-.forumbg li.header {
+.forumbg li.header, .forumbg-table li.header {
   background-color: #161614;
   color: white;
   text-align: center;
@@ -864,20 +961,20 @@ footer#page-footer a {
   font-weight: 700;
   text-transform: uppercase;
 }
-.forumbg li.row {
+.forumbg li.row, .forumbg-table li.row {
   display: flex;
   align-items: center;
   margin: 1.5rem 0;
 }
-.forumbg li.row .topiclist-lastpost {
+.forumbg li.row .topiclist-lastpost, .forumbg-table li.row .topiclist-lastpost {
   flex: 1;
   display: flex;
   font-size: 0.9rem;
 }
-.forumbg li.row .topiclist-lastpost .posts-views {
+.forumbg li.row .topiclist-lastpost .posts-views, .forumbg-table li.row .topiclist-lastpost .posts-views {
   color: #9a9a8f;
 }
-.forumbg li.row .topiclist-lastpost .lastpost {
+.forumbg li.row .topiclist-lastpost .lastpost, .forumbg-table li.row .topiclist-lastpost .lastpost {
   display: flex;
   flex-direction: column;
   padding: 0.7rem 1rem;
@@ -885,13 +982,13 @@ footer#page-footer a {
   margin-left: 0.35rem;
   white-space: nowrap;
 }
-.forumbg li.row .topiclist-lastpost .lastpost.newpost {
+.forumbg li.row .topiclist-lastpost .lastpost.newpost, .forumbg-table li.row .topiclist-lastpost .lastpost.newpost {
   border-width: 3px;
   border-style: solid;
   height: fit-content;
   border-color: #23a9b5;
 }
-.forumbg li.row .topiclist-lastpost .lastpost.newpost::after {
+.forumbg li.row .topiclist-lastpost .lastpost.newpost::after, .forumbg-table li.row .topiclist-lastpost .lastpost.newpost::after {
   top: calc(0.7rem * -1);
   content: "Du neuf ! ";
   font-family: "summeronregular", cursive;
@@ -902,33 +999,34 @@ footer#page-footer a {
   background-color: white;
   color: #23a9b5;
 }
-.forumbg li.row .topiclist-lastpost .topic-etiquette {
+.forumbg li.row .topiclist-lastpost .topic-etiquette, .forumbg-table li.row .topiclist-lastpost .topic-etiquette {
   width: 30px;
   background-position-y: center;
 }
-.forumbg li.row .dterm {
+.forumbg li.row .dterm, .forumbg-table li.row .dterm {
   flex: 2;
 }
-.forumbg li.row .dterm h2.topic-title.hierarchy a {
+.forumbg li.row .dterm h2.topic-title.hierarchy a, .forumbg-table li.row .dterm h2.topic-title.hierarchy a {
   font-size: 1.1rem;
   text-transform: uppercase;
   color: #161614;
 }
-.forumbg li.row .dterm .topic-title-container {
+.forumbg li.row .dterm .topic-title-container, .forumbg-table li.row .dterm .topic-title-container {
   text-align: right;
 }
-.forumbg li.row .dterm .topic-description {
+.forumbg li.row .dterm .topic-description, .forumbg-table li.row .dterm .topic-description {
   color: #9a9a8f;
   font-size: 0.9rem;
 }
-.forumbg li.row .dterm .topic-goto-page a {
+.forumbg li.row .dterm .topic-goto-page a, .forumbg-table li.row .dterm .topic-goto-page a {
   color: black;
 }
 .forumbg li.row .dterm .topic-title.hierarchy a:first-of-type:hover::after,
-.forumbg li.row .dterm .topic-goto-page a:hover::after {
+.forumbg li.row .dterm .topic-goto-page a:hover::after, .forumbg-table li.row .dterm .topic-title.hierarchy a:first-of-type:hover::after,
+.forumbg-table li.row .dterm .topic-goto-page a:hover::after {
   background-color: #161614;
 }
-.forumbg .topics-list-bottom {
+.forumbg .topics-list-bottom, .forumbg-table .topics-list-bottom {
   background-color: #161614;
   padding: 0.7rem 1rem;
   margin-top: 1.5rem;
@@ -936,17 +1034,17 @@ footer#page-footer a {
   justify-content: space-between;
   font-size: 0.9rem;
 }
-.forumbg .topics-list-bottom-pagination {
+.forumbg .topics-list-bottom-pagination, .forumbg-table .topics-list-bottom-pagination {
   color: #9a9a8f;
   justify-self: flex-end;
   margin-bottom: calc(-0.7rem);
 }
-.forumbg .topics-list-bottom span#read-forum a, .forumbg .topics-list-bottom span#watch-forum a {
+.forumbg .topics-list-bottom span#read-forum a, .forumbg .topics-list-bottom span#watch-forum a, .forumbg-table .topics-list-bottom span#read-forum a, .forumbg-table .topics-list-bottom span#watch-forum a {
   margin-right: 1rem;
   position: relative;
   padding-left: 23px;
 }
-.forumbg .topics-list-bottom span#read-forum a::before, .forumbg .topics-list-bottom span#watch-forum a::before {
+.forumbg .topics-list-bottom span#read-forum a::before, .forumbg .topics-list-bottom span#watch-forum a::before, .forumbg-table .topics-list-bottom span#read-forum a::before, .forumbg-table .topics-list-bottom span#watch-forum a::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -956,13 +1054,13 @@ footer#page-footer a {
   background-repeat: no-repeat;
   background-position: center;
 }
-.forumbg .topics-list-bottom span#read-forum a::before {
+.forumbg .topics-list-bottom span#read-forum a::before, .forumbg-table .topics-list-bottom span#read-forum a::before {
   background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_lu.png);
 }
-.forumbg .topics-list-bottom span#watch-forum a[href$="?watch=forum"]::before {
+.forumbg .topics-list-bottom span#watch-forum a[href$="?watch=forum"]::before, .forumbg-table .topics-list-bottom span#watch-forum a[href$="?watch=forum"]::before {
   background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
 }
-.forumbg .topics-list-bottom span#watch-forum a[href$="?unwatch=forum"]::before {
+.forumbg .topics-list-bottom span#watch-forum a[href$="?unwatch=forum"]::before, .forumbg-table .topics-list-bottom span#watch-forum a[href$="?unwatch=forum"]::before {
   background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
 }
 
@@ -1126,49 +1224,55 @@ a.topic-button:hover::after {
   color: #9a9a8f;
 }
 
-.panel {
+.image-panel {
   display: flex;
   flex-wrap: wrap;
   background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_sondage.jpg) no-repeat bottom right;
   padding: 0.7rem 1rem;
 }
-.panel h2 {
+.image-panel a {
+  color: #161614 !important;
+}
+.image-panel a:hover::after {
+  background-color: #161614 !important;
+}
+.image-panel h2 {
   font-size: 1.1rem;
   flex: 1;
 }
-.panel .polls {
+.image-panel .polls {
   flex: 1 100%;
   border: none;
   border-top: 3px solid #23a9b5;
   margin-top: 0.7rem;
 }
-.panel .polls dt {
+.image-panel .polls dt {
   min-width: 10%;
 }
-.panel .polls dl {
+.image-panel .polls dl {
   display: flex;
   align-items: center;
 }
-.panel .polls dl:nth-last-child(2) dd:nth-last-child(1) {
+.image-panel .polls dl:nth-last-child(2) dd:nth-last-child(1) {
   width: 39%;
   font-size: 0.9rem;
   text-align: right;
 }
-.panel .polls dl:nth-last-child(2) dd:nth-last-child(1) a {
+.image-panel .polls dl:nth-last-child(2) dd:nth-last-child(1) a {
   color: #161614;
 }
-.panel .poll-bar {
+.image-panel .poll-bar {
   background-color: #a4a3a382;
   position: relative;
   height: 1.5rem;
   width: 50%;
   margin: 1rem 0;
 }
-.panel .poll-bar-bar {
+.image-panel .poll-bar-bar {
   background-color: #23a9b5;
   height: 1.5rem;
 }
-.panel .poll-bar-desc {
+.image-panel .poll-bar-desc {
   position: absolute;
   top: 0;
   left: 5%;
@@ -1450,7 +1554,7 @@ a.topic-button:hover::after {
 }
 
 .wrapper.solo {
-  max-width: 1300px;
+  max-width: 1100px;
   margin: auto;
   padding: 1.5rem 0;
 }
@@ -1458,13 +1562,6 @@ a.topic-button:hover::after {
   text-align: right;
   font-size: 0.9rem;
   color: #9a9a8f;
-}
-.wrapper.solo .border-bottom {
-  border-bottom: 3px solid #23a9b5;
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  padding: 0.7rem 0;
-  font-weight: 700;
 }
 .wrapper.solo .normal-panel {
   background-color: #161614;
@@ -1511,18 +1608,18 @@ a.topic-button:hover::after {
   display: flex;
   align-items: center;
 }
-.wrapper.solo .forumbg-table {
-  max-width: 100%;
-  background-color: white;
-  padding: 0.7rem 1rem;
-  margin: 1.5rem auto;
-}
 .wrapper.solo .table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
   background-color: white;
   margin: 1.5rem auto 0;
+}
+.wrapper.solo .table a {
+  color: #161614;
+}
+.wrapper.solo .table a:hover::after {
+  background-color: #161614;
 }
 .wrapper.solo .table thead {
   background-color: #161614;
@@ -1676,6 +1773,43 @@ input[type=checkbox]:hover {
 input[type=checkbox]:checked {
   background: #23a9b5;
   position: relative;
+}
+
+.border-bottom {
+  border-bottom: 3px solid #23a9b5;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.7rem 0;
+  font-weight: 700;
+  flex: 1 100%;
+}
+
+.panel {
+  background-color: white;
+  max-width: 1100px;
+  margin: auto;
+}
+.panel a {
+  color: #161614 !important;
+}
+.panel a:hover::after {
+  background-color: #161614 !important;
+}
+.panel fieldset {
+  border: none;
+}
+.panel .table1 {
+  text-align: center;
+  width: 100%;
+}
+
+.panel.row2, .panel.row3 {
+  background-color: transparent;
+}
+
+.right-box {
+  text-align: right;
+  margin-right: 0.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */
