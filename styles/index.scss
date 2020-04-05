@@ -1,5 +1,5 @@
-@import "reset", "variables", "header", "page_accueil", "category", "first_onglet", 
- "footer", "profile", "mp", "topics_list", "forum_view", "topic_body", "solo_page";
+@import "animations", "reset", "variables", "header", "page_accueil", "category", "first_onglet", 
+ "footer", "profile", "mp", "topics_list", "forum_view", "topic_body", "solo_page", "message_post";
 
 body {
   font-family: $main-font;
@@ -40,7 +40,7 @@ li.nm-nav-item::after {
   height: .12rem;
   background-color: $no-color;
   left: 0;
-  bottom: -.3rem;
+  bottom: -.15rem;
   opacity: 0;
   transform: translateZ(-30%);
   transition: all 200ms ease-in-out;
@@ -57,6 +57,11 @@ li.nm-nav-item:hover::after {
 #logo {
   height: 385px;
   width: 100vw;
+}
+
+#main-content {
+  opacity: 0;
+  animation: fade 300ms forwards 0.35s ease-in-out;
 }
 
 input.button1 {

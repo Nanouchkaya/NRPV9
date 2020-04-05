@@ -1,0 +1,62 @@
+<div></div>
+<div class="wrapper solo">
+<ul id="privmsgs-menu">
+	<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_inbox.png" alt="Boite de réception" />{INBOX}<div class="active"></div></li>
+	<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_sent.png" alt="Messages envoyés" />{SENTBOX}<div class="active"></div></li>
+	<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_outbox.png" alt="Boite d'envoi" />{OUTBOX}<div class="active"></div></li>
+	<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_archives.png" alt="archives" />{SAVEBOX}<div class="active"></div></li>
+</ul>
+
+
+<form action="{S_PRIVMSGS_ACTION}" method="post">
+	<div class="topic-actions">
+		<!-- BEGIN switch_post_reply -->
+		<div class="post-icon">{REPLY_PM_IMG}</div>
+		<!-- END switch_post_reply -->
+		<!-- BEGIN switch_post_reply -->
+		<a href="{POST_PM_URL}"><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/bo_mp.png" alt="Nouveau MP" /></a>
+		<!-- END switch_post_reply -->
+	</div>
+	<div class="thead">{BOX_NAME}</div>
+	<div class="second-panel privmsg">
+		<div class="privmsg-profile">
+			<div class="privmsg-avatar">{AVATAR_FROM}</div>
+		</div>
+		<div class="privmsg-infos">
+			<p class="privmsg-subject">{POST_SUBJECT}</p>
+			<p class="privmsg-from">De {MESSAGE_FROM} à {MESSAGE_TO}, {POST_DATE}</p>
+		</div>
+		<div class="privmsg-content">
+			<div class="privmsg-icons">
+				<!-- BEGIN switch_quote -->
+				{QUOTE_PM_IMG}
+				<!-- END switch_quote -->
+				{EDIT_PM_IMG}
+			</div>
+			{MESSAGE}
+		</div>
+	</div>
+	<div class="submit-buttons">
+		{S_HIDDEN_FIELDS}
+		<!-- BEGIN switch_save -->
+		<input class="button1" type="submit" name="save" value="{L_SAVE_MSG}" />&nbsp;&nbsp;
+		<!-- END switch_save -->
+		<!-- BEGIN switch_move_profile -->
+		<input class="button1" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" />&nbsp;&nbsp;
+		<!-- END switch_move_profile -->
+		<input class="button1" type="submit" name="delete" value="{L_DELETE_MSG}" />
+	</div>
+</form>
+
+<!-- BEGIN switch_review_box -->
+{TOPIC_REVIEW_BOX}
+<!-- END switch_review_box -->
+
+</div>
+<!-- BEGIN switch_image_resize -->
+<script type="text/javascript">
+//<![CDATA[
+$(resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} }));
+//]]>
+</script>
+<!-- END switch_image_resize -->

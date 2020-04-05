@@ -1,0 +1,64 @@
+@import "variables";
+
+span.post_icon_img {
+  width: 79px;
+  height: 23px;
+  display: inline-block;
+  background-position-x: -79px;
+
+  img { display: none; }
+}
+
+.post-etiquette dd {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message_smiley-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+
+  #smiley-box {
+    p {
+      font-size: .9rem;
+      color: lighten($nano-dark, $amount: 50%)
+    } 
+
+    #sceditor_smilies body {
+      background: none;
+    }
+  }
+
+  #message-box {
+    flex: 1;
+    padding-right: $padding-rl;
+
+    textarea { width: auto!important; }
+  }
+}
+
+.counter {
+  text-align: center;
+  padding-bottom: $padding-tb;
+}
+
+.submit-buttons {
+  text-align: center;
+  margin-top: calc(#{$margin-tb} * -1);
+}
+
+input#nb_rolls {
+  width: auto!important;
+}
+
+.review {
+  p.author {
+    border-bottom: 2px solid $main-color;
+    margin-bottom: $padding-tb;
+  }
+  .content {
+      font-size: .9rem;
+  }
+}

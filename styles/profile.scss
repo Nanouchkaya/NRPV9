@@ -25,42 +25,6 @@ form h1.page-title {
   text-transform: uppercase;
 }
 
-.second-panel {
-  padding: $padding-tb $padding-rl;
-  margin: 0 0 $margin-tb;
-  background-color: $no-color;
-
-  a { color: $nano-dark!important; }
-  a:hover::after { background-color: $nano-dark!important;}
-  
-  fieldset { border: none; }
-
-  dl {
-    display: flex;
-    flex-wrap: wrap;
-    margin: $padding-tb 0;
-  }
-
-  dt {
-    font-weight: 700;
-    flex: 1 30%;
-  }
-
-  dd {
-    flex: 1 70%;
-  }
-
-  input[type="text"] {
-    border: none;
-    border-bottom: 1px solid $nano-dark;
-    width: 100%!important;
-  }
-
-  // fix
-  #profile_field_4_-12_0 { width: initial!important; }
-  span[style="color:#FFFFFF;"] { color: $nano-dark!important; }
-}
-
 .italic {
   font-size: .9rem;
   font-style: italic;

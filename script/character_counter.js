@@ -22,3 +22,8 @@ function changeCounter(e) {
 }
 
 textarea.addEventListener('keyup', changeCounter);
+
+icons.forEach(icon => {
+  img_ulr = icon.firstElementChild.src;
+  icon.style = "background-image:" + img_url;
+});

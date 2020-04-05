@@ -1,4 +1,52 @@
 @charset "UTF-8";
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fromCenter {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-10vw) skewX(20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) skewX(0);
+    opacity: 1;
+  }
+}
+@keyframes fromRight {
+  0% {
+    transform: translateX(10vw) skewX(-20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) skewX(0);
+    opacity: 1;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -65,13 +113,12 @@ header#page-header h1#site-title {
   position: relative;
   top: 17rem;
   text-align: center;
+  opacity: 0;
+  animation: fromLeft 700ms forwards 0.2s ease-in-out;
 }
 header#page-header h1#site-title span {
   margin-right: 8rem;
   transition: all 100ms ease-in-out;
-}
-header#page-header h1#site-title:hover span {
-  margin-right: 11rem;
 }
 header#page-header p#site-desc {
   color: white;
@@ -82,12 +129,16 @@ header#page-header p#site-desc {
   text-align: center;
   padding-left: 30rem;
   top: 18rem;
+  opacity: 0;
+  animation: fromRight 600ms forwards 0.3s ease-in-out;
 }
 header#page-header #mamie_guitar {
   position: absolute;
   left: 50%;
   top: 3rem;
   z-index: 1;
+  opacity: 0;
+  animation: fade 400ms forwards 0.6s ease-in-out;
 }
 header#page-header #mamie_guitar span {
   font-size: 0.6rem;
@@ -100,16 +151,10 @@ header#page-header #mamie_guitar span {
   transition: all 100ms ease-in-out;
   font-family: "summeronregular", cursive;
 }
-header#page-header #mamie_guitar:hover + #site-title span {
-  margin-right: 11rem;
-}
 header#page-header #mamie_guitar img {
   display: inline;
   position: relative;
   left: -247px;
-}
-header#page-header #mamie_guitar:hover span {
-  font-size: 0.8rem;
 }
 header#page-header #headerbar-top {
   background-color: white;
@@ -187,6 +232,7 @@ header#page-header .navbar {
 }
 header#page-header .navbar.first {
   justify-content: space-around;
+  padding-left: 1rem;
 }
 header#page-header .navbar.first a {
   color: #161614;
@@ -195,7 +241,7 @@ header#page-header .navbar.first a {
 }
 header#page-header .navbar.first a::after {
   height: 0.2rem;
-  background-color: black;
+  background-color: #161614;
 }
 header#page-header .navbar.first li {
   text-transform: uppercase;
@@ -864,44 +910,6 @@ form h1.page-title {
   text-transform: uppercase;
 }
 
-.second-panel {
-  padding: 0.7rem 1rem;
-  margin: 0 0 1.5rem;
-  background-color: white;
-}
-.second-panel a {
-  color: #161614 !important;
-}
-.second-panel a:hover::after {
-  background-color: #161614 !important;
-}
-.second-panel fieldset {
-  border: none;
-}
-.second-panel dl {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.7rem 0;
-}
-.second-panel dt {
-  font-weight: 700;
-  flex: 1 30%;
-}
-.second-panel dd {
-  flex: 1 70%;
-}
-.second-panel input[type=text] {
-  border: none;
-  border-bottom: 1px solid #161614;
-  width: 100% !important;
-}
-.second-panel #profile_field_4_-12_0 {
-  width: initial !important;
-}
-.second-panel span[style="color:#FFFFFF;"] {
-  color: #161614 !important;
-}
-
 .italic {
   font-size: 0.9rem;
   font-style: italic;
@@ -938,6 +946,102 @@ form h1.page-title {
 .rpg-avatar-explanation {
   text-align: center;
   color: #ee1c25;
+}
+
+#privmsgs-menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  color: #161614;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-variant: small-caps;
+}
+#privmsgs-menu a {
+  color: #161614;
+}
+#privmsgs-menu a:hover::after {
+  background-color: #161614;
+}
+#privmsgs-menu img {
+  padding-right: 0.7rem;
+}
+#privmsgs-menu li {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.privmsg {
+  display: flex;
+  flex-wrap: wrap;
+}
+.privmsg-content {
+  flex: 1 100%;
+  border-top: 1px solid;
+}
+.privmsg .signature_div {
+  display: none;
+}
+.privmsg-avatar img {
+  width: 100px;
+}
+.privmsg-infos {
+  padding-left: 0.7rem;
+  font-size: 0.9rem;
+}
+.privmsg-icons {
+  text-align: right;
+}
+
+.new-pm {
+  padding: 0.7rem 0;
+}
+
+.pm.thead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pm-actions-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pmlist {
+  margin: 0 auto !important;
+}
+.pmlist ul {
+  list-style: none;
+  padding: 0;
+}
+.pmlist dl {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.7rem 0 1rem;
+}
+.pmlist dt {
+  display: flex;
+  align-items: center;
+  flex: 1 100%;
+}
+.pmlist dt img {
+  width: 40px;
+  margin-right: 1rem;
+}
+.pmlist a.topictitle,
+.pmlist p.right-box.quick-select a {
+  color: #161614;
+}
+.pmlist a.topictitle:hover::after,
+.pmlist p.right-box.quick-select a:hover::after {
+  background-color: #161614;
+}
+.pmlist .row2 {
+  background-color: #f4f4f4;
 }
 
 .forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
@@ -1563,6 +1667,13 @@ a.topic-button:hover::after {
   font-size: 0.9rem;
   color: #9a9a8f;
 }
+.wrapper.solo .thead {
+  background-color: #161614;
+  padding: 0.7rem 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 .wrapper.solo .normal-panel {
   background-color: #161614;
   padding: 0.7rem 1rem;
@@ -1607,6 +1718,43 @@ a.topic-button:hover::after {
 .wrapper.solo .normal-panel .submit {
   display: flex;
   align-items: center;
+}
+.wrapper.solo .second-panel {
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.5rem;
+  background-color: white;
+}
+.wrapper.solo .second-panel a {
+  color: #161614 !important;
+}
+.wrapper.solo .second-panel a:hover::after {
+  background-color: #161614 !important;
+}
+.wrapper.solo .second-panel fieldset {
+  border: none;
+}
+.wrapper.solo .second-panel dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.7rem 0;
+}
+.wrapper.solo .second-panel dt {
+  font-weight: 700;
+  flex: 1 30%;
+}
+.wrapper.solo .second-panel dd {
+  flex: 1 70%;
+}
+.wrapper.solo .second-panel input[type=text] {
+  border: none;
+  border-bottom: 1px solid #161614;
+  width: 100% !important;
+}
+.wrapper.solo .second-panel #profile_field_4_-12_0 {
+  width: initial !important;
+}
+.wrapper.solo .second-panel span[style="color:#FFFFFF;"] {
+  color: #161614 !important;
 }
 .wrapper.solo .table {
   width: 100%;
@@ -1684,6 +1832,64 @@ a.topic-button:hover::after {
   padding: calc(0.7rem / 2) 1rem;
 }
 
+span.post_icon_img {
+  width: 79px;
+  height: 23px;
+  display: inline-block;
+  background-position-x: -79px;
+}
+span.post_icon_img img {
+  display: none;
+}
+
+.post-etiquette dd {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message_smiley-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.message_smiley-wrap #smiley-box p {
+  font-size: 0.9rem;
+  color: #9a9a8f;
+}
+.message_smiley-wrap #smiley-box #sceditor_smilies body {
+  background: none;
+}
+.message_smiley-wrap #message-box {
+  flex: 1;
+  padding-right: 1rem;
+}
+.message_smiley-wrap #message-box textarea {
+  width: auto !important;
+}
+
+.counter {
+  text-align: center;
+  padding-bottom: 0.7rem;
+}
+
+.submit-buttons {
+  text-align: center;
+  margin-top: calc(1.5rem * -1);
+}
+
+input#nb_rolls {
+  width: auto !important;
+}
+
+.review p.author {
+  border-bottom: 2px solid #23a9b5;
+  margin-bottom: 0.7rem;
+}
+.review .content {
+  font-size: 0.9rem;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
   font-size: 100%;
@@ -1722,7 +1928,7 @@ li.nm-nav-item::after {
   height: 0.12rem;
   background-color: white;
   left: 0;
-  bottom: -0.3rem;
+  bottom: -0.15rem;
   opacity: 0;
   transform: translateZ(-30%);
   transition: all 200ms ease-in-out;
@@ -1739,6 +1945,11 @@ li.nm-nav-item:hover::after {
 #logo {
   height: 385px;
   width: 100vw;
+}
+
+#main-content {
+  opacity: 0;
+  animation: fade 300ms forwards 0.35s ease-in-out;
 }
 
 input.button1 {
