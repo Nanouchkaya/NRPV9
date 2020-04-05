@@ -1,0 +1,79 @@
+<div></div>
+<div class="wrapper solo">
+  <ul id="privmsgs-menu">
+		<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_inbox.png" alt="Boite de réception" />{INBOX}<div class="active"></div></li>
+		<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_sent.png" alt="Messages envoyés" />{SENTBOX}<div class="active"></div></li>
+		<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_outbox.png" alt="Boite d'envoi" />{OUTBOX}<div class="active"></div></li>
+		<li><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/mp_archives.png" alt="archives" />{SAVEBOX}<div class="active"></div></li>
+	</ul>
+
+	<form action="{S_PRIVMSGS_ACTION}" method="post" name="privmsg_list">
+	<div class="normal-panel">
+		<!-- BEGIN switch_box_size_notice -->
+		{BOX_SIZE_STATUS}
+		<!-- END switch_box_size_notice -->
+			<div style="text-align: right">
+					{L_DISPLAY_MESSAGES}: <select name="msgdays">
+				{S_SELECT_MSG_DAYS}
+				</select> <input class="button2" type="submit" name="submit_msgdays" value="Valider" />
+			</div>
+	</div>
+
+	<div class="new-pm">
+		<a href="/privmsg?mode=post"><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/bo_mp.png" alt="Nouveau MP" /></a>
+	</div>
+
+	<div class="pm thead">
+		<span>{L_SUBJECT}</span>
+		<span class="mark">{L_MARK}</span>
+	</div>
+
+	<div class="forumbg pmlist">
+		<ul>
+		<!-- BEGIN listrow -->
+		<li class="{listrow.ROW_CLASS}">
+		<dl>
+				<dt>
+					<img src="{listrow.PRIVMSG_FOLDER_IMG}" alt="{listrow.L_PRIVMSG_FOLDER_ALT}" title="{listrow.L_PRIVMSG_FOLDER_ALT}" />
+					<a href="{listrow.U_READ}" class="topictitle">{listrow.SUBJECT}</a>
+					<span style="padding-left: .7rem" class="italic">{listrow.FROM} - {listrow.DATE}</span>
+				</dt>
+				<dd class="mark"><input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}" /></dd>
+			</dl>
+		</li>
+		<!-- END listrow -->
+		<!-- BEGIN switch_no_messages -->
+		<li class="row1">
+			<dl class="icon">
+				<dt>
+					<strong>{L_NO_MESSAGES}</strong>
+				</dt>
+				<dd class="mark"> </dd>
+			</dl>
+		</li>
+		<!-- END switch_no_messages -->
+		</ul>
+		<p class="right-box quick-select"><a href="javascript:select_switch_privmsg(true);">{L_MARK_ALL}</a> :: <a href="javascript:select_switch_privmsg(false);">{L_UNMARK_ALL}</a></p>
+	</div>
+	
+	<div class="privmsg-bottom pagination-bar">
+		<span>{PAGE_NUMBER}</span> 
+		<span class="pagination">{PAGINATION}</span>
+	</div>
+
+	<div class="pm-actions bottom">
+		<div class="pm-actions-buttons">
+			{S_HIDDEN_FIELDS}
+			<!-- BEGIN switch_save -->
+			<input class="button1" type="submit" name="save" value="{L_SAVE_MARKED}" />
+			<!-- END switch_save -->
+			<!-- BEGIN switch_move_profile -->
+			<input class="button1" type="submit" name="moveprofile" value="{L_MOVE_PROFILE_MARKED}" />
+			<!-- END switch_move_profile -->
+			<input class="button1" type="submit" name="delete" value="{L_DELETE_MARKED}" />
+			<input class="button1" type="submit" name="deleteall" value="{L_DELETE_ALL}" />
+		</div>
+	</div>
+	</form>
+
+</div>

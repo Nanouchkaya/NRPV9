@@ -1,0 +1,69 @@
+@import "variables";
+
+/* EDITION */
+#tabs ul {
+  display: flex;
+  justify-content: space-between;
+  background-color: $nano-dark;
+  padding: $padding-tb $padding-rl;
+
+  // fix content variable no access
+  max-width: $maxWidthForum;
+  margin: 0 auto $margin-tb;
+
+  li {
+    list-style: none;
+  }
+}
+
+.profile_h2,
+form h1.page-title {
+  border-bottom: 8px solid $main-color;
+  font-size: 1.2rem;
+  padding: $padding-tb $padding-rl 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.italic {
+  font-size: .9rem;
+  font-style: italic;
+}
+
+.profile_field_list {
+  display: flex;
+}
+
+
+// Signature
+
+.signature_edit {
+  input.button2 { //copy style from button1 (no access to variable html content)
+    cursor: pointer;
+    background-color: $main-color ;
+    color: $no-color;
+    padding: calc(#{$padding-tb} / 2) $padding-rl;
+    font-variant: small-caps;
+    font-weight: 700;
+    margin: $margin-tb 0;
+    transition: all 200ms ease;
+    &:hover { color: $nano-dark; }
+  }
+
+  #parent_editor_simple {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+// RPG sheet 
+
+.rpg-table {
+  border-collapse: separate;
+  border-spacing: .7rem;
+}
+.rpg-avatar-explanation {
+  text-align: center;
+  color: $zombie;
+}

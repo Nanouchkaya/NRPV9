@@ -21,21 +21,32 @@
 @keyframes fromTop {
   0% { 
     opacity: 0;
-    transform: translateY(-20%); 
+    transform: translateY(-10%); 
   }
   100% {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
   }
 }
 
-@keyframes fromLeft {
-  0% { 
-    opacity: 0;
-    transform: translateX(-80%); 
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0); 
-  }
+@keyframes fromLeft{
+  0%{
+      transform: translateX(-10vw) skewX(20deg);
+      opacity: 0;
+      }
+  100%{
+      transform: translateX(0) skewX(0);
+      opacity: 1;
+      }
+}
+
+@keyframes fromRight{
+  0%{
+      transform: translateX(10vw) skewX(-20deg);
+      opacity: 0;
+      }
+  100%{
+      transform: translateX(0) skewX(0);
+      opacity: 1;
+      }
 }

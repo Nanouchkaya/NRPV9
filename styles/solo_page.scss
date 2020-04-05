@@ -10,7 +10,7 @@
 }
 
 .wrapper.solo {
-  max-width: 1300px;
+  max-width: $maxWidthForum;
   margin: auto;
   padding: $margin-tb 0;
 
@@ -19,12 +19,12 @@
     font-size: .9rem;
     color: lighten($nano-dark, $amount: 50%);
   }
-  
-  .border-bottom {
-    border-bottom: 3px solid $main-color;
-    margin-bottom: $margin-tb;
-    font-size: 1.2rem;
-    padding: $padding-tb 0;
+
+  .thead {
+    background-color: $nano-dark;
+    padding: $padding-tb $padding-rl;
+    color: $no-color;
+    text-transform: uppercase;
     font-weight: 700;
   }
 
@@ -76,13 +76,43 @@
       align-items: center;
     }
   }
-  
-  .forumbg-table {
-    max-width: 100%;
-    background-color: $no-color;
+
+  .second-panel {
     padding: $padding-tb $padding-rl;
-    margin: $margin-tb auto;
+    margin: 0 0 $margin-tb;
+    background-color: $no-color;
+  
+    a { color: $nano-dark!important; }
+    a:hover::after { background-color: $nano-dark!important;}
+    
+    fieldset { border: none; }
+  
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      margin: $padding-tb 0;
+    }
+  
+    dt {
+      font-weight: 700;
+      flex: 1 30%;
+    }
+  
+    dd {
+      flex: 1 70%;
+    }
+  
+    input[type="text"] {
+      border: none;
+      border-bottom: 1px solid $nano-dark;
+      width: 100%!important;
+    }
+  
+    // fix
+    #profile_field_4_-12_0 { width: initial!important; }
+    span[style="color:#FFFFFF;"] { color: $nano-dark!important; }
   }
+
 
   .table {
     width: 100%;
@@ -90,6 +120,9 @@
     border-collapse: collapse;
     background-color: $no-color;
     margin: $margin-tb auto 0;
+
+    a { color: $nano-dark; }
+    a:hover::after { background-color: $nano-dark;} 
 
     thead {
       background-color: $nano-dark;

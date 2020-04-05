@@ -161,7 +161,6 @@
 			</div>
 			<ul class="navbar first">                      
 				<li><a href="/">Accueil</a></li>
-				<li><a href="/search">Rechercher</a></li>
 				<!-- BEGIN switch_user_logged_in -->
 				<li><a href="/profile?mode=editprofile">Profil</a></li>
 				<li><a href="/memberlist">Membres</a></li>
@@ -173,24 +172,18 @@
 					<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/bn-lien.png" alt="Plus" />
 				</a>
 				<div id="nav-plus">
-					<ul class="nav-plus-list">
-						<li class="nav-plus-list-item"><a href="" onclick="closeMenu('nav-plus');return false">Contrat du RP</a></li>
+					<ul class="nav-plus-list">					
 						<!-- BEGIN switch_user_logged_in -->
+                                          	<li class="nav-plus-list-item"><a href="">Contrat du RP</a></li>
 						<li class="nav-plus-list-item">
-							<a href="{U_SEARCH_NEW}" onclick="closeMenu('nav-plus');return false">Nouveaux messages</a>
+							<a href="{U_SEARCH_NEW}">Nouveaux messages</a>
 						</li>
 						<li class="nav-plus-list-item">
-							<a href="{U_SEARCH_SELF}" onclick="closeMenu('nav-plus');return false">Mes messages</a>
+							<a href="{U_MARK_READ}" accesskey="m">Tout marqué lu</a>
 						</li>
 						<!-- END switch_user_logged_in -->
-						<li class="nav-plus-list-item">
-							<a href="{U_SEARCH_UNANSWERED}" onclick="closeMenu('nav-plus');return false">Messages sans réponses</a>
-						</li>
-						<!-- BEGIN switch_user_logged_in -->
-							<li class="nav-plus-list-item">
-								<a href="{U_MARK_READ}" onclick="closeMenu('nav-plus');return false" accesskey="m">Tout marqué lu</a>
-							</li>
-						<!-- END switch_user_logged_in -->
+					
+                                          	<li class="nav-plus-list-item"><a href="/search">Rechercher</a></li>
 					</ul>
 					<img class="cross" onclick="closeMenu('nav-plus')" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
 				</div>

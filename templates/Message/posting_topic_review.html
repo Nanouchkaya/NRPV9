@@ -1,0 +1,24 @@
+<!-- BEGIN switch_inline_mode -->
+<div class="thead">{L_TOPIC_REVIEW}</div>
+<!-- END switch_inline_mode -->
+
+<!-- BEGIN postrow -->
+	<!-- BEGIN displayed -->
+		<div class="second-panel">
+			<a name="{postrow.displayed.POST_ID}"></a>
+			<div class="postbody review">
+				<p class="author">
+          Par {postrow.displayed.POSTER_NAME} {postrow.displayed.L_TOPIC_ON} {postrow.displayed.POST_DATE}
+        </p>
+				<div class="content">
+          {postrow.displayed.MESSAGE}
+        </div>
+			</div>
+		</div>
+	<!-- END displayed -->
+	<!-- BEGIN hidden -->
+		<div class="post row2">
+				<p style="text-align:center">{postrow.hidden.MESSAGE}</p>
+		</div>
+	<!-- END hidden -->
+<!-- END postrow -->
