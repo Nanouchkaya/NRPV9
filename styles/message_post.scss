@@ -17,7 +17,6 @@ span.post_icon_img {
 .message_smiley-wrap {
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
   justify-content: space-between;
 
   #smiley-box {
@@ -33,15 +32,46 @@ span.post_icon_img {
 
   #message-box {
     flex: 1;
-    padding-right: $padding-rl;
+    margin-right: $padding-rl;
 
-    textarea { width: auto!important; }
+    .sceditor-container.ltr.sourceMode {
+      font-weight: 100;
+      textarea { 
+        padding: .7rem;
+        width: 100%!important;
+      }
+    }
+
+    .sceditor-container.ltr.wysiwygMode {
+      iframe{ 
+        padding: .7rem 1.5rem;
+        width: 100%!important; }
+    }
+  }
+
+  .sceditor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-tb $padding-rl!important;
+  }
+
+  .sceditor-group {
+    display: flex!important;
+    justify-content: space-around;
+    background-color: #f4f4f4!important;
+    border: none!important;
+    flex: 1;
+    flex-wrap: wrap;
+
+    a.sceditor-button { padding: .7rem;}
+    .sceditor-button div { margin: -7px -7px; }
   }
 }
 
 .counter {
   text-align: center;
   padding-bottom: $padding-tb;
+  font-weight: 700;
 }
 
 .submit-buttons {

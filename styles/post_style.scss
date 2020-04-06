@@ -1,0 +1,150 @@
+@import 'variables';
+
+/* STYLES MISE EN PAGE */
+.post {
+  &-title {
+    font-family: $special-font;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &-block-1 {
+    width: 75%;
+    margin: auto;
+    padding: $padding-tb $padding-rl;
+    font-size: .9rem;
+  }
+
+  &-block-2 {
+    width: 95%;
+    margin: auto;
+    padding: $padding-tb $padding-rl;
+  }
+
+  &-block-ink-1 {
+    padding: 3rem 0;
+    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 2rem -1rem, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 81% 112%;
+  }
+
+  &-inner {
+    width: 60%;
+    margin: 0 auto;
+    padding: $padding-tb $padding-rl;
+    font-size: .9rem;
+  }
+
+  &-block-ink-2 {
+    padding: 4rem 0 2rem;
+    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.1.png) no-repeat 26% -8%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat 86% 0%;
+  }
+
+  &-block-ink-title {
+    font-family: $special-font;
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  &-warning {
+    font-weight: 700;
+    padding-left: 5rem;
+    position: relative;
+    font-size: .9rem;
+
+    &:before {
+      content: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_warning.png);
+      position: absolute;
+      top: calc(50% - 20px);
+      left: 0;
+    }
+  }
+
+  &-frame {
+    border-width: 5px;
+    border-style: solid;
+    padding: $padding-tb $padding-rl;
+    width: calc(100% - 4rem);
+    margin: auto;
+    position: relative;
+  }
+
+  &-frame-title {
+    font-family: $special-font;
+    padding: 0 $padding-rl;
+    position: absolute;
+    top: -1.3rem;
+    right: 10%;
+    font-size: 1.1rem;
+    background-color: #f4f4f4;
+  }
+
+  &-subtitle-1 {
+    padding: 0 $padding-rl;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $no-color;
+
+  }
+
+  &-subtitle-2 {
+    border-left-width: .5rem;
+    border-left-style: solid;
+    padding: 0 $padding-rl;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 0 $margin-rl;
+  }
+
+  &-subtitle-3 {
+    border-left-width: .5rem;
+    border-left-style: solid;
+    padding: 0 $padding-rl;
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 0 $padding-tb;
+  }
+}
+
+/* CLASSE COULEUR GENERALISTE */
+
+.bg {
+  &-light { background-color: $no-color; }
+  &-dark { background-color: $nano-dark; }
+  &-grey { background-color: lighten($nano-dark, $amount: 50%) }
+  &-pico { background-color: $micro; }
+  &-adp { background-color: $AdP; }
+  &-ap { background-color: $AP; }
+  &-zombie { background-color: $zombie; }
+  &-chim { background-color: $chimeres; }
+  &-xmen { background-color: $xmen; }
+  &-faille { background-color: $faille; }
+}
+
+.color {
+  &-light { color: $no-color!important; }
+  &-dark { color: $nano-dark; }
+  &-grey { color: lighten($nano-dark, $amount: 50%)!important;}
+  &-pico { color: $micro!important; }
+  &-adp { color: $AdP!important; }
+  &-ap { color: $AP!important; }
+  &-zombie { color: $zombie!important; }
+  &-chim { color: $chimeres!important; }
+  &-xmen { color: $xmen!important; }
+  &-faille { color: $faille!important; }
+}
+
+.border {
+  &-grey { border-color: lighten($nano-dark, $amount: 50%);}
+  &-pico { border-color: $micro; }
+  &-adp { border-color: $AdP; }
+  &-ap { border-color: $AP; }
+  &-zombie { border-color: $zombie; }
+  &-chim { border-color: $chimeres; }
+  &-xmen { border-color: $xmen; }
+  &-faille { border-color: $faille; }
+}
