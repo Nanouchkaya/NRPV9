@@ -102,6 +102,44 @@ img:not([alt]) {
     scroll-behavior: auto !important;
   }
 }
+a:not([href^="/u"]) {
+  text-decoration: none;
+  color: white;
+  font-variant: small-caps;
+  font-weight: 700;
+  position: relative;
+}
+
+a:not([href^="/u"])::after,
+li.nm-nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.12rem;
+  background-color: white;
+  left: 0;
+  bottom: -0.15rem;
+  opacity: 0;
+  transform: translateZ(-30%);
+  transition: all 200ms ease-in-out;
+}
+
+a:not([href^="/u"]):hover::after,
+li.nm-nav-item:hover::after {
+  width: 100%;
+  transform: translateZ(0);
+  opacity: 1;
+  font-variant: small-caps;
+}
+
+dl.codebox dd {
+  max-height: 15rem;
+  overflow-y: auto;
+  background-color: #161614;
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
 header#page-header {
   height: 30rem;
 }
@@ -1483,21 +1521,40 @@ a.topic-button:hover::after {
   justify-content: space-around;
   flex: 1 20%;
 }
-.post-body-head .topic-retitle {
+.post-body .topic-retitle,
+.post-body .edited-message {
   flex: 1 70%;
   font-size: 0.8rem;
   color: #9a9a8f;
 }
-.post-body-head .topic-retitle a {
+.post-body .topic-retitle a,
+.post-body .edited-message a {
   color: #9a9a8f;
   margin-right: 0.7rem;
 }
 .post-body-content {
   background-color: #F4F4F4;
   padding: 0.7rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.post-body-content div:first-child {
+  flex: 1 100%;
+}
+.post-body .indic {
+  font-size: 0.8rem;
+  text-align: right;
+  color: #9a9a8f;
 }
 .post-signature {
   flex: 100%;
+}
+.post a {
+  color: #161614;
+}
+.post a:hover::after {
+  background-color: #161614;
 }
 
 .topic-bottom {
@@ -1725,10 +1782,10 @@ a.topic-button:hover::after {
   background-color: white;
 }
 .wrapper.solo .second-panel a {
-  color: #161614 !important;
+  color: #161614;
 }
 .wrapper.solo .second-panel a:hover::after {
-  background-color: #161614 !important;
+  background-color: #161614;
 }
 .wrapper.solo .second-panel fieldset {
   border: none;
@@ -1850,7 +1907,6 @@ span.post_icon_img img {
 .message_smiley-wrap {
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
   justify-content: space-between;
 }
 .message_smiley-wrap #smiley-box p {
@@ -1862,15 +1918,43 @@ span.post_icon_img img {
 }
 .message_smiley-wrap #message-box {
   flex: 1;
-  padding-right: 1rem;
+  margin-right: 1rem;
 }
-.message_smiley-wrap #message-box textarea {
-  width: auto !important;
+.message_smiley-wrap #message-box .sceditor-container.ltr.sourceMode {
+  font-weight: 100;
+}
+.message_smiley-wrap #message-box .sceditor-container.ltr.sourceMode textarea {
+  padding: 0.7rem;
+  width: 100% !important;
+}
+.message_smiley-wrap #message-box .sceditor-container.ltr.wysiwygMode iframe {
+  padding: 0.7rem 1.5rem;
+  width: 100% !important;
+}
+.message_smiley-wrap .sceditor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem !important;
+}
+.message_smiley-wrap .sceditor-group {
+  display: flex !important;
+  justify-content: space-around;
+  background-color: #f4f4f4 !important;
+  border: none !important;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.message_smiley-wrap .sceditor-group a.sceditor-button {
+  padding: 0.7rem;
+}
+.message_smiley-wrap .sceditor-group .sceditor-button div {
+  margin: -7px -7px;
 }
 
 .counter {
   text-align: center;
   padding-bottom: 0.7rem;
+  font-weight: 700;
 }
 
 .submit-buttons {
@@ -1888,6 +1972,188 @@ input#nb_rolls {
 }
 .review .content {
   font-size: 0.9rem;
+}
+
+/* STYLES MISE EN PAGE */
+.post-title {
+  font-family: "summeronregular", cursive;
+  text-align: center;
+  font-size: 2rem;
+}
+.post-block-1 {
+  width: 75%;
+  margin: auto;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+}
+.post-block-2 {
+  width: 95%;
+  margin: auto;
+  padding: 0.7rem 1rem;
+}
+.post-block-ink-1 {
+  padding: 3rem 0;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 2rem -1rem, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 81% 112%;
+}
+.post-inner {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+}
+.post-block-ink-2 {
+  padding: 4rem 0 2rem;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.1.png) no-repeat 26% -8%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat 86% 0%;
+}
+.post-block-ink-title {
+  font-family: "summeronregular", cursive;
+  font-size: 1.1rem;
+  font-weight: 100;
+  text-align: center;
+}
+.post-warning {
+  font-weight: 700;
+  padding-left: 5rem;
+  position: relative;
+  font-size: 0.9rem;
+}
+.post-warning:before {
+  content: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_warning.png);
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 0;
+}
+.post-frame {
+  border-width: 5px;
+  border-style: solid;
+  padding: 0.7rem 1rem;
+  width: calc(100% - 4rem);
+  margin: auto;
+  position: relative;
+}
+.post-frame-title {
+  font-family: "summeronregular", cursive;
+  padding: 0 1rem;
+  position: absolute;
+  top: -1.3rem;
+  right: 10%;
+  font-size: 1.1rem;
+  background-color: #f4f4f4;
+}
+.post-subtitle-1 {
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+.post-subtitle-2 {
+  border-left-width: 0.5rem;
+  border-left-style: solid;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 0 2rem;
+}
+.post-subtitle-3 {
+  border-left-width: 0.5rem;
+  border-left-style: solid;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 0 0.7rem;
+}
+
+/* CLASSE COULEUR GENERALISTE */
+.bg-light {
+  background-color: white;
+}
+.bg-dark {
+  background-color: #161614;
+}
+.bg-grey {
+  background-color: #9a9a8f;
+}
+.bg-pico {
+  background-color: #a963a9;
+}
+.bg-adp {
+  background-color: #00a652;
+}
+.bg-ap {
+  background-color: #0054a5;
+}
+.bg-zombie {
+  background-color: #ee1c25;
+}
+.bg-chim {
+  background-color: #e9bd28;
+}
+.bg-xmen {
+  background-color: #f36523;
+}
+.bg-faille {
+  background-color: #23a9b5;
+}
+
+.color-light {
+  color: white !important;
+}
+.color-dark {
+  color: #161614;
+}
+.color-grey {
+  color: #9a9a8f !important;
+}
+.color-pico {
+  color: #a963a9 !important;
+}
+.color-adp {
+  color: #00a652 !important;
+}
+.color-ap {
+  color: #0054a5 !important;
+}
+.color-zombie {
+  color: #ee1c25 !important;
+}
+.color-chim {
+  color: #e9bd28 !important;
+}
+.color-xmen {
+  color: #f36523 !important;
+}
+.color-faille {
+  color: #23a9b5 !important;
+}
+
+.border-grey {
+  border-color: #9a9a8f;
+}
+.border-pico {
+  border-color: #a963a9;
+}
+.border-adp {
+  border-color: #00a652;
+}
+.border-ap {
+  border-color: #0054a5;
+}
+.border-zombie {
+  border-color: #ee1c25;
+}
+.border-chim {
+  border-color: #e9bd28;
+}
+.border-xmen {
+  border-color: #f36523;
+}
+.border-faille {
+  border-color: #23a9b5;
 }
 
 body {
@@ -1910,36 +2176,6 @@ a.gensmall[href^="/u"] {
 
 a[href^="/u"] {
   text-decoration: none;
-}
-
-a:not([href^="/u"]) {
-  text-decoration: none;
-  color: white;
-  font-variant: small-caps;
-  font-weight: 700;
-  position: relative;
-}
-
-a:not([href^="/u"])::after,
-li.nm-nav-item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0.12rem;
-  background-color: white;
-  left: 0;
-  bottom: -0.15rem;
-  opacity: 0;
-  transform: translateZ(-30%);
-  transition: all 200ms ease-in-out;
-}
-
-a:not([href^="/u"]):hover::after,
-li.nm-nav-item:hover::after {
-  width: 100%;
-  transform: translateZ(0);
-  opacity: 1;
-  font-variant: small-caps;
 }
 
 #logo {

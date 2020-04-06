@@ -1,5 +1,5 @@
-@import "animations", "reset", "variables", "header", "page_accueil", "category", "first_onglet", 
- "footer", "profile", "mp", "topics_list", "forum_view", "topic_body", "solo_page", "message_post";
+@import "animations", "reset", "variables", "annexe", "header", "page_accueil", "category", "first_onglet", 
+ "footer", "profile", "mp", "topics_list", "forum_view", "topic_body", "solo_page", "message_post", "post_style";
 
 body {
   font-family: $main-font;
@@ -21,37 +21,6 @@ a.gensmall[href^='/u'] {
 
 a[href^='/u'] {
   text-decoration: none;
-}
-
-a:not([href^='/u']) {
-  text-decoration: none;
-  color: $no-color;
-  font-variant: small-caps;
-  font-weight: 700;
-
-  position: relative;
-}
-
-a:not([href^='/u'])::after,
-li.nm-nav-item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: .12rem;
-  background-color: $no-color;
-  left: 0;
-  bottom: -.15rem;
-  opacity: 0;
-  transform: translateZ(-30%);
-  transition: all 200ms ease-in-out;
-}
-
-a:not([href^='/u']):hover::after,
-li.nm-nav-item:hover::after {
-  width: 100%;
-  transform: translateZ(0);
-  opacity: 1;
-  font-variant: small-caps;
 }
 
 #logo {

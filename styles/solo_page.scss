@@ -82,8 +82,8 @@
     margin: 0 0 $margin-tb;
     background-color: $no-color;
   
-    a { color: $nano-dark!important; }
-    a:hover::after { background-color: $nano-dark!important;}
+    a { color: $nano-dark; }
+    a:hover::after { background-color: $nano-dark;}
     
     fieldset { border: none; }
   

@@ -204,29 +204,45 @@
         display: flex;
         justify-content: space-around;
         flex: 1 20%;
-      }
-      
-      .topic-retitle {
-        flex: 1 70%;
-        font-size: .8rem;
+      }      
+    }
+
+    .topic-retitle,
+    .edited-message {
+      flex: 1 70%;
+      font-size: .8rem;
+      color: lighten($nano-dark, $amount: 50%);
+      a {
         color: lighten($nano-dark, $amount: 50%);
-        a {
-          color: lighten($nano-dark, $amount: 50%);
-          margin-right: $padding-tb;
-        }
+        margin-right: $padding-tb;
       }
-      
     }
 
     &-content {
       background-color: #F4F4F4;
       padding: $padding-tb $padding-rl;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    &-content div:first-child {
+      flex: 1 100%;
+    }
+
+    .indic {
+      font-size: .8rem;
+      text-align: right;
+      color: lighten($nano-dark, $amount: 50%);
     }
   }
 
   &-signature {
     flex: 100%;
   }
+  
+  a { color: $nano-dark; }
+  a:hover::after { background-color: $nano-dark; }
 }
 
 .topic-bottom {

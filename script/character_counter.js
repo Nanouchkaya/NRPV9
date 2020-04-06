@@ -27,3 +27,32 @@ icons.forEach(icon => {
   img_ulr = icon.firstElementChild.src;
   icon.style = "background-image:" + img_url;
 });
+
+
+/**
+ * Use in RP section to alert when a message is too long than authorized
+ * @param {array} allMsg 
+ */
+function addBorderOnTooLongMsg(allMsg) {
+  var firstMsgTotalChar = allMsg[0].textContent.length;
+  if (firstMsgTotalChar > 0 && firstMsgTotalChar <= 1444) {
+    allMsg[0].style.border = 'none';
+  } else {
+    allMsg[0].style.border = '3px solid #ee1c25';
+  }
+
+  var allMsgArr = Array.from(allMsg);
+  allMsgArr.shift();
+
+  allMsgArr.forEach(msg => {
+    var totalChar = msg.textContent.length;
+    if (totalChar > 0 && totalChar < 482) {
+      msg.style.border = 'none';
+    } else if (totalChar >= 482 && totalChar <= 690) {
+      msg.style.border = '3px solid #a963a9';
+    } else {
+      msg.style.border = '3px solid #ee1c25';
+    }
+  });
+}
+
