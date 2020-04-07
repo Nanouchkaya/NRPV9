@@ -2232,6 +2232,46 @@ input#nb_rolls {
   border-color: #23a9b5;
 }
 
+.popup {
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  display: flex;
+}
+.popup-nav {
+  height: 100%;
+  overflow-y: hidden;
+  background-color: #23a9b5;
+  width: 30%;
+  min-width: 10rem;
+}
+.popup-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.popup-nav li {
+  color: white;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #ffffff26;
+  font-weight: 700;
+}
+.popup-list-lv2-item {
+  display: none;
+}
+.popup-content {
+  overflow-y: auto;
+  height: 100%;
+  width: 70%;
+}
+
+.visible {
+  display: initial;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
   font-size: 100%;

@@ -1,72 +1,15 @@
-{JAVASCRIPT}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test script</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="popup.js" type="text/javascript"></script>
+</head>
+<body>
 
-<!-- BEGIN switch_user_login_form_header -->
-<div class="panel">
-	<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
-		<div class="user_login_form center">
-			<input placeholder="{L_USERNAME}" class="inputbox fl_username" type="text" size="10" name="username" />
-			<input placeholder="{L_PASSWORD}" class="inputbox fl_password" type="password" size="10" name="password" />
-			<br />
-			<label>{L_AUTO_LOGIN}: <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>
-			{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
-            <!-- BEGIN switch_social_login -->
-            <div class="social_btn">
-                <!-- BEGIN fb_connect -->
-                <div class="fb-login-button"></div>
-                <!-- END fb_connect -->
-                <!-- BEGIN topicit_connect -->
-                <div class="ti-connect"></div>
-                <!-- END topicit_connect -->
-            </div>
-            <!-- END switch_social_login -->
-		</div>
-	</form>
-</div>
-<!-- END switch_user_login_form_header -->
-
-<!-- BEGIN message_admin_index -->
-	<div class="panel introduction">
-		<!-- BEGIN message_admin_titre -->
-			<div class="h3">{message_admin_index.message_admin_titre.MES_TITRE}</div>
-		<!-- END message_admin_titre -->
-
-		<!-- BEGIN message_admin_txt -->
-			<div class="mes-txt">{message_admin_index.message_admin_txt.MES_TXT}</div>
-		<!-- END message_admin_txt -->
-	</div>
-<!-- END message_admin_index -->
-
-{BOARD_INDEX}
-
-
-
-<!-- BEGIN switch_user_login_form_footer -->
-<div class="panel">
-	<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
-		<div class="user_login_form center">
-			<input placeholder="{L_USERNAME}" class="inputbox fl_username" type="text" size="10" name="username" />
-			<input placeholder="{L_PASSWORD}" class="inputbox fl_password" type="password" size="10" name="password" />
-			<br />
-			<label>{L_AUTO_LOGIN}: <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>
-			{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
-			<!-- BEGIN switch_social_login -->
-            <div class="social_btn">
-                <!-- BEGIN fb_connect -->
-                <div class="fb-login-button"></div>
-                <!-- END fb_connect -->
-                <!-- BEGIN topicit_connect -->
-                <div class="ti-connect"></div>
-                <!-- END topicit_connect -->
-            </div>
-            <!-- END switch_social_login -->
-		</div>
-	</form>
-</div>
-<!-- END switch_user_login_form_footer -->
-
-{AUTO_DST}
-
-      <div class="popup">
+  <div class="popup">
     <nav class="popup-nav">
       <ul class="popup-list-lv1">
         <li class="popup-list-lv1-item">
@@ -142,6 +85,8 @@
   toggleMenu(listNM);
 
   var sectionsNM = document.querySelectorAll('.popup-list-lv2-item');
-  displayMessage(sectionsNM);
+  displayMessage(sectionNM);
   </script>
  
+</body>
+</html>

@@ -1,0 +1,44 @@
+.popup {
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  display: flex;
+
+  &-nav {
+    height: 100%;
+    overflow-y: hidden;
+    background-color: $main-color;
+    width: 30%;
+    min-width: 10rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      color: white;
+      text-transform: uppercase;
+      padding: $padding-tb $padding-rl;
+      border-bottom: 1px solid #ffffff26;
+      font-weight: 700;
+    }
+  }
+
+  &-list-lv2-item {
+    display: none;
+  }
+
+  &-content {
+    overflow-y: auto;
+    height: 100%;
+    width: 70%;
+  }
+}
+
+.visible {
+  display: initial;
+}
