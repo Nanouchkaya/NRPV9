@@ -140,6 +140,82 @@ dl.codebox dd {
   padding: 0.7rem 1rem;
 }
 
+/* LOGIN - REGISTER block */
+form#form_confirm {
+  display: block !important;
+}
+
+/* AGREEMENT PAGE */
+#frmAgreement h2 {
+  text-align: center;
+  font-family: summeronregular;
+  margin: 1.5rem;
+}
+
+/* classes d'origine non accessibles */
+.panel {
+  background-color: white;
+  max-width: 1100px;
+  margin: 1.5rem auto;
+}
+.panel .inner {
+  padding: 0.7rem 1rem;
+}
+.panel a {
+  color: #161614 !important;
+}
+.panel a:hover::after {
+  background-color: #161614 !important;
+}
+.panel fieldset {
+  border: none;
+}
+.panel .table1 {
+  text-align: center;
+  width: 100%;
+}
+.panel .content {
+  padding: 0.7rem 1rem;
+}
+.panel fieldset {
+  margin: 0 2rem;
+  text-align: center;
+}
+.panel fieldset dl {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.panel fieldset dt {
+  width: 30%;
+}
+.panel fieldset label {
+  display: flex;
+}
+.panel fieldset div#cont_pwd {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+}
+.panel .h3 {
+  border-bottom: 8px solid #23a9b5;
+  font-size: 1.2rem;
+  padding: 0.7rem 1rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.panel input[type=text],
+.panel input[type=password] {
+  border: none;
+  border-bottom: 1px solid #161614;
+  margin: 0.7rem 0;
+}
+
+.panel.row2, .panel.row3 {
+  background-color: transparent;
+}
+
 header#page-header {
   height: 30rem;
 }
@@ -743,7 +819,7 @@ li.themes-list-item.color-chimeres::before {
   display: flex;
   flex-wrap: wrap;
   margin: 2rem auto;
-  max-width: 90vw;
+  max-width: 1300px;
   text-transform: uppercase;
   background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 12% top;
   justify-content: center;
@@ -1706,7 +1782,7 @@ a.topic-button:hover::after {
   float: none;
 }
 
-.page-title.solo {
+.page-title {
   font-family: "summeronregular", cursive;
   text-align: center;
   font-size: 2rem;
@@ -2229,29 +2305,6 @@ input[type=checkbox]:checked {
   padding: 0.7rem 0;
   font-weight: 700;
   flex: 1 100%;
-}
-
-.panel {
-  background-color: white;
-  max-width: 1100px;
-  margin: auto;
-}
-.panel a {
-  color: #161614 !important;
-}
-.panel a:hover::after {
-  background-color: #161614 !important;
-}
-.panel fieldset {
-  border: none;
-}
-.panel .table1 {
-  text-align: center;
-  width: 100%;
-}
-
-.panel.row2, .panel.row3 {
-  background-color: transparent;
 }
 
 .right-box {

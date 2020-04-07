@@ -36,3 +36,84 @@ dl.codebox dd {
   color: $no-color;
   padding: $padding-tb $padding-rl;
 }
+
+
+/* LOGIN - REGISTER block */
+
+form#form_confirm {
+  display: block!important; // fix anti ads issue 
+}
+
+/* AGREEMENT PAGE */
+#frmAgreement h2 {
+  text-align: center;
+  font-family: summeronregular;
+  margin: 1.5rem;
+}
+
+/* classes d'origine non accessibles */
+
+.panel {
+  background-color: $no-color;
+  max-width: $maxWidthForum;
+  margin: $margin-tb auto;
+
+  .inner { padding: $padding-tb $padding-rl;}
+
+  a { color: $nano-dark!important; }
+  a:hover::after { background-color: $nano-dark!important;}
+
+  fieldset {
+    border: none;
+  }
+
+  .table1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .content {
+    padding: $padding-tb $padding-rl;
+  }
+
+  fieldset {
+    margin: 0 $margin-rl;
+    text-align: center;
+
+    dl {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    
+    dt { width: 30%; }
+    label { display: flex; }
+
+    div#cont_pwd {
+      display: flex;
+      justify-content: space-around;
+      font-size: .8rem;
+    }
+  }
+
+
+  .h3 {
+    border-bottom: 8px solid $main-color;
+    font-size: 1.2rem;
+    padding: $padding-tb $padding-rl 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: $margin-tb;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    border: none;
+    border-bottom: 1px solid $nano-dark;
+    margin: $padding-tb 0;
+  }
+}
+
+.panel.row2, .panel.row3 {
+  background-color: transparent;
+}
