@@ -8,7 +8,8 @@ a:not([href^='/u']) {
 }
 
 a:not([href^='/u'])::after,
-li.nm-nav-item::after {
+li.nm-nav-item::after,
+.popup-nav li::after {
   content: "";
   position: absolute;
   width: 0;
@@ -22,7 +23,8 @@ li.nm-nav-item::after {
 }
 
 a:not([href^='/u']):hover::after,
-li.nm-nav-item:hover::after {
+li.nm-nav-item:hover::after,
+.popup-nav li:hover::after {
   width: 100%;
   transform: translateZ(0);
   opacity: 1;
@@ -116,4 +118,10 @@ form#form_confirm {
 
 .panel.row2, .panel.row3 {
   background-color: transparent;
+}
+
+// overlay pour popup
+.jqmOverlay {
+  background-color: $no-color;
+  display: none;
 }

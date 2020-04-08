@@ -66,7 +66,7 @@
 
 {AUTO_DST}
 
-      <div class="popup">
+  <div class="popup">
     <nav class="popup-nav">
       <ul class="popup-list-lv1">
         <li class="popup-list-lv1-item">
@@ -131,17 +131,21 @@
       </ul>
     </nav>
 
-    <div class="popup-content">
-      
-
-    </div>
+    <div class="popup-content"></div>
   </div>
+  <div class="jqmOverlay" style="height: 100%; width: 100%; position: fixed; left: 0; top: 0; z-index: 2; opacity: 0.5;"></div>
 
-  <script type="text/javascript">
-  var listNM = document.querySelectorAll('.popup-list-lv1-item'); 
-  toggleMenu(listNM);
+<script type="text/javascript">
+var NMnavItem = document.querySelectorAll('.nm-nav-item');
+NMnavItem.forEach(item => {
+item.addEventListener('click', togglePopup);});
 
-  var sectionsNM = document.querySelectorAll('.popup-list-lv2-item');
-  displayMessage(sectionsNM);
-  </script>
+document.querySelector('.jqmOverlay').addEventListener('click', togglePopup);
+
+var listNM = document.querySelectorAll('.popup-list-lv1-item'); 
+toggleMenu(listNM);
+
+var sectionsNM = document.querySelectorAll('.popup-list-lv2-item');
+displayMessage(sectionsNM);
+</script>
  

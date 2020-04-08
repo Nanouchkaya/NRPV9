@@ -1,11 +1,13 @@
 .popup {
   width: 70%;
   height: 80%;
-  background-color: white;
+  background-color: $no-color;
   position: fixed;
   top: 10%;
   left: 10%;
-  display: flex;
+  display: none; // flex
+  font-size: .95rem;
+  z-index: 3;
 
   &-nav {
     height: 100%;
@@ -20,25 +22,46 @@
     }
 
     li {
-      color: white;
+      color: $no-color;
       text-transform: uppercase;
-      padding: $padding-tb $padding-rl;
       border-bottom: 1px solid #ffffff26;
       font-weight: 700;
+      position: relative;
+      cursor: pointer;
     }
+  }
+  
+  &-list-lv1-item {
+    padding: $padding-tb $padding-rl;
   }
 
   &-list-lv2-item {
+    padding: calc( #{$padding-tb} / 2 ) $padding-rl;
     display: none;
+    font-size: .8rem;
   }
 
   &-content {
     overflow-y: auto;
     height: 100%;
     width: 70%;
+    padding: $margin-rl $padding-rl;
+    background-color: #f4f4f4;
   }
+}
+
+.error {
+  width: 80%;
+  text-align: center;
+  margin: 20% auto;
+  font-weight: 700;
+  color: $zombie;
 }
 
 .visible {
   display: initial;
+}
+
+.flex {
+  display: flex;
 }

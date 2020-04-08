@@ -10,6 +10,25 @@ function toggleMenu(itemsLv1) {
   });
 }
 
+
+
+// Display submenu on click event
+function toggleMenu(menu) {
+  if(typeof menu === 'object' || typeof menu === 'array'){
+    menu.forEach(itemLv1 => {
+      itemLv1.addEventListener('click', (e) => {
+        var itemsLv2 = Array.from(e.target.children);
+        // second level of menu
+        itemsLv2.forEach(itemLv2 => {
+          itemLv2.classList.toggle('visible');
+        });
+      })
+    });
+  } else {
+    menu.classList.toggle('visible');
+  }
+}
+
 // Display content from url in popup content bloc  
 function displayMessage(links) {
   links.forEach(link => {
@@ -18,12 +37,18 @@ function displayMessage(links) {
       var url = e.target.dataset.url;
       fetchMessage(url).catch(e => {
         console.log('There has been a problem with your fetch operation: ' + e.message);
+        // General message to inform user - error
+        var errMsg = 'Oups! Il semblerait que les infos soient parties faire un tour... Tu peux les retrouver dans Vie du Forum. Bisous';
+        var errElt = document.createElement('p');
+        errElt.className = 'error';
+        errElt.textContent = errMsg;
+        document.querySelector('.popup-content').appendChild(errElt);
       });
     })
   });
 }
 
-// Get post html content and add it to popup
+// Fetch post html content and add it to popup
 async function fetchMessage(url) {
   console.log(url);
   let response = await fetch(url);
@@ -35,29 +60,24 @@ async function fetchMessage(url) {
 
   // Get the message content
   var idMsg = url.split('#')[1];
-  var text = doc.getElementById('msg-'+ idMsg);
+  var text = doc.querySelector('#msg-'+ idMsg +' .post-popup');
+  console.log(text + '#msg-'+ idMsg +' .post-popup');
   var target = document.querySelector('.popup-content');
   target.textContent = '';
-  console.log(text);
   target.appendChild(text);
 }
 
-// fetch('/t91-test-nm-x-men#409').then(function (response) {
-// 	// The API call was successful!
-// 	return response.text();
-// }).then(function (html) {
+// Display Popup
+/*
+- selectionner les liens onglet
+- poser un écouteur click
+- afficher la popup et le overlay
 
-// 	// Convert the HTML string into a document object
-// 	var parser = new DOMParser();
-// 	var doc = parser.parseFromString(html, 'text/html');
+- écouteur sur la croix 
+- fermer popup et masquer overlay
+*/
 
-// 	// Get the image file
-// 	var text = doc.querySelector('.post-body-content > div');
-// 	console.log(text);
-
-// }).catch(function (err) {
-// 	// There was an error
-// 	console.warn('Something went wrong.', err);
-// });
-
-
+function togglePopup(e) {
+  document.querySelector('.popup').classList.toggle('flex');
+  document.querySelector('.jqmOverlay').classList.toggle('visible');
+}

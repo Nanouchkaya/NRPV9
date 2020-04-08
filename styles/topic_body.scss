@@ -226,8 +226,9 @@
       align-items: flex-end;
     }
 
-    &-content div:first-child {
+    &-content-message {
       flex: 1 100%;
+      font-size: .95rem;
     }
 
     .indic {

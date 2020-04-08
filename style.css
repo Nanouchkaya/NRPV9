@@ -111,7 +111,8 @@ a:not([href^="/u"]) {
 }
 
 a:not([href^="/u"])::after,
-li.nm-nav-item::after {
+li.nm-nav-item::after,
+.popup-nav li::after {
   content: "";
   position: absolute;
   width: 0;
@@ -125,7 +126,8 @@ li.nm-nav-item::after {
 }
 
 a:not([href^="/u"]):hover::after,
-li.nm-nav-item:hover::after {
+li.nm-nav-item:hover::after,
+.popup-nav li:hover::after {
   width: 100%;
   transform: translateZ(0);
   opacity: 1;
@@ -214,6 +216,11 @@ form#form_confirm {
 
 .panel.row2, .panel.row3 {
   background-color: transparent;
+}
+
+.jqmOverlay {
+  background-color: white;
+  display: none;
 }
 
 header#page-header {
@@ -1615,8 +1622,9 @@ a.topic-button:hover::after {
   flex-wrap: wrap;
   align-items: flex-end;
 }
-.post-body-content div:first-child {
+.post-body-content-message {
   flex: 1 100%;
+  font-size: 0.95rem;
 }
 .post-body .indic {
   font-size: 0.8rem;
@@ -1932,10 +1940,6 @@ a.topic-button:hover::after {
   color: #9a9a8f;
 }
 
-.jqmOverlay {
-  background-color: white;
-}
-
 #find_username {
   width: 500px;
   background-image: none;
@@ -2002,6 +2006,8 @@ span.post_icon_img img {
 .message_smiley-wrap #message-box .sceditor-container.ltr.sourceMode textarea {
   padding: 0.7rem;
   width: 100% !important;
+  font-size: 0.9rem;
+  line-height: 1rem;
 }
 .message_smiley-wrap #message-box .sceditor-container.ltr.wysiwygMode iframe {
   padding: 0.7rem 1.5rem;
@@ -2144,6 +2150,38 @@ input#nb_rolls {
   margin: 0 0 0 0.7rem;
 }
 
+/* TABLEAU FLEXBOX */
+.post-table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  width: fit-content;
+  margin: auto;
+}
+
+.post-thead {
+  font-variant: small-caps;
+  font-size: 1.2rem;
+  background-color: #161614;
+  margin-bottom: -1.5rem;
+  padding: 0.35rem 0.7rem;
+  font-weight: 700;
+  color: white;
+}
+
+.post-cell {
+  padding: 0.7rem 1rem;
+  width: auto;
+  flex: 1 100%;
+}
+
+.post-column {
+  flex: 1 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+}
+
 /* CLASSE COULEUR GENERALISTE */
 .bg-light {
   background-color: white;
@@ -2239,7 +2277,9 @@ input#nb_rolls {
   position: fixed;
   top: 10%;
   left: 10%;
-  display: flex;
+  display: none;
+  font-size: 0.95rem;
+  z-index: 3;
 }
 .popup-nav {
   height: 100%;
@@ -2255,21 +2295,41 @@ input#nb_rolls {
 .popup-nav li {
   color: white;
   text-transform: uppercase;
-  padding: 0.7rem 1rem;
   border-bottom: 1px solid #ffffff26;
   font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.popup-list-lv1-item {
+  padding: 0.7rem 1rem;
 }
 .popup-list-lv2-item {
+  padding: calc( 0.7rem / 2 ) 1rem;
   display: none;
+  font-size: 0.8rem;
 }
 .popup-content {
   overflow-y: auto;
   height: 100%;
   width: 70%;
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+}
+
+.error {
+  width: 80%;
+  text-align: center;
+  margin: 20% auto;
+  font-weight: 700;
+  color: #ee1c25;
 }
 
 .visible {
   display: initial;
+}
+
+.flex {
+  display: flex;
 }
 
 body {
@@ -2278,7 +2338,7 @@ body {
   background-color: #d2d2d2;
   background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ban-compact-3.jpg), url(http://memoires-du-monde.fr/upload/NRPV8/V9/texture-fond.jpg);
   background-position: center 4.1rem, left top;
-  background-repeat: no-repeat, repeat;
+  background-repeat: repeat-x, repeat;
 }
 
 a:hover {
