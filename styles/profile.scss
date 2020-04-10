@@ -25,9 +25,9 @@ form h1.page-title {
   text-transform: uppercase;
 }
 
-.italic {
+
+form[action="/profile"] .italic {
   font-size: .9rem;
-  font-style: italic;
 }
 
 .profile_field_list {

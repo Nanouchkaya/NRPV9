@@ -525,7 +525,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
 #cat_NM .wrapper-list {
   background-color: #161614;
 }
-#cat_NM nav.onglets {
+#cat_NM .nav-onglets {
   display: flex;
   justify-content: space-around;
   max-width: 1100px;
@@ -822,15 +822,18 @@ li.themes-list-item.color-chimeres::before {
   border-color: #e9bd28;
 }
 
+.viewonline-wrapper {
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 15% top;
+}
+
 .viewonline {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem auto;
+  margin: 0 auto;
   max-width: 1300px;
   text-transform: uppercase;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 12% top;
-  justify-content: center;
-  height: 45rem;
+  justify-content: flex-end;
+  height: 49rem;
   align-content: center;
 }
 .viewonline a[href^="/u"] {
@@ -1002,11 +1005,38 @@ footer#page-footer {
   text-align: center;
   padding-bottom: 1rem;
   font-size: 0.9rem;
-  color: grey;
+  color: #9a9a8f;
+}
+
+.footer-links {
+  display: flex;
+  text-align: left;
+  max-width: 1100px;
+  padding-right: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+}
+.footer-links .nav-footer {
+  border-right: 2px solid;
+  padding-left: 2rem;
+  flex: 1;
+}
+.footer-links .fa-links {
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+  padding-left: 2rem;
+}
+.footer-links .nav-footer-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: white;
+  line-height: 2rem;
 }
 
 footer#page-footer a {
-  color: grey;
+  color: #9a9a8f;
+  font-size: 0.9rem;
 }
 
 /* EDITION */
@@ -1031,9 +1061,8 @@ form h1.page-title {
   text-transform: uppercase;
 }
 
-.italic {
+form[action="/profile"] .italic {
   font-size: 0.9rem;
-  font-style: italic;
 }
 
 .profile_field_list {
@@ -2157,6 +2186,7 @@ input#nb_rolls {
   border: 1px solid;
   width: fit-content;
   margin: auto;
+  align-items: center;
 }
 
 .post-thead {
@@ -2270,6 +2300,22 @@ input#nb_rolls {
   border-color: #23a9b5;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
 .popup {
   width: 70%;
   height: 80%;
@@ -2314,6 +2360,12 @@ input#nb_rolls {
   width: 70%;
   padding: 2rem 1rem;
   background-color: #f4f4f4;
+}
+.popup-content a {
+  color: #161614;
+}
+.popup-content a:hover::after {
+  background-color: #161614;
 }
 
 .error {

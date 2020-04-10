@@ -1,14 +1,16 @@
 @import "variables";
 
+.viewonline-wrapper {
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 15% top;
+}
 .viewonline {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem auto;
+  margin: 0 auto;
   max-width: 1300px;
   text-transform: uppercase;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 12% top;
-  justify-content: center;
-  height: 45rem;
+  justify-content: flex-end;
+  height: 49rem;
   align-content: center;
 
   a[href^='/u'] {
@@ -192,13 +194,44 @@
 }
 
 footer#page-footer {
-  background-color: #161614;
+  background-color: $nano-dark;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: $padding-rl;
   font-size: .9rem;
-  color: grey;
+  color: lighten($nano-dark, $amount: 50%);
 }
 
-footer#page-footer a {
-  color: grey;
+.footer-links {
+  display: flex;
+  text-align: left;
+  max-width: $maxWidthForum;
+  padding-right: $margin-rl;
+  justify-content: center;
+  margin: $margin-rl auto;
+
+  .nav-footer {
+    border-right: 2px solid;
+    padding-left: $margin-rl;
+    flex: 1;
+  }
+  .fa-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+    padding-left: $margin-rl;;
+  }
+  .nav-footer-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: $no-color;
+    line-height: 2rem;
+  }
 }
+
+
+
+footer#page-footer a {
+  color: lighten($nano-dark, $amount: 50%);
+  font-size: .9rem;
+}
+
