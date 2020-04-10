@@ -1,7 +1,7 @@
 @import 'variables';
 
 
-.page-title.solo {
+.page-title {
   font-family: $special-font;
   text-align: center;
   font-size: 2rem;
@@ -146,11 +146,6 @@
     font-size: 0.9rem;
     span { color: lighten($nano-dark, $amount: 50%); }
   }
-}
-
-// popup trouver un membre
-.jqmOverlay {
-  background-color: $no-color;
 }
 
 #find_username {

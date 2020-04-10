@@ -1,64 +1,13 @@
-{JAVASCRIPT}
-
-<!-- BEGIN switch_user_login_form_header -->
-<div class="panel">
-	<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
-		<div class="user_login_form center">
-			<input placeholder="{L_USERNAME}" class="inputbox fl_username" type="text" size="10" name="username" />
-			<input placeholder="{L_PASSWORD}" class="inputbox fl_password" type="password" size="10" name="password" />
-			<br />
-			<label>{L_AUTO_LOGIN}: <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>
-			{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
-            <!-- BEGIN switch_social_login -->
-            <div class="social_btn">
-                <!-- BEGIN fb_connect -->
-                <div class="fb-login-button"></div>
-                <!-- END fb_connect -->
-                <!-- BEGIN topicit_connect -->
-                <div class="ti-connect"></div>
-                <!-- END topicit_connect -->
-            </div>
-            <!-- END switch_social_login -->
-		</div>
-	</form>
-</div>
-<!-- END switch_user_login_form_header -->
-
-<!-- BEGIN message_admin_index -->
-	<!-- BEGIN message_admin_txt -->
-	<div class="index-PA">{message_admin_index.message_admin_txt.MES_TXT}</div>
-	<!-- END message_admin_txt -->
-<!-- END message_admin_index -->
-
-{BOARD_INDEX}
-
-
-
-<!-- BEGIN switch_user_login_form_footer -->
-<div class="panel">
-	<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
-		<div class="user_login_form center">
-			<input placeholder="{L_USERNAME}" class="inputbox fl_username" type="text" size="10" name="username" />
-			<input placeholder="{L_PASSWORD}" class="inputbox fl_password" type="password" size="10" name="password" />
-			<br />
-			<label>{L_AUTO_LOGIN}: <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>
-			{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
-			<!-- BEGIN switch_social_login -->
-            <div class="social_btn">
-                <!-- BEGIN fb_connect -->
-                <div class="fb-login-button"></div>
-                <!-- END fb_connect -->
-                <!-- BEGIN topicit_connect -->
-                <div class="ti-connect"></div>
-                <!-- END topicit_connect -->
-            </div>
-            <!-- END switch_social_login -->
-		</div>
-	</form>
-</div>
-<!-- END switch_user_login_form_footer -->
-
-{AUTO_DST}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test script</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="popup.js" type="text/javascript"></script>
+</head>
+<body>
 
   <div class="popup">
     <nav class="popup-nav">
@@ -94,11 +43,11 @@
         </li>
         <li class="popup-list-lv1-item">
           <ul class="popup-list-lv2">Aventures du Passé
-            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#415" data-ref="adp-01">Histoire complète</li>
-            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#416" data-ref="adp-02">Étape 1 : choisis ton alignement</li>
-            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#417" data-ref="adp-03">Étape 2 : choisis ta race</li>
-            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#418" data-ref="adp-04">Étape 3 : choisis ta classe</li>
-            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#419" data-ref="adp-05">Bon à savoir</li>
+            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#415">Histoire complète</li>
+            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#416">Étape 1 : choisis ton alignement</li>
+            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#417">Étape 2 : choisis ta race</li>
+            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#418">Étape 3 : choisis ta classe</li>
+            <li class="popup-list-lv2-item" data-url="/t92-test-nm-adp#419">Bon à savoir</li>
           </ul>
         </li>
         <li class="popup-list-lv1-item">
@@ -125,21 +74,49 @@
       </ul>
     </nav>
 
-    <div class="popup-content"></div>
+    <div class="popup-content">
+      .post-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 2px solid;
+        width: fit-content;
+        margin: auto;
+    }
+    
+    .post-cell {
+        border: 1px solid;
+        padding: .7rem 1rem;
+        width: auto;
+    }
+<div class="post-table">
+<div class="post-column">
+  <div class="post-cell">Texte</div>
+  <div class="post-cell">Texte</div>
+  <div class="post-cell">Texte</div>
+</div>
+<div class="post-column">
+  <div class="post-cell">Texte</div>
+  <div class="post-cell">Lorem ipsum dolor sit amet consectetur.</div>
+  <div class="post-cell">Texte</div>
+</div>
+<div class="post-column">
+  <div class="post-cell">Texte</div>
+  <div class="post-cell">Texte</div>
+  <div class="post-cell">Texte</div>
+</div>
+</div>
+
+    </div>
   </div>
-  <div class="jqmOverlay" style="height: 100%; width: 100%; position: fixed; left: 0; top: 0; z-index: 2; opacity: 0.5;"></div>
 
-<script type="text/javascript">
-var NMnavItem = document.querySelectorAll('.nm-nav-item');
-NMnavItem.forEach(item => {
-item.addEventListener('click', togglePopup);});
+  <script type="text/javascript">
+  var listNM = document.querySelectorAll('.popup-list-lv1-item'); 
+  toggleMenu(listNM);
 
-document.querySelector('.jqmOverlay').addEventListener('click', togglePopup);
-
-var listNM = document.querySelectorAll('.popup-list-lv1-item'); 
-toggleMenu(listNM);
-
-var sectionsNM = document.querySelectorAll('.popup-list-lv2-item');
-displayMessage(sectionsNM);
-</script>
+  var sectionsNM = document.querySelectorAll('.popup-list-lv2-item');
+  displayMessage(sectionNM);
+  </script>
  
+</body>
+</html>

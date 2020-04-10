@@ -1,0 +1,111 @@
+.index-PA {
+  display: flex;
+  max-width: 1300px;
+  margin: 2rem auto;
+  align-items: center;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/pa_ink.png) no-repeat 93% 0;
+
+  & ul {
+    list-style: none;
+    padding: 0 .35rem;
+  }
+  
+  & li {
+    padding: .35rem;
+    font-size: .9rem;
+  }
+}
+
+.index-PA-bloc-title {
+  font-family: $special-font;
+  font-size: 1.2rem;
+}
+
+.index-PA-left {
+  min-width: 29rem;
+  max-width: 35rem;
+  
+  .index-PA-welcome p {
+    background-color: $nano-dark;
+    color: $no-color;
+    padding: .7rem 1rem;
+  }
+  
+  .index-PA-welcome {
+    margin: 1.5rem 2rem;
+  }
+  
+  .index-PA-news {
+    margin: 1.5rem 2rem;
+    font-weight: 700;
+
+    .date-news {
+      background-color: $main-color;
+      padding: .15rem .35rem;
+      margin-right: 1rem;
+      color: $no-color;
+    }
+
+    a{ color: $nano-dark; }
+    a:hover::after{ background-color: $nano-dark;}
+  }
+}
+
+.index-PA-links {
+  margin: 1.5rem 2rem;
+  flex: .8;
+  max-width: 15rem;
+
+  .index-PA-visitor-links {
+    background-color: $main-color;
+  }
+
+  .index-PA-member-links {
+    background-color: $no-color;
+    a{ color: $nano-dark; }
+    a:hover::after{ background-color: $nano-dark;}
+  }
+
+  .index-PA-icon {
+    margin-right: .35rem;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.index-PA-right {
+  max-width: 24rem;
+  text-align: center;
+
+  .index-PA-topsites {
+    margin: 1.5rem 2rem;
+    & a:hover::after {
+      display: none;
+    }
+
+    & img {
+      margin: .7rem;
+    }
+  }
+  
+  .index-PA-partners {
+    & p {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      margin-top: 1rem;
+    }
+  }
+  .index-PA-partner {
+    padding: 0.3rem;
+    margin: 0.6rem;
+    background-color: $no-color;
+
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+}
+
+

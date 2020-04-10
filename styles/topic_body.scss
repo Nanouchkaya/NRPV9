@@ -12,9 +12,8 @@
   }
 
   .topic-title {
-    font-family: $special-font;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3.5rem;
     padding: $margin-tb;
   }
 
@@ -226,8 +225,9 @@
       align-items: flex-end;
     }
 
-    &-content div:first-child {
+    &-content-message {
       flex: 1 100%;
+      font-size: .95rem;
     }
 
     .indic {

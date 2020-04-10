@@ -110,6 +110,39 @@
   }
 }
 
+/* TABLEAU FLEXBOX */
+.post-table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  width: fit-content;
+  margin: auto;
+  align-items: center;
+}
+
+.post-thead {
+  font-variant: small-caps;
+  font-size: 1.2rem;
+  background-color: $nano-dark;
+  margin-bottom: -1.5rem;
+  padding: .35rem .7rem;
+  font-weight: 700;
+  color: $no-color;
+}
+
+.post-cell {
+  padding: .7rem 1rem;
+  width: auto;
+  flex: 1 100%;
+}
+
+.post-column {
+  flex: 1 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+}
+
 /* CLASSE COULEUR GENERALISTE */
 
 .bg {
@@ -123,6 +156,7 @@
   &-chim { background-color: $chimeres; }
   &-xmen { background-color: $xmen; }
   &-faille { background-color: $faille; }
+  &-main { background-color: $main-color; }
 }
 
 .color {
@@ -136,6 +170,7 @@
   &-chim { color: $chimeres!important; }
   &-xmen { color: $xmen!important; }
   &-faille { color: $faille!important; }
+  &-main { color: $main-color; }
 }
 
 .border {
@@ -147,4 +182,18 @@
   &-chim { border-color: $chimeres; }
   &-xmen { border-color: $xmen; }
   &-faille { border-color: $faille; }
+  &-main { border-color: $main-color; }
+}
+
+.bold {
+  font-weight: 700;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.strike {
+  text-decoration: line-through;
 }

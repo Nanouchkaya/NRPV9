@@ -8,7 +8,8 @@ a:not([href^='/u']) {
 }
 
 a:not([href^='/u'])::after,
-li.nm-nav-item::after {
+li.nm-nav-item::after,
+.popup-nav li::after {
   content: "";
   position: absolute;
   width: 0;
@@ -22,7 +23,8 @@ li.nm-nav-item::after {
 }
 
 a:not([href^='/u']):hover::after,
-li.nm-nav-item:hover::after {
+li.nm-nav-item:hover::after,
+.popup-nav li:hover::after {
   width: 100%;
   transform: translateZ(0);
   opacity: 1;
@@ -36,3 +38,177 @@ dl.codebox dd {
   color: $no-color;
   padding: $padding-tb $padding-rl;
 }
+
+
+/* LOGIN - REGISTER block */
+
+form#form_confirm {
+  display: block!important; // fix anti ads issue 
+}
+
+/* AGREEMENT PAGE */
+#frmAgreement h2 {
+  text-align: center;
+  font-family: summeronregular;
+  margin: 1.5rem;
+}
+
+/* classes d'origine non accessibles */
+
+.panel {
+  background-color: $no-color;
+  max-width: $maxWidthForum;
+  margin: $margin-tb auto;
+
+  .inner { padding: $padding-tb $padding-rl;}
+
+  a { color: $nano-dark!important; }
+  a:hover::after { background-color: $nano-dark!important;}
+
+  fieldset {
+    border: none;
+  }
+
+  .table1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .content {
+    padding: $padding-tb $padding-rl;
+  }
+
+  fieldset {
+    margin: 0 $margin-rl;
+    text-align: center;
+
+    dl {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    
+    dt { width: 30%; }
+    label { display: flex; }
+
+    div#cont_pwd {
+      display: flex;
+      justify-content: space-around;
+      font-size: .8rem;
+    }
+  }
+
+
+  .h3 {
+    border-bottom: 8px solid $main-color;
+    font-size: 1.2rem;
+    padding: $padding-tb $padding-rl 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: $margin-tb;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    border: none;
+    border-bottom: 1px solid $nano-dark;
+    margin: $padding-tb 0;
+  }
+}
+
+.panel.row2, .panel.row3 {
+  background-color: transparent;
+}
+
+// overlay pour popup
+.jqmOverlay {
+  background-color: $no-color;
+  display: none;
+}
+
+/* GESTION COULEUR PAR NM */
+
+#box_MM .box-title a,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $micro }
+#box_AP .box-title a,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $AP }
+#box_zombie .box-title a,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $zombie }
+#box_AdP .box-title a,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $AdP }
+#box_xmen .box-title a,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $xmen }
+#box_chimeres .box-title a,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]::after
+{ color: $chimeres }
+
+
+// background
+#box_MM .box-event-status,
+#box_MM .box-event-link::after,
+.listLieuxNM:nth-of-type(1) .nm-desc,
+li.themes-list-item.color-micro::before
+{ background-color: $micro }
+
+#box_AP .box-event-status,
+#box_AP .box-event-link::after,
+.listLieuxNM:nth-of-type(2) .nm-desc,
+li.themes-list-item.color-AP::before
+{ background-color: $AP }
+
+#box_zombie .box-event-status,
+#box_zombie .box-event-link::after,
+.listLieuxNM:nth-of-type(3) .nm-desc,
+li.themes-list-item.color-zombie::before
+{ background-color: $zombie }
+
+#box_AdP .box-event-status,
+#box_AdP .box-event-link::after,
+.listLieuxNM:nth-of-type(4) .nm-desc,
+li.themes-list-item.color-AdP::before 
+{ background-color: $AdP }
+
+#box_xmen .box-event-status,
+#box_xmen .box-event-link::after,
+.listLieuxNM:nth-of-type(5) .nm-desc,
+li.themes-list-item.color-xmen::before
+{ background-color: $xmen }
+
+#box_chimeres .box-event-status,
+#box_chimeres .box-event-link::after,
+.listLieuxNM:nth-of-type(6) .nm-desc,
+li.themes-list-item.color-chimeres::before 
+{ background-color: $chimeres }
+
+li.themes-list-item.color-faille::before 
+{ background-color: $faille }
+
+// border color
+.listLieuxNM:nth-of-type(1) ul.nm-nav,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $micro }
+
+.listLieuxNM:nth-of-type(2) ul.nm-nav,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $AP }
+
+.listLieuxNM:nth-of-type(3) ul.nm-nav,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $zombie }
+
+.listLieuxNM:nth-of-type(4) ul.nm-nav,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $AdP }
+
+.listLieuxNM:nth-of-type(5) ul.nm-nav,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $xmen }
+
+.listLieuxNM:nth-of-type(6) ul.nm-nav,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]
+{ border-color: $chimeres }

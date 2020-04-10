@@ -1,0 +1,74 @@
+.popup {
+  width: 70%;
+  height: 80%;
+  background-color: $no-color;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  display: none; // flex
+  font-size: .95rem;
+  z-index: 3;
+
+  &-nav {
+    height: 100%;
+    overflow-y: hidden;
+    background-color: $main-color;
+    width: 30%;
+    min-width: 10rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      color: $no-color;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ffffff26;
+      font-weight: 700;
+      position: relative;
+      cursor: pointer;
+    }
+  }
+  
+  &-list-lv1-item {
+    padding: $padding-tb $padding-rl;
+  }
+
+  &-list-lv2-item {
+    padding: calc( #{$padding-tb} / 2 ) $padding-rl;
+    display: none;
+    font-size: .8rem;
+  }
+
+  &-content {
+    overflow-y: auto;
+    height: 100%;
+    width: 70%;
+    padding: $margin-rl $padding-rl;
+    background-color: #f4f4f4;
+
+    a { color: $nano-dark; }
+    a:hover::after { background-color: $nano-dark; }
+  }
+}
+
+.error {
+  width: 80%;
+  text-align: center;
+  margin: 20% auto;
+  font-weight: 700;
+  color: $zombie;
+}
+
+.visible {
+  display: initial;
+}
+
+.active {
+  
+}
+
+.flex {
+  display: flex;
+}

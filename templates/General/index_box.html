@@ -44,29 +44,10 @@
   $("span[data-ong='AP']").parents("li.forumrow").attr("id","ong-AP").addClass('forumNM');
   
   document.getElementById('cat_NM').innerHTML = document.getElementById('cat_NM').innerHTML.replace('<li class="forumrow forumNM" id="ong-MM">','<div class="listLieuxNM onglets" id="nm-MM"><li class="forumrow forumNM" id="ong-MM">').replace('<li class="forumrow forumNM" id="ong-AP">','</div><div class="listLieuxNM onglets" id="nm-AP"><li class="forumrow forumNM" id="ong-AP">').replace('<li class="forumrow forumNM" id="ong-zombie">','</div><div class="listLieuxNM onglets" id="nm-zombie"><li class="forumrow forumNM" id="ong-zombie">').replace('<li class="forumrow forumNM" id="ong-AdP">','</div><div class="listLieuxNM onglets" id="nm-AdP"><li class="forumrow forumNM" id="ong-AdP">').replace('<li class="forumrow forumNM" id="ong-xmen">','</div><div class="listLieuxNM onglets" id="nm-xmen"><li class="forumrow forumNM" id="ong-xmen">').replace('<li class="forumrow forumNM" id="ong-chimeres">','</div><div class="listLieuxNM onglets" id="nm-chimeres"><li class="forumrow forumNM" id="ong-chimeres">').replace('</li></ul></div>','</li></div></ul>');
-  
-  
- function switchOnglet () {
 
-  $('#cat_NM .forumrows').before('<nav class="onglets"><a href="#general" class="onglets-link">Général</a><a href="#nm-MM" class="onglets-link">Pico. Monde</a><a href="#nm-AP" class="onglets-link">Alpha Perdu</a><a href="#nm-zombie" class="onglets-link">Zombieland</a><a href="#nm-AdP" class="onglets-link">Aventures du passé</a><a href="#nm-xmen" class="onglets-link">X-men</a><a href="#nm-chimeres" class="onglets-link">Chimères</a></nav>');
-
-  document.querySelectorAll('.onglets-link').forEach(link => {
-    link.addEventListener("click", function(e) { 
-      e.preventDefault();
-      
-      document.querySelectorAll('.onglets').forEach(onglet => {    
-        if ( $(onglet).hasClass('visible') ) {
-          $(onglet).removeClass('visible');
-        }
-      });
-      
-	var NM = $(e.target).attr('href');
-      document.querySelector(NM).classList.add('visible');
-    });
-  });
-};
 switchOnglet();
-
+</script>
+<script type="text/javascript">
 //<![CDATA[
 $(document).ready(function() {
 	var btn_collapse = $('<div></div>', {

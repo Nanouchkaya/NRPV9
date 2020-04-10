@@ -1,71 +1,77 @@
 <!-- BEGIN html_validation -->
-<footer>
-  <!-- END html_validation -->
-    <!-- BEGIN switch_footer_links -->
-            
-      
-              <!-- BEGIN footer_link -->
-                    <div class="footer-links">
-                      <ul class="footerbar-user">
-      <li>
-        <a name="bottom" class="copyright" href="{switch_footer_links.footer_link.U_FOOTER_LINK_HREF}" rel="{switch_footer_links.footer_link.FOOTER_LINK_REL}" target="{switch_footer_links.footer_link.FOOTER_LINK_TARGET}" title="{switch_footer_links.footer_link.L_FOOTER_LINK_TITLE}">
-        switch_footer_links.footer_link.L_FOOTER_LINK_TEXT}
-        </a>
-      </li>  </ul>
-              </div>
-              <!-- END footer_link -->
-        
-          <!-- END switch_footer_links -->
-      
-            
-            <div class="footer-links">{PROTECT_FOOTER}</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <div>
+	<footer>
+          <div class="footer-links">
+<!-- END html_validation -->
+           
+	<!-- BEGIN switch_footer_links -->  	
+            <!-- BEGIN footer_link -->
+           
+              <ul class="footerbar-user">
+		<li class="rightside">
+			<a name="bottom" class="copyright" href="{switch_footer_links.footer_link.U_FOOTER_LINK_HREF}" rel="{switch_footer_links.footer_link.FOOTER_LINK_REL}" target="{switch_footer_links.footer_link.FOOTER_LINK_TARGET}" title="{switch_footer_links.footer_link.L_FOOTER_LINK_TITLE}">
+			 {switch_footer_links.footer_link.L_FOOTER_LINK_TEXT}
+			</a>
+		 </li>
+               </ul>
+            <!-- END footer_link -->   
+        <!-- END switch_footer_links -->
+        </div>
+        </footer>
+     </div>
+{PROTECT_FOOTER}
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+   document.getElementById('main-content').children[0].style.display = "none";
+
+  const forumDesc = document.querySelectorAll('#cat_general .level_one .forumrow-content');
+    const imagesGeneral = [
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme1.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme2.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme3.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme4.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme5.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme6.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme7.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme8.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme9.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme10.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme11.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme12.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/meme13.jpg',
+    ];
+    shuffleArray(imagesGeneral);
+    randomBgImage(forumDesc, imagesGeneral);
   
-  <script type="text/javascript">
-  //<![CDATA[
-  $(document).ready(function() {
-     document.getElementById('main-content').children[0].style.display = "none";
+  const forumFaille = document.querySelectorAll('#cat_faille .level_one .forumrow-content');
+    const imagesFaille = [
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/faille1.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/faille2.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/faille3.jpg',
+    ];
+    randomBgImage(forumFaille, imagesFaille);
   
-    const forumDesc = document.querySelectorAll('#cat_general .level_one .forumrow-content');
-      const imagesGeneral = [
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme1.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme2.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme3.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme4.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme5.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme6.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme7.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme8.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme9.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme10.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme11.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme12.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/meme13.jpg',
-      ];
-      shuffleArray(imagesGeneral);
-      randomBgImage(forumDesc, imagesGeneral);
-    
-    const forumFaille = document.querySelectorAll('#cat_faille .level_one .forumrow-content');
-      const imagesFaille = [
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/faille1.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/faille2.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/faille3.jpg',
-      ];
-      randomBgImage(forumFaille, imagesFaille);
-    
-    const boxes = document.querySelectorAll('#cat_NM #boxes .box-content');
-      const imagesOngletGen = [
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_mm.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_ap.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_zom.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_adp.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_xmen.jpg',
-        'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_chim.jpg'
-      ];
-      randomBgImage(boxes, imagesOngletGen);
-  }); 
-  //]]>
-  </script>
-  
-  </footer>
-  </body>
-  </html>
+  const boxes = document.querySelectorAll('#cat_NM #boxes .box-content');
+    const imagesOngletGen = [
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_mm.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_ap.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_zom.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_adp.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_xmen.jpg',
+      'http://memoires-du-monde.fr/upload/NRPV8/V9/onggen_chim.jpg'
+    ];
+    randomBgImage(boxes, imagesOngletGen);
+}); 
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+	fa_endpage();
+//]]>
+</script>
+</body>
+</html>
