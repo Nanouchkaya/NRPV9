@@ -223,6 +223,113 @@ form#form_confirm {
   display: none;
 }
 
+/* GESTION COULEUR PAR NM */
+#box_MM .box-title a,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #a963a9;
+}
+
+#box_AP .box-title a,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #0054a5;
+}
+
+#box_zombie .box-title a,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #ee1c25;
+}
+
+#box_AdP .box-title a,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #00a652;
+}
+
+#box_xmen .box-title a,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #f36523;
+}
+
+#box_chimeres .box-title a,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #e9bd28;
+}
+
+#box_MM .box-event-status,
+#box_MM .box-event-link::after,
+.listLieuxNM:nth-of-type(1) .nm-desc,
+li.themes-list-item.color-micro::before {
+  background-color: #a963a9;
+}
+
+#box_AP .box-event-status,
+#box_AP .box-event-link::after,
+.listLieuxNM:nth-of-type(2) .nm-desc,
+li.themes-list-item.color-AP::before {
+  background-color: #0054a5;
+}
+
+#box_zombie .box-event-status,
+#box_zombie .box-event-link::after,
+.listLieuxNM:nth-of-type(3) .nm-desc,
+li.themes-list-item.color-zombie::before {
+  background-color: #ee1c25;
+}
+
+#box_AdP .box-event-status,
+#box_AdP .box-event-link::after,
+.listLieuxNM:nth-of-type(4) .nm-desc,
+li.themes-list-item.color-AdP::before {
+  background-color: #00a652;
+}
+
+#box_xmen .box-event-status,
+#box_xmen .box-event-link::after,
+.listLieuxNM:nth-of-type(5) .nm-desc,
+li.themes-list-item.color-xmen::before {
+  background-color: #f36523;
+}
+
+#box_chimeres .box-event-status,
+#box_chimeres .box-event-link::after,
+.listLieuxNM:nth-of-type(6) .nm-desc,
+li.themes-list-item.color-chimeres::before {
+  background-color: #e9bd28;
+}
+
+li.themes-list-item.color-faille::before {
+  background-color: #23a9b5;
+}
+
+.listLieuxNM:nth-of-type(1) ul.nm-nav,
+.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #a963a9;
+}
+
+.listLieuxNM:nth-of-type(2) ul.nm-nav,
+.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #0054a5;
+}
+
+.listLieuxNM:nth-of-type(3) ul.nm-nav,
+.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #ee1c25;
+}
+
+.listLieuxNM:nth-of-type(4) ul.nm-nav,
+.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #00a652;
+}
+
+.listLieuxNM:nth-of-type(5) ul.nm-nav,
+.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #f36523;
+}
+
+.listLieuxNM:nth-of-type(6) ul.nm-nav,
+.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"] {
+  border-color: #e9bd28;
+}
+
 header#page-header {
   height: 30rem;
 }
@@ -290,6 +397,8 @@ header#page-header #theme-button, header#page-header #nav-plus-button {
   padding: 1.3rem 1rem;
   text-transform: uppercase;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 header#page-header #nav-plus-button img {
   min-width: 30px;
@@ -368,6 +477,11 @@ header#page-header .navbar.first li {
   text-transform: uppercase;
   margin: 1rem;
 }
+header#page-header .navbar .discord-icon {
+  min-width: 30px;
+  max-width: 45%;
+  margin-right: 2rem;
+}
 header#page-header .navbar.last {
   flex: 2;
   justify-content: flex-end;
@@ -380,6 +494,108 @@ header#page-header .navbar #i_icon_mini_login,
 header#page-header .navbar img[alt="Panneau admin"] {
   min-width: 30px;
   max-width: 40%;
+}
+
+.index-PA {
+  display: flex;
+  max-width: 1300px;
+  margin: 2rem auto;
+  align-items: center;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/pa_ink.png) no-repeat 93% 0;
+}
+.index-PA ul {
+  list-style: none;
+  padding: 0 0.35rem;
+}
+.index-PA li {
+  padding: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.index-PA-bloc-title {
+  font-family: "summeronregular", cursive;
+  font-size: 1.2rem;
+}
+
+.index-PA-left {
+  min-width: 29rem;
+  max-width: 35rem;
+}
+.index-PA-left .index-PA-welcome p {
+  background-color: #161614;
+  color: white;
+  padding: 0.7rem 1rem;
+}
+.index-PA-left .index-PA-welcome {
+  margin: 1.5rem 2rem;
+}
+.index-PA-left .index-PA-news {
+  margin: 1.5rem 2rem;
+  font-weight: 700;
+}
+.index-PA-left .index-PA-news .date-news {
+  background-color: #23a9b5;
+  padding: 0.15rem 0.35rem;
+  margin-right: 1rem;
+  color: white;
+}
+.index-PA-left .index-PA-news a {
+  color: #161614;
+}
+.index-PA-left .index-PA-news a:hover::after {
+  background-color: #161614;
+}
+
+.index-PA-links {
+  margin: 1.5rem 2rem;
+  flex: 0.8;
+  max-width: 15rem;
+}
+.index-PA-links .index-PA-visitor-links {
+  background-color: #23a9b5;
+}
+.index-PA-links .index-PA-member-links {
+  background-color: white;
+}
+.index-PA-links .index-PA-member-links a {
+  color: #161614;
+}
+.index-PA-links .index-PA-member-links a:hover::after {
+  background-color: #161614;
+}
+.index-PA-links .index-PA-icon {
+  margin-right: 0.35rem;
+  position: relative;
+  top: 1px;
+}
+
+.index-PA-right {
+  max-width: 24rem;
+  text-align: center;
+}
+.index-PA-right .index-PA-topsites {
+  margin: 1.5rem 2rem;
+}
+.index-PA-right .index-PA-topsites a:hover::after {
+  display: none;
+}
+.index-PA-right .index-PA-topsites img {
+  margin: 0.7rem;
+}
+.index-PA-right .index-PA-partners p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 1rem;
+}
+.index-PA-right .index-PA-partner {
+  padding: 0.3rem;
+  margin: 0.6rem;
+  background-color: white;
+}
+.index-PA-right .index-PA-partner:hover {
+  background-color: #23a9b5;
 }
 
 .category {
@@ -717,109 +933,6 @@ header#page-header .navbar img[alt="Panneau admin"] {
 #cat_NM .forumrows li:first-of-type #boxes .box-event-link::after {
   bottom: 0;
   height: 0.2rem;
-}
-
-/* GESTION COULEUR PAR NM */
-#box_MM .box-title a,
-.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
-  color: #a963a9;
-}
-
-#box_AP .box-title a,
-.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
-  color: #0054a5;
-}
-
-#box_zombie .box-title a,
-.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
-  color: #ee1c25;
-}
-
-#box_AdP .box-title a,
-.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
-  color: #00a652;
-}
-
-#box_xmen .box-title a,
-.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
-  color: #f36523;
-}
-
-#box_chimeres .box-title a,
-.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"]::after {
-  color: #e9bd28;
-}
-
-#box_MM .box-event-status,
-#box_MM .box-event-link::after,
-.listLieuxNM:nth-of-type(1) .nm-desc,
-li.themes-list-item.color-micro::before {
-  background-color: #a963a9;
-}
-
-#box_AP .box-event-status,
-#box_AP .box-event-link::after,
-.listLieuxNM:nth-of-type(2) .nm-desc,
-li.themes-list-item.color-AP::before {
-  background-color: #0054a5;
-}
-
-#box_zombie .box-event-status,
-#box_zombie .box-event-link::after,
-.listLieuxNM:nth-of-type(3) .nm-desc,
-li.themes-list-item.color-zombie::before {
-  background-color: #ee1c25;
-}
-
-#box_AdP .box-event-status,
-#box_AdP .box-event-link::after,
-.listLieuxNM:nth-of-type(4) .nm-desc,
-li.themes-list-item.color-AdP::before {
-  background-color: #00a652;
-}
-
-#box_xmen .box-event-status,
-#box_xmen .box-event-link::after,
-.listLieuxNM:nth-of-type(5) .nm-desc,
-li.themes-list-item.color-xmen::before {
-  background-color: #f36523;
-}
-
-#box_chimeres .box-event-status,
-#box_chimeres .box-event-link::after,
-.listLieuxNM:nth-of-type(6) .nm-desc,
-li.themes-list-item.color-chimeres::before {
-  background-color: #e9bd28;
-}
-
-.listLieuxNM:nth-of-type(1) ul.nm-nav,
-.listLieuxNM:nth-of-type(1) dd.forumrow-lastpost[title="Nouveaux messages"] {
-  border-color: #a963a9;
-}
-
-.listLieuxNM:nth-of-type(2) ul.nm-nav,
-.listLieuxNM:nth-of-type(2) dd.forumrow-lastpost[title="Nouveaux messages"] {
-  border-color: #0054a5;
-}
-
-.listLieuxNM:nth-of-type(3) ul.nm-nav,
-.listLieuxNM:nth-of-type(3) dd.forumrow-lastpost[title="Nouveaux messages"] {
-  border-color: #ee1c25;
-}
-
-.listLieuxNM:nth-of-type(4) ul.nm-nav,
-.listLieuxNM:nth-of-type(4) dd.forumrow-lastpost[title="Nouveaux messages"] {
-  border-color: #00a652;
-}
-
-.listLieuxNM:nth-of-type(5) ul.nm-nav,
-.listLieuxNM:nth-of-type(5) dd.forumrow-lastpost[title="Nouveaux messages"] {
-  border-color: #f36523;
-}
-
-.listLieuxNM:nth-of-type(6) ul.nm-nav,
-.listLieuxNM:nth-of-type(6) dd.forumrow-lastpost[title="Nouveaux messages"] {
-  border-color: #e9bd28;
 }
 
 .viewonline-wrapper {
@@ -1457,9 +1570,8 @@ a.topic-button:hover::after {
   text-align: right;
 }
 .topic-top .topic-title {
-  font-family: "summeronregular", cursive;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3.5rem;
   padding: 1.5rem;
 }
 .topic-top.auth-buttons {
@@ -2243,6 +2355,9 @@ input#nb_rolls {
 .bg-faille {
   background-color: #23a9b5;
 }
+.bg-main {
+  background-color: #23a9b5;
+}
 
 .color-light {
   color: white !important;
@@ -2274,6 +2389,9 @@ input#nb_rolls {
 .color-faille {
   color: #23a9b5 !important;
 }
+.color-main {
+  color: #23a9b5;
+}
 
 .border-grey {
   border-color: #9a9a8f;
@@ -2297,6 +2415,9 @@ input#nb_rolls {
   border-color: #f36523;
 }
 .border-faille {
+  border-color: #23a9b5;
+}
+.border-main {
   border-color: #23a9b5;
 }
 

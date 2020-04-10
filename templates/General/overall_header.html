@@ -149,6 +149,7 @@
 				<a type="button" onclick="openMenu('themes');closeMenu('nav-plus')" ondblclick="closeMenu('themes')">Métamorphose</a>
 				<div id="themes">
 					<ul class="themes-list">
+						<li class="themes-list-item color-faille"><a type="button" onclick="delete_cookie('metamorphose');window.location.reload(false)">Faille</a></li>
 						<li class="themes-list-item color-micro"><a type="button" onclick="switch_style('micro_light');closeMenu('themes');return false">Pico.</a></li>
 						<li class="themes-list-item color-AP"><a type="button" onclick="switch_style('AP_light');closeMenu('themes');return false">Alpha Perdu</a></li>
 						<li class="themes-list-item color-chimeres"><a type="button" onclick="switch_style('chim_light');closeMenu('themes');return false">Chimères</a></li>
@@ -165,31 +166,33 @@
 				<li><a href="/profile?mode=editprofile">Profil</a></li>
 				<li><a href="/memberlist">Membres</a></li>
 				<li><a href="/groups">Groupes</a></li>             
-			<!-- END switch_user_logged_in -->
+				<!-- END switch_user_logged_in -->
+				
 			</ul>
 			<div id="nav-plus-button">
-				<a type="button" onclick="openMenu('nav-plus');closeMenu('themes')" ondblclick="closeMenu('nav-plus')">
-					<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/bn-lien.png" alt="Plus" />
-				</a>
-				<div id="nav-plus">
-					<ul class="nav-plus-list">					
-						<!-- BEGIN switch_user_logged_in -->
-                                          	<li class="nav-plus-list-item"><a href="">Contrat du RP</a></li>
-						<li class="nav-plus-list-item">
-							<a href="{U_SEARCH_NEW}">Nouveaux messages</a>
-						</li>
-						<li class="nav-plus-list-item">
-							<a href="{U_MARK_READ}" accesskey="m">Tout marqué lu</a>
-						</li>
-						<!-- END switch_user_logged_in -->
-					
-                                          	<li class="nav-plus-list-item"><a href="/search">Rechercher</a></li>
-					</ul>
-					<img class="cross" onclick="closeMenu('nav-plus')" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
-				</div>
+			<a type="button" onclick="openMenu('nav-plus');closeMenu('themes')" ondblclick="closeMenu('nav-plus')">
+				<img src="http://memoires-du-monde.fr/upload/NRPV8/V9/bn-lien.png" alt="Plus" />
+			</a>
+			<div id="nav-plus">
+				<ul class="nav-plus-list">					
+					<!-- BEGIN switch_user_logged_in -->
+																					<li class="nav-plus-list-item"><a href="">Contrat du RP</a></li>
+					<li class="nav-plus-list-item">
+						<a href="{U_SEARCH_NEW}">Nouveaux messages</a>
+					</li>
+					<li class="nav-plus-list-item">
+						<a href="{U_MARK_READ}" accesskey="m">Tout marqué lu</a>
+					</li>
+					<!-- END switch_user_logged_in -->
+				
+					<li class="nav-plus-list-item"><a href="/search">Rechercher</a></li>
+				</ul>
+				<img class="cross" onclick="closeMenu('nav-plus')" src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer" />
+			</div>
 			</div>
 			<ul class="navbar last">
 				<li>{GENERATED_NAV_BAR}</li>
+				<li><a href="https://discord.gg/p3SSKQq"><img class="discord-icon" src="http://memoires-du-monde.fr/upload/NRPV8/V9/bn-discord.png" alt="Discord NRP" title="Discord NRP" /></a></li>
 			</ul>                          	  
 		</div>
   <span id="mamie_guitar" href="/">
