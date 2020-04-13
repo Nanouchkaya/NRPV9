@@ -46,6 +46,10 @@
       color: $no-color;
     }
 
+    & ul {
+      max-height: 8rem;
+    }
+
     a{ color: $nano-dark; }
     a:hover::after{ background-color: $nano-dark;}
   }

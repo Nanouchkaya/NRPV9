@@ -159,6 +159,20 @@
   &-main { background-color: $main-color; }
 }
 
+.scrollbg {
+  &-light::-webkit-scrollbar-thumb { background-color: $no-color; }
+  &-dark::-webkit-scrollbar-thumb { background-color: $nano-dark; }
+  &-grey::-webkit-scrollbar-thumb { background-color: lighten($nano-dark, $amount: 50%) }
+  &-pico::-webkit-scrollbar-thumb { background-color: $micro; }
+  &-adp::-webkit-scrollbar-thumb { background-color: $AdP; }
+  &-ap::-webkit-scrollbar-thumb { background-color: $AP; }
+  &-zombie::-webkit-scrollbar-thumb { background-color: $zombie; }
+  &-chim::-webkit-scrollbar-thumb { background-color: $chimeres; }
+  &-xmen::-webkit-scrollbar-thumb { background-color: $xmen; }
+  &-faille::-webkit-scrollbar-thumb { background-color: $faille; }
+  &-main::-webkit-scrollbar-thumb { background-color: $main-color; }
+}
+
 .color {
   &-light { color: $no-color!important; }
   &-dark { color: $nano-dark; }
@@ -196,4 +210,109 @@
 }
 .strike {
   text-decoration: line-through;
+}
+
+/* CODE SPOILER QUOTE */
+.codebox {
+  display: block;
+}
+dl.codebox {
+  background-color: $no-color;
+  border-color: $main-color;
+  border-style: solid;
+  border-width: 0 0 0 6px;
+  padding: $padding-tb $padding-rl;
+  position: relative;
+}
+dl.codebox:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $nano-dark;
+  content: "\f271";
+  display: inline-block;
+  font-family: Ionicons;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  position: absolute;
+  right: 2%;
+  speak: none;
+  text-rendering: auto;
+  text-transform: none;
+  top: 0;
+}
+dl.codebox dt {
+  display: block;
+  font-weight: 400;
+  margin-bottom: $padding-tb;
+}
+
+dl.codebox dd {
+  max-height: 15rem;
+  overflow-y: hidden;
+  background-color: $nano-dark;
+  color: $no-color;
+  font-size: .9rem;
+}
+
+dl.codebox.spoiler:before {
+  content: '';
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/spoiler_icon.jpg);
+  width: 16px;
+  height: 12px;
+  background-repeat: no-repeat;
+  top: .7rem;
+}
+
+dl.codebox.spoiler dd {
+  max-height: none;
+}
+
+dl.codebox code {
+  color: grey;
+  display: block;
+  font-family: Courier,Courier New,monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
+  line-height: 1.1em;
+  max-height: 250px;
+  overflow: auto;
+  padding: $padding-tb $padding-rl;
+  white-space: normal;
+}
+
+code.hljs {
+  background-color: transparent!important;
+}
+
+.spoiler_content {
+  display: none;
+}
+
+.spoiler_content.hidden {
+  display: block;
+  padding: $padding-tb $padding-rl;
+  background-color: #f4f4f4;
+  color: $nano-dark;
+  border: 1px solid lightgrey;
+}
+
+blockquote {
+  background-color: $no-color;
+  border-color: $main-color;
+  border-style: solid;
+  border-width: 0 0 0 6px;
+  margin: 0 auto;
+  padding: $padding-tb $padding-rl;
+  width: 80%;
+
+  cite {
+    display: block;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+  }
 }

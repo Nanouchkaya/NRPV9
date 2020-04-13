@@ -1,4 +1,28 @@
-<div class="topic-maincontent">
+<script type="text/javascript">
+//<![CDATA[
+  var hiddenMsgLabel = { visible:'{JS_HIDE_HIDDEN_MESSAGE}', hidden:'{JS_SHOW_HIDDEN_MESSAGE}' };
+  showHiddenMessage = function(id) {
+      try {
+          var regId = parseInt(id, 10);
+          if( isNaN(regId) ) { regId = 0; }
+  
+          if( regId > 0) {
+              $('.post--' + id).toggle(0, function() {
+          if( $(this).is(":visible") ) {
+            $('#hidden-title--' + id).html(hiddenMsgLabel.visible);
+          } else {
+            $('#hidden-title--' + id).html(hiddenMsgLabel.hidden);
+          }
+        });
+          }
+      } catch(e) { }
+  
+    return false;
+  };
+
+  //]]>
+  </script>
+  <div class="topic-maincontent">
   <div class="topic-top">
     <h2 class="topic-title">
       <a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
@@ -221,8 +245,16 @@ $(resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image
 //]]>
 </script>
 <!-- END switch_image_resize -->
-
-<script type="text/javascript">          
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github-gist.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
+<script type="text/javascript">  
+  $(document).ready(function() {
+    $('pre, code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
+  
   $(".post").each(function() {
     var ID = $(this).attr('id'); 
     var rp = $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text();

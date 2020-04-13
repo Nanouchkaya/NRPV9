@@ -1,0 +1,27 @@
+/* PREDEF */ 
+.predef {
+  width: calc(49% - 2rem);
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  background-color: $no-color;
+  margin: 1rem;
+  padding: $padding-tb $padding-rl;
+
+  &-infos {
+    display: flex;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  &-details {
+    background-color: $nano-dark;
+    color: $no-color;
+    padding: $padding-tb $padding-rl;
+    font-size: .9rem;
+    height: 8rem;
+  }
+}
