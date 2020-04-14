@@ -192,7 +192,7 @@ form#form_confirm {
   font-size: 0.8rem;
 }
 .panel .h3 {
-  border-bottom: 8px solid #23a9b5;
+  border-bottom: 8px solid #00a652;
   font-size: 1.2rem;
   padding: 0.7rem 1rem 0;
   font-weight: 700;
@@ -347,6 +347,122 @@ li.themes-list-item.color-faille::before {
   height: 8rem;
 }
 
+/* CODE SPOILER QUOTE */
+.codebox {
+  display: block;
+}
+
+dl.codebox {
+  background-color: white;
+  border-color: #00a652;
+  border-style: solid;
+  border-width: 0 0 0 6px;
+  padding: 0.7rem 1rem;
+  position: relative;
+}
+
+dl.codebox:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #161614;
+  content: "";
+  display: inline-block;
+  font-family: Ionicons;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  position: absolute;
+  right: 2%;
+  speak: none;
+  text-rendering: auto;
+  text-transform: none;
+  top: 0;
+}
+
+dl.codebox dt {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+}
+
+dl.codebox dd {
+  max-height: 15rem;
+  overflow-y: hidden;
+  background-color: #161614;
+  color: white;
+  font-size: 0.9rem;
+}
+
+dl.spoiler:before,
+dl.hidecode:before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  background-repeat: no-repeat;
+  top: 0.3rem;
+}
+
+dl.spoiler:before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/spoiler_icon.jpg);
+}
+
+dl.hidecode:before {
+  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/hidden_icon.jpg);
+}
+
+dl.codebox.spoiler dd {
+  max-height: none;
+}
+
+dl.codebox code {
+  color: grey;
+  display: block;
+  font-family: Courier, Courier New, monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
+  line-height: 1.1em;
+  max-height: 250px;
+  overflow: auto;
+  padding: 0.7rem 1rem;
+  white-space: normal;
+}
+
+code.hljs {
+  background-color: transparent !important;
+}
+
+.spoiler_content {
+  display: none;
+}
+
+.spoiler_content.hidden,
+dl.codebox.hidecode dd {
+  display: block;
+  padding: 0.7rem 1rem;
+  background-color: #f4f4f4;
+  color: #161614;
+  border: 1px solid lightgrey;
+}
+
+blockquote {
+  background-color: white;
+  border-color: #00a652;
+  border-style: solid;
+  border-width: 0 0 0 6px;
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  width: 80%;
+}
+blockquote cite {
+  display: block;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 /* CHARACTER SHEET */
 .character-sheet {
   display: flex;
@@ -363,7 +479,7 @@ li.themes-list-item.color-faille::before {
   color: white;
   width: 100%;
   font-size: 1.8rem;
-  background: #161614 url("http://memoires-du-monde.fr/upload/NRPV8/V9/ban_ap.jpg") no-repeat;
+  background: #161614 url() no-repeat;
   height: 8.5rem;
 }
 .character-sheet-nm {
@@ -587,6 +703,12 @@ header#page-header .navbar.last {
   flex: 2;
   justify-content: flex-end;
 }
+header#page-header .navbar.last a {
+  transition: all 200ms ease-in-out;
+}
+header#page-header .navbar.last a :hover {
+  opacity: 0.6;
+}
 header#page-header .navbar #i_icon_mini_logout,
 header#page-header .navbar #i_icon_mini_new_message,
 header#page-header .navbar #i_icon_mini_message,
@@ -635,7 +757,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   font-weight: 700;
 }
 .index-PA-left .index-PA-news .date-news {
-  background-color: #23a9b5;
+  background-color: #00a652;
   padding: 0.15rem 0.35rem;
   margin-right: 1rem;
   color: white;
@@ -656,7 +778,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   max-width: 15rem;
 }
 .index-PA-links .index-PA-visitor-links {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 .index-PA-links .index-PA-member-links {
   background-color: white;
@@ -699,7 +821,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   background-color: white;
 }
 .index-PA-right .index-PA-partner:hover {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 
 .category {
@@ -726,7 +848,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   border-width: 3px;
   border-style: solid;
   height: fit-content;
-  border-color: #23a9b5;
+  border-color: #00a652;
 }
 .category .forumrow-lastpost[title="Nouveaux messages"]::after {
   top: calc(0.7rem * -1);
@@ -737,7 +859,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   right: 5%;
   padding: 0.1rem 0.7rem 0.7rem;
   background-color: white;
-  color: #23a9b5;
+  color: #00a652;
 }
 .category .forumrow-lastpost a img {
   display: inline;
@@ -811,9 +933,9 @@ header#page-header .navbar img[alt="Panneau admin"] {
   color: white !important;
 }
 #cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"], #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"] {
-  background-color: rgba(35, 169, 181, 0.1);
+  background-color: rgba(0, 166, 82, 0.1);
   border: none;
-  border-bottom: 7px solid #23a9b5;
+  border-bottom: 7px solid #00a652;
 }
 #cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after {
   bottom: -2.7rem;
@@ -821,7 +943,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   right: 0;
   background-color: transparent;
   content: "Y'a du neuf ! ";
-  color: #23a9b5;
+  color: #00a652;
   font-size: 0.7rem;
   width: fit-content;
   padding-right: 1rem;
@@ -829,7 +951,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
 }
 
 #cat_general .forumrows .forumrow-title {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 
 #cat_faille .forumrows .forumrow-title {
@@ -1076,7 +1198,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   justify-content: center;
 }
 .viewonline-stats div#TUO span:first-of-type {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 .viewonline-stats div#LIUL {
   flex-basis: 85%;
@@ -1214,7 +1336,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   background-color: white;
 }
 #footer-partner #normal a:hover img {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 
 footer#page-footer {
@@ -1270,8 +1392,9 @@ footer#page-footer a {
 }
 
 .profile_h2,
-form h1.page-title {
-  border-bottom: 8px solid #23a9b5;
+form h1.page-title,
+.signature_edit h1.page-title {
+  border-bottom: 8px solid #00a652;
   font-size: 1.2rem;
   padding: 0.7rem 1rem 0;
   font-weight: 700;
@@ -1288,7 +1411,7 @@ form[action="/profile"] .italic {
 
 .signature_edit input.button2 {
   cursor: pointer;
-  background-color: #23a9b5;
+  background-color: #00a652;
   color: white;
   padding: calc(0.7rem / 2) 1rem;
   font-variant: small-caps;
@@ -1562,7 +1685,7 @@ form[action="/profile"] .italic {
   border-width: 3px;
   border-style: solid;
   height: fit-content;
-  border-color: #23a9b5;
+  border-color: #00a652;
 }
 .forumbg li.row .topiclist-lastpost .lastpost.newpost::after, .forumbg-table li.row .topiclist-lastpost .lastpost.newpost::after {
   top: calc(0.7rem * -1);
@@ -1573,7 +1696,7 @@ form[action="/profile"] .italic {
   right: 5%;
   padding: 0.1rem 0.7rem 0.7rem;
   background-color: white;
-  color: #23a9b5;
+  color: #00a652;
 }
 .forumbg li.row .topiclist-lastpost .topic-etiquette, .forumbg-table li.row .topiclist-lastpost .topic-etiquette {
   width: 30px;
@@ -1655,8 +1778,7 @@ a.topic-button:hover::after {
   flex-wrap: wrap;
   justify-content: center;
 }
-.forumview ul.forumrows li.forumrow.level_two {
-  display: flex;
+.forumview ul.forumrows li.forumrow {
   min-width: 45rem;
   max-width: 50rem;
   width: 100%;
@@ -1667,7 +1789,7 @@ a.topic-button:hover::after {
   background-color: white;
   flex-direction: column;
 }
-.forumview ul.forumrows li.forumrow.level_two::after {
+.forumview ul.forumrows li.forumrow::after {
   width: 0;
   height: 0;
   border-style: solid;
@@ -1731,6 +1853,17 @@ a.topic-button:hover::after {
   color: #161614;
 }
 
+.forumview.level_two li.forumrow.level_three {
+  display: flex;
+}
+
+.forumview.level_one li.forumrow.level_two {
+  display: flex;
+}
+.forumview.level_one li.forumrow.level_three {
+  display: none;
+}
+
 .path {
   text-align: center;
   background-color: #161614;
@@ -1780,8 +1913,11 @@ a.topic-button:hover::after {
 }
 .topic-top .topic-title {
   text-align: center;
-  font-size: 3.5rem;
-  padding: 1.5rem;
+  font-size: 1.7rem;
+  padding: 0.7rem 1rem;
+  color: white;
+  background-color: #00a652;
+  margin-bottom: calc(1.5rem * -1);
 }
 .topic-top.auth-buttons {
   text-align: right;
@@ -1818,7 +1954,7 @@ a.topic-button:hover::after {
 .image-panel .polls {
   flex: 1 100%;
   border: none;
-  border-top: 3px solid #23a9b5;
+  border-top: 3px solid #00a652;
   margin-top: 0.7rem;
 }
 .image-panel .polls dt {
@@ -1844,7 +1980,7 @@ a.topic-button:hover::after {
   margin: 1rem 0;
 }
 .image-panel .poll-bar-bar {
-  background-color: #23a9b5;
+  background-color: #00a652;
   height: 1.5rem;
 }
 .image-panel .poll-bar-desc {
@@ -1899,6 +2035,18 @@ a.topic-button:hover::after {
   text-align: center;
   width: 10rem;
 }
+.post-rpg img {
+  max-width: unset;
+}
+.post-rpg::-webkit-scrollbar {
+  height: 0.5rem;
+}
+.post-rpg::-webkit-scrollbar-track {
+  background-color: #161614;
+}
+.post-rpg::-webkit-scrollbar-thumb {
+  background-color: #00a652;
+}
 .post-profile {
   flex: 1;
   padding: 0.7rem 1rem;
@@ -1948,11 +2096,19 @@ a.topic-button:hover::after {
 .post-body-head {
   display: flex;
   justify-content: space-between;
+  padding: 0.7rem 0;
 }
 .post-body-head .profile-icons {
   display: flex;
   justify-content: space-around;
   flex: 1 20%;
+  align-items: center;
+}
+.post-body-head .profile-icons a {
+  transition: all 200ms ease-in-out;
+}
+.post-body-head .profile-icons a :hover {
+  opacity: 0.6;
 }
 .post-body .topic-retitle,
 .post-body .edited-message {
@@ -1972,6 +2128,12 @@ a.topic-button:hover::after {
   flex-wrap: wrap;
   align-items: flex-end;
 }
+.post-body-content a {
+  color: #161614;
+}
+.post-body-content a:hover::after {
+  background-color: #161614;
+}
 .post-body-content-message {
   flex: 1 100%;
   font-size: 0.95rem;
@@ -1983,12 +2145,6 @@ a.topic-button:hover::after {
 }
 .post-signature {
   flex: 100%;
-}
-.post a {
-  color: #161614;
-}
-.post a:hover::after {
-  background-color: #161614;
 }
 
 .topic-bottom {
@@ -2032,55 +2188,6 @@ a.topic-button:hover::after {
   color: #ee1c25;
 }
 
-.topic-quickreply {
-  background: white url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
-}
-.topic-quickreply .h3 {
-  background-color: #23a9b5;
-  color: white;
-  padding: 0.7rem 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.topic-quickreply #quick_reply input.button2 {
-  background: none;
-  border: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 0.7rem 1rem;
-  transition: all 200ms ease-in-out;
-}
-.topic-quickreply #quick_reply input.button2:hover {
-  color: #23a9b5;
-  cursor: pointer;
-}
-.topic-quickreply form#quick_reply {
-  padding: 0.7rem 1rem;
-  margin-top: -0.7rem;
-}
-.topic-quickreply div#textarea_content {
-  margin-bottom: -20px;
-}
-.topic-quickreply .sceditor-toolbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.7rem 1rem !important;
-}
-.topic-quickreply .sceditor-group {
-  display: flex !important;
-  justify-content: space-around;
-  background-color: #f4f4f4 !important;
-  border: none !important;
-  flex: 1;
-}
-.topic-quickreply .sceditor-group a.sceditor-button {
-  padding: 0.7rem;
-}
-.topic-quickreply .sceditor-group .sceditor-button div {
-  margin: -7px -7px;
-}
-
 .topic-actions {
   display: flex;
   flex-direction: row-reverse;
@@ -2101,6 +2208,7 @@ a.topic-button:hover::after {
   text-align: right;
 }
 
+/* VOTE COOKIE */
 .fa_vote, .fa_voted, .fa_count {
   font-size: 12px;
   display: inline-block !important;
@@ -2178,7 +2286,7 @@ a.topic-button:hover::after {
   align-items: center;
 }
 .wrapper.solo .normal-panel dt label {
-  color: #23a9b5;
+  color: #00a652;
 }
 .wrapper.solo .normal-panel .inputbox, .wrapper.solo .normal-panel input[type=text], .wrapper.solo .normal-panel select {
   background-color: transparent;
@@ -2190,7 +2298,7 @@ a.topic-button:hover::after {
 .wrapper.solo .normal-panel .inputbox:hover,
 .wrapper.solo .normal-panel input[type=text]:focus,
 .wrapper.solo .normal-panel input[type=text]:hover {
-  border-bottom: 1px solid #23a9b5;
+  border-bottom: 1px solid #00a652;
 }
 .wrapper.solo .normal-panel option {
   background-color: #161614;
@@ -2203,7 +2311,7 @@ a.topic-button:hover::after {
   transition: all 200ms ease;
 }
 .wrapper.solo .normal-panel input.button2:hover {
-  color: #23a9b5;
+  color: #00a652;
   cursor: pointer;
 }
 .wrapper.solo .normal-panel .submit {
@@ -2314,7 +2422,7 @@ a.topic-button:hover::after {
   font-size: 1.3rem;
 }
 #find_username input {
-  background-color: #23a9b5;
+  background-color: #00a652;
   color: white;
   padding: calc(0.7rem / 2) 1rem;
 }
@@ -2399,11 +2507,82 @@ input#nb_rolls {
 }
 
 .review p.author {
-  border-bottom: 2px solid #23a9b5;
+  border-bottom: 2px solid #00a652;
   margin-bottom: 0.7rem;
 }
 .review .content {
   font-size: 0.9rem;
+}
+
+/* REPONSE RAPIDE */
+.topic-quickreply {
+  background: white url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
+}
+.topic-quickreply .h3 {
+  background-color: #00a652;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.topic-quickreply #quick_reply input.button2 {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  transition: all 200ms ease-in-out;
+}
+.topic-quickreply #quick_reply input.button2:hover {
+  color: #00a652;
+  cursor: pointer;
+}
+.topic-quickreply form#quick_reply {
+  padding: 0.7rem 1rem;
+  margin-top: -0.7rem;
+}
+.topic-quickreply div#textarea_content {
+  margin-bottom: -20px;
+}
+.topic-quickreply .sceditor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem !important;
+}
+.topic-quickreply .sceditor-group {
+  display: flex !important;
+  justify-content: space-around;
+  background-color: #f4f4f4 !important;
+  border: none !important;
+  flex: 1;
+}
+.topic-quickreply .sceditor-group a.sceditor-button {
+  padding: 0.7rem;
+}
+.topic-quickreply .sceditor-group .sceditor-button div {
+  margin: -7px -7px;
+}
+.topic-quickreply .sceditor-container.ltr.sourceMode {
+  font-weight: 100;
+}
+.topic-quickreply .sceditor-container.ltr.sourceMode textarea {
+  padding: 0.7rem;
+  width: 100% !important;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+.topic-quickreply .sceditor-container.ltr.wysiwygMode iframe {
+  padding: 0.7rem 1.5rem;
+  width: 100% !important;
+}
+
+/* PREVIEW */
+.preview-content {
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  margin: 0 0 1.5rem;
 }
 
 /* STYLES MISE EN PAGE */
@@ -2566,7 +2745,7 @@ input#nb_rolls {
   background-color: #23a9b5;
 }
 .bg-main {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 
 .scrollbg-light::-webkit-scrollbar-thumb {
@@ -2600,7 +2779,7 @@ input#nb_rolls {
   background-color: #23a9b5;
 }
 .scrollbg-main::-webkit-scrollbar-thumb {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 
 .color-light {
@@ -2634,7 +2813,7 @@ input#nb_rolls {
   color: #23a9b5 !important;
 }
 .color-main {
-  color: #23a9b5;
+  color: #00a652;
 }
 
 .border-grey {
@@ -2662,7 +2841,7 @@ input#nb_rolls {
   border-color: #23a9b5;
 }
 .border-main {
-  border-color: #23a9b5;
+  border-color: #00a652;
 }
 
 .bold {
@@ -2681,113 +2860,6 @@ input#nb_rolls {
   text-decoration: line-through;
 }
 
-/* CODE SPOILER QUOTE */
-.codebox {
-  display: block;
-}
-
-dl.codebox {
-  background-color: white;
-  border-color: #23a9b5;
-  border-style: solid;
-  border-width: 0 0 0 6px;
-  padding: 0.7rem 1rem;
-  position: relative;
-}
-
-dl.codebox:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: #161614;
-  content: "";
-  display: inline-block;
-  font-family: Ionicons;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  position: absolute;
-  right: 2%;
-  speak: none;
-  text-rendering: auto;
-  text-transform: none;
-  top: 0;
-}
-
-dl.codebox dt {
-  display: block;
-  font-weight: 400;
-  margin-bottom: 0.7rem;
-}
-
-dl.codebox dd {
-  max-height: 15rem;
-  overflow-y: hidden;
-  background-color: #161614;
-  color: white;
-  font-size: 0.9rem;
-}
-
-dl.codebox.spoiler:before {
-  content: "";
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/spoiler_icon.jpg);
-  width: 16px;
-  height: 12px;
-  background-repeat: no-repeat;
-  top: 0.7rem;
-}
-
-dl.codebox.spoiler dd {
-  max-height: none;
-}
-
-dl.codebox code {
-  color: grey;
-  display: block;
-  font-family: Courier, Courier New, monospace;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  height: auto;
-  line-height: 1.1em;
-  max-height: 250px;
-  overflow: auto;
-  padding: 0.7rem 1rem;
-  white-space: normal;
-}
-
-code.hljs {
-  background-color: transparent !important;
-}
-
-.spoiler_content {
-  display: none;
-}
-
-.spoiler_content.hidden {
-  display: block;
-  padding: 0.7rem 1rem;
-  background-color: #f4f4f4;
-  color: #161614;
-  border: 1px solid lightgrey;
-}
-
-blockquote {
-  background-color: white;
-  border-color: #23a9b5;
-  border-style: solid;
-  border-width: 0 0 0 6px;
-  margin: 0 auto;
-  padding: 0.7rem 1rem;
-  width: 80%;
-}
-blockquote cite {
-  display: block;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-}
-
 .popup {
   width: 70%;
   height: 80%;
@@ -2801,7 +2873,7 @@ blockquote cite {
 }
 .popup-nav {
   height: 100%;
-  background-color: #23a9b5;
+  background-color: #00a652;
   width: 30%;
   min-width: 10rem;
 }
@@ -2892,7 +2964,7 @@ dl.codebox code::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb,
 dl.codebox code::-webkit-scrollbar-thumb {
-  background-color: #23a9b5;
+  background-color: #00a652;
 }
 
 .wrapper {
@@ -2924,7 +2996,7 @@ a[href^="/u"] {
 
 input.button1 {
   cursor: pointer;
-  background-color: #23a9b5;
+  background-color: #00a652;
   color: white;
   padding: calc(0.7rem / 2) 1rem;
   font-variant: small-caps;
@@ -2952,12 +3024,12 @@ input[type=checkbox]:hover {
 }
 
 input[type=checkbox]:checked {
-  background: #23a9b5;
+  background: #00a652;
   position: relative;
 }
 
 .border-bottom {
-  border-bottom: 3px solid #23a9b5;
+  border-bottom: 3px solid #00a652;
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   padding: 0.7rem 0;

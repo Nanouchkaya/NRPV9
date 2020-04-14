@@ -24,9 +24,6 @@
   </script>
   <div class="topic-maincontent">
   <div class="topic-top">
-    <h2 class="topic-title">
-      <a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
-    </h2>
     <div class="topic-top auth-buttons">
       <!-- BEGIN switch_user_authpost -->
       <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_NEW_TOPIC}">
@@ -39,6 +36,7 @@
       </a>
       <!-- END switch_user_authreply -->
     </div>
+    <h2 class="topic-title">{TOPIC_TITLE}</h2>
   </div>
 
     {POLL_DISPLAY}
@@ -56,7 +54,7 @@
       {postrow.displayed.POSTER_AVATAR}
     </div>
 
-    <div class="post-rpg">
+    <div class="post-rpg scrollbar scrollbg-main">
       {postrow.displayed.POSTER_RPG}
     </div>
 
@@ -132,28 +130,12 @@
           <!-- END switch_no_bar -->
         </div>
         <!-- END switch_vote_active -->
-        <ul class="profile-icons">
-          <li class="btn-quote">
-            <a href="{postrow.displayed.QUOTE_URL}" title="Citer">
-              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_quote.png" alt="Citer" />
-            </a>
-          </li>
-          <li class="btn-edit">
-            <a href="{postrow.displayed.EDIT_URL}" title="Editer">
-              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_edit.png" alt="Editer" />
-            </a>
-          </li>
-          <li class="btn-delete">
-            <a href="{postrow.displayed.DELETE_URL}" title="Sipprimer">
-              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_delete.png" alt="Supprimer" />
-            </a>
-          </li>
-          <li class="btn-thank">
-            <a href="{postrow.displayed.THANK_URL}" title="Super cookie, remercie un unique participant à ton sujet !"> {postrow.displayed.THANK_IMG}
-              <img src="http://memoires-du-monde.fr/upload/NRPV8/V9/me_merci.png" alt="Merci" />
-            </a>
-          </li>
-        </ul>
+        <div class="profile-icons">
+          {postrow.displayed.EDIT_IMG}
+          {postrow.displayed.DELETE_IMG}
+          {postrow.displayed.QUOTE_IMG}
+          {postrow.displayed.THANK_IMG}           
+        </div>
       </div>
 
       <div class="post-body-content">

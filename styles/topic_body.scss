@@ -13,8 +13,11 @@
 
   .topic-title {
     text-align: center;
-    font-size: 3.5rem;
-    padding: $margin-tb;
+    font-size: 1.7rem;
+    padding: $padding-tb $padding-rl;
+    color: $no-color;
+    background-color: $main-color;
+    margin-bottom: calc(#{$margin-tb} * -1);
   }
 
   &.auth-buttons {
@@ -144,6 +147,20 @@
       text-align: center;
       width: 10rem;
     }
+
+    img {
+      max-width: unset;
+    }
+
+    &::-webkit-scrollbar {
+      height: .5rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $nano-dark;
+    }   
+    &::-webkit-scrollbar-thumb {
+      background-color: $main-color;
+    } 
   }
 
   &-profile {
@@ -198,12 +215,18 @@
     &-head {
       display: flex;
       justify-content: space-between;
+      padding: $padding-tb 0;
 
       .profile-icons {
         display: flex;
         justify-content: space-around;
         flex: 1 20%;
+        align-items: center;
       }      
+      .profile-icons a {
+        transition: all 200ms ease-in-out;
+        :hover { opacity: 0.6; }
+      }
     }
 
     .topic-retitle,
@@ -223,6 +246,8 @@
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
+      a { color: $nano-dark; }
+      a:hover::after { background-color: $nano-dark; }
     }
 
     &-content-message {
@@ -240,9 +265,6 @@
   &-signature {
     flex: 100%;
   }
-  
-  a { color: $nano-dark; }
-  a:hover::after { background-color: $nano-dark; }
 }
 
 .topic-bottom {
@@ -288,58 +310,7 @@
   & h4 { color: $zombie; }
 }
 
-.topic-quickreply {
-  background: $no-color url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
 
-  .h3 { 
-    background-color: $main-color;
-    color: $no-color;
-    padding: $padding-tb $padding-rl;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  #quick_reply input.button2 {
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: $padding-tb $padding-rl;
-    transition: all 200ms ease-in-out;
-
-    &:hover {
-      color: $main-color;
-      cursor: pointer;
-    }
-  }
-
-  form#quick_reply {
-    padding: $padding-tb $padding-rl;
-    margin-top: -.7rem;
-  }
-
-  div#textarea_content {
-     margin-bottom: -20px;
-  }
-
-  .sceditor-toolbar {
-    display: flex;
-    justify-content: space-between;
-    padding: $padding-tb $padding-rl!important;
-  }
-
-  .sceditor-group {
-    display: flex!important;
-    justify-content: space-around;
-    background-color: #f4f4f4!important;
-    border: none!important;
-    flex: 1;
-
-    a.sceditor-button { padding: .7rem;}
-    .sceditor-button div { margin: -7px -7px; }
-  }
-}
 
 .topic-actions {
   display: flex;
@@ -363,12 +334,7 @@
   }
 }
 
-
-
-
-
-
-
+/* VOTE COOKIE */
 .fa_vote, .fa_voted, .fa_count {
   font-size: 12px;
   display: inline-block !important;
@@ -377,9 +343,8 @@
   transition:300ms;
 }
  
-.fa_voted, .fa_vote:hover { opacity:0.4 }
+.fa_voted, .fa_vote:hover { opacity: 0.4 }
 .fa_voted { cursor:default }
- 
 .fa_count {
   font-weight: bold;
   margin: 0 3px;

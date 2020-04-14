@@ -177,6 +177,11 @@ header#page-header {
       justify-content: flex-end;
     }
 
+    &.last a {
+      transition: all 200ms ease-in-out;
+      :hover { opacity: 0.6; }
+    }
+
     #i_icon_mini_logout,
     #i_icon_mini_new_message,
     #i_icon_mini_message,

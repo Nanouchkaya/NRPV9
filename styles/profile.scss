@@ -17,7 +17,8 @@
 }
 
 .profile_h2,
-form h1.page-title {
+form h1.page-title,
+.signature_edit h1.page-title {
   border-bottom: 8px solid $main-color;
   font-size: 1.2rem;
   padding: $padding-tb $padding-rl 0;
