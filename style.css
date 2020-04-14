@@ -332,6 +332,7 @@ li.themes-list-item.color-faille::before {
   background-color: white;
   margin: 1rem;
   padding: 0.7rem 1rem;
+  font-size: 0.9rem;
 }
 .predef-infos {
   display: flex;
@@ -343,8 +344,91 @@ li.themes-list-item.color-faille::before {
   background-color: #161614;
   color: white;
   padding: 0.7rem 1rem;
-  font-size: 0.9rem;
   height: 8rem;
+}
+
+/* CHARACTER SHEET */
+.character-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.character-sheet-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "summeronregular", cursive;
+  color: white;
+  width: 100%;
+  font-size: 1.8rem;
+  background: #161614 url("http://memoires-du-monde.fr/upload/NRPV8/V9/ban_ap.jpg") no-repeat;
+  height: 8.5rem;
+}
+.character-sheet-nm {
+  font-size: 1.5rem;
+  font-family: "summeronregular", cursive;
+  text-align: center;
+  display: block;
+}
+.character-sheet-passeport {
+  margin: 1.5rem;
+  flex: 1 calc(35% - 1.5rem * 2);
+}
+.character-sheet-passeport p {
+  height: 13rem;
+  padding-right: 1rem;
+}
+.character-sheet-look {
+  flex: 1 calc(60% - 1.5rem * 2);
+  margin: 1.5rem;
+  padding: 0.7rem 1rem;
+  background-color: #161614;
+  color: white;
+  height: 17rem;
+}
+@media (max-width: 1000px) {
+  .character-sheet-look {
+    flex: 1 100%;
+  }
+}
+.character-sheet-avatar {
+  padding: 3.5rem 2rem 1rem;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 100% -19%;
+}
+@media (max-width: 1000px) {
+  .character-sheet-avatar {
+    flex: 1 100%;
+    text-align: center;
+  }
+}
+.character-sheet-interview {
+  flex: 1 calc(65% - 2rem * 2);
+  padding: 1.5rem 1.5rem 0;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv3.png) no-repeat right top;
+}
+.character-sheet-interview .character-sheet-inner {
+  width: 88%;
+  padding-right: 1rem;
+}
+.character-sheet-story {
+  flex: 1 100%;
+  padding: 1.5rem;
+  padding: 4.5rem 1.5rem;
+  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat left -23%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv4.png) no-repeat right bottom;
+}
+.character-sheet-story .character-sheet-inner {
+  border-width: 5px;
+  border-style: solid;
+  border-right: none;
+  width: 80%;
+  padding: 0.7rem 1rem;
+  margin: auto;
+}
+.character-sheet-inner {
+  background-color: #f4f4f4;
+  height: 21rem;
 }
 
 header#page-header {
@@ -2348,6 +2432,7 @@ input#nb_rolls {
   margin: 0 auto;
   padding: 0.7rem 1rem;
   font-size: 0.9rem;
+  box-shadow: 1px 1px 6px #00000082;
 }
 .post-block-ink-2 {
   padding: 4rem 0 2rem;

@@ -8,6 +8,7 @@
   background-color: $no-color;
   margin: 1rem;
   padding: $padding-tb $padding-rl;
+  font-size: .9rem;
 
   &-infos {
     display: flex;
@@ -21,7 +22,98 @@
     background-color: $nano-dark;
     color: $no-color;
     padding: $padding-tb $padding-rl;
-    font-size: .9rem;
     height: 8rem;
+  }
+}
+
+/* CHARACTER SHEET */ 
+
+.character-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  font-size: .9rem;
+
+  &-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $special-font;
+    color: $no-color;
+    width: 100%;
+    font-size: 1.8rem;
+    background: $nano-dark url() no-repeat;
+    height: 8.5rem;
+  }
+
+  &-nm {
+    font-size: 1.5rem;
+    font-family: $special-font;
+    text-align: center;
+    display: block;
+  }
+
+  &-passeport {
+    margin: $margin-tb;
+    flex:1 calc(35% - #{$margin-tb} * 2);
+
+    p { 
+      height: 13rem;
+      padding-right: $padding-rl;
+    }
+  }
+
+  &-look {
+    flex:1 calc(60% - #{$margin-tb} * 2);
+    margin: $margin-tb;
+    padding: $padding-tb $padding-rl;
+    background-color: $nano-dark;
+    color: $no-color;
+    height: 17rem;
+    @media (max-width: 1000px) {
+      flex: 1 100%;
+    }
+  }
+  
+  &-avatar {
+    padding: 3.5rem 2rem 1rem;
+    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 100% -19%;
+    @media (max-width: 1000px) {
+      flex: 1 100%;
+      text-align: center;
+    }
+  }
+  
+  &-interview {
+    flex:1 calc(65% - #{$margin-rl} * 2);
+    padding: $margin-tb $margin-tb 0;
+    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv3.png) no-repeat right top;
+
+    .character-sheet-inner {
+      width: 88%;
+      padding-right: $padding-rl;
+    }
+  }
+
+  &-story {
+    flex: 1 100%;
+    padding: $margin-tb;
+    padding: 4.5rem 1.5rem;
+    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat left -23%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv4.png) no-repeat right bottom;
+
+    .character-sheet-inner {
+      border-width: 5px;
+      border-style: solid;
+      border-right: none;
+      width: 80%;
+      padding: $padding-tb $padding-rl;
+      margin: auto;
+    }
+  }
+
+  &-inner {
+    background-color: #f4f4f4;
+    height: 21rem;
   }
 }
