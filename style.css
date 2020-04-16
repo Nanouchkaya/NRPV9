@@ -192,7 +192,7 @@ form#form_confirm {
   font-size: 0.8rem;
 }
 .panel .h3 {
-  border-bottom: 8px solid #00a652;
+  border-bottom: 8px solid #23a9b5;
   font-size: 1.2rem;
   padding: 0.7rem 1rem 0;
   font-weight: 700;
@@ -354,7 +354,7 @@ li.themes-list-item.color-faille::before {
 
 dl.codebox {
   background-color: white;
-  border-color: #00a652;
+  border-color: #23a9b5;
   border-style: solid;
   border-width: 0 0 0 6px;
   padding: 0.7rem 1rem;
@@ -449,7 +449,7 @@ dl.codebox.hidecode dd {
 
 blockquote {
   background-color: white;
-  border-color: #00a652;
+  border-color: #23a9b5;
   border-style: solid;
   border-width: 0 0 0 6px;
   margin: 0 auto;
@@ -721,6 +721,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
 
 .index-PA {
   display: flex;
+  justify-content: center;
   max-width: 1300px;
   margin: 2rem auto;
   align-items: center;
@@ -733,6 +734,11 @@ header#page-header .navbar img[alt="Panneau admin"] {
 .index-PA li {
   padding: 0.35rem;
   font-size: 0.9rem;
+}
+@media (max-width: 980px) {
+  .index-PA {
+    flex-wrap: wrap;
+  }
 }
 
 .index-PA-bloc-title {
@@ -757,7 +763,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   font-weight: 700;
 }
 .index-PA-left .index-PA-news .date-news {
-  background-color: #00a652;
+  background-color: #23a9b5;
   padding: 0.15rem 0.35rem;
   margin-right: 1rem;
   color: white;
@@ -776,9 +782,10 @@ header#page-header .navbar img[alt="Panneau admin"] {
   margin: 1.5rem 2rem;
   flex: 0.8;
   max-width: 15rem;
+  min-width: fit-content;
 }
 .index-PA-links .index-PA-visitor-links {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 .index-PA-links .index-PA-member-links {
   background-color: white;
@@ -821,7 +828,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   background-color: white;
 }
 .index-PA-right .index-PA-partner:hover {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 
 .category {
@@ -848,7 +855,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   border-width: 3px;
   border-style: solid;
   height: fit-content;
-  border-color: #00a652;
+  border-color: #23a9b5;
 }
 .category .forumrow-lastpost[title="Nouveaux messages"]::after {
   top: calc(0.7rem * -1);
@@ -859,7 +866,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   right: 5%;
   padding: 0.1rem 0.7rem 0.7rem;
   background-color: white;
-  color: #00a652;
+  color: #23a9b5;
 }
 .category .forumrow-lastpost a img {
   display: inline;
@@ -933,9 +940,9 @@ header#page-header .navbar img[alt="Panneau admin"] {
   color: white !important;
 }
 #cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"], #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"] {
-  background-color: rgba(0, 166, 82, 0.1);
+  background-color: rgba(35, 169, 181, 0.1);
   border: none;
-  border-bottom: 7px solid #00a652;
+  border-bottom: 7px solid #23a9b5;
 }
 #cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after {
   bottom: -2.7rem;
@@ -943,7 +950,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   right: 0;
   background-color: transparent;
   content: "Y'a du neuf ! ";
-  color: #00a652;
+  color: #23a9b5;
   font-size: 0.7rem;
   width: fit-content;
   padding-right: 1rem;
@@ -951,7 +958,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
 }
 
 #cat_general .forumrows .forumrow-title {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 
 #cat_faille .forumrows .forumrow-title {
@@ -988,7 +995,6 @@ header#page-header .navbar img[alt="Panneau admin"] {
   max-width: 1300px;
   margin: auto;
   min-height: 53rem;
-  max-height: 92vh;
 }
 #cat_NM .listLieuxNM ul.forumrows {
   max-width: 1300px;
@@ -1031,6 +1037,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
+  height: fit-content;
 }
 #cat_NM .listLieuxNM li.forumrow.forumNM dd.forumrow-desc ul.nm-nav::after {
   content: "Comprendre l'univers";
@@ -1056,10 +1063,37 @@ header#page-header .navbar img[alt="Panneau admin"] {
   color: #9a9a8f;
   display: block;
 }
+@media (max-width: 800px) {
+  #cat_NM .listLieuxNM li.forumrow.forumNM {
+    position: initial;
+    width: 100%;
+  }
+  #cat_NM .listLieuxNM li.forumrow.forumNM img {
+    display: none;
+  }
+  #cat_NM .listLieuxNM li.forumrow.forumNM .forumrow-desc {
+    align-items: center;
+  }
+  #cat_NM .listLieuxNM li.forumrow.forumNM .nm-desc {
+    margin: 1.5rem !important;
+    max-width: unset;
+    min-width: 300px;
+    flex: 1;
+  }
+  #cat_NM .listLieuxNM li.forumrow.forumNM .nm-nav {
+    flex: 1;
+    max-width: unset;
+  }
+}
 #cat_NM .listLieuxNM li.forumrow:not(.forumNM) {
   margin: calc(0.7rem / 2) 1.5rem;
   width: calc(70% - 1.5rem * 2);
   background-color: white;
+}
+@media (max-width: 800px) {
+  #cat_NM .listLieuxNM li.forumrow:not(.forumNM) {
+    width: auto;
+  }
 }
 #cat_NM .listLieuxNM li.forumrow:not(.forumNM) a:not([href^="/u"]) {
   color: #161614;
@@ -1198,7 +1232,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   justify-content: center;
 }
 .viewonline-stats div#TUO span:first-of-type {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 .viewonline-stats div#LIUL {
   flex-basis: 85%;
@@ -1336,7 +1370,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   background-color: white;
 }
 #footer-partner #normal a:hover img {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 
 footer#page-footer {
@@ -1394,7 +1428,7 @@ footer#page-footer a {
 .profile_h2,
 form h1.page-title,
 .signature_edit h1.page-title {
-  border-bottom: 8px solid #00a652;
+  border-bottom: 8px solid #23a9b5;
   font-size: 1.2rem;
   padding: 0.7rem 1rem 0;
   font-weight: 700;
@@ -1411,7 +1445,7 @@ form[action="/profile"] .italic {
 
 .signature_edit input.button2 {
   cursor: pointer;
-  background-color: #00a652;
+  background-color: #23a9b5;
   color: white;
   padding: calc(0.7rem / 2) 1rem;
   font-variant: small-caps;
@@ -1685,7 +1719,7 @@ form[action="/profile"] .italic {
   border-width: 3px;
   border-style: solid;
   height: fit-content;
-  border-color: #00a652;
+  border-color: #23a9b5;
 }
 .forumbg li.row .topiclist-lastpost .lastpost.newpost::after, .forumbg-table li.row .topiclist-lastpost .lastpost.newpost::after {
   top: calc(0.7rem * -1);
@@ -1696,7 +1730,7 @@ form[action="/profile"] .italic {
   right: 5%;
   padding: 0.1rem 0.7rem 0.7rem;
   background-color: white;
-  color: #00a652;
+  color: #23a9b5;
 }
 .forumbg li.row .topiclist-lastpost .topic-etiquette, .forumbg-table li.row .topiclist-lastpost .topic-etiquette {
   width: 30px;
@@ -1906,6 +1940,11 @@ a.topic-button:hover::after {
   max-width: 1300px;
   margin: auto;
 }
+@media (max-width: 1345px) {
+  .topic-maincontent {
+    margin: 0 2rem;
+  }
+}
 
 .topic-top .topic-actions-auth {
   flex: 1;
@@ -1916,7 +1955,7 @@ a.topic-button:hover::after {
   font-size: 1.7rem;
   padding: 0.7rem 1rem;
   color: white;
-  background-color: #00a652;
+  background-color: #23a9b5;
   margin-bottom: calc(1.5rem * -1);
 }
 .topic-top.auth-buttons {
@@ -1954,7 +1993,7 @@ a.topic-button:hover::after {
 .image-panel .polls {
   flex: 1 100%;
   border: none;
-  border-top: 3px solid #00a652;
+  border-top: 3px solid #23a9b5;
   margin-top: 0.7rem;
 }
 .image-panel .polls dt {
@@ -1980,7 +2019,7 @@ a.topic-button:hover::after {
   margin: 1rem 0;
 }
 .image-panel .poll-bar-bar {
-  background-color: #00a652;
+  background-color: #23a9b5;
   height: 1.5rem;
 }
 .image-panel .poll-bar-desc {
@@ -2045,7 +2084,7 @@ a.topic-button:hover::after {
   background-color: #161614;
 }
 .post-rpg::-webkit-scrollbar-thumb {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 .post-profile {
   flex: 1;
@@ -2062,6 +2101,7 @@ a.topic-button:hover::after {
   position: relative;
   left: -2.9rem;
   top: -12px;
+  width: 208px;
 }
 .post-profile .post-profile-name {
   margin: 0.7rem 0;
@@ -2286,7 +2326,7 @@ a.topic-button:hover::after {
   align-items: center;
 }
 .wrapper.solo .normal-panel dt label {
-  color: #00a652;
+  color: #23a9b5;
 }
 .wrapper.solo .normal-panel .inputbox, .wrapper.solo .normal-panel input[type=text], .wrapper.solo .normal-panel select {
   background-color: transparent;
@@ -2298,7 +2338,7 @@ a.topic-button:hover::after {
 .wrapper.solo .normal-panel .inputbox:hover,
 .wrapper.solo .normal-panel input[type=text]:focus,
 .wrapper.solo .normal-panel input[type=text]:hover {
-  border-bottom: 1px solid #00a652;
+  border-bottom: 1px solid #23a9b5;
 }
 .wrapper.solo .normal-panel option {
   background-color: #161614;
@@ -2311,7 +2351,7 @@ a.topic-button:hover::after {
   transition: all 200ms ease;
 }
 .wrapper.solo .normal-panel input.button2:hover {
-  color: #00a652;
+  color: #23a9b5;
   cursor: pointer;
 }
 .wrapper.solo .normal-panel .submit {
@@ -2422,7 +2462,7 @@ a.topic-button:hover::after {
   font-size: 1.3rem;
 }
 #find_username input {
-  background-color: #00a652;
+  background-color: #23a9b5;
   color: white;
   padding: calc(0.7rem / 2) 1rem;
 }
@@ -2507,7 +2547,7 @@ input#nb_rolls {
 }
 
 .review p.author {
-  border-bottom: 2px solid #00a652;
+  border-bottom: 2px solid #23a9b5;
   margin-bottom: 0.7rem;
 }
 .review .content {
@@ -2519,7 +2559,7 @@ input#nb_rolls {
   background: white url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
 }
 .topic-quickreply .h3 {
-  background-color: #00a652;
+  background-color: #23a9b5;
   color: white;
   padding: 0.7rem 1rem;
   font-weight: 700;
@@ -2535,7 +2575,7 @@ input#nb_rolls {
   transition: all 200ms ease-in-out;
 }
 .topic-quickreply #quick_reply input.button2:hover {
-  color: #00a652;
+  color: #23a9b5;
   cursor: pointer;
 }
 .topic-quickreply form#quick_reply {
@@ -2745,7 +2785,7 @@ input#nb_rolls {
   background-color: #23a9b5;
 }
 .bg-main {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 
 .scrollbg-light::-webkit-scrollbar-thumb {
@@ -2779,7 +2819,7 @@ input#nb_rolls {
   background-color: #23a9b5;
 }
 .scrollbg-main::-webkit-scrollbar-thumb {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 
 .color-light {
@@ -2813,7 +2853,7 @@ input#nb_rolls {
   color: #23a9b5 !important;
 }
 .color-main {
-  color: #00a652;
+  color: #23a9b5;
 }
 
 .border-grey {
@@ -2841,7 +2881,7 @@ input#nb_rolls {
   border-color: #23a9b5;
 }
 .border-main {
-  border-color: #00a652;
+  border-color: #23a9b5;
 }
 
 .bold {
@@ -2873,9 +2913,12 @@ input#nb_rolls {
 }
 .popup-nav {
   height: 100%;
-  background-color: #00a652;
+  background-color: #23a9b5;
   width: 30%;
   min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .popup-nav ul {
   display: flex;
@@ -2887,6 +2930,11 @@ input#nb_rolls {
   border-bottom: 1px solid #ffffff26;
   font-weight: 700;
   position: relative;
+  cursor: pointer;
+}
+.popup-cross {
+  align-self: flex-end;
+  margin: 1rem;
   cursor: pointer;
 }
 .popup-list-lv1-item {
@@ -2964,7 +3012,7 @@ dl.codebox code::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb,
 dl.codebox code::-webkit-scrollbar-thumb {
-  background-color: #00a652;
+  background-color: #23a9b5;
 }
 
 .wrapper {
@@ -2996,7 +3044,7 @@ a[href^="/u"] {
 
 input.button1 {
   cursor: pointer;
-  background-color: #00a652;
+  background-color: #23a9b5;
   color: white;
   padding: calc(0.7rem / 2) 1rem;
   font-variant: small-caps;
@@ -3024,12 +3072,12 @@ input[type=checkbox]:hover {
 }
 
 input[type=checkbox]:checked {
-  background: #00a652;
+  background: #23a9b5;
   position: relative;
 }
 
 .border-bottom {
-  border-bottom: 3px solid #00a652;
+  border-bottom: 3px solid #23a9b5;
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
   padding: 0.7rem 0;

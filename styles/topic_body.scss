@@ -3,6 +3,9 @@
 .topic-maincontent {
   max-width: 1300px;
   margin: auto;
+  @media (max-width: 1345px) {
+    margin: 0 $margin-rl;
+  }
 }
 
 .topic-top {
@@ -178,6 +181,7 @@
       position: relative;
       left: -2.9rem;
       top: -12px;
+      width: 208px;
     }
 
     .post-profile-name {

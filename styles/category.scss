@@ -193,7 +193,6 @@
     max-width: 1300px;
     margin: auto;
     min-height: 53rem;
-    max-height: 92vh;
 
     ul.forumrows {
       max-width: 1300px;
@@ -245,6 +244,7 @@
           font-weight: 700;
           text-transform: uppercase;
           position: relative;
+          height: fit-content;
         }
 
         ul.nm-nav::after {
@@ -277,11 +277,41 @@
       }
     }
 
+    // colonne nav gauche sur fenêtre très réduite
+    @media (max-width: 800px) {
+      li.forumrow.forumNM {
+        position: initial;
+        width: 100%;
+
+        img { display: none;}
+
+        .forumrow-desc {
+          align-items: center;
+        }
+
+        .nm-desc {
+          margin: $margin-tb!important;
+          max-width: unset;
+          min-width: 300px;
+          flex: 1;
+        }
+
+        .nm-nav {
+          flex: 1;
+          max-width: unset;
+        }
+      }
+    }
+
     // colonne droite : sous-forum (lieux NM)
     li.forumrow:not(.forumNM) { 
       margin: calc(#{$padding-tb} / 2) $margin-tb;
       width: calc(70% - #{$margin-tb} * 2);
       background-color: $no-color;
+
+      @media (max-width: 800px) {
+        width: auto;
+      }
 
       a:not([href^="/u"]) {
         color: $nano-dark;

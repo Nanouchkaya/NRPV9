@@ -64,7 +64,7 @@
     <nav class="popup-nav scrollbar scrollbg-dark">
       <ul class="popup-list-lv1">
         <li class="popup-list-lv1-item">
-          <ul class="popup-list-lv2">Pico. Monde
+          <ul class="popup-list-lv2 popup-nav-item">Pico. Monde
             <li class="popup-list-lv2-item" data-url="/t94-test-nm-pico#427">Histoire complète</li>
             <li class="popup-list-lv2-item" data-url="/t94-test-nm-pico#428">Quelle race tu joues ?</li>
             <li class="popup-list-lv2-item" data-url="/t94-test-nm-pico#429">Invocation et Magie</li>
@@ -122,9 +122,8 @@
           </ul>
         </li>
       </ul>
+      <span class="popup-cross" onclick="togglePopup()"><img src="http://memoires-du-monde.fr/upload/NRPV8/V9/close_menu.png" alt="Fermer"/></span>
     </nav>
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla molestias veritatis aut voluptas perferendis explicabo ipsam velit sint veniam aspernatur?
 
     <div class="popup-content scrollbar scrollbg-dark"></div>
   </div>
@@ -133,14 +132,7 @@
 <script type="text/javascript">
 var NMnavItem = document.querySelectorAll('.nm-nav-item');
 NMnavItem.forEach(item => {
-item.addEventListener('click', togglePopup);});
+item.addEventListener('click', openPopup);});
 
-document.querySelector('.jqmOverlay').addEventListener('click', togglePopup);
-
-var listNM = document.querySelectorAll('.popup-list-lv1-item'); 
-toggleMenu(listNM);
-
-var sectionsNM = document.querySelectorAll('.popup-list-lv2-item');
-displayMessage(sectionsNM);
 </script>
  
