@@ -1,13 +1,13 @@
 .popup {
-  width: 70%;
-  height: 80%;
+  width: 76%;
+  height: 86%;
   background-color: $no-color;
   position: fixed;
   top: 10%;
-  left: 10%;
+  left: 12%;
   display: none; // flex
   font-size: .95rem;
-  z-index: 3;
+  z-index: 4;
 
   &-nav {
     height: 100%;

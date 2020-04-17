@@ -611,7 +611,7 @@ header#page-header #headerbar-top {
 }
 header#page-header #theme-button, header#page-header #nav-plus-button {
   font-weight: 700;
-  padding: 1.3rem 1rem;
+  padding: 0 1rem;
   text-transform: uppercase;
   position: relative;
   display: flex;
@@ -2901,15 +2901,15 @@ input#nb_rolls {
 }
 
 .popup {
-  width: 70%;
-  height: 80%;
+  width: 76%;
+  height: 86%;
   background-color: white;
   position: fixed;
   top: 10%;
-  left: 10%;
+  left: 12%;
   display: none;
   font-size: 0.95rem;
-  z-index: 3;
+  z-index: 4;
 }
 .popup-nav {
   height: 100%;
@@ -2983,7 +2983,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-size: 100%;
   background-color: #d2d2d2;
-  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ban-compact-3.jpg), url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/texture-fond.jpg);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ban_compact.jpg), url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/texture-fond.jpg);
   background-position: center 4.1rem, left top;
   background-repeat: repeat-x, repeat;
   display: flex;
@@ -3088,6 +3088,28 @@ input[type=checkbox]:checked {
 .right-box {
   text-align: right;
   margin-right: 0.7rem;
+}
+
+#top-bottom-shortcuts {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #23a9b5;
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+}
+
+.arrow {
+  margin: 0.35rem;
+  transition: all 300ms ease-out;
+}
+.arrow:hover {
+  opacity: 0.6;
+}
+.arrow:hover::after {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

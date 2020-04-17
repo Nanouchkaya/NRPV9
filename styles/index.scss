@@ -110,3 +110,26 @@ input[type="checkbox"]:checked {
   text-align: right;
   margin-right: .7rem;
 }
+
+#top-bottom-shortcuts {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: $main-color;
+  padding: .35rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+}
+
+.arrow {
+  margin: .35rem;
+  transition: all 300ms ease-out;
+
+  &:hover {
+    opacity: .6;
+  }
+  &:hover::after {
+    display: none;
+  }
+}
