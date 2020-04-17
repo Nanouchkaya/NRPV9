@@ -404,11 +404,11 @@ dl.hidecode:before {
 }
 
 dl.spoiler:before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/spoiler_icon.jpg);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/spoiler_icon.jpg);
 }
 
 dl.hidecode:before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/hidden_icon.jpg);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/hidden_icon.jpg);
 }
 
 dl.codebox.spoiler dd {
@@ -511,7 +511,7 @@ blockquote cite {
 }
 .character-sheet-avatar {
   padding: 3.5rem 2rem 1rem;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 100% -19%;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 100% -19%;
 }
 @media (max-width: 1000px) {
   .character-sheet-avatar {
@@ -522,7 +522,7 @@ blockquote cite {
 .character-sheet-interview {
   flex: 1 calc(65% - 2rem * 2);
   padding: 1.5rem 1.5rem 0;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv3.png) no-repeat right top;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv3.png) no-repeat right top;
 }
 .character-sheet-interview .character-sheet-inner {
   width: 88%;
@@ -532,7 +532,7 @@ blockquote cite {
   flex: 1 100%;
   padding: 1.5rem;
   padding: 4.5rem 1.5rem;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat left -23%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv4.png) no-repeat right bottom;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat left -23%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv4.png) no-repeat right bottom;
 }
 .character-sheet-story .character-sheet-inner {
   border-width: 5px;
@@ -725,7 +725,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   max-width: 1300px;
   margin: 2rem auto;
   align-items: center;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/pa_ink.png) no-repeat 93% 0;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/pa_ink.png) no-repeat 93% 0;
 }
 .index-PA ul {
   list-style: none;
@@ -1196,7 +1196,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
 }
 
 .viewonline-wrapper {
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/qeel_meme.png) no-repeat 15% top;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/qeel_meme.png) no-repeat 15% top;
 }
 
 .viewonline {
@@ -1788,13 +1788,13 @@ form[action="/profile"] .italic {
   background-position: center;
 }
 .forumbg .topics-list-bottom span#read-forum a::before, .forumbg-table .topics-list-bottom span#read-forum a::before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_lu.png);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ic_lu.png);
 }
 .forumbg .topics-list-bottom span#watch-forum a[href$="?watch=forum"]::before, .forumbg-table .topics-list-bottom span#watch-forum a[href$="?watch=forum"]::before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ic_surv.png);
 }
 .forumbg .topics-list-bottom span#watch-forum a[href$="?unwatch=forum"]::before, .forumbg-table .topics-list-bottom span#watch-forum a[href$="?unwatch=forum"]::before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ic_nosurv.png);
 }
 
 a.topic-button {
@@ -1977,7 +1977,7 @@ a.topic-button:hover::after {
 .image-panel {
   display: flex;
   flex-wrap: wrap;
-  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_sondage.jpg) no-repeat bottom right;
+  background: #f4f4f4 url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/mamie_sondage.jpg) no-repeat bottom right;
   padding: 0.7rem 1rem;
 }
 .image-panel a {
@@ -2212,14 +2212,14 @@ a.topic-button:hover::after {
   background-position: center;
 }
 .topic-bottom span#watch-topic a[href$="?watch=topic"]::before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_surv.png);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ic_surv.png);
 }
 .topic-bottom span#watch-topic a[href$="?unwatch=topic"]::before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_nosurv.png);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ic_nosurv.png);
 }
 
 .topic-forum-rules {
-  background: #f4f4f4 url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_reglement.jpg) no-repeat top right;
+  background: #f4f4f4 url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/mamie_reglement.jpg) no-repeat top right;
   padding: 0.7rem 1rem;
   margin: 1.5rem 0;
   text-align: center;
@@ -2556,7 +2556,7 @@ input#nb_rolls {
 
 /* REPONSE RAPIDE */
 .topic-quickreply {
-  background: white url(http://memoires-du-monde.fr/upload/NRPV8/V9/mamie_rep.jpg) no-repeat bottom left;
+  background: white url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/mamie_rep.jpg) no-repeat bottom left;
 }
 .topic-quickreply .h3 {
   background-color: #23a9b5;
@@ -2644,7 +2644,7 @@ input#nb_rolls {
 }
 .post-block-ink-1 {
   padding: 3rem 0;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 2rem -1rem, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 81% 112%;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 2rem -1rem, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 81% 112%;
 }
 .post-inner {
   width: 60%;
@@ -2655,7 +2655,7 @@ input#nb_rolls {
 }
 .post-block-ink-2 {
   padding: 4rem 0 2rem;
-  background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.1.png) no-repeat 26% -8%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat 86% 0%;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.1.png) no-repeat 26% -8%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat 86% 0%;
 }
 .post-block-ink-title {
   font-family: "summeronregular", cursive;
@@ -2670,7 +2670,7 @@ input#nb_rolls {
   font-size: 0.9rem;
 }
 .post-warning:before {
-  content: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ic_warning.png);
+  content: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ic_warning.png);
   position: absolute;
   top: calc(50% - 20px);
   left: 0;
@@ -2983,7 +2983,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-size: 100%;
   background-color: #d2d2d2;
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/ban-compact-3.jpg), url(http://memoires-du-monde.fr/upload/NRPV8/V9/texture-fond.jpg);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ban-compact-3.jpg), url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/texture-fond.jpg);
   background-position: center 4.1rem, left top;
   background-repeat: repeat-x, repeat;
   display: flex;

@@ -80,11 +80,11 @@ dl.hidecode:before {
 }
 
 dl.spoiler:before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/spoiler_icon.jpg);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/spoiler_icon.jpg);
 }
 
 dl.hidecode:before {
-  background-image: url(http://memoires-du-monde.fr/upload/NRPV8/V9/hidden_icon.jpg);
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/hidden_icon.jpg);
 }
 
 dl.codebox.spoiler dd {
@@ -192,7 +192,7 @@ blockquote {
   
   &-avatar {
     padding: 3.5rem 2rem 1rem;
-    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv1.1.png) no-repeat 100% -19%;
+    background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 100% -19%;
     @media (max-width: 1000px) {
       flex: 1 100%;
       text-align: center;
@@ -202,7 +202,7 @@ blockquote {
   &-interview {
     flex:1 calc(65% - #{$margin-rl} * 2);
     padding: $margin-tb $margin-tb 0;
-    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv3.png) no-repeat right top;
+    background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv3.png) no-repeat right top;
 
     .character-sheet-inner {
       width: 88%;
@@ -214,7 +214,7 @@ blockquote {
     flex: 1 100%;
     padding: $margin-tb;
     padding: 4.5rem 1.5rem;
-    background: url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv2.2.png) no-repeat left -23%, url(http://memoires-du-monde.fr/upload/NRPV8/V9/inkv4.png) no-repeat right bottom;
+    background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat left -23%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv4.png) no-repeat right bottom;
 
     .character-sheet-inner {
       border-width: 5px;
