@@ -24,6 +24,9 @@ form h1.page-title,
   padding: $padding-tb $padding-rl 0;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: left;
+  color: $nano-dark;
+  font-family: $main-font;
 }
 
 
@@ -51,10 +54,23 @@ form[action="/profile"] .italic {
     &:hover { color: $nano-dark; }
   }
 
+  .panel {
+    background-color: transparent;
+  }
+
+  #textarea_content {
+    margin: 0 auto;
+    width: 90%!important;
+  }
+
   #parent_editor_simple {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+
+  #smiley-box {
+    display: none;
   }
 }
 

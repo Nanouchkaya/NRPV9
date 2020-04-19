@@ -8,16 +8,16 @@
 
 	<!-- BEGIN forumrow -->
 				<li class="forumrow">
-                                  <h{catrow.forumrow.LEVEL} class="forumrow-title">
+            <h{catrow.forumrow.LEVEL} class="forumrow-title">
 					<a href="{catrow.forumrow.U_VIEWFORUM}">{catrow.forumrow.FORUM_NAME}</a>
 				  </h{catrow.forumrow.LEVEL}>
                                                                
-                                  <dl class="forumrow-content">                                   
-                                    <dd class="forumrow-desc">{catrow.forumrow.FORUM_DESC}</dd>
-                                    <dd class="forum-links">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</dd>                                 
-                                    <dd class="forumrow-stats">{catrow.forumrow.POSTS} messages dans {catrow.forumrow.TOPICS} sujets </dd>
-                                    <dd class="forumrow-lastpost" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}">{catrow.forumrow.LAST_POST}</dd>
-                                  </dl>
+						<dl class="forumrow-content">                                   
+							<dd class="forumrow-desc">{catrow.forumrow.FORUM_DESC}</dd>
+							<dd class="forum-links">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</dd>                                 
+							<dd class="forumrow-stats">{catrow.forumrow.POSTS} messages dans {catrow.forumrow.TOPICS} sujets </dd>
+							<dd class="forumrow-lastpost" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}">{catrow.forumrow.LAST_POST}</dd>
+						</dl>
 				</li>
 	<!-- END forumrow -->
 	<!-- BEGIN tablefoot -->
@@ -45,13 +45,11 @@
   
   document.getElementById('cat_NM').innerHTML = document.getElementById('cat_NM').innerHTML.replace('<li class="forumrow forumNM" id="ong-MM">','<div class="listLieuxNM onglets" id="nm-MM"><li class="forumrow forumNM" id="ong-MM">').replace('<li class="forumrow forumNM" id="ong-AP">','</div><div class="listLieuxNM onglets" id="nm-AP"><li class="forumrow forumNM" id="ong-AP">').replace('<li class="forumrow forumNM" id="ong-zombie">','</div><div class="listLieuxNM onglets" id="nm-zombie"><li class="forumrow forumNM" id="ong-zombie">').replace('<li class="forumrow forumNM" id="ong-AdP">','</div><div class="listLieuxNM onglets" id="nm-AdP"><li class="forumrow forumNM" id="ong-AdP">').replace('<li class="forumrow forumNM" id="ong-xmen">','</div><div class="listLieuxNM onglets" id="nm-xmen"><li class="forumrow forumNM" id="ong-xmen">').replace('<li class="forumrow forumNM" id="ong-chimeres">','</div><div class="listLieuxNM onglets" id="nm-chimeres"><li class="forumrow forumNM" id="ong-chimeres">').replace('</li></ul></div>','</li></div></ul>');
 
-switchOnglet();
+	switchOnglet();
 </script>
 <script type="text/javascript">
 	//<![CDATA[
-	$(document).ready(function() {
-		 document.getElementById('main-content').children[0].style.display = "none";
-	
+	$(document).ready(function() {	
 		const forumDesc = document.querySelectorAll('#cat_general .level_one .forumrow-content');
 			const imagesGeneral = [
 				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme1.jpg',

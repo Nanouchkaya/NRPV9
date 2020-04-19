@@ -13,6 +13,9 @@
   max-width: $maxWidthForum;
   margin: auto;
   padding: $margin-tb 0;
+  @media (max-width: 1345px) {
+    margin: 0 $margin-rl;
+  }
 
   .group-time-info {
     text-align: right;
@@ -177,4 +180,25 @@
     color: $no-color;
     padding: calc(#{$padding-tb} / 2) $padding-rl;
   }
+}
+
+
+/* SEARCH RESULTS by post */ 
+.search-results {
+  background-color: $no-color;
+  padding: $padding-tb $padding-rl;
+
+  .postbody {
+    background-color: #f4f4f4;
+    padding: $padding-tb $padding-rl;
+    flex: 1;
+  }
+
+  .postprofile {
+    padding: $padding-tb $padding-rl;
+    font-weight: 700;
+  }
+
+  a { color: $nano-dark; }
+  a:hover::after { background-color: $nano-dark;}
 }

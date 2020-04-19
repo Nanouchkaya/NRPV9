@@ -24,6 +24,10 @@
   &-block-ink-1 {
     padding: 3rem 0;
     background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 2rem -1rem, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 81% 112%;
+    
+    .post-inner {
+      box-shadow: 1px 1px 6px #00000082;
+    }
   }
 
   &-inner {
@@ -31,7 +35,6 @@
     margin: 0 auto;
     padding: $padding-tb $padding-rl;
     font-size: .9rem;
-    box-shadow: 1px 1px 6px #00000082;
   }
 
   &-block-ink-2 {

@@ -636,7 +636,7 @@ header#page-header #themes, header#page-header #nav-plus {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 4.2rem;
+  top: 3.5rem;
   left: 0;
   transition: all 400ms ease-in-out;
   padding: 0.7rem 1rem;
@@ -836,7 +836,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
 }
 .category .cat-title h2, .category #h1-category {
   font-family: "summeronregular", cursive;
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   font-weight: 100;
   text-transform: uppercase;
   color: white;
@@ -1239,6 +1239,7 @@ header#page-header .navbar img[alt="Panneau admin"] {
   height: 5rem;
   display: flex;
   font-size: 0.9rem;
+  flex-wrap: wrap;
 }
 .viewonline-groups {
   align-items: center;
@@ -1307,6 +1308,12 @@ header#page-header .navbar img[alt="Panneau admin"] {
   max-width: 900px;
   padding-left: 4%;
 }
+@media (max-width: 915px) {
+  .viewonline-bottom {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
 .viewonline-bottom div#connected, .viewonline-bottom-text {
   flex: 1;
   margin: 0.7rem;
@@ -1315,11 +1322,13 @@ header#page-header .navbar img[alt="Panneau admin"] {
   background-color: white;
   display: flex;
   font-size: 0.8rem;
-  height: 6rem;
+  height: 7rem;
   overflow-y: auto;
   flex-wrap: wrap;
   padding: 0.7rem 1rem;
   align-content: flex-start;
+  min-width: 20rem;
+  max-width: 45%;
 }
 .viewonline-bottom div#connected a span:not([style="color:#EE1C25"]) {
   /* affiche la couleur que pour les admins dans les dernières connexion */
@@ -1331,7 +1340,8 @@ header#page-header .navbar img[alt="Panneau admin"] {
 .viewonline-bottom-text {
   font-family: "summeronregular", cursive;
   color: white;
-  flex-basis: 25%;
+  flex-basis: 40%;
+  padding: 0.7rem 1rem;
 }
 
 /* partenaires */
@@ -1433,6 +1443,9 @@ form h1.page-title,
   padding: 0.7rem 1rem 0;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: left;
+  color: #161614;
+  font-family: "Noto Sans", sans-serif;
 }
 
 form[action="/profile"] .italic {
@@ -1456,10 +1469,20 @@ form[action="/profile"] .italic {
 .signature_edit input.button2:hover {
   color: #161614;
 }
+.signature_edit .panel {
+  background-color: transparent;
+}
+.signature_edit #textarea_content {
+  margin: 0 auto;
+  width: 90% !important;
+}
 .signature_edit #parent_editor_simple {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.signature_edit #smiley-box {
+  display: none;
 }
 
 .rpg-table {
@@ -1673,10 +1696,15 @@ form[action="/profile"] .italic {
   background-color: #f4f4f4;
 }
 
-.forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
-  width: 166px;
+.topiclist-lastpost .topic-etiquette {
+  width: fit-content;
+  background-position-y: center;
   background-repeat: no-repeat;
-  background-position: center;
+  min-width: 30px;
+}
+.topiclist-lastpost .topic-etiquette img {
+  width: 166px;
+  min-width: 166px;
 }
 
 .forumbg, .forumbg-table {
@@ -1731,10 +1759,6 @@ form[action="/profile"] .italic {
   padding: 0.1rem 0.7rem 0.7rem;
   background-color: white;
   color: #23a9b5;
-}
-.forumbg li.row .topiclist-lastpost .topic-etiquette, .forumbg-table li.row .topiclist-lastpost .topic-etiquette {
-  width: 30px;
-  background-position-y: center;
 }
 .forumbg li.row .dterm, .forumbg-table li.row .dterm {
   flex: 2;
@@ -1873,7 +1897,7 @@ a.topic-button:hover::after {
   padding-left: 0.7rem;
 }
 .forumview ul.forumrows dl.forumrow-content dd.forumrow-stats {
-  width: 25%;
+  width: 33%;
   padding: 0 1rem;
   font-variant: small-caps;
   font-weight: 700;
@@ -2301,6 +2325,11 @@ a.topic-button:hover::after {
   margin: auto;
   padding: 1.5rem 0;
 }
+@media (max-width: 1345px) {
+  .wrapper.solo {
+    margin: 0 2rem;
+  }
+}
 .wrapper.solo .group-time-info {
   text-align: right;
   font-size: 0.9rem;
@@ -2467,6 +2496,27 @@ a.topic-button:hover::after {
   padding: calc(0.7rem / 2) 1rem;
 }
 
+/* SEARCH RESULTS by post */
+.search-results {
+  background-color: white;
+  padding: 0.7rem 1rem;
+}
+.search-results .postbody {
+  background-color: #f4f4f4;
+  padding: 0.7rem 1rem;
+  flex: 1;
+}
+.search-results .postprofile {
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+}
+.search-results a {
+  color: #161614;
+}
+.search-results a:hover::after {
+  background-color: #161614;
+}
+
 span.post_icon_img {
   width: 79px;
   height: 23px;
@@ -2585,34 +2635,39 @@ input#nb_rolls {
 .topic-quickreply div#textarea_content {
   margin-bottom: -20px;
 }
-.topic-quickreply .sceditor-toolbar {
-  display: flex;
+
+.sceditor-toolbar {
+  display: flex !important;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.7rem 1rem !important;
 }
-.topic-quickreply .sceditor-group {
+
+.sceditor-group {
   display: flex !important;
   justify-content: space-around;
   background-color: #f4f4f4 !important;
   border: none !important;
   flex: 1;
 }
-.topic-quickreply .sceditor-group a.sceditor-button {
+.sceditor-group a.sceditor-button {
   padding: 0.7rem;
 }
-.topic-quickreply .sceditor-group .sceditor-button div {
+.sceditor-group .sceditor-button div {
   margin: -7px -7px;
 }
-.topic-quickreply .sceditor-container.ltr.sourceMode {
+
+.sceditor-container.ltr.sourceMode {
   font-weight: 100;
 }
-.topic-quickreply .sceditor-container.ltr.sourceMode textarea {
+.sceditor-container.ltr.sourceMode textarea {
   padding: 0.7rem;
   width: 100% !important;
   font-size: 0.9rem;
   line-height: 1rem;
 }
-.topic-quickreply .sceditor-container.ltr.wysiwygMode iframe {
+
+.sceditor-container.ltr.wysiwygMode iframe {
   padding: 0.7rem 1.5rem;
   width: 100% !important;
 }
@@ -2646,12 +2701,14 @@ input#nb_rolls {
   padding: 3rem 0;
   background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 2rem -1rem, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 81% 112%;
 }
+.post-block-ink-1 .post-inner {
+  box-shadow: 1px 1px 6px #00000082;
+}
 .post-inner {
   width: 60%;
   margin: 0 auto;
   padding: 0.7rem 1rem;
   font-size: 0.9rem;
-  box-shadow: 1px 1px 6px #00000082;
 }
 .post-block-ink-2 {
   padding: 4rem 0 2rem;
@@ -3030,6 +3087,7 @@ a.gensmall[href^="/u"] {
 
 a[href^="/u"] {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 #logo {

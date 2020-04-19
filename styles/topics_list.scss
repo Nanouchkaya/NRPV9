@@ -1,9 +1,15 @@
 @import 'variables';
 
-.forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
-  width: 166px;
+.topiclist-lastpost .topic-etiquette {
+  width: fit-content;
+  background-position-y: center;
   background-repeat: no-repeat;
-  background-position: center;
+  min-width: 30px;
+
+  img {
+    width: 166px;
+    min-width: 166px;
+  }
 }
 
 .forumbg, .forumbg-table {
@@ -62,11 +68,6 @@
             color: $main-color
           }
         }
-      }
-
-      .topic-etiquette {
-        width: 30px;
-        background-position-y: center;
       }
     }
 

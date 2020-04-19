@@ -47,6 +47,7 @@
       height: 5rem;
       display: flex;
       font-size: .9rem;
+      flex-wrap: wrap;
     }
   }
 
@@ -113,6 +114,11 @@
     max-width: 900px;
     padding-left: 4%;
 
+    @media (max-width: 915px) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
     div#connected, &-text {
       flex: 1;
       margin: .7rem;
@@ -122,11 +128,13 @@
       background-color: $no-color;
       display: flex;
       font-size: .8rem;
-      height: 6rem;
+      height: 7rem;
       overflow-y: auto;
       flex-wrap: wrap;
       padding: .7rem 1rem;
       align-content: flex-start;
+      min-width: 20rem;
+      max-width: 45%;
 
       a span:not([style="color:#EE1C25"]) { /* affiche la couleur que pour les admins dans les dernières connexion */
         color: black!important;
@@ -140,7 +148,8 @@
     &-text {
       font-family: $special-font;
       color: $no-color;
-      flex-basis: 25%;
+      flex-basis: 40%;
+      padding: $padding-tb $padding-rl;
     }
   }
 }
