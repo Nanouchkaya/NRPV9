@@ -79,6 +79,7 @@ span.post_icon_img {
 .submit-buttons {
   text-align: center;
   margin-top: calc(#{$margin-tb} * -1);
+  border: none;
 }
 
 input#nb_rolls {

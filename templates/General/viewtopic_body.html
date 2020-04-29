@@ -77,11 +77,18 @@
         <!-- END profile_field -->
       </div>
 
-      <div class="post-profile-online {postrow.displayed.ONLINE_IMG_NEW}">
-        <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/profil_online.png" alt="Online" />En ligne
+      
+
+      <div class="profile-field-contact">
+        <!-- BEGIN contact_field -->
+        {postrow.displayed.contact_field.CONTENT}
+        <!-- END contact_field -->
       </div>
 
       <div class="post-profile-mp">
+        <div class="post-profile-online {postrow.displayed.ONLINE_IMG_NEW}">
+          <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/profil_online.png" alt="Online" />En ligne
+        </div>
         {postrow.displayed.PM_IMG}
       </div>
     </div>
@@ -229,16 +236,8 @@
       hljs.highlightBlock(block);
     });
   });
-  
-  $(".post").each(function() {
-    var ID = $(this).attr('id'); 
-    var rp = $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text();
-    var cookies = $('div.'+ID+'').children("span:contains(Cookies)").next("span.profile-field-content").text();
-    var result = parseInt(rp,10) - parseInt(cookies,10) + 5;
-    
-      $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text(result);
-return true;
-  });
+
+  fixTotalMsgRPinProfile();
 </script>
 
 <script type="text/javascript">
@@ -269,40 +268,10 @@ $(document).ready(function() {
 
   textarea.addEventListener('keyup', changeCounter);
 
-  function addBorderOnTooLongMsg(allMsg) {
-    allMsg.forEach(msg => {
-      var totalChar = msg.textContent.length;
-      var indic = document.createElement('div');
-      indic.className = 'indic';
-      indic.textContent = "Total caractères : " + totalChar;
-      msg.appendChild(indic);
-    });
-
-    var firstMsgTotalChar = allMsg[0].textContent.length;
-    if (firstMsgTotalChar > 0 && firstMsgTotalChar <= 1444) {
-      allMsg[0].style.border = 'none';
-    } else {
-      allMsg[0].style.border = '3px solid #ee1c25';
-    }
-
-    var allMsgArr = Array.from(allMsg);
-    allMsgArr.shift();
-
-    allMsgArr.forEach(msg => {
-      var totalChar = msg.textContent.length;
-      if (totalChar > 0 && totalChar < 482) {
-        msg.style.border = 'none';
-      } else if (totalChar >= 482 && totalChar <= 690) {
-        msg.style.border = '3px solid #a963a9';
-      } else {
-        msg.style.border = '3px solid #ee1c25';
-      }
-    });
-  }
-
   $("span[data-cat='NM']").parents("div.path").siblings('.topic-maincontent').attr("id","cat_NM");
-  var rpMsg = document.querySelectorAll('#cat_NM .post-body-content.content');
-  addBorderOnTooLongMsg(rpMsg);
+  $("span[data-cat='faille']").parents("div.path").siblings('.topic-maincontent').attr("id","cat_NM");
+
+  addBorderOnTooLongMsg();
   
 }); 
 //]]>

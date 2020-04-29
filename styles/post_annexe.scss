@@ -9,6 +9,8 @@
   margin: 1rem;
   padding: $padding-tb $padding-rl;
   font-size: .9rem;
+  justify-content: space-between;
+  height: 27rem;
 
   &-infos {
     display: flex;

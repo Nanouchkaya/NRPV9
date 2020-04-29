@@ -24,10 +24,6 @@
   &-block-ink-1 {
     padding: 3rem 0;
     background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 2rem -1rem, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 81% 112%;
-    
-    .post-inner {
-      box-shadow: 1px 1px 6px #00000082;
-    }
   }
 
   &-inner {
@@ -40,6 +36,9 @@
   &-block-ink-2 {
     padding: 4rem 0 2rem;
     background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.1.png) no-repeat 26% -8%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat 86% 0%;
+    .post-inner {
+      box-shadow: 1px 1px 6px #00000082;
+    }
   }
 
   &-block-ink-title {

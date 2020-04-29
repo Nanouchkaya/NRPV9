@@ -106,6 +106,10 @@ form#form_confirm {
     margin: $padding-tb 0;
   }
 }
+// fix password input
+input.inputbox {
+  border-bottom: 1px solid;
+}
 
 .panel.row2, .panel.row3 {
   background-color: transparent;

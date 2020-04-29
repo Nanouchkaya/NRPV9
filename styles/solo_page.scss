@@ -105,7 +105,7 @@
       flex: 1 70%;
     }
   
-    input[type="text"] {
+    input[type="text"], input[type="url"] {
       border: none;
       border-bottom: 1px solid $nano-dark;
       width: 100%!important;
@@ -114,6 +114,9 @@
     // fix
     #profile_field_4_-12_0 { width: initial!important; }
     span[style="color:#FFFFFF;"] { color: $nano-dark!important; }
+
+    img[alt='Livre de bord'],
+    img[alt='Présentation'] { display: none;}
   }
 
 

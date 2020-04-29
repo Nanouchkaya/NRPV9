@@ -60,12 +60,14 @@
     margin-top: $padding-tb;
 
     & dt {
-      min-width: 10%;
+      width: 60%;
     }
     
     & dl {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      width: 70%;
     }
 
     & dl:nth-last-child(2) dd:nth-last-child(1) {
@@ -81,7 +83,7 @@
     background-color: #a4a3a382;
     position: relative;
     height: 1.5rem;
-    width: 50%;
+    width: 35%;
     margin: 1rem 0;
 
     &-bar {
@@ -187,7 +189,19 @@
     .post-profile-name {
       margin: $padding-tb 0;
 
-      a {font-family: $special-font;}
+      a {
+        font-family: $special-font;
+        white-space: normal;
+      }
+    }
+
+    .profile-field-contact {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 100%;
+      align-items: flex-end;
+      padding: $margin-tb 0;
+      align-content: flex-start;
     }
 
     &-online.online {
@@ -195,7 +209,6 @@
       text-transform: uppercase;
       font-weight: 700;
       color: $AdP;
-      padding-top: .7rem;
       display: flex;
         img { margin-right: $padding-tb; }
     }
@@ -205,10 +218,11 @@
     }
 
     &-mp {
-      flex: 100%;
-      align-self: flex-end;
+      flex: 1;
       display: flex;
       align-items: flex-end;
+      justify-content: space-between;
+      padding-top: $padding-tb;
     }
   }
 
