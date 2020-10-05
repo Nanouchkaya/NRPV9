@@ -134,8 +134,7 @@ li.nm-nav-item:hover::after,
   font-variant: small-caps;
 }
 
-/* LOGIN - REGISTER block */
-form#form_confirm {
+/* LOGIN - REGISTER block*/
   display: block !important;
 }
 
@@ -2250,6 +2249,55 @@ a.topic-button:hover::after {
   color: #ee1c25;
 }
 
+.topic-quickreply {
+  background: white url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/mamie_rep.jpg) no-repeat bottom left;
+}
+.topic-quickreply .h3 {
+  background-color: #23a9b5;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.topic-quickreply #quick_reply input.button2 {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  transition: all 200ms ease-in-out;
+}
+.topic-quickreply #quick_reply input.button2:hover {
+  color: #23a9b5;
+  cursor: pointer;
+}
+.topic-quickreply form#quick_reply {
+  padding: 0.7rem 1rem;
+  margin-top: -0.7rem;
+}
+.topic-quickreply div#textarea_content {
+  margin-bottom: -20px;
+}
+.topic-quickreply .sceditor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem !important;
+}
+.topic-quickreply .sceditor-group {
+  display: flex !important;
+  justify-content: space-around;
+  background-color: #f4f4f4 !important;
+  border: none !important;
+  flex: 1;
+}
+.topic-quickreply .sceditor-group a.sceditor-button {
+  padding: 0.7rem;
+}
+.topic-quickreply .sceditor-group .sceditor-button div {
+  margin: -7px -7px;
+}
+
 .topic-actions {
   display: flex;
   flex-direction: row-reverse;
@@ -2614,12 +2662,23 @@ input#nb_rolls {
   padding: 0.7rem 1rem;
   transition: all 200ms ease-in-out;
 }
+
 .topic-quickreply #quick_reply input.button2:hover {
   cursor: pointer;
+
+.post-block-ink-1 {
+  padding: 3rem 0;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 2rem -1rem, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 81% 112%;
+
 }
 .topic-quickreply form#quick_reply {
   padding: 0.7rem 1rem;
   margin-top: -0.7rem;
+  font-size: 0.9rem;
+}
+.post-block-ink-2 {
+  padding: 4rem 0 2rem;
+  background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.1.png) no-repeat 26% -8%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat 86% 0%;
 }
 .topic-quickreply div#textarea_content {
   margin-bottom: -20px;
