@@ -1,0 +1,147 @@
+body::-webkit-scrollbar-thumb,
+dl.codebox code::-webkit-scrollbar-thumb {
+  background-color: #0054a5;
+}
+
+input.button1 {
+  background-color: #0054a5;
+}
+
+input[type=checkbox]:checked {
+  position: relative;
+}
+
+.border-bottom {
+  border-bottom: 3px solid #0054a5;
+}
+
+#top-bottom-shortcuts {
+  background-color: #0054a5;
+}
+
+.category .forumrow-lastpost {
+  border-color: #0054a5;
+}
+.category .forumrow-lastpost::after {
+  color: #0054a5;
+}
+
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"], #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"] {
+  background-color: rgba(0, 84, 165, 0.1);
+  border-bottom: 7px solid #0054a5;
+}
+#cat_general .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after, #cat_faille .forumrows .forumrow.level_one dl.forumrow-content dd.forumrow-lastpost[title="Nouveaux messages"]::after {
+  color: #0054a5;
+}
+
+#cat_general .forumrows .forumrow-title {
+  background-color: #0054a5;
+}
+
+.viewonline-stats div#TUO span:first-of-type {
+  background-color: #0054a5;
+}
+.viewonline-bottom div#connected p {
+  color: #0054a5;
+}
+
+#footer-partner #normal a:hover img {
+  background-color: #0054a5;
+}
+
+.h3 {
+  border-bottom: 8px solid #0054a5;
+}
+
+.review p.author {
+  border-bottom: 2px solid #0054a5;
+}
+
+.topic-quickreply .h3 {
+  background-color: #0054a5;
+}
+.topic-quickreply #quick_reply input.button2:hover {
+  color: #0054a5;
+}
+
+.index-PA-left .index-PA-news .date-news {
+  background-color: #0054a5;
+}
+
+.index-PA-links .index-PA-visitor-links {
+  background-color: #0054a5;
+}
+
+.index-PA-right .index-PA-partner:hover {
+  background-color: #0054a5;
+}
+
+.popup-nav {
+  background-color: #0054a5;
+}
+
+dl.codebox {
+  border-color: #0054a5;
+}
+
+blockquote {
+  border-color: #0054a5;
+}
+
+.bg-main,
+.scrollbg-main::-webkit-scrollbar-thumb {
+  background-color: #0054a5;
+}
+
+.color-main {
+  color: #0054a5;
+}
+
+.border-main {
+  border-color: #0054a5;
+}
+
+.signature_edit input.button2 {
+  background-color: #0054a5;
+}
+
+.wrapper.solo .normal-panel dt label {
+  color: #0054a5;
+}
+.wrapper.solo .inputbox:focus,
+.wrapper.solo .inputbox:hover,
+.wrapper.solo input[type=text]:focus,
+.wrapper.solo input[type=text]:hover {
+  border-bottom: 1px solid #0054a5;
+}
+.wrapper.solo input.button2:hover {
+  color: #0054a5;
+}
+
+#find_username input {
+  background-color: #0054a5;
+}
+
+.topic-top .topic-title {
+  background-color: #0054a5;
+}
+
+.image-panel .polls {
+  border-top: 3px solid #0054a5;
+}
+.image-panel .poll-bar-bar {
+  background-color: #0054a5;
+}
+
+.post-rpg::-webkit-scrollbar-thumb {
+  background-color: #0054a5;
+}
+
+.forumbg li.row .lastpost.newpost, .forumbg-table li.row .lastpost.newpost {
+  border-color: #0054a5;
+}
+.forumbg li.row .lastpost.newpost::after, .forumbg-table li.row .lastpost.newpost::after {
+  color: #0054a5;
+}
+
+/*# sourceMappingURL=AP_light.css.map */
