@@ -1,3 +1,18 @@
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+};
+
+function randomBgImage(target, images) {
+  for (let i = 0; i < target.length; i++) {
+    target[i].style.backgroundImage = 'url(' + images[i] + ')';
+  }
+};
+
 // Open popup on direct submenu content 
 async function openPopup(e) {
   // 1 - get html from url and display it in popup
@@ -34,7 +49,7 @@ async function openPopup(e) {
     });
     togglePopup();
   });
-}  
+};
 
 // display all list elements in the list
 function showListElements(listItem) {
@@ -42,7 +57,7 @@ function showListElements(listItem) {
   siblings.forEach(li => {
     li.classList.add('visible');
   });
-}
+};
 
 /**
  * Display submenu on click event
@@ -54,7 +69,7 @@ function toggleMenu(itemLv1) {
   itemsLv2.forEach(itemLv2 => {
     itemLv2.classList.toggle('visible');
   });
-}
+};
 
 // Display content from url in popup content bloc  
 async function displayMessage(url) {
@@ -69,7 +84,7 @@ async function displayMessage(url) {
     error.textContent = 'Oups! Il semblerait que les infos soient parties faire un tour... Tu peux les retrouver dans Vie du Forum. Bisous';
     target.appendChild(error);
   }
-}
+};
 
 // Fetch post html content and add it to popup
 async function fetchMessage(url) {
@@ -85,21 +100,36 @@ async function fetchMessage(url) {
   var text = doc.querySelector('#msg-'+ idMsg +' .post-popup');
  
   return text;
-}
+};
 
 function togglePopup() {
   document.querySelector('.popup').classList.toggle('flex');
   document.querySelector('.jqmOverlay').classList.toggle('visible');
-}
-
-
-
-// Display Popup
-/*
-- selectionner les liens onglet
-- poser un écouteur click
-- afficher la popup et le overlay
-
-- écouteur sur la croix 
-- fermer popup et masquer overlay
-*/
+  document.body.classList.toggle('modal-opened');
+};
+    
+/* QUI EST EN LIGNE - TEXTE */    
+function changeViewonlineText() {
+	var TU = document.getElementById('TU');
+	TU.innerHTML = TU.innerHTML.replace(/Nous avons /," ").replace(/ membres enregistrés/," nanites");
+	// TOTAL MEMBRES MOINS LES SOUVENIRS
+	var totalSouvenirs = 68;
+	var totalMembers = TU.children[0].innerText;
+	TU.children[0].innerText = totalMembers - totalSouvenirs;	
+		
+	document.getElementById('TP').innerHTML = document.getElementById('TP').innerHTML.replace(/Nos membres ont posté un total de /,"");
+		
+	document.getElementById('NU').innerHTML = document.getElementById('NU').innerHTML.replace(/L'utilisateur enregistré le plus récent est/,"Le dernier gus s'appelle ");
+		
+	document.getElementById('TUO').innerHTML = document.getElementById('TUO').innerHTML.replace(/Il y a en tout/,"").replace(/utilisateur en ligne ::/," en ligne").replace(/utilisateurs en ligne ::/," en ligne").replace(/Enregistré/,"").replace(/Enregistrés/,"").replace(/Invisible/,"").replace(/Invisibles /,"").replace(/Invité/,"voyeur").replace(/Invités/,"voyeurs");
+		
+	var arrTUO = document.getElementById('TUO').innerHTML.split(" ");
+	var strTUO = '<span>' + arrTUO[5] + ' connecté(s)</span><span>' + arrTUO[10] + ' voyeur(s)</span>';
+	document.getElementById('TUO').innerHTML = strTUO;
+		
+	document.getElementById('LIUL').innerHTML = document.getElementById('LIUL').innerHTML.replace(/Utilisateurs enregistrés :/," ").replace(/<br>/gi,'');
+		
+	document.getElementById('connected').innerHTML = document.getElementById('connected').innerHTML.replace(/Membres connectés au cours des 48 dernières heures :/," ");
+		 
+	document.getElementById('annif').innerHTML = document.getElementById('annif').innerHTML.replace(/Membres fêtant leur anniversaire aujourd'hui :/,"Joyeux Anniversaire ").replace(/Aucun membre ne fête son anniversaire aujourd'hui/, "Pas de naniversaire");
+};

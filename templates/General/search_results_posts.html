@@ -1,0 +1,28 @@
+<div class="wrapper solo">
+  <h2 class="border-bottom">
+    {L_SEARCH_MATCHES}
+  </h2>
+<!-- BEGIN searchresults -->
+<div class="search-results">
+	<div class="postprofile">
+		{searchresults.L_TOPIC_BY} {searchresults.POSTER_NAME} - {searchresults.POST_DATE} - 
+    sujet : <a href="{searchresults.U_POST}">{searchresults.TOPIC_TITLE}</a>	
+  </div>
+  
+	<div class="postbody">
+		{searchresults.MESSAGE}
+	</div>
+</div>
+<!-- END searchresults -->
+
+<p class="pagination-bar">{PAGINATION}</p>
+
+</div>
+
+<!-- BEGIN switch_image_resize -->
+<script type="text/javascript">
+//<![CDATA[
+$(resize_images({ 'selector' : '.postbody', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} }));
+//]]>
+</script>
+<!-- END switch_image_resize -->

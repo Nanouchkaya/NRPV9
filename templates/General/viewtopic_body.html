@@ -1,8 +1,29 @@
-<div class="topic-maincontent">
+<script type="text/javascript">
+//<![CDATA[
+  var hiddenMsgLabel = { visible:'{JS_HIDE_HIDDEN_MESSAGE}', hidden:'{JS_SHOW_HIDDEN_MESSAGE}' };
+  showHiddenMessage = function(id) {
+      try {
+          var regId = parseInt(id, 10);
+          if( isNaN(regId) ) { regId = 0; }
+  
+          if( regId > 0) {
+              $('.post--' + id).toggle(0, function() {
+          if( $(this).is(":visible") ) {
+            $('#hidden-title--' + id).html(hiddenMsgLabel.visible);
+          } else {
+            $('#hidden-title--' + id).html(hiddenMsgLabel.hidden);
+          }
+        });
+          }
+      } catch(e) { }
+  
+    return false;
+  };
+
+  //]]>
+  </script>
+  <div class="topic-maincontent">
   <div class="topic-top">
-    <h2 class="topic-title">
-      <a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
-    </h2>
     <div class="topic-top auth-buttons">
       <!-- BEGIN switch_user_authpost -->
       <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="auth-button" title="{L_POST_NEW_TOPIC}">
@@ -15,6 +36,7 @@
       </a>
       <!-- END switch_user_authreply -->
     </div>
+    <h2 class="topic-title">{TOPIC_TITLE}</h2>
   </div>
 
     {POLL_DISPLAY}
@@ -26,13 +48,13 @@
   <!-- END topicpagination -->
   <!-- BEGIN postrow -->
   <!-- BEGIN displayed -->
-  <div id="{postrow.displayed.U_POST_ID}" class="post post--{postrow.displayed.U_POST_ID}"{postrow.displayed.THANK_BGCOLOR} style="{postrow.displayed.DISPLAYABLE_STATE}">
+  <div id="{postrow.displayed.U_POST_ID}" class="post post--{postrow.displayed.U_POST_ID}" style="{postrow.displayed.DISPLAYABLE_STATE}">
     
     <div class="post-profile-avatar" id="profile-avatar{postrow.displayed.U_POST_ID}">
       {postrow.displayed.POSTER_AVATAR}
     </div>
 
-    <div class="post-rpg">
+    <div class="post-rpg scrollbar scrollbg-main">
       {postrow.displayed.POSTER_RPG}
     </div>
 
@@ -53,13 +75,21 @@
           </span>
           {postrow.displayed.profile_field.SEPARATOR}
         <!-- END profile_field -->
-      </div>
+      </div>    
+
+      <div class="profile-field-contact">
+        <!-- BEGIN contact_field -->
+        {postrow.displayed.contact_field.CONTENT}
+        <!-- END contact_field -->
 
       <div class="post-profile-online {postrow.displayed.ONLINE_IMG_NEW}">
         <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/profil_online.png" alt="Online" />En ligne
       </div>
 
       <div class="post-profile-mp">
+        <div class="post-profile-online {postrow.displayed.ONLINE_IMG_NEW}">
+          <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/profil_online.png" alt="Online" />En ligne
+        </div>
         {postrow.displayed.PM_IMG}
       </div>
     </div>
@@ -108,28 +138,12 @@
           <!-- END switch_no_bar -->
         </div>
         <!-- END switch_vote_active -->
-        <ul class="profile-icons">
-          <li class="btn-quote">
-            <a href="{postrow.displayed.QUOTE_URL}" title="Citer">
-              <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/me_quote.png" alt="Citer" />
-            </a>
-          </li>
-          <li class="btn-edit">
-            <a href="{postrow.displayed.EDIT_URL}" title="Editer">
-              <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/me_edit.png" alt="Editer" />
-            </a>
-          </li>
-          <li class="btn-delete">
-            <a href="{postrow.displayed.DELETE_URL}" title="Sipprimer">
-              <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/me_delete.png" alt="Supprimer" />
-            </a>
-          </li>
-          <li class="btn-thank">
-            <a href="{postrow.displayed.THANK_URL}" title="Super cookie, remercie un unique participant à ton sujet !"> {postrow.displayed.THANK_IMG}
-              <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/me_merci.png" alt="Merci" />
-            </a>
-          </li>
-        </ul>
+        <div class="profile-icons">
+          {postrow.displayed.EDIT_IMG}
+          {postrow.displayed.DELETE_IMG}
+          {postrow.displayed.QUOTE_IMG}
+          {postrow.displayed.THANK_IMG}           
+        </div>
       </div>
 
       <div class="post-body-content">
@@ -214,24 +228,17 @@
   <a class="path-link nav" href="{U_INDEX}">[ Retour à l'index ]</a>{NAV_CAT_DESC}
 </div>
 
-<!-- BEGIN switch_image_resize -->
-<script type="text/javascript">
-//<![CDATA[
-$(resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} }));
-//]]>
-</script>
-<!-- END switch_image_resize -->
-
-<script type="text/javascript">          
-  $(".post").each(function() {
-    var ID = $(this).attr('id'); 
-    var rp = $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text();
-    var cookies = $('div.'+ID+'').children("span:contains(Cookies)").next("span.profile-field-content").text();
-    var result = parseInt(rp,10) - parseInt(cookies,10) + 5;
-    
-      $('div.'+ID+'').children("span:contains(Messages RP)").next("span.profile-field-content").text(result);
-return true;
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github-gist.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
+<script type="text/javascript">  
+  $(document).ready(function() {
+    $('pre, code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
   });
+
+  fixTotalMsgRPinProfile();
 </script>
 
 <script type="text/javascript">
@@ -262,40 +269,10 @@ $(document).ready(function() {
 
   textarea.addEventListener('keyup', changeCounter);
 
-  function addBorderOnTooLongMsg(allMsg) {
-    allMsg.forEach(msg => {
-      var totalChar = msg.textContent.length;
-      var indic = document.createElement('div');
-      indic.className = 'indic';
-      indic.textContent = "Total caractères : " + totalChar;
-      msg.appendChild(indic);
-    });
-
-    var firstMsgTotalChar = allMsg[0].textContent.length;
-    if (firstMsgTotalChar > 0 && firstMsgTotalChar <= 1444) {
-      allMsg[0].style.border = 'none';
-    } else {
-      allMsg[0].style.border = '3px solid #ee1c25';
-    }
-
-    var allMsgArr = Array.from(allMsg);
-    allMsgArr.shift();
-
-    allMsgArr.forEach(msg => {
-      var totalChar = msg.textContent.length;
-      if (totalChar > 0 && totalChar < 482) {
-        msg.style.border = 'none';
-      } else if (totalChar >= 482 && totalChar <= 690) {
-        msg.style.border = '3px solid #a963a9';
-      } else {
-        msg.style.border = '3px solid #ee1c25';
-      }
-    });
-  }
-
   $("span[data-cat='NM']").parents("div.path").siblings('.topic-maincontent').attr("id","cat_NM");
-  var rpMsg = document.querySelectorAll('#cat_NM .post-body-content.content');
-  addBorderOnTooLongMsg(rpMsg);
+  $("span[data-cat='faille']").parents("div.path").siblings('.topic-maincontent').attr("id","cat_NM");
+
+  addBorderOnTooLongMsg();
   
 }); 
 //]]>

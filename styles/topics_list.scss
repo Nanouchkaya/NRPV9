@@ -1,9 +1,15 @@
 @import 'variables';
 
-.forumbg.announcement li.row .topiclist-lastpost .topic-etiquette {
-  width: 166px;
+.topiclist-lastpost .topic-etiquette {
+  width: fit-content;
+  background-position-y: center;
   background-repeat: no-repeat;
-  background-position: center;
+  min-width: 30px;
+
+  img {
+    width: 166px;
+    min-width: 166px;
+  }
 }
 
 .forumbg, .forumbg-table {
@@ -48,7 +54,6 @@
           border-width: 3px;
           border-style: solid;
           height: fit-content;
-          border-color: $main-color;
     
           &::after {
             top: calc(#{$padding-tb} * -1);
@@ -59,14 +64,8 @@
             right: 5%;
             padding: .1rem $padding-tb $padding-tb;
             background-color: $no-color;
-            color: $main-color
           }
         }
-      }
-
-      .topic-etiquette {
-        width: 30px;
-        background-position-y: center;
       }
     }
 

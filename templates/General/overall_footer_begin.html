@@ -30,7 +30,7 @@
 	</div>
 
   <div class="viewonline-bottom">
-    <div id="connected">
+    <div id="connected" class="scrollbar scrollbg-main">
       <p>Dernières connexions :</p> {L_CONNECTED_MEMBERS}
     </div>
     <div class="viewonline-bottom-text">
@@ -40,24 +40,33 @@
   </div>
  </div>
 </div>
-    <script type="text/javascript"> 
-  document.getElementById('TU').innerHTML = document.getElementById('TU').innerHTML.replace(/Nous avons /," ").replace(/ membres enregistrés/," nanites");
-
-  document.getElementById('TP').innerHTML = document.getElementById('TP').innerHTML.replace(/Nos membres ont posté un total de /,"");
-
-    document.getElementById('NU').innerHTML = document.getElementById('NU').innerHTML.replace(/L'utilisateur enregistré le plus récent est/,"Le dernier gus s'appelle ");
-
-   document.getElementById('TUO').innerHTML = document.getElementById('TUO').innerHTML.replace(/Il y a en tout/,"").replace(/utilisateur en ligne ::/," en ligne").replace(/utilisateurs en ligne ::/," en ligne").replace(/Enregistré/,"").replace(/Enregistrés/,"").replace(/Invisible/,"").replace(/Invisibles /,"").replace(/Invité/,"voyeur").replace(/Invités/,"voyeurs");
-
-  var arrTUO = document.getElementById('TUO').innerHTML.split(" ");
-  var strTUO = '<span>' + arrTUO[5] + ' connecté(s)</span><span>' + arrTUO[10] + ' voyeur(s)</span>';
-  document.getElementById('TUO').innerHTML = strTUO;
-
-  document.getElementById('LIUL').innerHTML = document.getElementById('LIUL').innerHTML.replace(/Utilisateurs enregistrés :/," ").replace(/<br>/gi,'');
-
-			document.getElementById('connected').innerHTML = document.getElementById('connected').innerHTML.replace(/Membres connectés au cours des 48 dernières heures :/," ");
- 
-		document.getElementById('annif').innerHTML = document.getElementById('annif').innerHTML.replace(/Membres fêtant leur anniversaire aujourd'hui :/,"Joyeux Anniversaire ").replace(/Aucun membre ne fête son anniversaire aujourd'hui/, "Pas de naniversaire");
+		<script type="text/javascript"> 
+		function changeViewonlineText() {
+			var TU = document.getElementById('TU');
+			TU.innerHTML = TU.innerHTML.replace(/Nous avons /," ").replace(/ membres enregistrés/," nanites");
+			// TOTAL MEMBRES MOINS LES SOUVENIRS
+			var totalSouvenirs = 68;
+			var totalMembers = TU.children[0].innerText;
+			TU.children[0].innerText = totalMembers - totalSouvenirs;
+		
+		
+			document.getElementById('TP').innerHTML = document.getElementById('TP').innerHTML.replace(/Nos membres ont posté un total de /,"");
+		
+				document.getElementById('NU').innerHTML = document.getElementById('NU').innerHTML.replace(/L'utilisateur enregistré le plus récent est/,"Le dernier gus s'appelle ");
+		
+			 document.getElementById('TUO').innerHTML = document.getElementById('TUO').innerHTML.replace(/Il y a en tout/,"").replace(/utilisateur en ligne ::/," en ligne").replace(/utilisateurs en ligne ::/," en ligne").replace(/Enregistré/,"").replace(/Enregistrés/,"").replace(/Invisible/,"").replace(/Invisibles /,"").replace(/Invité/,"voyeur").replace(/Invités/,"voyeurs");
+		
+			var arrTUO = document.getElementById('TUO').innerHTML.split(" ");
+			var strTUO = '<span>' + arrTUO[5] + ' connecté(s)</span><span>' + arrTUO[10] + ' voyeur(s)</span>';
+			document.getElementById('TUO').innerHTML = strTUO;
+		
+			document.getElementById('LIUL').innerHTML = document.getElementById('LIUL').innerHTML.replace(/Utilisateurs enregistrés :/," ").replace(/<br>/gi,'');
+		
+					document.getElementById('connected').innerHTML = document.getElementById('connected').innerHTML.replace(/Membres connectés au cours des 48 dernières heures :/," ");
+		 
+				document.getElementById('annif').innerHTML = document.getElementById('annif').innerHTML.replace(/Membres fêtant leur anniversaire aujourd'hui :/,"Joyeux Anniversaire ").replace(/Aucun membre ne fête son anniversaire aujourd'hui/, "Pas de naniversaire");
+		};
+		changeViewonlineText();
 </script>  
   
 <!-- END disable_viewonline -->  
@@ -146,7 +155,7 @@
 	<img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/logo_100-35.jpg" alt="Nom Forum" />
 </a>	
 </div>         
-          </div>
+  </div>
     <div class="footer-links">
       <ul class="nav-footer"><span class="nav-footer-title">Réseaux sociaux</span>
 				<li class="nav-footer-item"><a href="https://discord.gg/p3SSKQq">Discord</a></li>
@@ -163,7 +172,3 @@
 				<li class="nav-footer-item"><a href="http://www.nano-roleplay.com/t1059-nous-lier">Nous lier</a></li>
 			 </ul>
     <div class="fa-links">
-<!-- BEGIN html_validation -->
-    
-
-<!-- END html_validation -->

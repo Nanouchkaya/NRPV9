@@ -36,6 +36,9 @@
   &-block-ink-2 {
     padding: 4rem 0 2rem;
     background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.1.png) no-repeat 26% -8%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat 86% 0%;
+    .post-inner {
+      box-shadow: 1px 1px 6px #00000082;
+    }
   }
 
   &-block-ink-title {
@@ -156,7 +159,19 @@
   &-chim { background-color: $chimeres; }
   &-xmen { background-color: $xmen; }
   &-faille { background-color: $faille; }
-  &-main { background-color: $main-color; }
+}
+
+.scrollbg {
+  &-light::-webkit-scrollbar-thumb { background-color: $no-color; }
+  &-dark::-webkit-scrollbar-thumb { background-color: $nano-dark; }
+  &-grey::-webkit-scrollbar-thumb { background-color: lighten($nano-dark, $amount: 50%) }
+  &-pico::-webkit-scrollbar-thumb { background-color: $micro; }
+  &-adp::-webkit-scrollbar-thumb { background-color: $AdP; }
+  &-ap::-webkit-scrollbar-thumb { background-color: $AP; }
+  &-zombie::-webkit-scrollbar-thumb { background-color: $zombie; }
+  &-chim::-webkit-scrollbar-thumb { background-color: $chimeres; }
+  &-xmen::-webkit-scrollbar-thumb { background-color: $xmen; }
+  &-faille::-webkit-scrollbar-thumb { background-color: $faille; }
 }
 
 .color {
@@ -170,7 +185,6 @@
   &-chim { color: $chimeres!important; }
   &-xmen { color: $xmen!important; }
   &-faille { color: $faille!important; }
-  &-main { color: $main-color; }
 }
 
 .border {
@@ -182,7 +196,6 @@
   &-chim { border-color: $chimeres; }
   &-xmen { border-color: $xmen; }
   &-faille { border-color: $faille; }
-  &-main { border-color: $main-color; }
 }
 
 .bold {

@@ -19,13 +19,13 @@
 	<meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}"/>
   {T_HEAD_STYLESHEET}
   {CSS}
-  <link rel="alternate stylesheet" type="text/css" title="micro_light" href="http://memoires-du-monde.fr/NRPV9/css/micro_light.css" />
-  <link rel="alternate stylesheet" type="text/css" title="AP_light" href="http://memoires-du-monde.fr/NRPV9/css/AP_light.css" />
-  <link rel="alternate stylesheet" type="text/css" title="chim_light" href="http://memoires-du-monde.fr/NRPV9/css/chim_light.css" />
-  <link rel="alternate stylesheet" type="text/css" title="zomb_light" href="http://memoires-du-monde.fr/NRPV9/css/zomb_light.css" />
-  <link rel="alternate stylesheet" type="text/css" title="xmen_light" href="http://memoires-du-monde.fr/NRPV9/css/xmen_light.css" />
-  <link rel="alternate stylesheet" type="text/css" title="AdP_light" href="http://memoires-du-monde.fr/NRPV9/css/AdP_light.css" />
-  
+  <link rel="stylesheet" type="text/css" title="style" href="https://nanorp-2020.web.app/styles/forum.css" />
+  <link rel="alternate stylesheet" type="text/css" title="micro_light" href="https://nanorp-2020.web.app/styles/metamorphose/micro_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="AP_light" href="https://nanorp-2020.web.app/styles/metamorphose/AP_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="chim_light" href="https://nanorp-2020.web.app/styles/metamorphose/chim_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="zomb_light" href="https://nanorp-2020.web.app/styles/metamorphose/zomb_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="xmen_light" href="https://nanorp-2020.web.app/styles/metamorphose/xmen_light.css" />
+  <link rel="alternate stylesheet" type="text/css" title="AdP_light" href="https://nanorp-2020.web.app/styles/metamorphose/AdP_light.css" />
   
  
 	<link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}" />
@@ -36,7 +36,7 @@
 	<script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"></script>
 	<script src="{JQUERY_DIR}browser/v1.0/jquery.browser.min.js" type="text/javascript"></script>
 	<script src="{JQUERY_DIR}support/jquery.support.js" type="text/javascript"></script>
-	<!-- END switch_recent_jquery -->
+	<!-- END switch_recent_jquery -->>
 	<script src="{JS_DIR}{L_LANG}.js" type="text/javascript"></script>
 	{RICH_SNIPPET_GOOGLE}
 
@@ -117,7 +117,7 @@
 	<!-- END google_analytics_code -->
 
   	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
-  	<link href="http://memoires-du-monde.fr/NRPV9/font/font.css" rel="stylesheet" />
+  	<link href="https://nanorp-2020.web.app/font/font.css" rel="stylesheet" />
 	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
   	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -143,13 +143,21 @@
 {JAVASCRIPT}
 
 <div class="wrapper">
+	<div id="top-bottom-shortcuts">
+		<a href="#page-header" class="arrow">
+			<img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/arrow_top.png" alt="Haut">
+		</a>
+		<a href="#page-footer" class="arrow">
+			<img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/arrow_bottom.png" alt="Bas">
+		</a>
+</div>
 <header id="page-header">
 		<div id="headerbar-top">
 			<div id="theme-button">
 				<a type="button" onclick="openMenu('themes');closeMenu('nav-plus')" ondblclick="closeMenu('themes')">Métamorphose</a>
 				<div id="themes">
 					<ul class="themes-list">
-						<li class="themes-list-item color-faille"><a type="button" onclick="delete_cookie('metamorphose');window.location.reload(false)">Faille</a></li>
+						<li class="themes-list-item color-faille"><a type="button" onclick="delete_cookie('metamorphose');window.location.reload(false);return false">Faille</a></li>
 						<li class="themes-list-item color-micro"><a type="button" onclick="switch_style('micro_light');closeMenu('themes');return false">Pico.</a></li>
 						<li class="themes-list-item color-AP"><a type="button" onclick="switch_style('AP_light');closeMenu('themes');return false">Alpha Perdu</a></li>
 						<li class="themes-list-item color-chimeres"><a type="button" onclick="switch_style('chim_light');closeMenu('themes');return false">Chimères</a></li>
@@ -176,13 +184,14 @@
 			<div id="nav-plus">
 				<ul class="nav-plus-list">					
 					<!-- BEGIN switch_user_logged_in -->
-																					<li class="nav-plus-list-item"><a href="">Contrat du RP</a></li>
 					<li class="nav-plus-list-item">
 						<a href="{U_SEARCH_NEW}">Nouveaux messages</a>
 					</li>
 					<li class="nav-plus-list-item">
 						<a href="{U_MARK_READ}" accesskey="m">Tout marqué lu</a>
 					</li>
+					<li class="nav-plus-list-item"><a href="/t1703-le-contrat-du-rp">Contrat du RP</a></li>
+					<li class="nav-plus-list-item"><a href="/t2936-liste-des-personnages">Liste personnages</a></li>
 					<!-- END switch_user_logged_in -->
 				
 					<li class="nav-plus-list-item"><a href="/search">Rechercher</a></li>
@@ -197,7 +206,8 @@
 		</div>
   <span id="mamie_guitar" href="/">
     <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/ban_mamie.png" alt="Mamie guitare" />
-  <span>10 ans dejaaa !!</span></span>
+	<!-- <span>10 ans dejaaa !!</span> -->
+</span>
         <h1 id="site-title"><span>Nano.</span> RolePlay</h1>
 	<p id="site-desc">Ici, c'est pas plus de 4 lignes !</p>
     

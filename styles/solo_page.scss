@@ -13,6 +13,9 @@
   max-width: $maxWidthForum;
   margin: auto;
   padding: $margin-tb 0;
+  @media (max-width: 1345px) {
+    margin: 0 $margin-rl;
+  }
 
   .group-time-info {
     text-align: right;
@@ -41,20 +44,11 @@
       align-items: center;
     }
 
-    dt label { color: $main-color; }
-
     .inputbox, input[type="text"], select {
       background-color: transparent;
       border-bottom: 1px solid $no-color;
       cursor: text;
       color: $no-color;
-    }
-
-    .inputbox:focus,
-    .inputbox:hover,
-    input[type="text"]:focus,
-    input[type="text"]:hover {
-      border-bottom: 1px solid $main-color;
     }
 
     option { background-color: $nano-dark; }
@@ -66,7 +60,6 @@
       font-weight: 700;
       transition: all 200ms ease;
       &:hover { 
-        color: $main-color;
         cursor: pointer;
       }
     }
@@ -102,7 +95,7 @@
       flex: 1 70%;
     }
   
-    input[type="text"] {
+    input[type="text"], input[type="url"] {
       border: none;
       border-bottom: 1px solid $nano-dark;
       width: 100%!important;
@@ -111,6 +104,9 @@
     // fix
     #profile_field_4_-12_0 { width: initial!important; }
     span[style="color:#FFFFFF;"] { color: $nano-dark!important; }
+
+    img[alt='Livre de bord'],
+    img[alt='Présentation'] { display: none;}
   }
 
 
@@ -173,8 +169,28 @@
   }
 
   & input {
-    background-color: $main-color;
     color: $no-color;
     padding: calc(#{$padding-tb} / 2) $padding-rl;
   }
+}
+
+
+/* SEARCH RESULTS by post */ 
+.search-results {
+  background-color: $no-color;
+  padding: $padding-tb $padding-rl;
+
+  .postbody {
+    background-color: #f4f4f4;
+    padding: $padding-tb $padding-rl;
+    flex: 1;
+  }
+
+  .postprofile {
+    padding: $padding-tb $padding-rl;
+    font-weight: 700;
+  }
+
+  a { color: $nano-dark; }
+  a:hover::after { background-color: $nano-dark;}
 }

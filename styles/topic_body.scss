@@ -3,6 +3,9 @@
 .topic-maincontent {
   max-width: 1300px;
   margin: auto;
+  @media (max-width: 1345px) {
+    margin: 0 $margin-rl;
+  }
 }
 
 .topic-top {
@@ -13,8 +16,10 @@
 
   .topic-title {
     text-align: center;
-    font-size: 3.5rem;
-    padding: $margin-tb;
+    font-size: 1.7rem;
+    padding: $padding-tb $padding-rl;
+    color: $no-color;
+    margin-bottom: calc(#{$margin-tb} * -1);
   }
 
   &.auth-buttons {
@@ -54,12 +59,14 @@
     margin-top: $padding-tb;
 
     & dt {
-      min-width: 10%;
+      width: 60%;
     }
     
     & dl {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      width: 70%;
     }
 
     & dl:nth-last-child(2) dd:nth-last-child(1) {
@@ -69,17 +76,20 @@
 
       a { color: $nano-dark; }
     }
+
+    & dl:last-of-type {
+      width: 18em;
+    }
   }
 
   .poll-bar {
     background-color: #a4a3a382;
     position: relative;
     height: 1.5rem;
-    width: 50%;
+    width: 35%;
     margin: 1rem 0;
 
     &-bar {
-      background-color: $main-color;
       height: 1.5rem;
     }
     
@@ -112,7 +122,7 @@
     background-color: $nano-dark;
     color: $no-color;
     padding: $padding-tb $padding-rl;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     height: 200px;
     font-size: 0;
@@ -144,6 +154,17 @@
       text-align: center;
       width: 10rem;
     }
+
+    img {
+      max-width: unset;
+    }
+
+    &::-webkit-scrollbar {
+      height: .5rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $nano-dark;
+    }   
   }
 
   &-profile {
@@ -161,12 +182,25 @@
       position: relative;
       left: -2.9rem;
       top: -12px;
+      width: 208px;
     }
 
     .post-profile-name {
       margin: $padding-tb 0;
 
-      a {font-family: $special-font;}
+      a {
+        font-family: $special-font;
+        white-space: normal;
+      }
+    }
+
+    .profile-field-contact {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 100%;
+      align-items: flex-end;
+      padding: $margin-tb 0;
+      align-content: flex-start;
     }
 
     &-online.online {
@@ -174,7 +208,6 @@
       text-transform: uppercase;
       font-weight: 700;
       color: $AdP;
-      padding-top: .7rem;
       display: flex;
         img { margin-right: $padding-tb; }
     }
@@ -184,10 +217,11 @@
     }
 
     &-mp {
-      flex: 100%;
-      align-self: flex-end;
+      flex: 1;
       display: flex;
       align-items: flex-end;
+      justify-content: space-between;
+      padding-top: $padding-tb;
     }
   }
 
@@ -198,12 +232,18 @@
     &-head {
       display: flex;
       justify-content: space-between;
+      padding: $padding-tb 0;
 
       .profile-icons {
         display: flex;
         justify-content: space-around;
         flex: 1 20%;
+        align-items: center;
       }      
+      .profile-icons a {
+        transition: all 200ms ease-in-out;
+        :hover { opacity: 0.6; }
+      }
     }
 
     .topic-retitle,
@@ -223,6 +263,8 @@
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
+      a { color: $nano-dark; }
+      a:hover::after { background-color: $nano-dark; }
     }
 
     &-content-message {
@@ -240,9 +282,6 @@
   &-signature {
     flex: 100%;
   }
-  
-  a { color: $nano-dark; }
-  a:hover::after { background-color: $nano-dark; }
 }
 
 .topic-bottom {
@@ -291,56 +330,6 @@
 .topic-quickreply {
   background: $no-color url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/mamie_rep.jpg) no-repeat bottom left;
 
-  .h3 { 
-    background-color: $main-color;
-    color: $no-color;
-    padding: $padding-tb $padding-rl;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  #quick_reply input.button2 {
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: $padding-tb $padding-rl;
-    transition: all 200ms ease-in-out;
-
-    &:hover {
-      color: $main-color;
-      cursor: pointer;
-    }
-  }
-
-  form#quick_reply {
-    padding: $padding-tb $padding-rl;
-    margin-top: -.7rem;
-  }
-
-  div#textarea_content {
-     margin-bottom: -20px;
-  }
-
-  .sceditor-toolbar {
-    display: flex;
-    justify-content: space-between;
-    padding: $padding-tb $padding-rl!important;
-  }
-
-  .sceditor-group {
-    display: flex!important;
-    justify-content: space-around;
-    background-color: #f4f4f4!important;
-    border: none!important;
-    flex: 1;
-
-    a.sceditor-button { padding: .7rem;}
-    .sceditor-button div { margin: -7px -7px; }
-  }
-}
-
 .topic-actions {
   display: flex;
   flex-direction: row-reverse;
@@ -363,12 +352,7 @@
   }
 }
 
-
-
-
-
-
-
+/* VOTE COOKIE */
 .fa_vote, .fa_voted, .fa_count {
   font-size: 12px;
   display: inline-block !important;
@@ -377,9 +361,8 @@
   transition:300ms;
 }
  
-.fa_voted, .fa_vote:hover { opacity:0.4 }
+.fa_voted, .fa_vote:hover { opacity: 0.4 }
 .fa_voted { cursor:default }
- 
 .fa_count {
   font-weight: bold;
   margin: 0 3px;

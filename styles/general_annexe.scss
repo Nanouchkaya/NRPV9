@@ -31,15 +31,6 @@ li.nm-nav-item:hover::after,
   font-variant: small-caps;
 }
 
-dl.codebox dd {
-  max-height: 15rem;
-  overflow-y: auto;
-  background-color: $nano-dark;
-  color: $no-color;
-  padding: $padding-tb $padding-rl;
-}
-
-
 /* LOGIN - REGISTER block */
 
 form#form_confirm {
@@ -100,7 +91,6 @@ form#form_confirm {
 
 
   .h3 {
-    border-bottom: 8px solid $main-color;
     font-size: 1.2rem;
     padding: $padding-tb $padding-rl 0;
     font-weight: 700;
@@ -114,6 +104,10 @@ form#form_confirm {
     border-bottom: 1px solid $nano-dark;
     margin: $padding-tb 0;
   }
+}
+// fix password input
+input.inputbox {
+  border-bottom: 1px solid;
 }
 
 .panel.row2, .panel.row3 {

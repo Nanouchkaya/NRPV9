@@ -8,16 +8,16 @@
 
 	<!-- BEGIN forumrow -->
 				<li class="forumrow">
-                                  <h{catrow.forumrow.LEVEL} class="forumrow-title">
+            <h{catrow.forumrow.LEVEL} class="forumrow-title">
 					<a href="{catrow.forumrow.U_VIEWFORUM}">{catrow.forumrow.FORUM_NAME}</a>
 				  </h{catrow.forumrow.LEVEL}>
                                                                
-                                  <dl class="forumrow-content">                                   
-                                    <dd class="forumrow-desc">{catrow.forumrow.FORUM_DESC}</dd>
-                                    <dd class="forum-links">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</dd>                                 
-                                    <dd class="forumrow-stats">{catrow.forumrow.POSTS} messages dans {catrow.forumrow.TOPICS} sujets </dd>
-                                    <dd class="forumrow-lastpost" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}">{catrow.forumrow.LAST_POST}</dd>
-                                  </dl>
+						<dl class="forumrow-content">                                   
+							<dd class="forumrow-desc">{catrow.forumrow.FORUM_DESC}</dd>
+							<dd class="forum-links">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</dd>                                 
+							<dd class="forumrow-stats">{catrow.forumrow.POSTS} messages dans {catrow.forumrow.TOPICS} sujets </dd>
+							<dd class="forumrow-lastpost" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}">{catrow.forumrow.LAST_POST}</dd>
+						</dl>
 				</li>
 	<!-- END forumrow -->
 	<!-- BEGIN tablefoot -->
@@ -45,97 +45,48 @@
   
   document.getElementById('cat_NM').innerHTML = document.getElementById('cat_NM').innerHTML.replace('<li class="forumrow forumNM" id="ong-MM">','<div class="listLieuxNM onglets" id="nm-MM"><li class="forumrow forumNM" id="ong-MM">').replace('<li class="forumrow forumNM" id="ong-AP">','</div><div class="listLieuxNM onglets" id="nm-AP"><li class="forumrow forumNM" id="ong-AP">').replace('<li class="forumrow forumNM" id="ong-zombie">','</div><div class="listLieuxNM onglets" id="nm-zombie"><li class="forumrow forumNM" id="ong-zombie">').replace('<li class="forumrow forumNM" id="ong-AdP">','</div><div class="listLieuxNM onglets" id="nm-AdP"><li class="forumrow forumNM" id="ong-AdP">').replace('<li class="forumrow forumNM" id="ong-xmen">','</div><div class="listLieuxNM onglets" id="nm-xmen"><li class="forumrow forumNM" id="ong-xmen">').replace('<li class="forumrow forumNM" id="ong-chimeres">','</div><div class="listLieuxNM onglets" id="nm-chimeres"><li class="forumrow forumNM" id="ong-chimeres">').replace('</li></ul></div>','</li></div></ul>');
 
-switchOnglet();
+	switchOnglet();
 </script>
 <script type="text/javascript">
-//<![CDATA[
-$(document).ready(function() {
-	var btn_collapse = $('<div></div>', {
-		class: 'btn-collapse'
-	});
-
-	var btn_collapse_show = $('<i></i>', {
-		class: 'ion-android-add-circle hidden',
-		'data-tooltip': '{L_EXPEND_CAT}'
-	}).appendTo(btn_collapse);
-
-	var btn_collapse_hide = $('<i></i>', {
-		class: 'ion-android-remove-circle',
-		'data-tooltip': '{L_HIDE_CAT}'
-	}).appendTo(btn_collapse);
-
-	var collapsed = [];
-
-	if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
-		collapsed = readCookie('collapsed').split(',');
-	}
-
-	$(document).on('click', '.btn-collapse', function() {
-		$(this).children('.ion-android-add-circle').toggleClass('hidden');
-		$(this).children('.ion-android-remove-circle').toggleClass('hidden');
-		$(this).parents('.forabg').toggleClass('hidden');
-
-		if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
-			collapsed = readCookie('collapsed').split(',');
-		}
-
-		if (!$(this).parents('.forabg').hasClass('hidden')) {
-			removeFromArray('' + $(this).parents('.forabg').data('cindex'), collapsed);
-
-			createCookie('collapsed', collapsed);
-		} else {
-			collapsed.push('' + $(this).parents('.forabg').data('cindex'));
-
-			createCookie('collapsed', collapsed);
-		}
-	});
-
-	$('.forabg').each(function(i) {
-		$(this).data('cindex', '' + i);
-
-		$(btn_collapse)
-			.clone()
-			.attr('id', 'forabg' + i)
-			.appendTo($(this).find('.header'));
-
-		if ($.inArray('' + i, collapsed) > -1) {
-			$(this).toggleClass('hidden');
-			$('#forabg' + i).children('.ion-android-add-circle').toggleClass('hidden');
-			$('#forabg' + i).children('.ion-android-remove-circle').toggleClass('hidden');
-		}
-	});
-});
-
-function removeFromArray(item, array) {
-	var i = array.indexOf(item);
-
-	if (i > -1) {
-		array = array.splice(i, 1);
-	}
-}
-
-function createCookie(name, value, days) {
-	var expires;
-
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		expires = "; expires=" + date.toGMTString();
-	} else {
-		expires = "";
-	}
-	document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
-}
-
-function readCookie(name) {
-	var nameEQ = encodeURIComponent(name) + "=";
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-		if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
-	}
-	return null;
-}
-//]]>
-</script>
+	//<![CDATA[
+	$(document).ready(function() {	
+		const forumDesc = document.querySelectorAll('#cat_general .level_one .forumrow-content');
+			const imagesGeneral = [
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme1.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme2.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme3.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme4.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme5.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme6.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme7.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme8.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme9.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme10.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme11.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme12.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/meme13.jpg',
+			];
+			shuffleArray(imagesGeneral);
+			randomBgImage(forumDesc, imagesGeneral);
+		
+		const forumFaille = document.querySelectorAll('#cat_faille .level_one .forumrow-content');
+			const imagesFaille = [
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/faille1.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/faille2.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/faille3.jpg',
+			];
+			randomBgImage(forumFaille, imagesFaille);
+		
+		const boxes = document.querySelectorAll('#cat_NM #boxes .box-content');
+			const imagesOngletGen = [
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/onggen_mm.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/onggen_ap.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/onggen_zom.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/onggen_adp.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/onggen_xmen.jpg',
+				'https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/onggen_chim.jpg'
+			];
+			randomBgImage(boxes, imagesOngletGen);
+	}); 
+	//]]>
+	</script>

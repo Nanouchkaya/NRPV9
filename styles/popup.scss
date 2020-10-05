@@ -1,20 +1,21 @@
 .popup {
-  width: 70%;
-  height: 80%;
+  width: 76%;
+  height: 86%;
   background-color: $no-color;
   position: fixed;
   top: 10%;
-  left: 10%;
+  left: 12%;
   display: none; // flex
   font-size: .95rem;
-  z-index: 3;
+  z-index: 4;
 
   &-nav {
     height: 100%;
-    overflow-y: hidden;
-    background-color: $main-color;
     width: 30%;
     min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     ul {
       display: flex;
@@ -29,6 +30,12 @@
       position: relative;
       cursor: pointer;
     }
+  }
+
+  &-cross {
+    align-self: flex-end;
+    margin: $padding-rl;
+    cursor: pointer;
   }
   
   &-list-lv1-item {
@@ -63,10 +70,6 @@
 
 .visible {
   display: initial;
-}
-
-.active {
-  
 }
 
 .flex {

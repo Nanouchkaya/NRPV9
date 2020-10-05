@@ -1,0 +1,242 @@
+/* PREDEF */ 
+.predef {
+  width: calc(49% - 2rem);
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  background-color: $no-color;
+  margin: 1rem;
+  padding: $padding-tb $padding-rl;
+  font-size: .9rem;
+  justify-content: space-between;
+  height: 27rem;
+
+  &-infos {
+    display: flex;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  &-details {
+    background-color: $nano-dark;
+    color: $no-color;
+    padding: $padding-tb $padding-rl;
+    height: 8rem;
+  }
+}
+
+/* CODE SPOILER QUOTE */
+.selectCode {
+  font-variant: small-caps;
+  font-weight: 700;
+  position: absolute;
+  right: 2.5rem;
+  top: 0.1rem;
+  cursor: pointer;
+}
+
+.codebox {
+  display: block;
+}
+dl.codebox {
+  background-color: $no-color;
+  border-style: solid;
+  border-width: 0 0 0 6px;
+  padding: $padding-tb $padding-rl;
+  position: relative;
+}
+dl.codebox:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $nano-dark;
+  content: "\f271";
+  display: inline-block;
+  font-family: Ionicons;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  position: absolute;
+  right: 2%;
+  speak: none;
+  text-rendering: auto;
+  text-transform: none;
+  top: 0;
+}
+dl.codebox dt {
+  display: block;
+  font-weight: 400;
+  margin-bottom: $padding-tb;
+}
+
+dl.codebox dd {
+  max-height: 15rem;
+  overflow-y: hidden;
+  background-color: $nano-dark;
+  color: $no-color;
+  font-size: .9rem;
+}
+
+dl.spoiler:before,
+dl.hidecode:before {
+  content: '';
+  width: 16px;
+  height: 12px;
+  background-repeat: no-repeat;
+  top: .3rem;
+}
+
+dl.spoiler:before {
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/spoiler_icon.jpg);
+}
+
+dl.hidecode:before {
+  background-image: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/hidden_icon.jpg);
+}
+
+dl.codebox.spoiler dd {
+  max-height: none;
+}
+
+dl.codebox code {
+  color: grey;
+  display: block;
+  font-family: Courier,Courier New,monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
+  line-height: 1.1em;
+  max-height: 250px;
+  overflow: auto;
+  padding: $padding-tb $padding-rl;
+  white-space: normal;
+}
+
+code.hljs {
+  background-color: transparent!important;
+}
+
+.spoiler_content {
+  display: none;
+}
+
+.spoiler_content.hidden,
+dl.codebox.hidecode dd {
+  display: block;
+  padding: $padding-tb $padding-rl;
+  background-color: #f4f4f4;
+  color: $nano-dark;
+  border: 1px solid lightgrey;
+}
+
+blockquote {
+  background-color: $no-color;
+  border-style: solid;
+  border-width: 0 0 0 6px;
+  margin: 0 auto;
+  padding: $padding-tb $padding-rl;
+  width: 80%;
+
+  cite {
+    display: block;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+}
+
+/* CHARACTER SHEET */ 
+
+.character-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  font-size: .9rem;
+
+  &-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $special-font;
+    color: $no-color;
+    width: 100%;
+    font-size: 1.8rem;
+    background: $nano-dark url() no-repeat;
+    height: 8.5rem;
+  }
+
+  &-nm {
+    font-size: 1.5rem;
+    font-family: $special-font;
+    text-align: center;
+    display: block;
+  }
+
+  &-passeport {
+    margin: $margin-tb;
+    flex:1 calc(35% - #{$margin-tb} * 2);
+
+    p { 
+      height: 13rem;
+      padding-right: $padding-rl;
+    }
+  }
+
+  &-look {
+    flex:1 calc(60% - #{$margin-tb} * 2);
+    margin: $margin-tb;
+    padding: $padding-tb $padding-rl;
+    background-color: $nano-dark;
+    color: $no-color;
+    height: 17rem;
+    @media (max-width: 1000px) {
+      flex: 1 100%;
+    }
+  }
+  
+  &-avatar {
+    padding: 3.5rem 2rem 1rem;
+    background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv1.1.png) no-repeat 100% -19%;
+    @media (max-width: 1000px) {
+      flex: 1 100%;
+      text-align: center;
+    }
+  }
+  
+  &-interview {
+    flex:1 calc(65% - #{$margin-rl} * 2);
+    padding: $margin-tb $margin-tb 0;
+    background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv3.png) no-repeat right top;
+
+    .character-sheet-inner {
+      width: 88%;
+      padding-right: $padding-rl;
+    }
+  }
+
+  &-story {
+    flex: 1 100%;
+    padding: $margin-tb;
+    padding: 4.5rem 1.5rem;
+    background: url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv2.2.png) no-repeat left -23%, url(https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/inkv4.png) no-repeat right bottom;
+
+    .character-sheet-inner {
+      border-width: 5px;
+      border-style: solid;
+      border-right: none;
+      width: 80%;
+      padding: $padding-tb $padding-rl;
+      margin: auto;
+    }
+  }
+
+  &-inner {
+    background-color: #f4f4f4;
+    height: 21rem;
+  }
+}

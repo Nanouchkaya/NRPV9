@@ -1,6 +1,4 @@
 
-@import 'variables';
-
 a.topic-button { // boutons nouveau/repondre/lock
   margin: 1rem auto;
   max-width: $maxWidthForum;
@@ -11,16 +9,13 @@ a.topic-button { // boutons nouveau/repondre/lock
     display: none;
   }
 }
-
 .forumview {
-  
   ul.forumrows {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
-    li.forumrow.level_two {
-      display: flex; // affiche les sous-forum lv2 quand on est dedans, garde masqué les lv3
+    li.forumrow {
       min-width: 45rem;
       max-width: 50rem;
       width: 100%;
@@ -85,7 +80,7 @@ a.topic-button { // boutons nouveau/repondre/lock
       }
 
       dd.forumrow-stats {
-        width: 25%;
+        width: 33%;
         padding: 0 $padding-rl;
         font-variant: small-caps;
         font-weight: 700;
@@ -103,7 +98,20 @@ a.topic-button { // boutons nouveau/repondre/lock
 
     }
   }
+}
 
+.forumview.level_two {
+  li.forumrow.level_three {
+    display: flex; // affiche les sous-forum lv3 quand on est dedans, garde masqué les lv3
+  }
+}
+.forumview.level_one {
+  li.forumrow.level_two {
+    display: flex; // affiche les sous-forum lv2 quand on est dedans, garde masqué les lv3
+  }
+  li.forumrow.level_three {
+    display: none; // mais garde masquer les sous-forums lv3
+  }
 }
 
 .path {
@@ -111,6 +119,7 @@ a.topic-button { // boutons nouveau/repondre/lock
   background-color: $nano-dark;
   color: $nano-dark;
   width: fit-content;
+  width: -moz-fit-content;
   margin: calc(2 * #{$margin-rl}) auto 0;
   padding: $padding-tb $padding-rl;
   position: relative;

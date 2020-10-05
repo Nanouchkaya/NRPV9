@@ -1,0 +1,47 @@
+<div class="wrapper solo">
+  <h3 class="page-title solo">Profil de {USERNAME}</h3>
+
+  <div class="profile-infos">
+    <div class="profile-left">
+      <div class="profile-avatar">
+        {AVATAR_IMG}
+        <span class="profile-rank">{POSTER_RANK}</span>
+      </div>
+      <div class="profile-fields">
+        <!-- BEGIN profile_field -->
+        <ul class="profile-field-list" id="field_id{profile_field.ID}">
+          <li><span class="profile-label">{profile_field.LABEL} </span>{profile_field.CONTENT}</li>
+        </ul>
+        <!-- END profile_field -->
+      </div>
+    </div>
+
+    <div class="profile-right">
+      <ul class="profile-field-list">
+        <!-- BEGIN contact_field -->
+        <li>{contact_field.CONTENT}</li>
+        <!-- END contact_field -->			
+      </ul>
+      <div>
+        <span class="profile-label">Dernière visite :</span>{LAST_VISIT_TIME}
+        <!-- BEGIN switch_auth_user -->
+        <div class="profile-administrate">
+          <span class="profile-label">{L_ADMINISTRATE_USER} :</span> {ADMINISTRATE_USER}{BAN_USER}
+        </div>
+        <!-- END switch_auth_user -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- BEGIN switch_rpg -->
+    <div class="profile-rpg">
+    <span class="profile-rpg-title">Ses personnages</span>
+    <!-- BEGIN rpg_fields -->
+    <div class="profile-rpgsheet">
+      {switch_rpg.rpg_fields.F_VALUE_NEW}
+    </div>
+    <!-- END rpg_fields -->
+  </div>
+    <!-- END switch_rpg -->
+</div>
+

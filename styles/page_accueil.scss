@@ -1,5 +1,6 @@
 .index-PA {
   display: flex;
+  justify-content: center;
   max-width: 1300px;
   margin: 2rem auto;
   align-items: center;
@@ -13,6 +14,10 @@
   & li {
     padding: .35rem;
     font-size: .9rem;
+  }
+
+  @media (max-width: 980px) {
+    flex-wrap: wrap;
   }
 }
 
@@ -40,10 +45,13 @@
     font-weight: 700;
 
     .date-news {
-      background-color: $main-color;
       padding: .15rem .35rem;
       margin-right: 1rem;
       color: $no-color;
+    }
+
+    & ul {
+      max-height: 8rem;
     }
 
     a{ color: $nano-dark; }
@@ -55,10 +63,8 @@
   margin: 1.5rem 2rem;
   flex: .8;
   max-width: 15rem;
+  min-width: fit-content;
 
-  .index-PA-visitor-links {
-    background-color: $main-color;
-  }
 
   .index-PA-member-links {
     background-color: $no-color;
@@ -101,10 +107,6 @@
     padding: 0.3rem;
     margin: 0.6rem;
     background-color: $no-color;
-
-    &:hover {
-      background-color: $main-color;
-    }
   }
 }
 

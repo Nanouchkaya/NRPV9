@@ -2,7 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <body>
-    <div>
 	<footer>
           <div class="footer-links">
 <!-- END html_validation -->
@@ -21,10 +20,12 @@
         <!-- END switch_footer_links -->
         </div>
         </footer>
-     </div>
 {PROTECT_FOOTER}
 <script type="text/javascript">
 //<![CDATA[
+  fa_endpage();
+  addWrapperStyleOnPost();
+
 $(document).ready(function() {
    document.getElementById('main-content').children[0].style.display = "none";
 
@@ -66,11 +67,6 @@ $(document).ready(function() {
     ];
     randomBgImage(boxes, imagesOngletGen);
 }); 
-//]]>
-</script>
-<script type="text/javascript">
-//<![CDATA[
-	fa_endpage();
 //]]>
 </script>
 </body>

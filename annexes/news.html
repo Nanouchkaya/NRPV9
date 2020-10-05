@@ -1,0 +1,157 @@
+<br /><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter - Nano. RôlePlay, forum RPG</title>
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
+  <link href="http://memoires-du-monde.fr/NRPV9/font/font.css" rel="stylesheet" />
+  <style>
+    .container {
+      width: 600px;
+      background-color: white;
+      position: relative;
+      margin: 2rem auto;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: .9rem;
+      line-height: 1.4rem;
+    }
+    
+    .general {
+    padding: 1.5rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-left: 10px solid #23a9b5;
+    padding-left: 1rem;
+}
+
+main {
+    margin-top: -5rem;
+    padding: .7rem 1rem;
+}
+
+p span, ul span {
+    font-weight: 700;
+    color: #23a9b5;
+}
+
+.bloc-color2 {
+    width: 85%;
+    background-color: #e9bd28;
+    padding: .35rem .7rem;
+    position: relative;
+    margin: 2rem auto;
+    font-weight: 700;
+}
+
+.bloc-image {
+    display: flex;
+    align-items: center;
+}
+
+.frame {
+    padding: 0 1rem;
+    border: 4px solid #a963a9;
+    margin: 2rem 0;
+    position: relative;
+}
+
+
+.frame ul {
+    list-style: none;
+    padding: .7rem;
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+.frame-title {
+    background-color: white;
+    font-family: 'summeronregular';
+    font-size: .7rem;
+    color: #a963a9;
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+}
+
+
+footer {
+    padding: .7rem 1rem;
+    background-color: #161614;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-variant: small-caps;
+    position: relative;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: .12rem;
+  background-color: white;
+  left: 0;
+  bottom: -.15rem;
+  opacity: 0;
+  transform: translateZ(-30%);
+  transition: all 200ms ease-in-out;
+}
+
+footer a:hover::after{
+  width: 100%;
+  transform: translateZ(0);
+  opacity: 1;
+  font-variant: small-caps;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/n_news.jpg" alt="Bannière NRP news" />
+      </a>
+    </header>
+
+      <section class="general">
+        <h2>01/04/2020 : Une MAJ, une MAJ, une MAJ !!!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ut ullam ex nostrum maxime vel exercitationem rem at minus, deleniti asperiores quidem aut, sequi dignissimos cum <span>tenetur dolorem blanditiis possimus</span>.</p>
+
+        <div class="bloc-color2">
+          <p>Lorem ipsum dolor sit <u>amet consectetur adipisicing</u> elit. Quia totam deleniti iusto ducimus excepturi. Qui consequatur veniam adipisci cumque excepturi?</p>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque nihil iste nemo sed quae, <strong>60 personnages</strong>, voluptatibus mollitia maiores fugit deleniti fugiat odio dolores quidem animi nam. Molestiae!</p>
+
+        <div class="bloc-image">
+          <img src="https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/fb_msevere.png" alt="image mamie" />
+          <div class="frame">
+            <span class="frame-title">Message aux copains et futurs copains</span>
+            <ul>
+              <li>- Les copains, encore et toujours, merci pour vos nouvelles et vos gentils mots !</li>
+              <li>- Il reste <span>1 place en top, 3 places en footer une infinité en simple !</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+      <a href="#">Accéder au forum</a> ¤
+      <a href="#">Concept de NRP</a> ¤ 
+      <a href="#">Guide du Guguss</a> ¤ 
+      <a href="#">Espace voyeur</a> ¤ 
+      <a href="#">Coupaings</a>
+    </footer>
+  </div>
+</body>
+</html>
