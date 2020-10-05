@@ -19,7 +19,6 @@
     font-size: 1.7rem;
     padding: $padding-tb $padding-rl;
     color: $no-color;
-    background-color: $main-color;
     margin-bottom: calc(#{$margin-tb} * -1);
   }
 
@@ -77,6 +76,10 @@
 
       a { color: $nano-dark; }
     }
+
+    & dl:last-of-type {
+      width: 18em;
+    }
   }
 
   .poll-bar {
@@ -87,7 +90,6 @@
     margin: 1rem 0;
 
     &-bar {
-      background-color: $main-color;
       height: 1.5rem;
     }
     
@@ -163,9 +165,6 @@
     &::-webkit-scrollbar-track {
       background-color: $nano-dark;
     }   
-    &::-webkit-scrollbar-thumb {
-      background-color: $main-color;
-    } 
   }
 
   &-profile {

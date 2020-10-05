@@ -28,7 +28,6 @@
       border-width: 3px;
       border-style: solid;
       height: fit-content;
-      border-color: $main-color;
 
       &::after {
         top: calc(#{$padding-tb} * -1);
@@ -39,7 +38,6 @@
         right: 5%;
         padding: .1rem $padding-tb $padding-tb;
         background-color: $no-color;
-        color: $main-color
       }
     }
     a img { // correctif image lien petit cookie
@@ -124,9 +122,7 @@
       }
   
       dd.forumrow-lastpost[title="Nouveaux messages"] {
-        background-color: rgba($main-color, .1);
         border: none;
-        border-bottom: 7px solid $main-color;
         
         &::after {
           bottom: -2.7rem;
@@ -134,7 +130,6 @@
           right: 0;
           background-color: transparent;
           content: "Y'a du neuf ! ";
-          color: $main-color;
           font-size: .7rem;
           width: fit-content;
           padding-right: 1rem;
@@ -142,12 +137,6 @@
         }
       }
     }
-  }
-}
-
-#cat_general .forumrows {
-  .forumrow-title {
-    background-color: $main-color;
   }
 }
 

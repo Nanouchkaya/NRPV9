@@ -1,6 +1,4 @@
 
-@import 'variables';
-
 a.topic-button { // boutons nouveau/repondre/lock
   margin: 1rem auto;
   max-width: $maxWidthForum;
@@ -121,6 +119,7 @@ a.topic-button { // boutons nouveau/repondre/lock
   background-color: $nano-dark;
   color: $nano-dark;
   width: fit-content;
+  width: -moz-fit-content;
   margin: calc(2 * #{$margin-rl}) auto 0;
   padding: $padding-tb $padding-rl;
   position: relative;

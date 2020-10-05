@@ -1,0 +1,146 @@
+/* FICHE PRESENTATION */
+#info_joueur {
+  background-color: #3d9697;
+  color: white;
+  margin: 30px auto auto;
+  padding: 8px;
+  width: 65%;
+  position: relative;
+}
+
+#info_joueur::before {
+  color: #3d9697;
+  content: "Tu te présentes, banane flambée !";
+  display: block;
+  font-size: 35px;
+  font-variant: small-caps;
+  position: absolute;
+  text-align: center;
+  top: -33px;
+font-weight: 600;
+}
+#info_joueur::after {
+  bottom: -15px;
+  content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/ti_cookie1.png");
+  position: absolute;
+  right: -15px;
+}
+
+#info_joueur strong, .physique strong, .caractere strong, .passeport strong {
+  font-size: 15px;
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+.pres {
+  color: black;
+  margin: 70px auto;
+  width: 88%;
+}
+
+.pres .titre {
+  left: -23px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.passeport {
+  margin: 25px auto -50px;
+  padding: 8px;
+  position: relative;
+  width: 65%;
+}
+.passeport::before {
+  position: absolute;
+  top: -101px;
+  left: -5px;
+}
+
+.physique {
+  background-color: #383232;
+  border-left: 30px solid #dedcdd;
+  width:100%;
+  padding-top: 42px;
+  vertical-align: top;
+  color: white;
+}
+
+.physique:before {
+  content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_coif.png");
+  left: 214px;
+  top: 3px;
+  position: absolute;
+  z-index: 1;
+}
+.physique > div {
+  height: 263px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.pres > table {
+  position: relative;
+}
+.pres > table::before {
+  content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_fleche.png");
+  left: -34px;
+  position: absolute;
+  top: -80px;
+}
+
+.caractere div, .histoire div {
+  height: 260px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.caractere {
+  background-color: #75706c;
+  padding-top: 42px;
+  position:relative;
+  color: white;
+}
+
+.caractere:before {
+  content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_int.png");
+  left: -15px;
+  top: 3px;
+  position: absolute;
+  z-index: 1;
+}
+.histoire {
+  margin-top: -20px;
+  padding-top: 42px;
+  position: relative;
+}
+
+.histoire:before {
+  content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_hist.png");
+  left: -15px;
+  top: 3px;
+  position: absolute;
+  z-index: 1;
+}
+/* PREZ CHIMERES */
+.mod_chim .passeport {    background-color: #f3c055;}
+.mod_chim .passeport::before {    content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_chimeres.png");}
+.mod_chim .histoire {    background-color: #da7436;}
+/* PREZ XMEN */
+.mod_xmen .passeport {    background-color: #da7436;}
+.mod_xmen .passeport::before {    content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_xmen.png");}
+.mod_xmen .histoire {    background-color: #85426b;}
+/* PREZ BRUXIA */
+.mod_brux .passeport {    background-color: #85426b;}
+.mod_brux .passeport::before {    content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_bruxia.png");}
+.mod_brux .histoire {    background-color: #b7bb2c;}
+/* PREZ AdP */
+.mod_adp .passeport {    background-color: #b7bb2c;}
+.mod_adp .passeport::before {    content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_adp.png");}
+.mod_adp .histoire {    background-color: #b22d29; color: white;}
+/* PREZ ZOMBIELAND */
+.mod_zomb .passeport {    background-color: #b22d29;}
+.mod_zomb .passeport::before {    content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_zombieland.png");}
+.mod_zomb .histoire {    background-color: #3d9697;}
+/* PREZ ALPHA PERDU */
+.mod_ap .passeport {    background-color: #54BCBD}
+.mod_ap .passeport::before {    content: url("https://raw.githubusercontent.com/Skalleface/images-hosting/master/NRP/V9/vieux/pres_ap.png");}
+.mod_ap .histoire {    background-color: #f3c055;}

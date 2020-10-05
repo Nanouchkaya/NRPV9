@@ -159,7 +159,6 @@
   &-chim { background-color: $chimeres; }
   &-xmen { background-color: $xmen; }
   &-faille { background-color: $faille; }
-  &-main { background-color: $main-color; }
 }
 
 .scrollbg {
@@ -173,7 +172,6 @@
   &-chim::-webkit-scrollbar-thumb { background-color: $chimeres; }
   &-xmen::-webkit-scrollbar-thumb { background-color: $xmen; }
   &-faille::-webkit-scrollbar-thumb { background-color: $faille; }
-  &-main::-webkit-scrollbar-thumb { background-color: $main-color; }
 }
 
 .color {
@@ -187,7 +185,6 @@
   &-chim { color: $chimeres!important; }
   &-xmen { color: $xmen!important; }
   &-faille { color: $faille!important; }
-  &-main { color: $main-color; }
 }
 
 .border {
@@ -199,7 +196,6 @@
   &-chim { border-color: $chimeres; }
   &-xmen { border-color: $xmen; }
   &-faille { border-color: $faille; }
-  &-main { border-color: $main-color; }
 }
 
 .bold {

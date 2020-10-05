@@ -36,10 +36,6 @@
     div#TUO {
         display: flex;
         justify-content: center;
-
-        span:first-of-type {
-          background-color: $main-color;
-        }
     }
   
     div#LIUL {
@@ -142,7 +138,6 @@
       
       p {
         font-weight: 700;
-        color: $main-color;
       }
     }
 
@@ -194,10 +189,6 @@
         padding: .3rem;
         margin: .6rem;
         background-color: $no-color;
-      }
-  
-      &:hover img {
-        background-color: $main-color;
       }
     }
   }
